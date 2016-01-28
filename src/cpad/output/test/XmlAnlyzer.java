@@ -148,8 +148,8 @@ public class XmlAnlyzer {
 	    return node.getNodeValue();
 	 }
 
-   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
-   @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
+//   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
+//   @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
 // @AfterClass   public static void closeBrowsers() { driver.quit(); }
