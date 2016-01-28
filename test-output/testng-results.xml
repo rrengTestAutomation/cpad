@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44682" started-at="2015-12-09T18:56:16Z" finished-at="2015-12-09T18:57:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44682" started-at="2015-12-09T18:56:16Z" finished-at="2015-12-09T18:57:01Z">
+      <class name="cpad.output.test.XmlAnlyzer">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:cpad.output.test.XmlAnlyzer@1dab4eb]" name="logOpen" is-config="true" duration-ms="48" started-at="2015-12-09T13:56:16Z" finished-at="2015-12-09T13:56:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOpen -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:cpad.output.test.XmlAnlyzer@1dab4eb]" name="startTime" is-config="true" duration-ms="15" started-at="2015-12-09T13:56:16Z" finished-at="2015-12-09T13:56:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testCpadOutputIsCorrect()[pri:0, instance:cpad.output.test.XmlAnlyzer@1dab4eb]" name="testCpadOutputIsCorrect" duration-ms="44652" started-at="2015-12-09T13:56:16Z" finished-at="2015-12-09T13:57:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCpadOutputIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:cpad.output.test.XmlAnlyzer@1dab4eb]" name="endTime" is-config="true" duration-ms="15" started-at="2015-12-09T13:57:01Z" finished-at="2015-12-09T13:57:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="logClose()[pri:0, instance:cpad.output.test.XmlAnlyzer@1dab4eb]" name="logClose" is-config="true" duration-ms="0" started-at="2015-12-09T13:57:01Z" finished-at="2015-12-09T13:57:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logClose -->
+      </class> <!-- cpad.output.test.XmlAnlyzer -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

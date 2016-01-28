@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="cpad.output.test.AllInOne">
+        <methods>
+          <include name="sourcePagePrint"/>
+          <include name="printXmlPath"/>
+          <include name="getExceptionDescriptive"/>
+          <include name="fileWriter"/>
+          <include name="fileWriter"/>
+          <include name="getScreenShot"/>
+          <include name="getScreenShot"/>
+          <include name="getScreenShot"/>
+          <include name="getScreenShot"/>
+          <include name="getScreenShot"/>
+          <include name="fileCleaner"/>
+          <include name="fileCleaner"/>
+          <include name="main"/>
+          <include name="fileWriterPrinter"/>
+          <include name="fileWriterPrinter"/>
+          <include name="fileWriterPrinter"/>
+        </methods>
+      </class> <!-- cpad.output.test.AllInOne -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
