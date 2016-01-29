@@ -33,7 +33,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-//@Test(enabled = true /** , invocationCount = 10 */)
+//@Test(enabled = true /** , invocationCount = 100 */)
 public class Test {
 	
 	public static void main(String[] args) throws IOException {
