@@ -21,27 +21,28 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+// import org.openqa.selenium.firefox.FirefoxDriver;
 
 import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
 public class XmlAnlyzer {
-    WebDriver driver = new FirefoxDriver();
+    //WebDriver driver = new FirefoxDriver();
+	static WebDriver driver;
 	Functions function = new Functions();
 	
 	/**
 	 * @throws IOException
 	 */
-    @Test(enabled = true, invocationCount = 3)
+    @Test(enabled = true, invocationCount = 1)
 	public void testCpadOutputIsCorrect() throws IOException {
 
    	function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 //     count++; System.out.print("\n" + count + ") "); =   	
    	try { 		
    		// ENTRY
-   		driver = new FirefoxDriver();
+   		//driver = new FirefoxDriver();
    		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
    		String path = Locators.testOutputFileDir;
    		String name = "source";
