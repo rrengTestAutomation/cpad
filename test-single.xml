@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="test-single">
+  <test verbose="1" name="test-single">
+    <classes>
+
+    <class name="org.tvo.rebuild.test.helper.UtilitiesTestHelper"></class>
+    
+<!-- 
+COVERED BY AUTOMATED TEST:
+-->
+<class name="org.tvo.rebuild.test.Programs.ProgramsPageAgenda"><methods>
+<include name="testAgendaProgCreateScheduleCheckHeader"/>
+</methods></class>
+
+	<!-- 	
+    <class name="org.tvo.rebuild.test.AboutTVO.AboutTVOPage"><methods><include name="testAboutUsPageExists"/></methods></class>
+	-->
+		
+    </classes>
+  </test>
+</suite>
