@@ -24,6 +24,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import cpad.output.common.Locators;
 
 
@@ -897,5 +901,35 @@ public class Functions {
     	       if (n > 1) { fileWriter("run.log", "   Subtotal: " + testRunTime("ini.time", finish)); }
 	       }
            }
+		
+		/**
+		 * @throws IOException
+		 */
+		public void sourcePagePrint(WebDriver driver, String url, String path, String fileName) throws IOException {
+			try {
+//				Functions function = new Functions();				
+				fileCleaner(path, fileName);
+				
+				while(! driver.getCurrentUrl().equals(url)) {			
+				driver.get(url);
+				Thread.sleep(5000);
+				}
+				
+	            fileWriterPrinter();
+//				function.
+				getUrlSourcePagePrint(driver.getCurrentUrl(), path, fileName);			
+				fileWriterPrinter();
+				
+				Thread.sleep(2000);
+				driver.quit();	
+			} catch (Exception exception) { getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver); }
+			finally { driver.quit(); }
+			}
+			
+			 public String getValue(String tag, Element element) {
+			    NodeList nodes = element.getElementsByTagName(tag).item(0).getChildNodes();
+			    Node node = (Node) nodes.item(0);
+			    return node.getNodeValue();
+			 }
 		
 }

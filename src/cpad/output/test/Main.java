@@ -34,7 +34,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 //@Test(enabled = true /** , invocationCount = 100 */)
-public class Test {
+public class Main {
 	
 	public static void main(String[] args) throws IOException {
         // count++; System.out.print("\n" + count + ") "); =   	
@@ -78,8 +78,8 @@ public class Test {
 	   		if (node.getNodeType() == Node.ELEMENT_NODE) {
 	   		Element element = (Element) node;
 	   		
-//	   	fileWriterPrinter("    Record ID: " + getValue("record_id", element));
-//	   	fileWriterPrinter("Episode Title: " + getValue("episode_title", element));    		
+//	   	    fileWriterPrinter("    Record ID: " + getValue("record_id", element));
+//	   	    fileWriterPrinter("Episode Title: " + getValue("episode_title", element));    		
 //	 		fileWriterPrinter("   Created On: " + getValue("created_on", element));
 	   		
 	   		valueArray[i] = getValue("created_on", element);
@@ -104,7 +104,7 @@ public class Test {
 	   		sec = Integer.valueOf(SS);
 
 	   		fingerprintArray[i] = convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);  		
-	   	 // fileWriterPrinter("   Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
+//	   	    fileWriterPrinter("   Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
 	   		
 	   		}
 	   		}
@@ -130,17 +130,10 @@ public class Test {
 	   	         }
 	   }
 	
-	
-	
-	
-	
 /** ########### Common Locators ############### */
 	
 	public static String outputFileDir     = System.getProperty("user.dir") + File.separator + "output" + File.separator;
 	public static String testOutputFileDir = System.getProperty("user.dir") + File.separator + "test-output" + File.separator;
-	
-	
-	
 	
 /** ########### Common Functions ############### */	
 	 

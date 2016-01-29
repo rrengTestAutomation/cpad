@@ -1,38 +1,40 @@
 package cpad.output.test;
 
-import java.io.File;
-import java.io.IOException;
+   import java.io.File;
+   import java.io.IOException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+   import javax.xml.parsers.DocumentBuilder;
+   import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
+
+   import org.testng.Assert;
 // import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+   import org.testng.annotations.AfterMethod;
+   import org.testng.annotations.AfterSuite;
+   import org.testng.annotations.BeforeMethod;
+   import org.testng.annotations.BeforeSuite;
+   import org.testng.annotations.Test;
+   import org.w3c.dom.Document;
+   import org.w3c.dom.Element;
+   import org.w3c.dom.Node;
+   import org.w3c.dom.NodeList;
 
-import cpad.output.common.Locators;
-import cpad.output.helper.Functions;
+   import org.openqa.selenium.WebDriver;
+   import org.openqa.selenium.firefox.FirefoxDriver;
+   import cpad.output.common.Locators;
+   import cpad.output.helper.Functions;
 
 @SuppressWarnings("static-access")
 public class XmlAnlyzer {
 	WebDriver driver = new FirefoxDriver();
-	   
+	Functions function = new Functions();
+	
 	/**
 	 * @throws IOException
 	 */
-    @Test(enabled = true /** , invocationCount = 10 */)
+    @Test(enabled = true, invocationCount = 3)
 	public void testCpadOutputIsCorrect() throws IOException {
-   	Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+   	function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 //     count++; System.out.print("\n" + count + ") "); =   	
    	try { 		
    		// ENTRY
@@ -44,7 +46,7 @@ public class XmlAnlyzer {
    		String fileName = name + "." + extention;
    		String tag = "video";
    		
-   		sourcePagePrint(driver, url, path, fileName);
+   		function.sourcePagePrint(driver, url, path, fileName);
    		
    		function.fileWriterPrinter(); 		
    		function.fileWriterPrinter(path + "\n");
@@ -74,7 +76,7 @@ public class XmlAnlyzer {
 //   	function.fileWriterPrinter("Episode Title: " + getValue("episode_title", element));    		
 // 		function.fileWriterPrinter("   Created On: " + getValue("created_on", element));
    		
-   		valueArray[i] = getValue("created_on", element);
+   		valueArray[i] = function.getValue("created_on", element);
    		
    		String created = valueArray[i];
    		String date = created.substring(0, created.indexOf("T"));
@@ -118,37 +120,7 @@ public class XmlAnlyzer {
    		} catch (Exception exception) { exception.printStackTrace(); }
    }
    
-	/**
-	 * @throws IOException
-	 */
-	public void sourcePagePrint(WebDriver driver, String url, String path, String fileName) throws IOException {
-		try {
-			Functions function = new Functions();
-			
-			function.fileCleaner(path, fileName);
-			
-			while(! driver.getCurrentUrl().equals(url)) {			
-			driver.get(url);
-			Thread.sleep(5000);
-			}
-			
-            function.fileWriterPrinter();
-			function.getUrlSourcePagePrint(driver.getCurrentUrl(), path, fileName);			
-			function.fileWriterPrinter();
-			
-			Thread.sleep(2000);
-			driver.quit();	
-		} catch (Exception exception) { Functions.getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver); }
-		finally { driver.quit(); }
-	}
-	
-	 private static String getValue(String tag, Element element) {
-	    NodeList nodes = element.getElementsByTagName(tag).item(0).getChildNodes();
-	    Node node = (Node) nodes.item(0);
-	    return node.getNodeValue();
-	 }
-	 
-   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
+@BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
