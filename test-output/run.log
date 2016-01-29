@@ -1,8 +1,8 @@
- TEST START: 2015-12-09 13:56:16
+ TEST START: 2016-01-29 16:26:23
 
 
        Test: #1
-      Start: 2015-12-09 13:56:16
-   XML Path: <class name="cpad.output.test.XmlAnlyzer"><methods><include name="testCpadOutputIsCorrect"/></methods></class>
-     Finish: 2015-12-09 13:57:01
-   Duration: 0:00:44
+      Start: 2016-01-29 16:26:23
+   XML Path: <class name="test.engine.XmlAnlyzer"><methods><include name="testCpadOutputIsCorrect"/></methods></class>
+     Finish: 2016-01-29 16:27:00
+   Duration: 0:00:37

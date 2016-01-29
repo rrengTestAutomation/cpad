@@ -21,24 +21,25 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.openqa.selenium.WebDriver;
-// import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
 public class XmlAnlyzer {
-    //WebDriver driver = new FirefoxDriver();
-	static WebDriver driver;
-	Functions function = new Functions();
+      WebDriver driver = new FirefoxDriver();
+//	  static WebDriver driver;
+	
 	
 	/**
 	 * @throws IOException
 	 */
     @Test(enabled = true, invocationCount = 1)
 	public void testCpadOutputIsCorrect() throws IOException {
-
-   	function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+       Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+//     driver = function.getServerName(driver);
+       
 //     count++; System.out.print("\n" + count + ") "); =   	
    	try { 		
    		// ENTRY
