@@ -26,14 +26,20 @@ package cpad.output.test;
 
 @SuppressWarnings("static-access")
 public class XmlAnlyzer {
-	WebDriver driver = new FirefoxDriver();
+
 	Functions function = new Functions();
+	
+	@Test
+	public void testCreateVideoImageCaptionField() {
+		System.out.println(Locators.driverFileDir);
+	}
 	
 	/**
 	 * @throws IOException
 	 */
     @Test(enabled = true, invocationCount = 3)
 	public void testCpadOutputIsCorrect() throws IOException {
+    WebDriver driver = new FirefoxDriver();
    	function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 //     count++; System.out.print("\n" + count + ") "); =   	
    	try { 		

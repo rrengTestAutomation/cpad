@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.DateFormat;
@@ -23,6 +24,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -33,6 +39,42 @@ import cpad.output.common.Locators;
 
 
 public class Functions {
+WebDriver driverHelper;
+	
+	public WebDriver getServerName(WebDriver driver) throws IllegalArgumentException, MalformedURLException{
+		try{
+			String remoteOrLocal = System.getProperty("Server");
+			String browser = System.getProperty("Browser");
+			if (remoteOrLocal.equalsIgnoreCase("local") && browser.equalsIgnoreCase("firefox")){
+				driver = new FirefoxDriver();
+			}
+			else if (remoteOrLocal.equalsIgnoreCase("remote") && browser.equalsIgnoreCase("firefox")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.firefox());
+			}
+			else if (remoteOrLocal.equalsIgnoreCase("local") && browser.equalsIgnoreCase("chrome")){
+				System.setProperty("webdriver.chrome.driver", Locators.driverFileDir + "chromedriver.exe");
+				driver = new ChromeDriver();
+			}
+			else if (remoteOrLocal.equalsIgnoreCase("remote") && browser.equalsIgnoreCase("chrome")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.chrome());
+			}
+			else
+				throw new IllegalArgumentException("input type not supported! ");
+			return driver;
+		}
+		catch(WebDriverException e){
+			String browser = System.getProperty("Browser");
+			if (browser.equalsIgnoreCase("firefox")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.firefox());
+			}
+			else if (browser.equalsIgnoreCase("chrome")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.chrome());
+			}
+			return driver;
+		}
+	}
+	
+	
 	
     /** Print XML path 
      * @throws IOException
