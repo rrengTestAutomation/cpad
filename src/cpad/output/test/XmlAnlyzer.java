@@ -11,9 +11,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 // import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-//import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -147,10 +147,9 @@ public class XmlAnlyzer {
 	    Node node = (Node) nodes.item(0);
 	    return node.getNodeValue();
 	 }
-
-//   THIS IS TESTING OF GIT SYNCHRONIZATION   //	 
-//   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
-//   @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
+	 
+   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
+   @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
 // @AfterClass   public static void closeBrowsers() { driver.quit(); }
