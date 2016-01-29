@@ -1,28 +1,30 @@
-package cpad.output.test;
+package test.engine;
 
    import java.io.File;
-   import java.io.IOException;
+import java.io.IOException;
 
    import javax.xml.parsers.DocumentBuilder;
-   import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+
 
 
    import org.testng.Assert;
 // import org.testng.annotations.AfterClass;
    import org.testng.annotations.AfterMethod;
-   import org.testng.annotations.AfterSuite;
-   import org.testng.annotations.BeforeMethod;
-   import org.testng.annotations.BeforeSuite;
-   import org.testng.annotations.Test;
-   import org.w3c.dom.Document;
-   import org.w3c.dom.Element;
-   import org.w3c.dom.Node;
-   import org.w3c.dom.NodeList;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-   import org.openqa.selenium.WebDriver;
-   import org.openqa.selenium.firefox.FirefoxDriver;
-   import cpad.output.common.Locators;
-   import cpad.output.helper.Functions;
+import test.common.Locators;
+import test.helper.Functions;
 
 @SuppressWarnings("static-access")
 public class XmlAnlyzer {

@@ -1,4 +1,4 @@
-package cpad.output.common;
+package test.common;
 
 import java.io.File;
 

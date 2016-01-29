@@ -1,4 +1,4 @@
-package cpad.output.helper;
+package test.helper;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -34,7 +34,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import cpad.output.common.Locators;
+import test.common.Locators;
 
 
 
