@@ -1,17 +1,11 @@
 package test.engine;
 
-   import java.io.File;
+import java.io.File;
 import java.io.IOException;
-
-   import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-
-
-
-   import org.testng.Assert;
-// import org.testng.annotations.AfterClass;
-   import org.testng.annotations.AfterMethod;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -22,14 +16,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
 public class XmlAnlyzer {
       WebDriver driver = new FirefoxDriver();
-//	  static WebDriver driver;
+      int count = 0;
 	
 	
 	/**
@@ -37,13 +30,9 @@ public class XmlAnlyzer {
 	 */
     @Test(enabled = true, invocationCount = 1)
 	public void testCpadOutputIsCorrect() throws IOException {
-       Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-//     driver = function.getServerName(driver);
-       
-//     count++; System.out.print("\n" + count + ") "); =   	
+    Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	
    	try { 		
    		// ENTRY
-   		//driver = new FirefoxDriver();
    		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
    		String path = Locators.testOutputFileDir;
    		String name = "source";

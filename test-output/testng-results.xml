@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37228" started-at="2016-01-29T21:26:23Z" finished-at="2016-01-29T21:27:00Z">
+  <suite name="Default suite" duration-ms="36383" started-at="2016-01-30T05:37:51Z" finished-at="2016-01-30T05:38:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37228" started-at="2016-01-29T21:26:23Z" finished-at="2016-01-29T21:27:00Z">
+    <test name="Default test" duration-ms="36383" started-at="2016-01-30T05:37:51Z" finished-at="2016-01-30T05:38:27Z">
       <class name="test.engine.XmlAnlyzer">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="logOpen" is-config="true" duration-ms="157" started-at="2016-01-29T16:26:23Z" finished-at="2016-01-29T16:26:23Z">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="logOpen" is-config="true" duration-ms="52" started-at="2016-01-30T00:37:51Z" finished-at="2016-01-30T00:37:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="startTime" is-config="true" duration-ms="91" started-at="2016-01-29T16:26:23Z" finished-at="2016-01-29T16:26:23Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="startTime" is-config="true" duration-ms="9" started-at="2016-01-30T00:37:51Z" finished-at="2016-01-30T00:37:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testCpadOutputIsCorrect()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="testCpadOutputIsCorrect" duration-ms="37045" started-at="2016-01-29T16:26:23Z" finished-at="2016-01-29T16:27:00Z">
+        <test-method status="PASS" signature="testCpadOutputIsCorrect()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="testCpadOutputIsCorrect" duration-ms="36352" started-at="2016-01-30T00:37:51Z" finished-at="2016-01-30T00:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCpadOutputIsCorrect -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="endTime" is-config="true" duration-ms="78" started-at="2016-01-29T16:27:00Z" finished-at="2016-01-29T16:27:00Z">
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="endTime" is-config="true" duration-ms="8" started-at="2016-01-30T00:38:27Z" finished-at="2016-01-30T00:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="logClose" is-config="true" duration-ms="2" started-at="2016-01-29T16:27:00Z" finished-at="2016-01-29T16:27:00Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.engine.XmlAnlyzer@6caf0677]" name="logClose" is-config="true" duration-ms="10" started-at="2016-01-30T00:38:27Z" finished-at="2016-01-30T00:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->
