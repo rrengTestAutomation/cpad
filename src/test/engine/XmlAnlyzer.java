@@ -31,7 +31,10 @@ public class XmlAnlyzer {
     @Test(enabled = true, invocationCount = 1)
 	public void testCpadOutputIsCorrect() throws IOException {
     Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	
-   	try { 		
+    // // COUNTER
+    // count++;
+    // System.out.print("\n" + "URL #" + count + ":");
+    try { 		
    		// ENTRY
    		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
    		String path = Locators.testOutputFileDir;
