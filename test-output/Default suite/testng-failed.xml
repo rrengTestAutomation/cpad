@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.engine.XmlAnlyzer">
+      <class name="test.engine.cpadTester">
         <methods>
-          <include name="logOpen"/>
-          <include name="logClose"/>
-          <include name="testCpadOutputIsCorrect"/>
+          <include name="testOrder"/>
           <include name="startTime"/>
+          <include name="logClose"/>
+          <include name="logOpen"/>
           <include name="endTime"/>
         </methods>
-      </class> <!-- test.engine.XmlAnlyzer -->
+      </class> <!-- test.engine.cpadTester -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

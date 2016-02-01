@@ -20,8 +20,8 @@ import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class XmlAnlyzer {
-      WebDriver driver = new FirefoxDriver();
+public class cpadTester2 {
+      
       int count = 0;
 	
 	
@@ -29,14 +29,26 @@ public class XmlAnlyzer {
 	 * @throws IOException
 	 */
     @Test(enabled = true, invocationCount = 1)
-	public void testCpadOutputIsCorrect() throws IOException {
+	public void testOrder() throws IOException {
     Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	
-    // // COUNTER
-    // count++;
-    // System.out.print("\n" + "URL #" + count + ":");
-    try { 		
+    
+    // COUNTER
+    count++;
+    System.out.print("\n" + "TEST EXECUTION #" + count + ":");
+    int combination = 0;
+    
+    for (int j = 0; j < Locators.URL.length; j++) {
+    	 WebDriver driver = new FirefoxDriver();
+    try {               
    		// ENTRY
-   		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
+    	
+   	 // String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
+    	String url = Locators.URL[j];
+    			
+   		combination++;
+   		function.fileWriterPrinter("\n" + "URL #" + combination + ":");
+   		function.fileWriterPrinter(url);
+   		
    		String path = Locators.testOutputFileDir;
    		String name = "source";
    		String extention = "xml";
@@ -45,8 +57,8 @@ public class XmlAnlyzer {
    		
    		function.sourcePagePrint(driver, url, path, fileName);
    		
-   		function.fileWriterPrinter(); 		
-   		function.fileWriterPrinter(path + "\n");
+   		// function.fileWriterPrinter(); 		
+   		// function.fileWriterPrinter(path + "\n");
    		
    		File stocks = new File(path + fileName);
    		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -54,7 +66,7 @@ public class XmlAnlyzer {
    		Document doc = dBuilder.parse(stocks);
    		doc.getDocumentElement().normalize();
 
-   		function.fileWriterPrinter(path + fileName);
+   		// function.fileWriterPrinter(path + fileName);
    		function.fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":");
    		NodeList nodes = doc.getElementsByTagName(tag);
    		function.fileWriterPrinter();
@@ -108,6 +120,11 @@ public class XmlAnlyzer {
 //                                 UtilitiesTestHelper.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "Out of order!",
 //                                 fingerprintArray[i] >= fingerprintArray[i + 1]));
    			if (fingerprintArray[i] >= fingerprintArray[i + 1]) { function.fileWriterPrinter("    Result: OK\n"); }
+   			else {
+   				  function.fileWriterPrinter("URL #" + combination + " FAILED!");	
+   				  function.fileWriterPrinter(url);
+   			}
+   			
    			Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
    			}
    		}
@@ -115,6 +132,9 @@ public class XmlAnlyzer {
    		function.fileWriterPrinter("==========================");
    		function.fileWriterPrinter();
    		} catch (Exception exception) { exception.printStackTrace(); }
+        finally { driver.quit(); }
+    }
+    
    }
    
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }

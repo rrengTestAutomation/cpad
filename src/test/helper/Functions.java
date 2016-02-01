@@ -18,6 +18,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -26,6 +31,7 @@ import org.testng.Assert;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
 import test.common.Locators;
 
 public class Functions {
@@ -185,7 +191,20 @@ public class Functions {
 	    pw.close();
 	 // System Out Print Line:
 	    fileWriterPrinter(printLine);
-	} 
+	}
+    
+	/** Writes an Object line into File, as well as through System Out Print Line by Choise (YES or NO) */
+    public static void fileWriterPrinter(String path, String fileName, Object printLine, Boolean ifPrint) throws NumberFormatException, IOException {
+     // Create File:
+		File f = new File(path + fileName);		                                                                      
+	 // Write or add a String line into File:	
+	    FileWriter fw = new FileWriter(f,true);
+	    PrintWriter pw = new PrintWriter(fw);
+	    pw.println(printLine);
+	    pw.close();
+	 // System Out Print Line:
+	    if (ifPrint) { fileWriterPrinter(printLine); }
+	}
     
 	public String getUrlSourcePage(String url) throws IOException {
         URL URL = new URL(url);
@@ -292,8 +311,8 @@ public class Functions {
 	        in.close();
 	        
             fileCleaner(fileName);
-            fileWriterPrinter(path, fileName, sb.toString());
-            
+         // fileWriterPrinter(path, fileName, sb.toString());
+            fileWriterPrinter(path, fileName, sb.toString(), false);
 	        return sb.toString();
 	}
 	
@@ -920,7 +939,7 @@ public class Functions {
 				Thread.sleep(2000);
 				driver.quit();	
 			} catch (Exception exception) { getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver); }
-			finally { driver.quit(); }
+//            finally { driver.quit(); }
 			}
 			
 			 public String getValue(String tag, Element element) {
@@ -928,5 +947,98 @@ public class Functions {
 			    Node node = (Node) nodes.item(0);
 			    return node.getNodeValue();
 			 }
+			 
+				public void xmlAnlyzer(WebDriver driver, String url, int combination) throws IOException {
+				    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
+				    // COUNTER
+				    try {               
+				   		// ENTRY
+				   		fileWriterPrinter("\n" + "URL #" + combination + ":");
+				   		fileWriterPrinter(url);
+				   		
+				   		String path = Locators.testOutputFileDir;
+				   		String name = "source";
+				   		String extention = "xml";
+				   		String fileName = name + "." + extention;
+				   		String tag = "video";
+				   		
+				   		sourcePagePrint(driver, url, path, fileName);
+				   		
+				   		// fileWriterPrinter(); 		
+				   		// fileWriterPrinter(path + "\n");
+				   		
+				   		File stocks = new File(path + fileName);
+				   		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+				   		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+				   		Document doc = dBuilder.parse(stocks);
+				   		doc.getDocumentElement().normalize();
+
+				   		// fileWriterPrinter(path + fileName);
+				   		fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":");
+				   		NodeList nodes = doc.getElementsByTagName(tag);
+				   		fileWriterPrinter();
+				   		fileWriterPrinter("==========================");
+				   		
+				   		long[] fingerprintArray     = new long[nodes.getLength()];
+						    String[] valueArray  = new String[nodes.getLength()];
+				   		 
+				   		for (int i = 0; i < nodes.getLength(); i++) {
+				   		Node node = nodes.item(i);
+				   		 
+				   		if (node.getNodeType() == Node.ELEMENT_NODE) {
+				   		Element element = (Element) node;
+				   		
+//				   	    fileWriterPrinter("    Record ID: " + getValue("record_id", element));
+//				      	fileWriterPrinter("Episode Title: " + getValue("episode_title", element));    		
+//				 		fileWriterPrinter("   Created On: " + getValue("created_on", element));
+				   		
+				   		valueArray[i] = getValue("created_on", element);
+				   		
+				   		String created = valueArray[i];
+				   		String date = created.substring(0, created.indexOf("T"));
+				   		String HH = created.substring(created.indexOf("T")+1,created.indexOf("T")+3);
+				   		String MM = created.substring(created.indexOf(":")+1,created.indexOf(":")+3);
+				   		String SS = created.substring(created.indexOf(":")+4,created.indexOf(":")+6);
+				   		String math = created.substring(created.lastIndexOf(":")-3,created.lastIndexOf(":")-2);
+				   		String hh = created.substring(created.lastIndexOf(":")-2,created.lastIndexOf(":"));
+				   		String mm = created.substring(created.lastIndexOf(":")+1,created.lastIndexOf(":")+3);
+				   		
+//				      fileWriterPrinter("   Created On: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm + "\n" );
+				   		
+				   		int hours, min, sec;
+				   		
+				   		if (math.equals("-")) { hours = Integer.valueOf(HH) - Integer.valueOf(hh); }
+				   		                 else { hours = Integer.valueOf(HH) + Integer.valueOf(hh); }		
+				   		if (math.equals("-")) {   min = Integer.valueOf(MM) - Integer.valueOf(mm); }
+				   		                 else {   min = Integer.valueOf(MM) + Integer.valueOf(mm); }
+				   		sec = Integer.valueOf(SS);
+
+				   		fingerprintArray[i] = convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);  		
+				   	 // fileWriterPrinter("   Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
+				   		
+				   		}
+				   		}
+				   		
+				   		for (int i = 0; i < nodes.getLength(); i++) {
+				   			fileWriterPrinter(" Record ID: " + (i + 1));
+				   			fileWriterPrinter("Created On: " + valueArray[i]);
+				   			if (i < (nodes.getLength() - 1)) {
+//				   		    Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1],
+//				                                 UtilitiesTestHelper.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "Out of order!",
+//				                                 fingerprintArray[i] >= fingerprintArray[i + 1]));
+				   			if (fingerprintArray[i] >= fingerprintArray[i + 1]) { fileWriterPrinter("    Result: OK\n"); }
+				   			else {
+				   				  fileWriterPrinter("URL #" + combination + " FAILED!");	
+				   				  fileWriterPrinter(url);
+				   			}
+				   			
+				   			Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
+				   			}
+				   		}
+				   		
+				   		fileWriterPrinter("==========================");
+				   		fileWriterPrinter();
+				   		} catch (Exception exception) { exception.printStackTrace(); }
+				   }			 
 		
 }
