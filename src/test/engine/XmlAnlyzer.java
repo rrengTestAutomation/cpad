@@ -117,7 +117,7 @@ public class XmlAnlyzer {
    		} catch (Exception exception) { exception.printStackTrace(); }
    }
    
-@BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
+   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
