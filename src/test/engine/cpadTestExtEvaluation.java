@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadEvaluation {
+public class cpadTestExtEvaluation {
 	static WebDriver driver;
 	Functions function = new Functions();
 	int count = 0;

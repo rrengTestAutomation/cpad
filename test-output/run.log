@@ -1,8 +1,113 @@
- TEST START: 2016-02-01 17:58:16
+ TEST START: 2016-02-02 15:12:41
 
 
        Test: #1
-      Start: 2016-02-01 17:58:16
-   XML Path: <class name="test.engine.cpadTester4"><methods><include name="testOrder"/></methods></class>
-     Finish: 2016-02-01 18:08:26
-   Duration: 0:10:10
+      Start: 2016-02-02 15:12:41
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:13:27
+   Duration: 0:00:45
+
+       Test: #2
+      Start: 2016-02-02 15:13:27
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:14:10
+   Duration: 0:00:43
+   Subtotal: 0:01:29
+
+       Test: #3
+      Start: 2016-02-02 15:14:10
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:15:03
+   Duration: 0:00:52
+   Subtotal: 0:02:21
+
+       Test: #4
+      Start: 2016-02-02 15:15:03
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:15:46
+   Duration: 0:00:42
+   Subtotal: 0:03:04
+
+       Test: #5
+      Start: 2016-02-02 15:15:46
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:16:28
+   Duration: 0:00:42
+   Subtotal: 0:03:47
+
+       Test: #6
+      Start: 2016-02-02 15:16:28
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:17:09
+   Duration: 0:00:40
+   Subtotal: 0:04:28
+
+       Test: #7
+      Start: 2016-02-02 15:17:09
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:17:52
+   Duration: 0:00:42
+   Subtotal: 0:05:10
+
+       Test: #8
+      Start: 2016-02-02 15:17:52
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:18:32
+   Duration: 0:00:40
+   Subtotal: 0:05:50
+
+       Test: #9
+      Start: 2016-02-02 15:18:32
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:19:13
+   Duration: 0:00:41
+   Subtotal: 0:06:32
+
+       Test: #10
+      Start: 2016-02-02 15:19:13
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:19:53
+   Duration: 0:00:40
+   Subtotal: 0:07:12
+
+       Test: #11
+      Start: 2016-02-02 15:19:53
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:20:35
+   Duration: 0:00:41
+   Subtotal: 0:07:54
+
+       Test: #12
+      Start: 2016-02-02 15:20:35
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:21:16
+   Duration: 0:00:40
+   Subtotal: 0:08:34
+
+       Test: #13
+      Start: 2016-02-02 15:21:16
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:21:57
+   Duration: 0:00:41
+   Subtotal: 0:09:15
+
+       Test: #14
+      Start: 2016-02-02 15:21:57
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:22:38
+   Duration: 0:00:41
+   Subtotal: 0:09:56
+
+       Test: #15
+      Start: 2016-02-02 15:22:38
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-02 15:23:20
+   Duration: 0:00:41
+   Subtotal: 0:10:38
+
+TOTAL TESTS: 15
+     FAILED: 0
+TEST  START: 2016-02-02 15:12:41
+TEST FINISH: 2016-02-02 15:23:20
+TOTAL  TIME: 0:10:38
+

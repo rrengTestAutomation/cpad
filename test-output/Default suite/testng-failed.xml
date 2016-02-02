@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.engine.cpadTester1">
+      <class name="test.engine.cpadTestExtLoop">
         <methods>
           <include name="logClose"/>
-          <include name="startTime"/>
-          <include name="testOrder"/>
-          <include name="endTime"/>
           <include name="logOpen"/>
+          <include name="testOrder"/>
+          <include name="startTime"/>
+          <include name="endTime"/>
         </methods>
-      </class> <!-- test.engine.cpadTester1 -->
+      </class> <!-- test.engine.cpadTestExtLoop -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,7 +1,7 @@
 
        Test: #1
-      Start: 2016-02-01 17:58:16
-   XML Path: <class name="test.engine.cpadTester4"><methods><include name="testOrder"/></methods></class>
+      Start: 2016-02-02 15:12:41
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #1:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790
@@ -11,85 +11,92 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
 ==========================
 
+     Finish: 2016-02-02 15:13:27
+   Duration: 0:00:45
+
+
+       Test: #2
+      Start: 2016-02-02 15:13:27
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #2:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&group=Adult
@@ -99,85 +106,93 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-20T12:41:38-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T23:50:13-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T12:41:38-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-19T23:50:13-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
 ==========================
 
+     Finish: 2016-02-02 15:14:10
+   Duration: 0:00:43
+   Subtotal: 0:01:29
+
+
+       Test: #3
+      Start: 2016-02-02 15:14:10
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #3:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80
@@ -187,358 +202,21 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2015-07-30T12:11:02-04:00
-
-URL #3 Record ID: 1 FAILED!
+Created On: 2015-10-24T16:20:14-04:00
+    Result: FAILED!
+    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...
 
  Record ID: 2
-Created On: 2015-07-30T13:20:14-04:00
-    Result: OK
+Created On: 2016-02-01T18:01:59-05:00
 
- Record ID: 3
-Created On: 2010-05-08T14:55:33-04:00
+     Finish: 2016-02-02 15:15:03
+   Duration: 0:00:52
+   Subtotal: 0:02:21
 
-URL #3 Record ID: 3 FAILED!
 
- Record ID: 4
-Created On: 2011-07-14T15:10:10-04:00
-    Result: OK
-
- Record ID: 5
-Created On: 2010-06-24T11:39:29-04:00
-
-URL #3 Record ID: 5 FAILED!
-
- Record ID: 6
-Created On: 2016-01-13T19:43:17-05:00
-    Result: OK
-
- Record ID: 7
-Created On: 2015-11-20T12:41:11-05:00
-    Result: OK
-
- Record ID: 8
-Created On: 2014-04-22T17:10:25-04:00
-
-URL #3 Record ID: 8 FAILED!
-
- Record ID: 9
-Created On: 2014-10-23T16:10:46-04:00
-
-URL #3 Record ID: 9 FAILED!
-
- Record ID: 10
-Created On: 2015-04-11T15:21:17-04:00
-
-URL #3 Record ID: 10 FAILED!
-
- Record ID: 11
-Created On: 2015-05-22T19:30:10-04:00
-    Result: OK
-
- Record ID: 12
-Created On: 2014-04-14T20:10:04-04:00
-
-URL #3 Record ID: 12 FAILED!
-
- Record ID: 13
-Created On: 2015-05-07T14:20:52-04:00
-    Result: OK
-
- Record ID: 14
-Created On: 2010-07-07T11:17:47-04:00
-    Result: OK
-
- Record ID: 15
-Created On: 2010-07-07T11:17:47-04:00
-
-URL #3 Record ID: 15 FAILED!
-
- Record ID: 16
-Created On: 2012-06-08T12:20:20-04:00
-
-URL #3 Record ID: 16 FAILED!
-
- Record ID: 17
-Created On: 2015-02-28T22:50:15-05:00
-
-URL #3 Record ID: 17 FAILED!
-
- Record ID: 18
-Created On: 2015-10-05T18:21:09-04:00
-    Result: OK
-
- Record ID: 19
-Created On: 2015-03-13T18:21:21-04:00
-    Result: OK
-
- Record ID: 20
-Created On: 2012-01-06T12:20:16-05:00
-    Result: OK
-
- Record ID: 21
-Created On: 2011-09-22T20:50:39-04:00
-
-URL #3 Record ID: 21 FAILED!
-
- Record ID: 22
-Created On: 2013-12-19T23:20:08-05:00
-
-URL #3 Record ID: 22 FAILED!
-
- Record ID: 23
-Created On: 2015-10-20T19:10:55-04:00
-    Result: OK
-
- Record ID: 24
-Created On: 2015-08-12T02:50:27-04:00
-    Result: OK
-
- Record ID: 25
-Created On: 2010-08-11T15:07:27-04:00
-    Result: OK
-
- Record ID: 26
-Created On: 2010-08-11T14:00:59-04:00
-    Result: OK
-
- Record ID: 27
-Created On: 2010-08-08T21:47:02-04:00
-    Result: OK
-
- Record ID: 28
-Created On: 2010-08-08T21:36:43-04:00
-    Result: OK
-
- Record ID: 29
-Created On: 2010-08-08T21:06:56-04:00
-    Result: OK
-
- Record ID: 30
-Created On: 2010-08-08T19:47:01-04:00
-    Result: OK
-
- Record ID: 31
-Created On: 2010-06-24T12:18:32-04:00
-    Result: OK
-
- Record ID: 32
-Created On: 2010-03-19T20:50:51-04:00
-
-URL #3 Record ID: 32 FAILED!
-
- Record ID: 33
-Created On: 2010-03-22T14:30:12-04:00
-    Result: OK
-
- Record ID: 34
-Created On: 2010-03-19T20:51:07-04:00
-    Result: OK
-
- Record ID: 35
-Created On: 2010-03-19T20:40:39-04:00
-    Result: OK
-
- Record ID: 36
-Created On: 2010-03-19T20:29:59-04:00
-    Result: OK
-
- Record ID: 37
-Created On: 2010-03-19T20:20:19-04:00
-
-URL #3 Record ID: 37 FAILED!
-
- Record ID: 38
-Created On: 2010-03-19T20:41:02-04:00
-    Result: OK
-
- Record ID: 39
-Created On: 2010-03-19T20:40:27-04:00
-
-URL #3 Record ID: 39 FAILED!
-
- Record ID: 40
-Created On: 2010-03-19T20:50:31-04:00
-    Result: OK
-
- Record ID: 41
-Created On: 2010-03-19T20:40:51-04:00
-    Result: OK
-
- Record ID: 42
-Created On: 2010-03-19T20:20:35-04:00
-
-URL #3 Record ID: 42 FAILED!
-
- Record ID: 43
-Created On: 2016-01-28T17:14:08-05:00
-    Result: OK
-
- Record ID: 44
-Created On: 2016-01-28T17:01:14-05:00
-    Result: OK
-
- Record ID: 45
-Created On: 2012-12-11T13:31:25-05:00
-    Result: OK
-
- Record ID: 46
-Created On: 2012-04-23T15:02:49-04:00
-
-URL #3 Record ID: 46 FAILED!
-
- Record ID: 47
-Created On: 2016-01-20T12:41:38-05:00
-    Result: OK
-
- Record ID: 48
-Created On: 2011-03-21T10:41:37-04:00
-
-URL #3 Record ID: 48 FAILED!
-
- Record ID: 49
-Created On: 2011-03-22T15:30:40-04:00
-    Result: OK
-
- Record ID: 50
-Created On: 2010-07-28T14:37:25-04:00
-    Result: OK
-
- Record ID: 51
-Created On: 2010-07-28T14:07:53-04:00
-    Result: OK
-
- Record ID: 52
-Created On: 2010-07-27T15:57:50-04:00
-    Result: OK
-
- Record ID: 53
-Created On: 2010-07-27T15:57:37-04:00
-
-URL #3 Record ID: 53 FAILED!
-
- Record ID: 54
-Created On: 2010-07-28T14:57:33-04:00
-
-URL #3 Record ID: 54 FAILED!
-
- Record ID: 55
-Created On: 2011-03-22T15:30:17-04:00
-
-URL #3 Record ID: 55 FAILED!
-
- Record ID: 56
-Created On: 2011-12-23T14:50:37-05:00
-
-URL #3 Record ID: 56 FAILED!
-
- Record ID: 57
-Created On: 2016-01-07T23:40:12-05:00
-    Result: OK
-
- Record ID: 58
-Created On: 2014-01-04T12:20:14-05:00
-    Result: OK
-
- Record ID: 59
-Created On: 2012-11-15T20:40:48-05:00
-
-URL #3 Record ID: 59 FAILED!
-
- Record ID: 60
-Created On: 2016-01-27T16:09:01-05:00
-    Result: OK
-
- Record ID: 61
-Created On: 2015-07-30T15:50:57-04:00
-    Result: OK
-
- Record ID: 62
-Created On: 2015-07-25T15:14:36-04:00
-
-URL #3 Record ID: 62 FAILED!
-
- Record ID: 63
-Created On: 2015-07-30T15:20:41-04:00
-    Result: OK
-
- Record ID: 64
-Created On: 2011-05-23T18:00:16-04:00
-
-URL #3 Record ID: 64 FAILED!
-
- Record ID: 65
-Created On: 2013-03-03T18:00:00-05:00
-    Result: OK
-
- Record ID: 66
-Created On: 2010-07-28T14:37:49-04:00
-
-URL #3 Record ID: 66 FAILED!
-
- Record ID: 67
-Created On: 2010-07-28T14:38:01-04:00
-    Result: OK
-
- Record ID: 68
-Created On: 2010-07-28T14:08:33-04:00
-
-URL #3 Record ID: 68 FAILED!
-
- Record ID: 69
-Created On: 2010-07-28T14:37:12-04:00
-    Result: OK
-
- Record ID: 70
-Created On: 2010-07-28T13:17:48-04:00
-
-URL #3 Record ID: 70 FAILED!
-
- Record ID: 71
-Created On: 2010-07-28T14:07:16-04:00
-
-URL #3 Record ID: 71 FAILED!
-
- Record ID: 72
-Created On: 2010-07-28T14:07:41-04:00
-    Result: OK
-
- Record ID: 73
-Created On: 2010-07-27T15:57:25-04:00
-
-URL #3 Record ID: 73 FAILED!
-
- Record ID: 74
-Created On: 2010-07-28T13:17:15-04:00
-    Result: OK
-
- Record ID: 75
-Created On: 2010-05-08T14:52:26-04:00
-
-URL #3 Record ID: 75 FAILED!
-
- Record ID: 76
-Created On: 2010-07-27T15:57:11-04:00
-
-URL #3 Record ID: 76 FAILED!
-
- Record ID: 77
-Created On: 2011-03-30T22:50:08-04:00
-
-URL #3 Record ID: 77 FAILED!
-
- Record ID: 78
-Created On: 2015-07-27T17:50:36-04:00
-    Result: OK
-
- Record ID: 79
-Created On: 2015-07-27T17:40:47-04:00
-    Result: OK
-
- Record ID: 80
-Created On: 2012-02-01T21:51:02-05:00
-==========================
-
+       Test: #4
+      Start: 2016-02-02 15:15:03
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #4:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790&group=Adult
@@ -548,85 +226,93 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
 ==========================
 
+     Finish: 2016-02-02 15:15:46
+   Duration: 0:00:42
+   Subtotal: 0:03:04
+
+
+       Test: #5
+      Start: 2016-02-02 15:15:46
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #5:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790&size=80
@@ -636,325 +322,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:16:28
+   Duration: 0:00:42
+   Subtotal: 0:03:47
+
+
+       Test: #6
+      Start: 2016-02-02 15:16:28
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #6:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&group=Adult&program_asset_id=2790
@@ -964,85 +658,93 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
 ==========================
 
+     Finish: 2016-02-02 15:17:09
+   Duration: 0:00:40
+   Subtotal: 0:04:28
+
+
+       Test: #7
+      Start: 2016-02-02 15:17:09
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #7:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&group=Adult&size=80
@@ -1052,325 +754,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-20T12:41:38-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T23:50:13-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T12:41:38-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-19T23:50:13-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T23:40:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-07T23:40:12-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2016-01-05T14:30:12-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T14:30:12-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-10T13:01:03-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:01:03-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-09T13:20:14-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-08T13:01:28-05:00
+Created On: 2015-12-09T13:20:14-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T13:01:28-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-12-07T12:50:30-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-07T18:50:32-05:00
 ==========================
 
+     Finish: 2016-02-02 15:17:52
+   Duration: 0:00:42
+   Subtotal: 0:05:10
+
+
+       Test: #8
+      Start: 2016-02-02 15:17:52
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #8:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790
@@ -1380,325 +1090,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:18:32
+   Duration: 0:00:40
+   Subtotal: 0:05:50
+
+
+       Test: #9
+      Start: 2016-02-02 15:18:32
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #9:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&group=Adult
@@ -1708,325 +1426,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-20T12:41:38-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T23:50:13-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T12:41:38-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-19T23:50:13-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T23:40:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-07T23:40:12-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2016-01-05T14:30:12-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T14:30:12-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-10T13:01:03-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:01:03-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-09T13:20:14-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-08T13:01:28-05:00
+Created On: 2015-12-09T13:20:14-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T13:01:28-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-12-07T12:50:30-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-07T18:50:32-05:00
 ==========================
 
+     Finish: 2016-02-02 15:19:13
+   Duration: 0:00:41
+   Subtotal: 0:06:32
+
+
+       Test: #10
+      Start: 2016-02-02 15:19:13
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #10:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790&group=Adult&size=80
@@ -2036,325 +1762,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:19:53
+   Duration: 0:00:40
+   Subtotal: 0:07:12
+
+
+       Test: #11
+      Start: 2016-02-02 15:19:53
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #11:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790&size=80&group=Adult
@@ -2364,325 +2098,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:20:35
+   Duration: 0:00:41
+   Subtotal: 0:07:54
+
+
+       Test: #12
+      Start: 2016-02-02 15:20:35
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #12:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&group=Adult&program_asset_id=2790&size=80
@@ -2692,325 +2434,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:21:16
+   Duration: 0:00:40
+   Subtotal: 0:08:34
+
+
+       Test: #13
+      Start: 2016-02-02 15:21:16
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #13:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&group=Adult&size=80&program_asset_id=2790
@@ -3020,325 +2770,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:21:57
+   Duration: 0:00:41
+   Subtotal: 0:09:15
+
+
+       Test: #14
+      Start: 2016-02-02 15:21:57
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #14:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790&group=Adult
@@ -3348,325 +3106,333 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
+     Finish: 2016-02-02 15:22:38
+   Duration: 0:00:41
+   Subtotal: 0:09:56
+
+
+       Test: #15
+      Start: 2016-02-02 15:22:38
+   XML Path: <class name="test.engine.cpadTestExtLoop"><methods><include name="testOrder"/></methods></class>
 
 URL COMBINATION #15:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&group=Adult&program_asset_id=2790
@@ -3676,325 +3442,332 @@ videos:
 
 ==========================
  Record ID: 1
-Created On: 2016-01-28T17:14:08-05:00
+Created On: 2016-02-01T18:10:30-05:00
     Result: OK
 
  Record ID: 2
-Created On: 2016-01-28T17:01:14-05:00
+Created On: 2016-02-01T18:01:59-05:00
     Result: OK
 
  Record ID: 3
-Created On: 2016-01-27T16:09:01-05:00
+Created On: 2016-01-28T17:14:08-05:00
     Result: OK
 
  Record ID: 4
-Created On: 2016-01-26T16:51:02-05:00
+Created On: 2016-01-28T17:01:14-05:00
     Result: OK
 
  Record ID: 5
-Created On: 2016-01-25T15:20:22-05:00
+Created On: 2016-01-27T16:09:01-05:00
     Result: OK
 
  Record ID: 6
-Created On: 2016-01-25T15:01:39-05:00
+Created On: 2016-01-26T16:51:02-05:00
     Result: OK
 
  Record ID: 7
-Created On: 2016-01-22T19:39:50-05:00
+Created On: 2016-01-25T15:20:22-05:00
     Result: OK
 
  Record ID: 8
-Created On: 2016-01-22T19:36:37-05:00
+Created On: 2016-01-25T15:01:39-05:00
     Result: OK
 
  Record ID: 9
-Created On: 2016-01-22T12:11:00-05:00
+Created On: 2016-01-22T19:39:50-05:00
     Result: OK
 
  Record ID: 10
-Created On: 2016-01-21T20:10:30-05:00
+Created On: 2016-01-22T19:36:37-05:00
     Result: OK
 
  Record ID: 11
-Created On: 2016-01-21T19:50:23-05:00
+Created On: 2016-01-22T12:11:00-05:00
     Result: OK
 
  Record ID: 12
-Created On: 2016-01-21T17:54:22-05:00
+Created On: 2016-01-21T20:10:30-05:00
     Result: OK
 
  Record ID: 13
-Created On: 2016-01-20T18:40:48-05:00
+Created On: 2016-01-21T19:50:23-05:00
     Result: OK
 
  Record ID: 14
-Created On: 2016-01-20T18:30:14-05:00
+Created On: 2016-01-21T17:54:22-05:00
     Result: OK
 
  Record ID: 15
-Created On: 2016-01-20T18:10:24-05:00
+Created On: 2016-01-20T18:40:48-05:00
     Result: OK
 
  Record ID: 16
-Created On: 2016-01-19T18:55:06-05:00
+Created On: 2016-01-20T18:30:14-05:00
     Result: OK
 
  Record ID: 17
-Created On: 2016-01-19T18:31:57-05:00
+Created On: 2016-01-20T18:10:24-05:00
     Result: OK
 
  Record ID: 18
-Created On: 2016-01-19T17:30:13-05:00
+Created On: 2016-01-19T18:55:06-05:00
     Result: OK
 
  Record ID: 19
-Created On: 2016-01-19T10:10:11-05:00
+Created On: 2016-01-19T18:31:57-05:00
     Result: OK
 
  Record ID: 20
-Created On: 2016-01-18T19:00:26-05:00
+Created On: 2016-01-19T17:30:13-05:00
     Result: OK
 
  Record ID: 21
-Created On: 2016-01-18T18:10:12-05:00
+Created On: 2016-01-19T10:10:11-05:00
     Result: OK
 
  Record ID: 22
-Created On: 2016-01-18T18:00:11-05:00
+Created On: 2016-01-18T19:00:26-05:00
     Result: OK
 
  Record ID: 23
-Created On: 2016-01-15T17:10:12-05:00
+Created On: 2016-01-18T18:10:12-05:00
     Result: OK
 
  Record ID: 24
-Created On: 2016-01-15T16:30:25-05:00
+Created On: 2016-01-18T18:00:11-05:00
     Result: OK
 
  Record ID: 25
-Created On: 2016-01-14T18:40:11-05:00
+Created On: 2016-01-15T17:10:12-05:00
     Result: OK
 
  Record ID: 26
-Created On: 2016-01-14T17:40:11-05:00
+Created On: 2016-01-15T16:30:25-05:00
     Result: OK
 
  Record ID: 27
-Created On: 2016-01-14T16:52:13-05:00
+Created On: 2016-01-14T18:40:11-05:00
     Result: OK
 
  Record ID: 28
-Created On: 2016-01-13T19:43:17-05:00
+Created On: 2016-01-14T17:40:11-05:00
     Result: OK
 
  Record ID: 29
-Created On: 2016-01-13T16:10:14-05:00
+Created On: 2016-01-14T16:52:13-05:00
     Result: OK
 
  Record ID: 30
-Created On: 2016-01-13T15:10:39-05:00
+Created On: 2016-01-13T19:43:17-05:00
     Result: OK
 
  Record ID: 31
-Created On: 2016-01-13T12:30:14-05:00
+Created On: 2016-01-13T16:10:14-05:00
     Result: OK
 
  Record ID: 32
-Created On: 2016-01-12T18:10:29-05:00
+Created On: 2016-01-13T15:10:39-05:00
     Result: OK
 
  Record ID: 33
-Created On: 2016-01-12T18:00:27-05:00
+Created On: 2016-01-13T12:30:14-05:00
     Result: OK
 
  Record ID: 34
-Created On: 2016-01-11T17:10:48-05:00
+Created On: 2016-01-12T18:10:29-05:00
     Result: OK
 
  Record ID: 35
-Created On: 2016-01-11T17:01:17-05:00
+Created On: 2016-01-12T18:00:27-05:00
     Result: OK
 
  Record ID: 36
-Created On: 2016-01-11T16:40:48-05:00
+Created On: 2016-01-11T17:10:48-05:00
     Result: OK
 
  Record ID: 37
-Created On: 2016-01-11T13:40:14-05:00
+Created On: 2016-01-11T17:01:17-05:00
     Result: OK
 
  Record ID: 38
-Created On: 2016-01-11T11:50:18-05:00
+Created On: 2016-01-11T16:40:48-05:00
     Result: OK
 
  Record ID: 39
-Created On: 2016-01-11T11:30:32-05:00
+Created On: 2016-01-11T13:40:14-05:00
     Result: OK
 
  Record ID: 40
-Created On: 2016-01-08T18:30:27-05:00
+Created On: 2016-01-11T11:50:18-05:00
     Result: OK
 
  Record ID: 41
-Created On: 2016-01-08T18:20:58-05:00
+Created On: 2016-01-11T11:30:32-05:00
     Result: OK
 
  Record ID: 42
-Created On: 2016-01-08T10:10:11-05:00
+Created On: 2016-01-08T18:30:27-05:00
     Result: OK
 
  Record ID: 43
-Created On: 2016-01-07T18:10:12-05:00
+Created On: 2016-01-08T18:20:58-05:00
     Result: OK
 
  Record ID: 44
-Created On: 2016-01-07T16:20:13-05:00
+Created On: 2016-01-08T10:10:11-05:00
     Result: OK
 
  Record ID: 45
-Created On: 2016-01-07T16:00:41-05:00
+Created On: 2016-01-07T18:10:12-05:00
     Result: OK
 
  Record ID: 46
-Created On: 2016-01-06T18:00:29-05:00
+Created On: 2016-01-07T16:20:13-05:00
     Result: OK
 
  Record ID: 47
-Created On: 2016-01-06T17:50:28-05:00
+Created On: 2016-01-07T16:00:41-05:00
     Result: OK
 
  Record ID: 48
-Created On: 2016-01-06T11:00:14-05:00
+Created On: 2016-01-06T18:00:29-05:00
     Result: OK
 
  Record ID: 49
-Created On: 2016-01-05T22:38:04-05:00
+Created On: 2016-01-06T17:50:28-05:00
     Result: OK
 
  Record ID: 50
-Created On: 2016-01-05T22:36:00-05:00
+Created On: 2016-01-06T11:00:14-05:00
     Result: OK
 
  Record ID: 51
-Created On: 2016-01-05T16:02:16-05:00
+Created On: 2016-01-05T22:38:04-05:00
     Result: OK
 
  Record ID: 52
-Created On: 2016-01-04T18:20:11-05:00
+Created On: 2016-01-05T22:36:00-05:00
     Result: OK
 
  Record ID: 53
-Created On: 2016-01-04T18:00:11-05:00
+Created On: 2016-01-05T16:02:16-05:00
     Result: OK
 
  Record ID: 54
-Created On: 2015-12-22T13:30:11-05:00
+Created On: 2016-01-04T18:20:11-05:00
     Result: OK
 
  Record ID: 55
-Created On: 2015-12-22T13:10:24-05:00
+Created On: 2016-01-04T18:00:11-05:00
     Result: OK
 
  Record ID: 56
-Created On: 2015-12-17T17:30:56-05:00
+Created On: 2015-12-22T13:30:11-05:00
     Result: OK
 
  Record ID: 57
-Created On: 2015-12-16T14:10:51-05:00
+Created On: 2015-12-22T13:10:24-05:00
     Result: OK
 
  Record ID: 58
-Created On: 2015-12-16T13:40:10-05:00
+Created On: 2015-12-17T17:30:56-05:00
     Result: OK
 
  Record ID: 59
-Created On: 2015-12-15T12:50:18-05:00
+Created On: 2015-12-16T14:10:51-05:00
     Result: OK
 
  Record ID: 60
-Created On: 2015-12-15T11:40:11-05:00
+Created On: 2015-12-16T13:40:10-05:00
     Result: OK
 
  Record ID: 61
-Created On: 2015-12-14T17:20:10-05:00
+Created On: 2015-12-15T12:50:18-05:00
     Result: OK
 
  Record ID: 62
-Created On: 2015-12-14T11:50:11-05:00
+Created On: 2015-12-15T11:40:11-05:00
     Result: OK
 
  Record ID: 63
-Created On: 2015-12-11T16:51:27-05:00
+Created On: 2015-12-14T17:20:10-05:00
     Result: OK
 
  Record ID: 64
-Created On: 2015-12-11T16:40:32-05:00
+Created On: 2015-12-14T11:50:11-05:00
     Result: OK
 
  Record ID: 65
-Created On: 2015-12-10T16:20:59-05:00
+Created On: 2015-12-11T16:51:27-05:00
     Result: OK
 
  Record ID: 66
-Created On: 2015-12-10T13:20:13-05:00
+Created On: 2015-12-11T16:40:32-05:00
     Result: OK
 
  Record ID: 67
-Created On: 2015-12-09T14:40:48-05:00
+Created On: 2015-12-10T16:20:59-05:00
     Result: OK
 
  Record ID: 68
-Created On: 2015-12-09T14:31:01-05:00
+Created On: 2015-12-10T13:20:13-05:00
     Result: OK
 
  Record ID: 69
-Created On: 2015-12-08T15:20:44-05:00
+Created On: 2015-12-09T14:40:48-05:00
     Result: OK
 
  Record ID: 70
-Created On: 2015-12-08T12:50:20-05:00
+Created On: 2015-12-09T14:31:01-05:00
     Result: OK
 
  Record ID: 71
-Created On: 2015-12-07T18:50:32-05:00
+Created On: 2015-12-08T15:20:44-05:00
     Result: OK
 
  Record ID: 72
-Created On: 2015-12-04T17:00:43-05:00
+Created On: 2015-12-08T12:50:20-05:00
     Result: OK
 
  Record ID: 73
-Created On: 2015-12-03T16:50:12-05:00
+Created On: 2015-12-07T18:50:32-05:00
     Result: OK
 
  Record ID: 74
-Created On: 2015-12-03T14:19:46-05:00
+Created On: 2015-12-04T17:00:43-05:00
     Result: OK
 
  Record ID: 75
-Created On: 2015-12-03T14:15:20-05:00
+Created On: 2015-12-03T16:50:12-05:00
     Result: OK
 
  Record ID: 76
-Created On: 2015-12-02T14:01:08-05:00
+Created On: 2015-12-03T14:19:46-05:00
     Result: OK
 
  Record ID: 77
-Created On: 2015-12-01T13:50:12-05:00
+Created On: 2015-12-03T14:15:20-05:00
     Result: OK
 
  Record ID: 78
-Created On: 2015-11-30T17:30:58-05:00
+Created On: 2015-12-02T14:01:08-05:00
     Result: OK
 
  Record ID: 79
-Created On: 2015-11-30T14:10:21-05:00
+Created On: 2015-12-01T13:50:12-05:00
     Result: OK
 
  Record ID: 80
-Created On: 2015-11-30T14:10:11-05:00
+Created On: 2015-11-30T17:30:58-05:00
 ==========================
 
-     Finish: 2016-02-01 18:08:26
-   Duration: 0:10:10
+     Finish: 2016-02-02 15:23:20
+   Duration: 0:00:41
+   Subtotal: 0:10:38
+
+TOTAL TESTS: 15
+     FAILED: 0
+TEST  START: 2016-02-02 15:12:41
+TEST FINISH: 2016-02-02 15:23:20
+TOTAL  TIME: 0:10:38
 
