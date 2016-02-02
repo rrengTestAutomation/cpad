@@ -1,8 +1,8 @@
- TEST START: 2016-02-01 17:16:49
+ TEST START: 2016-02-01 17:58:16
 
 
        Test: #1
-      Start: 2016-02-01 17:16:49
-   XML Path: <class name="test.engine.cpadTester"><methods><include name="testOrder"/></methods></class>
-     Finish: 2016-02-01 17:19:23
-   Duration: 0:02:34
+      Start: 2016-02-01 17:58:16
+   XML Path: <class name="test.engine.cpadTester4"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-01 18:08:26
+   Duration: 0:10:10

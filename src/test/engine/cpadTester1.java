@@ -39,10 +39,10 @@ public class cpadTester1 {
     
     try {               
    		// ENTRY
-   		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
-   		
+   		// String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
+   		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80";
    		combination++;
-   		function.fileWriterPrinter("\n" + "URL #" + combination + ":");
+   		function.fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
    		function.fileWriterPrinter(url);
    		
    		String path = Locators.testOutputFileDir;

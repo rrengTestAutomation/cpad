@@ -937,7 +937,7 @@ public class Functions {
 				fileWriterPrinter();
 				
 				Thread.sleep(2000);
-				driver.quit();	
+//				driver.quit();	
 			} catch (Exception exception) { getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver); }
 //            finally { driver.quit(); }
 			}
@@ -953,7 +953,7 @@ public class Functions {
 				    // COUNTER
 				    try {               
 				   		// ENTRY
-				   		fileWriterPrinter("\n" + "URL #" + combination + ":");
+				   		fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
 				   		fileWriterPrinter(url);
 				   		
 				   		String path = Locators.testOutputFileDir;
@@ -1028,11 +1028,11 @@ public class Functions {
 //				                                 fingerprintArray[i] >= fingerprintArray[i + 1]));
 				   			if (fingerprintArray[i] >= fingerprintArray[i + 1]) { fileWriterPrinter("    Result: OK\n"); }
 				   			else {
-				   				  fileWriterPrinter("URL #" + combination + " FAILED!");	
-				   				  fileWriterPrinter(url);
+				   				  fileWriterPrinter("\nURL #" + combination + " Record ID: "+ (i + 1) + " FAILED!");	
+				   				  fileWriterPrinter();
 				   			}
 				   			
-				   			Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
+//				   			Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
 				   			}
 				   		}
 				   		

@@ -46,7 +46,7 @@ public class cpadTester2 {
     	String url = Locators.URL[j];
     			
    		combination++;
-   		function.fileWriterPrinter("\n" + "URL #" + combination + ":");
+   		function.fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
    		function.fileWriterPrinter(url);
    		
    		String path = Locators.testOutputFileDir;

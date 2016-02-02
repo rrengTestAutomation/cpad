@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.engine.cpadTester">
+      <class name="test.engine.cpadTester1">
         <methods>
-          <include name="testOrder"/>
-          <include name="startTime"/>
           <include name="logClose"/>
-          <include name="logOpen"/>
+          <include name="startTime"/>
+          <include name="testOrder"/>
           <include name="endTime"/>
+          <include name="logOpen"/>
         </methods>
-      </class> <!-- test.engine.cpadTester -->
+      </class> <!-- test.engine.cpadTester1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
