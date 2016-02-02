@@ -1075,6 +1075,7 @@ public class Functions {
 		   		doc.getDocumentElement().normalize();
 
 		   		// fileWriterPrinter(path + fileName);
+		   		
 		   		fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":");
 		   		NodeList nodes = doc.getElementsByTagName(tag);
 		   		fileWriterPrinter();
@@ -1127,10 +1128,10 @@ public class Functions {
 		   			fileWriterPrinter(" Record ID: " + (i + 1));
 		   			fileWriterPrinter("Created On: " + valueArray[i]);
 		   			
-		   // TEST VALIDATION OUTPUT:
-//			  fileWriterPrinter(dateCheckArray[i]); 		
-			  fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
-			  fileWriterPrinter("Created On: " + fingerprintArray[i]);		   			
+//		         // TEST VALIDATION OUTPUT:
+//			        fileWriterPrinter(dateCheckArray[i]); 		
+//			        fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
+//			        fileWriterPrinter("Created On: " + fingerprintArray[i]);		   			
 		   			
 		   			
 		   			if (i < (nodes.getLength() - 1)) {
@@ -1139,7 +1140,18 @@ public class Functions {
 //		                                 fingerprintArray[i] >= fingerprintArray[i + 1]));
 		   			if (fingerprintArray[i] >= fingerprintArray[i + 1]) { fileWriterPrinter("    Result: OK\n"); }
 		   			else {
-		   				  fileWriterPrinter("\nURL #" + combination + " Record ID: "+ (i + 1) + " FAILED!");	
+//		   				  fileWriterPrinter("\nURL #" + combination + " Record ID: "+ (i + 1) + " FAILED!");
+		   				  fileWriterPrinter("    Result: FAILED!");
+		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), OPPOSITE THEN AS REQUIRED PER GIVEN ACCEPTANCE CRITERIA...");
+		   				  fileWriterPrinter();
+		   				  fileWriterPrinter(" Record ID: " + (i + 2));
+			   			  fileWriterPrinter("Created On: " + valueArray[i + 1]);
+			   			  
+//		         // TEST VALIDATION OUTPUT:
+//			        fileWriterPrinter(dateCheckArray[i]); 		
+//			        fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i + 1]));
+//			        fileWriterPrinter("Created On: " + fingerprintArray[i + 1]);	
+		   				  
 		   				  fileWriterPrinter();
 		   			}
 		   			
