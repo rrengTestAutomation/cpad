@@ -23,7 +23,7 @@ import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class cpadTester6 {	
+public class cpadTestIntLoop {	
 	   Functions function = new Functions();
 	   int combination = 0;
 	
@@ -129,7 +129,7 @@ public class cpadTester6 {
               if (fingerprintArray[i] >= fingerprintArray[i + 1]) { function.fileWriterPrinter("    Result: OK\n"); }
               else {
                    function.fileWriterPrinter("    Result: FAILED!");
-                   function.fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), OPPOSITE THEN AS REQUIRED PER GIVEN ACCEPTANCE CRITERIA...");
+                   function.fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...");
                    function.fileWriterPrinter();
                    function.fileWriterPrinter(" Record ID: " + (i + 2));
                    function.fileWriterPrinter("Created On: " + valueArray[i + 1]);
@@ -142,11 +142,13 @@ public class cpadTester6 {
                    function.fileWriterPrinter();
               }
               
-// Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
-              Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1],
-            		            function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, 
-            		            "    Result: FAILED\n",
-            		            fingerprintArray[i] >= fingerprintArray[i + 1]));
+              Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
+              
+//            Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1],
+//            		            function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, 
+//            		            "CURRENT RECORD IS OLDER THEN PREVIOUS...",
+//            		            (fingerprintArray[i] >= fingerprintArray[i + 1])
+//            		            ));
           	
               }
            }

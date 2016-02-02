@@ -14,8 +14,8 @@ import org.testng.annotations.BeforeSuite;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTester4 {
-	
+public class cpadEvaluation {
+	static WebDriver driver;
 	Functions function = new Functions();
 	int count = 0;
 	
@@ -30,9 +30,9 @@ public class cpadTester4 {
 		for (int i = 0; i < Locators.URL.length; i++) {
 
 		try { 
-			WebDriver driver = new FirefoxDriver();
-			function.xmlAnlyzer(driver, Locators.URL[i], i+1);
-			driver.quit();
+			driver = new FirefoxDriver();
+			function.xmlAnlyzer(driver, Locators.URL[i], i+1, false);
+//			driver.quit();
 			} catch (Exception e) { /*// TODO:  // e.printStackTrace(); */ }
 		}	
 	}
@@ -41,5 +41,5 @@ public class cpadTester4 {
 	   @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
 	   @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
 	   @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
-	// @AfterClass   public static void closeBrowsers() { driver.quit(); }
+//	   @AfterClass   public static void closeBrowsers() { driver.quit(); }
 }

@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeSuite;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTester5 {
+public class cpadTestExtLoop {
 	
 	Functions function = new Functions();
 	int combination = 0;
@@ -30,7 +30,7 @@ public class cpadTester5 {
 //		for (int i = 0; i < Locators.URL.length; i++) {
 		
 		WebDriver driver = new FirefoxDriver();
-		function.xmlTester(driver, Locators.URL[combination-1], combination);
+		function.xmlAnlyzer(driver, Locators.URL[combination-1], combination, true);
 		
 //		driver.quit();
 //		}
