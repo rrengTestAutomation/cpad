@@ -142,7 +142,12 @@ public class cpadTester6 {
                    function.fileWriterPrinter();
               }
               
-              Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
+// Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
+              Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1],
+            		            function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, 
+            		            "    Result: FAILED\n",
+            		            fingerprintArray[i] >= fingerprintArray[i + 1]));
+          	
               }
            }
            
