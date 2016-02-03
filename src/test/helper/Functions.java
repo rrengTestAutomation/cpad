@@ -21,8 +21,8 @@ import java.util.zip.InflaterInputStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.Document;
 
+import org.w3c.dom.Document;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -951,8 +951,8 @@ public class Functions {
 		/**
 		 * xml Anlyzer
 		 * @throws IOException
-		 */		 
-		public void xmlAnlyzer(WebDriver driver, String url, int combination, Boolean ifAssert) throws IOException {
+		 */
+		public boolean xmlAnlyzer(WebDriver driver, String url, int combination, Boolean ifAssert) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               
@@ -1027,6 +1027,8 @@ public class Functions {
 		   		}
 		   		}
 		   		
+		   		fileCleaner("cpad.log"); fileWriter("cpad.log", "true");
+		   		
 		   		for (int i = 0; i < nodes.getLength(); i++) {
 		   			fileWriterPrinter(" Record ID: " + (i + 1));
 		   			fileWriterPrinter("Created On: " + valueArray[i]);
@@ -1046,6 +1048,7 @@ public class Functions {
 //		   				  fileWriterPrinter("\nURL #" + combination + " Record ID: "+ (i + 1) + " FAILED!");
 		   				  fileWriterPrinter("    Result: FAILED!");
 		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...");
+		   				  fileCleaner("cpad.log"); fileWriter("cpad.log", "false");
 		   				  
 		   				  if (ifAssert) {
 		   					  fileWriterPrinter();
@@ -1067,7 +1070,12 @@ public class Functions {
 		   		
 		   		fileWriterPrinter("==========================");
 		   		fileWriterPrinter();
-		   		} catch (Exception exception) { exception.printStackTrace(); } finally { driver.quit(); }
+		   		
+		   		boolean result = Boolean.valueOf(fileScanner("cpad.log"));
+		   		fileCleaner("cpad.log");
+		   		return result;
+		   		
+		   		} catch (Exception exception) { exception.printStackTrace(); return false; } finally { driver.quit(); }
 		   }			 
 		
 }
