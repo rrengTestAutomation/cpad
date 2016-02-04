@@ -7,7 +7,7 @@
 
 <!--  <class name="org.tvo.rebuild.test.helper.UtilitiesTestHelper"></class> -->
     
-<class name="test.engine.cpadTestExtExamination"><methods><include name="testOrder"/></methods></class>
+<class name="test.engine.cpadTestExtEvaluation"><methods><include name="testOrder"/></methods></class>
 		
     </classes>
   </test>

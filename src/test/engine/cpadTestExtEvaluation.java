@@ -1,5 +1,6 @@
 package test.engine;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -19,22 +20,30 @@ public class cpadTestExtEvaluation {
 	Functions function = new Functions();
 	int count = 0;
 	
-	@Test(enabled = true, invocationCount = 1)
+	@SuppressWarnings("static-access")
+	@Test(enabled = true, invocationCount = 135)
 	public void testOrder() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
 	    count++;
-	    System.out.print("\n" + "TEST EXECUTION #" + count + ":");
-		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	    boolean result = true;
 		for (int i = 0; i < Locators.URL.length; i++) {
 
 		try { 
 			driver = new FirefoxDriver();
-			function.xmlAnlyzer(driver, Locators.URL[i], i+1, false);
-//			driver.quit();
-			} catch (Exception e) { /*// TODO:  // e.printStackTrace(); */ }
+			result = function.xmlAnlyzer(driver, Locators.URL[i], i+1, false);
+			if(!result) {
+				function.fileWriterPrinter("    Result: URL FAILED!");
+				function.fileWriterPrinter("    Reason: CONTAINS RECORDS WHICH ARE OLDER THEN THEIR PREVIOUS ONCE, WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...");
+			}
+			} catch (Exception e) { /** e.printStackTrace(); */ result = false; }
+//		finally { driver.quit(); }
+		
 		}	
+		
+		Assert.assertTrue(result, "    Result: FAILED!\n    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...");		
 	}
 
 	   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }

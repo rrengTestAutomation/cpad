@@ -1,201 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="15" passed="15">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="test-single" duration-ms="671176" started-at="2016-02-03T19:50:11Z" finished-at="2016-02-03T20:01:22Z">
+  <suite name="test-single" duration-ms="1282538" started-at="2016-02-04T20:33:11Z" finished-at="2016-02-04T20:54:34Z">
     <groups>
     </groups>
-    <test name="test-single" duration-ms="671176" started-at="2016-02-03T19:50:11Z" finished-at="2016-02-03T20:01:22Z">
-      <class name="test.engine.cpadTestExtExamination">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="logOpen" is-config="true" duration-ms="66" started-at="2016-02-03T14:50:11Z" finished-at="2016-02-03T14:50:11Z">
+    <test name="test-single" duration-ms="1282538" started-at="2016-02-04T20:33:11Z" finished-at="2016-02-04T20:54:34Z">
+      <class name="test.engine.cpadTestExtEvaluation">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="logOpen" is-config="true" duration-ms="50" started-at="2016-02-04T15:33:11Z" finished-at="2016-02-04T15:33:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="14" started-at="2016-02-03T14:50:11Z" finished-at="2016-02-03T14:50:11Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="startTime" is-config="true" duration-ms="27" started-at="2016-02-04T15:33:11Z" finished-at="2016-02-04T15:33:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="44648" started-at="2016-02-03T14:50:11Z" finished-at="2016-02-03T14:50:56Z">
+        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="testOrder" duration-ms="639748" started-at="2016-02-04T15:33:11Z" finished-at="2016-02-04T15:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-03T14:50:56Z" finished-at="2016-02-03T14:50:56Z">
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="endTime" is-config="true" duration-ms="2" started-at="2016-02-04T15:43:51Z" finished-at="2016-02-04T15:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="53919" started-at="2016-02-03T14:50:56Z" finished-at="2016-02-03T14:51:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-02-03T14:50:56Z" finished-at="2016-02-03T14:50:56Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="startTime" is-config="true" duration-ms="1" started-at="2016-02-04T15:43:51Z" finished-at="2016-02-04T15:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="10" started-at="2016-02-03T14:51:50Z" finished-at="2016-02-03T14:51:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="5" started-at="2016-02-03T14:51:50Z" finished-at="2016-02-03T14:51:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="44305" started-at="2016-02-03T14:51:50Z" finished-at="2016-02-03T14:52:34Z">
+        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="testOrder" duration-ms="642719" started-at="2016-02-04T15:43:51Z" finished-at="2016-02-04T15:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="15" started-at="2016-02-03T14:52:34Z" finished-at="2016-02-03T14:52:34Z">
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="endTime" is-config="true" duration-ms="7" started-at="2016-02-04T15:54:34Z" finished-at="2016-02-04T15:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="5" started-at="2016-02-03T14:52:34Z" finished-at="2016-02-03T14:52:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="53425" started-at="2016-02-03T14:52:34Z" finished-at="2016-02-03T14:53:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="14" started-at="2016-02-03T14:53:28Z" finished-at="2016-02-03T14:53:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="6" started-at="2016-02-03T14:53:28Z" finished-at="2016-02-03T14:53:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="43210" started-at="2016-02-03T14:53:28Z" finished-at="2016-02-03T14:54:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="33" started-at="2016-02-03T14:54:11Z" finished-at="2016-02-03T14:54:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="3" started-at="2016-02-03T14:54:11Z" finished-at="2016-02-03T14:54:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="45197" started-at="2016-02-03T14:54:11Z" finished-at="2016-02-03T14:54:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="8" started-at="2016-02-03T14:54:56Z" finished-at="2016-02-03T14:54:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="7" started-at="2016-02-03T14:54:56Z" finished-at="2016-02-03T14:54:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="43548" started-at="2016-02-03T14:54:56Z" finished-at="2016-02-03T14:55:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="10" started-at="2016-02-03T14:55:40Z" finished-at="2016-02-03T14:55:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="41909" started-at="2016-02-03T14:55:40Z" finished-at="2016-02-03T14:56:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-02-03T14:55:40Z" finished-at="2016-02-03T14:55:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="11" started-at="2016-02-03T14:56:22Z" finished-at="2016-02-03T14:56:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="3" started-at="2016-02-03T14:56:22Z" finished-at="2016-02-03T14:56:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="42606" started-at="2016-02-03T14:56:22Z" finished-at="2016-02-03T14:57:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="3" started-at="2016-02-03T14:57:04Z" finished-at="2016-02-03T14:57:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="2" started-at="2016-02-03T14:57:04Z" finished-at="2016-02-03T14:57:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="44066" started-at="2016-02-03T14:57:04Z" finished-at="2016-02-03T14:57:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="20" started-at="2016-02-03T14:57:48Z" finished-at="2016-02-03T14:57:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="3" started-at="2016-02-03T14:57:48Z" finished-at="2016-02-03T14:57:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="42339" started-at="2016-02-03T14:57:48Z" finished-at="2016-02-03T14:58:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="10" started-at="2016-02-03T14:58:31Z" finished-at="2016-02-03T14:58:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="10" started-at="2016-02-03T14:58:31Z" finished-at="2016-02-03T14:58:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="41953" started-at="2016-02-03T14:58:31Z" finished-at="2016-02-03T14:59:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="4" started-at="2016-02-03T14:59:13Z" finished-at="2016-02-03T14:59:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="1" started-at="2016-02-03T14:59:13Z" finished-at="2016-02-03T14:59:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="42816" started-at="2016-02-03T14:59:13Z" finished-at="2016-02-03T14:59:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="3" started-at="2016-02-03T14:59:56Z" finished-at="2016-02-03T14:59:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="1" started-at="2016-02-03T14:59:56Z" finished-at="2016-02-03T14:59:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="44002" started-at="2016-02-03T14:59:56Z" finished-at="2016-02-03T15:00:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-03T15:00:40Z" finished-at="2016-02-03T15:00:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-02-03T15:00:40Z" finished-at="2016-02-03T15:00:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testOrder()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="testOrder" duration-ms="42852" started-at="2016-02-03T15:00:40Z" finished-at="2016-02-03T15:01:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-03T15:01:22Z" finished-at="2016-02-03T15:01:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.engine.cpadTestExtExamination@19bb089b]" name="logClose" is-config="true" duration-ms="15" started-at="2016-02-03T15:01:23Z" finished-at="2016-02-03T15:01:23Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.engine.cpadTestExtEvaluation@19bb089b]" name="logClose" is-config="true" duration-ms="5" started-at="2016-02-04T15:54:34Z" finished-at="2016-02-04T15:54:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->
-      </class> <!-- test.engine.cpadTestExtExamination -->
+      </class> <!-- test.engine.cpadTestExtEvaluation -->
     </test> <!-- test-single -->
   </suite> <!-- test-single -->
 </testng-results>
