@@ -4,3 +4,9 @@
        Test: #1
       Start: 2016-02-04 16:09:19
    XML Path: <class name="test.engine.cpadTestExtEvaluation"><methods><include name="testOrder"/></methods></class>
+     Finish: 2016-02-04 16:20:10
+   Duration: 0:10:50
+
+       Test: #2
+      Start: 2016-02-04 16:20:10
+   XML Path: <class name="test.engine.cpadTestExtEvaluation"><methods><include name="testOrder"/></methods></class>
