@@ -1304,7 +1304,16 @@ public class Functions {
 			    Node node = (Node) nodes.item(0);
 			    return node.getNodeValue();
 			 }
-			 
+		
+		/**
+		 * Compare two long values
+		 * @throws IOException
+		 */
+		public boolean compareLong(long firstLong, long secondLong) throws IOException {
+			try { return (firstLong >= secondLong); }
+			catch (Exception e) { return false; }
+			}
+		
 		/**
 		 * xml Anlyzer
 		 * @throws IOException
@@ -1397,7 +1406,7 @@ public class Functions {
 		   			
 		   			
 		   			if (i < (nodes.getLength() - 1)) {
-		   				boolean assertion = (fingerprintArray[i] < fingerprintArray[i + 1]);
+		   				boolean assertion = compareLong(fingerprintArray[i], fingerprintArray[i + 1]);
 		   				
 //		   		    Assert.assertTrue(assertion,
 //		                              getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "Out of order!",

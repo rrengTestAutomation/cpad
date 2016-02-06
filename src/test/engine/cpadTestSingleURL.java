@@ -24,7 +24,7 @@ import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class cpadTestURL {
+public class cpadTestSingleURL {
       static WebDriver driver;
       int combination = 0;
 	
@@ -140,7 +140,7 @@ public class cpadTestURL {
 //         function.fileWriterPrinter("Created On: " + fingerprintArray[i]);             
                       
            if (i < (nodes.getLength() - 1)) {
-        	  boolean assertion = (fingerprintArray[i] < fingerprintArray[i + 1]);
+        	  boolean assertion = function.compareLong(fingerprintArray[i], fingerprintArray[i + 1]);
         	  
            if (assertion) { function.fileWriterPrinter("    Result: OK\n"); }
            else {
@@ -176,11 +176,11 @@ public class cpadTestURL {
    		function.fileCleaner("cpad.log");
    		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 		              // "CPAD \"CREATED ON\" RECORDS ARE OUT OF DESC ORDER!",
-   				         "Found ''Created On'' Records Out of Order!",
+   				         "Out Of Order ''Created On'' Records found!",
 		                  result));
    		
    		} catch (Exception exception) { // Functions.getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver);
-   		} finally{ cpadTestURL.closeBrowsers(); }
+   		} finally{ cpadTestSingleURL.closeBrowsers(); }
     }
    
 	@BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }

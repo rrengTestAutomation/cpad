@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeSuite;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTestURLsAllInOne{
+public class cpadTestComboURL{
 	static WebDriver driver;
 	Functions function = new Functions();
 	int count = 0;
@@ -35,12 +35,20 @@ public class cpadTestURLsAllInOne{
 			driver = function.getServerName(driver);
 			result = function.xmlAnlyzer(driver, Locators.URL[i], i+1, false);
 			
+			// SCREENSHOT-CAPABLE ASSERTION:
+			if (i == Locators.URL.length - 1) {
+				Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+		                         "TEST EXECUTION # " + count + " - Out Of Order ''Created On'' Records found!",
+		                          result));
+				}
+			
 			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { driver.quit(); }
 		}
 		
-		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
-		                 "TEST EXECUTION #" + count + "  - Out Of Order ''Created On'' Records found!",
-		                  result));
+		// SCREENSHOT-UNABLED ASSERTION:
+//		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+//		                 "TEST EXECUTION #" + count + "  - Out Of Order ''Created On'' Records found!",
+//		                  result));
 		}
 
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
