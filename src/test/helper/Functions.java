@@ -1,40 +1,159 @@
 package test.helper;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.Inflater;
-import java.util.zip.InflaterInputStream;
-
+/** ORIGINAL IMPORT */
+// import java.io.BufferedReader;
+// import java.io.File;
+// import java.io.FileWriter;
+// import java.io.InputStreamReader;
+// import java.io.IOException;
+// import java.io.PrintWriter;
+// import java.net.HttpURLConnection;
+// import java.net.MalformedURLException;
+// import java.net.URL;
+// import java.net.URLConnection;
+// import java.text.DateFormat;
+// import java.text.ParseException;
+// import java.text.SimpleDateFormat;
+// import java.util.concurrent.TimeUnit;
+// import java.util.Date;
+// import java.util.Scanner;
+// import java.util.zip.GZIPInputStream;
+// import java.util.zip.Inflater;
+// import java.util.zip.InflaterInputStream;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+// import org.apache.commons.io.FileUtils;
+// import org.openqa.selenium.chrome.ChromeDriver;
+// import org.openqa.selenium.firefox.FirefoxDriver;
+// import org.openqa.selenium.OutputType;
+// import org.openqa.selenium.TakesScreenshot;
+// import org.openqa.selenium.WebDriver;
+// import org.testng.Assert;
 
 import org.w3c.dom.Document;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+/** HELPER IMPORT */
+import java.awt.AWTException;
+import java.awt.Component;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.Toolkit;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.text.DateFormat;
+import java.text.DateFormatSymbols;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Properties;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TimeZone;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.Inflater;
+import java.util.zip.InflaterInputStream;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+//import javax.mail.BodyPart;
+//import javax.mail.internet.AddressException;
+//import javax.mail.internet.InternetAddress;
+//import javax.mail.internet.MimeBodyPart;
+//import javax.mail.internet.MimeMessage;
+//import javax.mail.internet.MimeMultipart;
+//import javax.mail.Message;
+//import javax.mail.MessagingException;
+//import javax.mail.Multipart;
+//import javax.mail.Session;
+//import javax.mail.Transport;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.internal.Coordinates;
+import org.openqa.selenium.internal.Locatable;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.support.pagefactory.ByAll;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.Assert;
+
+/** LOCATORS */
 import test.common.Locators;
 
 public class Functions {
+	WebDriver driverHelper;
+	
+	public WebDriver getServerName(WebDriver driver) throws IllegalArgumentException, MalformedURLException{
+		try{
+			String remoteOrLocal = System.getProperty("Server");
+			String browser = System.getProperty("Browser");
+			if (remoteOrLocal.equalsIgnoreCase("local") && browser.equalsIgnoreCase("firefox")){
+				driver = new FirefoxDriver();
+			}
+			else if (remoteOrLocal.equalsIgnoreCase("remote") && browser.equalsIgnoreCase("firefox")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.firefox());
+			}
+			else if (remoteOrLocal.equalsIgnoreCase("local") && browser.equalsIgnoreCase("chrome")){
+				System.setProperty("webdriver.chrome.driver", Locators.driverFileDir + "chromedriver.exe");
+				driver = new ChromeDriver();
+			}
+			else if (remoteOrLocal.equalsIgnoreCase("remote") && browser.equalsIgnoreCase("chrome")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.chrome());
+			}
+			else
+				throw new IllegalArgumentException("input type not supported! ");
+			return driver;
+		}
+		catch(WebDriverException e){
+			String browser = System.getProperty("Browser");
+			if (browser.equalsIgnoreCase("firefox")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.firefox());
+			}
+			else if (browser.equalsIgnoreCase("chrome")){
+				driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), DesiredCapabilities.chrome());
+			}
+			return driver;
+		}
+	}
 	
     /** 
      * Print XML path 
@@ -205,6 +324,242 @@ public class Functions {
 	 // System Out Print Line:
 	    if (ifPrint) { fileWriterPrinter(printLine); }
 	}
+    
+    /** Returns a String of n spaces long */
+	public String padSpace(int n) {
+		if (n < 0) { n = 0; }
+		String s = "";
+		for (int i = 0; i < n; i++) {
+			s = s + " ";
+		}
+		return s;
+	}
+
+    /** Gets a String and returs it with added n leading spaces (to left) */
+	public String padLeft(String s, int n) {
+			if (n < 0) { n = 0; }
+			if (s.equals(null)) { s = ""; }
+			for (int i = 0; i < n; i++) {
+				s = " " + s;
+			}
+		return s;
+		}
+	
+    /** Gets a String and returs it with added n spaces to right */
+	public String padRight(String s, int n) {
+		if (n < 0) { n = 0; }
+		if (s.equals(null)) { s = ""; }
+		for (int i = 0; i < n; i++) {
+			s = s + " ";
+		}
+		return s;
+	}
+	
+    /**
+	 * Detects if the entered Object is numeric, and if yes: 
+	 * ---> returns String value of #.### Format;
+	 * ---> adds leading Spaces to match in-row of "###.###";
+	 */
+	public String padNum(Object o) {
+	double d = 0;
+	if (o instanceof Double)  { d = Double.parseDouble((String) o.toString()); }
+	if (o instanceof String)  { try { d = Double.parseDouble((String) o); }  catch(NumberFormatException nfe) { } }
+	if (o instanceof Integer) { d = Double.parseDouble((String) o.toString()); }
+	if (o instanceof Float)   { d = new Double(o.toString()); }
+	String pad = "";
+	if (d < 100) { pad = " ";  }
+	if (d < 10 ) { pad = "  "; }
+	String s = pad + (new DecimalFormat("0.000").format(d)).toString();
+	return s;
+	}
+    
+    // ################# WAIT UNTIL URL CHANGE START #################
+				public void waitUntilUrl(WebDriver driver, String previousURL) throws NumberFormatException, IOException {
+					long start = System.currentTimeMillis();
+					final String oldURL = previousURL.toLowerCase();
+					WebDriverWait wait = new WebDriverWait(driver, 30);
+					ExpectedCondition<Boolean> e = new ExpectedCondition<Boolean>() {
+				        public Boolean apply(WebDriver driver) {
+				        return (driver.getCurrentUrl() != oldURL);
+				        }
+				    };
+				    wait.until(e);
+				    fileWriterPrinter("Waiting time for New URL:" + padSpace(58 - "Waiting time for New URL:".length()) + waitTimeConroller(start, 30, driver.getCurrentUrl()) + " sec");
+				}
+				
+				public void waitUntilUrl(WebDriver driver, int seconds, String previousURL) throws NumberFormatException, IOException {
+					long start = System.currentTimeMillis();
+					final String oldURL = previousURL.toLowerCase();
+					fileWriterPrinter("\nOld URL: " + oldURL);
+					WebDriverWait wait = new WebDriverWait(driver, seconds);
+					ExpectedCondition<Boolean> e = new ExpectedCondition<Boolean>() {
+				        public Boolean apply(WebDriver driver) {
+				        return (driver.getCurrentUrl() != oldURL);
+				        }
+				    };
+				    wait.until(e);
+				    fileWriterPrinter("New URL: " + driver.getCurrentUrl());
+				    fileWriterPrinter("Waiting time for New URL:" + padSpace(58 - "Waiting time for New URL:".length()) + waitTimeConroller(start, seconds, driver.getCurrentUrl()) + " sec");
+				}
+				
+				public void waitUntilUrl(WebDriver driver, int seconds, String previousURL, Boolean ifPrompt) throws NumberFormatException, IOException {
+					long start = System.currentTimeMillis();
+					final String oldURL = previousURL.toLowerCase();
+					if (ifPrompt) { fileWriterPrinter("\nOld URL: " + oldURL); }
+					WebDriverWait wait = new WebDriverWait(driver, seconds);
+					ExpectedCondition<Boolean> e = new ExpectedCondition<Boolean>() {
+				        public Boolean apply(WebDriver driver) {
+				        return (driver.getCurrentUrl() != oldURL);
+				        }
+				    };
+				    wait.until(e);
+				    if (ifPrompt) { 
+				        fileWriterPrinter("New URL: " + driver.getCurrentUrl());
+				        fileWriterPrinter("Waiting time for New URL:" + padSpace(58 - "Waiting time for New URL:".length()) + waitTimeConroller(start, seconds, driver.getCurrentUrl()) + " sec");
+				    }
+				}
+	// ################# WAIT UNTIL URL CHANGE END #################
+				
+	// ################# WAIT TIME CALCULATOR ################  
+				/** 
+				 * Calculates waiting time from "START" till now;
+				 * Returnd difference as Double Milliseconds;
+				 */
+				public Double waitTimeCalculatior(long start) {
+					double difference = (System.currentTimeMillis() - start);
+					return difference;
+				}
+				
+				/** 
+				 * Calculates waiting time from "START" till now;
+				 * Returnd difference as Double Seconds;
+				 * @throws IOException
+				 * @throws NumberFormatException 
+				 */
+				public String waitTimeConroller(long start) throws NumberFormatException, IOException {
+					double sec = waitTimeCalculatior(start)/1000;
+					long testStart = convertStringToLong(fileScanner("start.time"));
+					int limit = 0;
+					
+					if ((sec >= 15) && (sec < 30)) { limit = 15; }
+					if ((sec >= 30) && (sec < 60)) { limit = 30; }
+					if  (sec >= 60)                { limit = 60; }
+					
+					if (sec >= 15) {
+					fileWriterPrinter("Waiting time exceeded limit of " + new DecimalFormat("0.000").format(limit) + " seconds!");
+					fileWriter("wait.log", "       Test: #" + fileScanner("test.num"));	
+					fileWriter("wait.log", "    Started: "  + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(testStart));
+					fileWriter("wait.log", "      Event: "  + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(start));
+					fileWriter("wait.log", "   XML Path: "  + fileScanner("xml.path"));
+					fileWriter("wait.log", "             Waiting time is " + sec + " sec, which exceeds limit of " + new DecimalFormat("0.000").format(limit) + " seconds!");
+					fileWriterPrinter("wait.log", "");
+					}
+					return padNum(sec);
+				}
+				
+				/** 
+				 * Calculates waiting time from "START" till now;
+				 * Returnd difference as Double Seconds;
+				 * @throws IOException
+				 * @throws NumberFormatException 
+				 */
+				public String waitTimeConroller(long start, String elementName) throws NumberFormatException, IOException {
+					double sec = waitTimeCalculatior(start)/1000;
+					long testStart = convertStringToLong(fileScanner("start.time"));
+					int limit = 0;
+					
+					if ((sec >= 15) && (sec < 30)) { limit = 15; }
+					if ((sec >= 30) && (sec < 60)) { limit = 30; }
+					if  (sec >= 60)                { limit = 60; }
+					
+					if (sec >= 15) {
+					fileWriterPrinter("Waiting time exceeded limit of " + new DecimalFormat("0.000").format(limit) + " seconds!");
+					fileWriter("wait.log", "       Test: #" + fileScanner("test.num"));	
+					fileWriter("wait.log", "    Started: "  + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(testStart));
+					fileWriter("wait.log", "      Event: "  + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(start));
+					fileWriter("wait.log", "   XML Path: "  + fileScanner("xml.path"));
+					fileWriter("wait.log", "             Waiting " + sec + " sec for " + elementName + ", which exceeds limit of " + new DecimalFormat("0.000").format(limit) + " seconds!");
+					fileWriterPrinter("wait.log", "");
+					}
+					return padNum(sec);
+				}
+				
+				/** 
+				 * Calculates waiting time from "START" till now;
+				 * Returnd difference as Double Seconds;
+				 * @throws IOException
+				 * @throws NumberFormatException 
+				 */
+				public String waitTimeConroller(long start, int limit, String elementName) throws NumberFormatException, IOException {
+					double sec = waitTimeCalculatior(start)/1000;
+					long testStart = convertStringToLong(fileScanner("start.time"));
+					
+					if ((sec >= limit) && (sec >= 15)) {
+					fileWriterPrinter("Waiting time exceeded limit of " + new DecimalFormat("0.000").format(limit) + " seconds!");
+					fileWriter("wait.log", "       Test: #" + fileScanner("test.num"));	
+					fileWriter("wait.log", "    Started: "  + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(testStart));
+					fileWriter("wait.log", "      Event: "  + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(start));
+					fileWriter("wait.log", "   XML Path: "  + fileScanner("xml.path"));
+					fileWriter("wait.log", "             Waiting " + sec + " sec for " + elementName + ", which exceeds limit of " + new DecimalFormat("0.000").format(limit) + " seconds!");
+					fileWriterPrinter("wait.log", "");
+					}
+					return padNum(sec);
+				}
+		// ################# TIME CALCULATOR END ##########################				
+				
+	// ################# GET URL WAIT UNTIL CHANGE START ################							
+	public void getUrlWaitUntil(WebDriver driver, int seconds, String newURL) throws NumberFormatException, IOException {
+		final String previousURL = driver.getCurrentUrl();
+		final String URL = newURL.toLowerCase();
+		
+	// First (initial) connection:
+		int i = 1;
+		int s = 1;
+	    // driver.get(URL);
+	    // waitUntilUrl(driver, seconds, previousURL);
+		long start = System.currentTimeMillis();
+		
+	 // "Try Again" connection manager, if required (up to 10 times):					
+		String xpathTryAgainButton = "//*[contains(@id,'error')][@id='errorTryAgain'][text()='Try Again']";					
+		// List<WebElement> list; int s = list.size(); int s = driver.findElements(By.xpath(xpathTryAgainButton)).size();					
+		while ((s > 0) && (i <= 10)) {
+			   driver.get(URL);
+			   waitUntilUrl(driver, seconds, previousURL);					   
+			   s = driver.findElements(By.xpath(xpathTryAgainButton)).size();
+			   if (s > 0) { i = i + 1; }
+		}	
+		if (i > 1) {
+		            fileWriterPrinter("Try Again   attempts: " + i);
+	                fileWriterPrinter("Try Again time spent: " + waitTimeConroller(start, seconds, newURL) + " sec\n");
+		            }	
+	}
+	
+	public void getUrlWaitUntil(WebDriver driver, int seconds, String newURL, Boolean ifPrompt) throws NumberFormatException, IOException {
+		final String previousURL = driver.getCurrentUrl();
+		final String URL = newURL.toLowerCase();
+		
+	// First (initial) connection:
+		int i = 1;
+		int s = 1;
+	    // driver.get(URL);
+	    // waitUntilUrl(driver, seconds, previousURL);
+		long start = System.currentTimeMillis();
+		
+	 // "Try Again" connection manager, if required (up to 10 times):					
+		String xpathTryAgainButton = "//*[contains(@id,'error')][@id='errorTryAgain'][text()='Try Again']";					
+		// List<WebElement> list; int s = list.size(); int s = driver.findElements(By.xpath(xpathTryAgainButton)).size();					
+		while ((s > 0) && (i <= 10)) {
+			   driver.get(URL);
+			   waitUntilUrl(driver, seconds, previousURL, ifPrompt);					   
+			   s = driver.findElements(By.xpath(xpathTryAgainButton)).size();
+			   if (s > 0) { i = i + 1; }
+		}	
+		if (i > 1) {
+		            fileWriterPrinter("Try Again   attempts: " + i);
+	                fileWriterPrinter("Try Again time spent: " + waitTimeConroller(start, seconds, newURL) + " sec\n");
+		            }	
+	}
+// ################# GET URL WAIT UNTIL CHANGE END #################
     
 	public String getUrlSourcePage(String url) throws IOException {
         URL URL = new URL(url);
@@ -807,6 +1162,7 @@ public class Functions {
 		 * create file example: File f = new File(<full path string>); f.createNewFile();
 		 * @throws IOException
 		 */
+//		@BeforeSuite
 		public void logOpen() throws IOException {
 		 // Initialization:
 			fileCleaner("failed.log" );
@@ -833,6 +1189,7 @@ public class Functions {
 		 * @throws IOException
 		 * @throws Exception 
          */
+//		@AfterSuite
 		public void logClose() throws IOException {
 			long finish = System.currentTimeMillis();
 			String time = getCurrentDateTimeFull();
@@ -1040,14 +1397,17 @@ public class Functions {
 		   			
 		   			
 		   			if (i < (nodes.getLength() - 1)) {
-//		   		    Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1],
-//		                                 UtilitiesTestHelper.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "Out of order!",
-//		                                 fingerprintArray[i] >= fingerprintArray[i + 1]));
-		   			if (fingerprintArray[i] >= fingerprintArray[i + 1]) { fileWriterPrinter("    Result: OK\n"); }
+		   				boolean assertion = (fingerprintArray[i] < fingerprintArray[i + 1]);
+		   				
+//		   		    Assert.assertTrue(assertion,
+//		                              getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "Out of order!",
+//		                              assertion));
+		   				
+		   			if (assertion) { fileWriterPrinter("    Result: OK\n"); }
 		   			else {
 //		   				  fileWriterPrinter("\nURL #" + combination + " Record ID: "+ (i + 1) + " FAILED!");
 		   				  fileWriterPrinter("    Result: FAILED!");
-		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...");
+		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...");
 		   				  fileCleaner("cpad.log"); fileWriter("cpad.log", "false");
 		   				  
 		   				  if (ifAssert) {
@@ -1064,7 +1424,10 @@ public class Functions {
 		   				  fileWriterPrinter();
 		   			}
 		   			
-		   			if (ifAssert) { Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n"); }
+		   			if (ifAssert) { 
+		   				Assert.assertTrue(assertion, "    Result: FAILED\n");
+		   				}
+		   			
 		   			}
 		   		}
 		   		
@@ -1075,7 +1438,7 @@ public class Functions {
 		   		fileCleaner("cpad.log");
 		   		return result;
 		   		
-		   		} catch (Exception exception) { exception.printStackTrace(); return false; } finally { driver.quit(); }
+		   		} catch (Exception exception) { /**exception.printStackTrace();*/ return false; } // finally { driver.quit(); }
 		   }			 
 		
 }

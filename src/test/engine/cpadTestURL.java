@@ -7,7 +7,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+// import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -18,14 +18,14 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+// import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class cpadTestSingleURL {
-      static WebDriver driver = new FirefoxDriver();
+public class cpadTestURL {
+      static WebDriver driver;
       int combination = 0;
 	
 	
@@ -34,17 +34,27 @@ public class cpadTestSingleURL {
 	 */
     @Test(enabled = true, invocationCount = 1)
 	public void testOrder() throws IOException {
-    Functions function = new Functions(); function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	
+    Functions function = new Functions();
+    function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	
     
     // COUNTER
     combination++;
-    System.out.print("\n" + "TEST EXECUTION #" + combination + ":");    
-    try {               
+    System.out.print("\n" + "TEST EXECUTION #" + combination + ":" + "\n");    
+    try {
+    	
+        // driver = new FirefoxDriver();
+    	
+    	// System.setProperty("webdriver.chrome.driver", Locators.driverFileDir + "chromedriver.exe");
+        // driver = new ChromeDriver();
+        
+    	driver = function.getServerName(driver);
+    	
+    	
    	 // ENTRY
    	 // String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
    		String url = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80";
-   		combination++;
-   		function.fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
+   		
+   		function.fileWriterPrinter("\n" + "URL COMBINATION:");
    		function.fileWriterPrinter(url);
    		
    		String path = Locators.testOutputFileDir;
@@ -118,6 +128,8 @@ public class cpadTestSingleURL {
         }
         }
         
+        function.fileCleaner("cpad.log"); function.fileWriter("cpad.log", "true");
+        
         for (int i = 0; i < nodes.getLength(); i++) {
            function.fileWriterPrinter(" Record ID: " + (i + 1));
            function.fileWriterPrinter("Created On: " + valueArray[i]);
@@ -128,41 +140,53 @@ public class cpadTestSingleURL {
 //         function.fileWriterPrinter("Created On: " + fingerprintArray[i]);             
                       
            if (i < (nodes.getLength() - 1)) {
-           if (fingerprintArray[i] >= fingerprintArray[i + 1]) { function.fileWriterPrinter("    Result: OK\n"); }
+        	  boolean assertion = (fingerprintArray[i] < fingerprintArray[i + 1]);
+        	  
+           if (assertion) { function.fileWriterPrinter("    Result: OK\n"); }
            else {
                 function.fileWriterPrinter("    Result: FAILED!");
-                function.fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE (SHOWN BELOW), WHICH IS OPPOSITE THEN REQUIRED AS PER GIVEN ACCEPTANCE CRITERIA...");
-                function.fileWriterPrinter();
-                function.fileWriterPrinter(" Record ID: " + (i + 2));
-                function.fileWriterPrinter("Created On: " + valueArray[i + 1]);
+                function.fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...");
+                function.fileCleaner("cpad.log"); function.fileWriter("cpad.log", "false");
                 
-//      // TEST VALIDATION OUTPUT:
-//         function.fileWriterPrinter(dateCheckArray[i]);      
-//         function.fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i + 1]));
-//         function.fileWriterPrinter("Created On: " + fingerprintArray[i + 1]); 
+//              function.fileWriterPrinter();
+//              function.fileWriterPrinter(" Record ID: " + (i + 2));
+//              function.fileWriterPrinter("Created On: " + valueArray[i + 1]);
+                
+//              // TEST VALIDATION OUTPUT:
+//              function.fileWriterPrinter(dateCheckArray[i]);      
+//              function.fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i + 1]));
+//              function.fileWriterPrinter("Created On: " + fingerprintArray[i + 1]); 
                 
                 function.fileWriterPrinter();
            }
            
-//         Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1], "    Result: FAILED\n");
-           
-           Assert.assertTrue(fingerprintArray[i] >= fingerprintArray[i + 1],
-         		            function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, 
-         		            "CURRENT RECORD IS OLDER THEN PREVIOUS...",
-         		            (fingerprintArray[i] >= fingerprintArray[i + 1])
-         		            ));
+//         Assert.assertTrue(assertion,
+//         		            function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver, 
+//         		            "CURRENT RECORD IS OLDER THEN PREVIOUS...",
+//         		            assertion
+//         		            ));
        	
            }
         }
         
         function.fileWriterPrinter("==========================");
    		function.fileWriterPrinter();
-   		} catch (Exception exception) { exception.printStackTrace(); }
-   }
+   		
+   		boolean result = Boolean.valueOf(function.fileScanner("cpad.log"));
+   		function.fileCleaner("cpad.log");
+   		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+		              // "CPAD \"CREATED ON\" RECORDS ARE OUT OF DESC ORDER!",
+   				         "Found ''Created On'' Records Out of Order!",
+		                  result));
+   		
+   		} catch (Exception exception) { // Functions.getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver);
+   		} finally{ cpadTestURL.closeBrowsers(); }
+    }
    
-   @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
-   @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
-   @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
-   @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
-   @AfterClass   public static void closeBrowsers() { driver.quit(); }
+	@BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
+	@AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
+	@BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
+	@AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
+	@AfterMethod  public static void closeBrowsers() { driver.quit(); }
+//  @AfterClass   public static void closeBrowsers() { driver.quit(); }
 }

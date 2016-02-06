@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [test-single]">
+  <test name="test-single(failed)">
     <classes>
-      <class name="test.engine.cpadTestExtLoop">
+      <class name="test.engine.cpadTestSingleURL">
         <methods>
           <include name="logClose"/>
-          <include name="logOpen"/>
-          <include name="testOrder"/>
           <include name="startTime"/>
           <include name="endTime"/>
+          <include name="testOrder"/>
+          <include name="closeBrowsers"/>
+          <include name="logOpen"/>
         </methods>
-      </class> <!-- test.engine.cpadTestExtLoop -->
+      </class> <!-- test.engine.cpadTestSingleURL -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- test-single(failed) -->
+</suite> <!-- Failed suite [test-single] -->
