@@ -39,7 +39,7 @@ public class cpadTestURLsAllInOne{
 		}
 		
 		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
-		                 "TEST EXECUTION #" + count + "  - found ''Created On'' Records Out of Order!",
+		                 "TEST EXECUTION #" + count + "  - Out Of Order ''Created On'' Records found!",
 		                  result));
 		}
 

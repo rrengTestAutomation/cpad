@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-test-single">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-test-single" title="test.engine.cpadTestSingleURL" hash-for-method="testOrder">testOrder</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-test-single" title="test.engine.cpadTestURLsAllInOne" hash-for-method="testOrder">testOrder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-test-single -->
@@ -119,7 +119,7 @@
           <div class="suite-test-single-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test.engine.cpadTestSingleURL</span>
+              <span class="class-name">test.engine.cpadTestURLsAllInOne</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -127,19 +127,19 @@
                   <a name="testOrder">
                   </a> <!-- testOrder -->
                   <span class="method-name">testOrder</span>
-                  <div class="stack-trace">java.lang.AssertionError: 
-Error Cause: ---&gt; Found Created On Records are Out of Order!
-   Location: ---&gt; test.engine\cpadTestSingleURL\testOrder, line # 177
-   Expected: ---&gt; true
-     Actual: ---&gt; false
-   Detected: ---&gt; 2016-02-05 19:42:10
-    Runtime: ---&gt; 0:00:42
-   Subtotal: ---&gt; 0:00:42
-&lt;class name=&quot;test.engine.cpadTestSingleURL&quot;&gt;&lt;methods&gt;&lt;include name=&quot;testOrder&quot;/&gt;&lt;/methods&gt;&lt;/class&gt;
-
-Stack Traces: expected [true] but found [false]
-	at test.engine.cpadTestSingleURL.testOrder(cpadTestSingleURL.java:177)
-... Removed 27 stack frames
+                  <div class="stack-trace">org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;2.45.0&apos;, revision: &apos;32a636c&apos;, time: &apos;2015-03-05 22:01:35&apos;
+System info: host: &apos;WIN-K1RO6HNCMPU&apos;, ip: &apos;192.168.126.129&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_72&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:324)
+	at test.helper.Functions.getScreenShot(Functions.java:963)
+	at test.helper.Functions.getAssertTrue(Functions.java:781)
+	at test.engine.cpadTestURLsAllInOne.testOrder(cpadTestURLsAllInOne.java:41)
+... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -157,11 +157,11 @@ Stack Traces: expected [true] but found [false]
 &lt;suite name=&quot;test-single&quot;&gt;
   &lt;test name=&quot;test-single&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.engine.cpadTestSingleURL&quot;&gt;
+      &lt;class name=&quot;test.engine.cpadTestURLsAllInOne&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;testOrder&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.engine.cpadTestSingleURL --&gt;
+      &lt;/class&gt; &lt;!-- test.engine.cpadTestURLsAllInOne --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- test-single --&gt;
 &lt;/suite&gt; &lt;!-- test-single --&gt;
@@ -204,13 +204,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testOrder')
-data.setCell(0, 2, 'test.engine.cpadTestSingleURL')
-data.setCell(0, 3, 43929);
+data.setCell(0, 2, 'test.engine.cpadTestURLsAllInOne')
+data.setCell(0, 3, 628234);
 window.suiteTableData['test-single']= { tableData: data, tableDiv: 'times-div-test-single'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 10 minutes</span>
               <div id="times-div-test-single">
               </div> <!-- times-div-test-single -->
             </div> <!-- times-div -->
@@ -236,32 +236,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.engine.cpadTestSingleURL</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.engine.cpadTestURLsAllInOne</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">logOpen</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startTime</span>
-                <span class="method-start">106 ms</span>
+                <span class="method-start">58 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testOrder</span>
-                <span class="method-start">116 ms</span>
+                <span class="method-start">95 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeBrowsers</span>
-                <span class="method-start">44060 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
                 <span class="method-name">endTime</span>
-                <span class="method-start">44060 ms</span>
+                <span class="method-start">628347 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">logClose</span>
-                <span class="method-start">44095 ms</span>
+                <span class="method-start">628388 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

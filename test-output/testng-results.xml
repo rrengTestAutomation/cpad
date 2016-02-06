@@ -2,50 +2,40 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="test-single" duration-ms="43978" started-at="2016-02-06T00:41:28Z" finished-at="2016-02-06T00:42:12Z">
+  <suite name="test-single" duration-ms="628304" started-at="2016-02-06T01:12:58Z" finished-at="2016-02-06T01:23:27Z">
     <groups>
     </groups>
-    <test name="test-single" duration-ms="43978" started-at="2016-02-06T00:41:28Z" finished-at="2016-02-06T00:42:12Z">
-      <class name="test.engine.cpadTestSingleURL">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.engine.cpadTestSingleURL@16c0663d]" name="logOpen" is-config="true" duration-ms="92" started-at="2016-02-05T19:41:28Z" finished-at="2016-02-05T19:41:28Z">
+    <test name="test-single" duration-ms="628304" started-at="2016-02-06T01:12:58Z" finished-at="2016-02-06T01:23:27Z">
+      <class name="test.engine.cpadTestURLsAllInOne">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.engine.cpadTestURLsAllInOne@c818063]" name="logOpen" is-config="true" duration-ms="49" started-at="2016-02-05T20:12:58Z" finished-at="2016-02-05T20:12:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestSingleURL@16c0663d]" name="startTime" is-config="true" duration-ms="10" started-at="2016-02-05T19:41:28Z" finished-at="2016-02-05T19:41:28Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.engine.cpadTestURLsAllInOne@c818063]" name="startTime" is-config="true" duration-ms="36" started-at="2016-02-05T20:12:58Z" finished-at="2016-02-05T20:12:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="FAIL" signature="testOrder()[pri:0, instance:test.engine.cpadTestSingleURL@16c0663d]" name="testOrder" duration-ms="43929" started-at="2016-02-05T19:41:28Z" finished-at="2016-02-05T19:42:12Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="testOrder()[pri:0, instance:test.engine.cpadTestURLsAllInOne@c818063]" name="testOrder" duration-ms="628234" started-at="2016-02-05T20:12:58Z" finished-at="2016-02-05T20:23:26Z">
+          <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
-              <![CDATA[
-Error Cause: ---> Found Created On Records are Out of Order!
-   Location: ---> test.engine\cpadTestSingleURL\testOrder, line # 177
-   Expected: ---> true
-     Actual: ---> false
-   Detected: ---> 2016-02-05 19:42:10
-    Runtime: ---> 0:00:42
-   Subtotal: ---> 0:00:42
-<class name="test.engine.cpadTestSingleURL"><methods><include name="testOrder"/></methods></class>
-
-Stack Traces: expected [true] but found [false]]]>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'WIN-K1RO6HNCMPU', ip: '192.168.126.129', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_72'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 
-Error Cause: ---> Found Created On Records are Out of Order!
-   Location: ---> test.engine\cpadTestSingleURL\testOrder, line # 177
-   Expected: ---> true
-     Actual: ---> false
-   Detected: ---> 2016-02-05 19:42:10
-    Runtime: ---> 0:00:42
-   Subtotal: ---> 0:00:42
-<class name="test.engine.cpadTestSingleURL"><methods><include name="testOrder"/></methods></class>
-
-Stack Traces: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at test.engine.cpadTestSingleURL.testOrder(cpadTestSingleURL.java:177)
+              <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.45.0', revision: '32a636c', time: '2015-03-05 22:01:35'
+System info: host: 'WIN-K1RO6HNCMPU', ip: '192.168.126.129', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_72'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:324)
+	at test.helper.Functions.getScreenShot(Functions.java:963)
+	at test.helper.Functions.getAssertTrue(Functions.java:781)
+	at test.engine.cpadTestURLsAllInOne.testOrder(cpadTestURLsAllInOne.java:41)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -72,23 +62,19 @@ Stack Traces: expected [true] but found [false]
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.remote.SessionNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestSingleURL@16c0663d]" name="endTime" is-config="true" duration-ms="10" started-at="2016-02-05T19:42:12Z" finished-at="2016-02-05T19:42:12Z">
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.engine.cpadTestURLsAllInOne@c818063]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-05T20:23:27Z" finished-at="2016-02-05T20:23:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="closeBrowsers()[pri:0, instance:test.engine.cpadTestSingleURL@16c0663d]" name="closeBrowsers" is-config="true" duration-ms="0" started-at="2016-02-05T19:42:12Z" finished-at="2016-02-05T19:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowsers -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.engine.cpadTestSingleURL@16c0663d]" name="logClose" is-config="true" duration-ms="3" started-at="2016-02-05T19:42:12Z" finished-at="2016-02-05T19:42:12Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.engine.cpadTestURLsAllInOne@c818063]" name="logClose" is-config="true" duration-ms="3" started-at="2016-02-05T20:23:27Z" finished-at="2016-02-05T20:23:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->
-      </class> <!-- test.engine.cpadTestSingleURL -->
+      </class> <!-- test.engine.cpadTestURLsAllInOne -->
     </test> <!-- test-single -->
   </suite> <!-- test-single -->
 </testng-results>

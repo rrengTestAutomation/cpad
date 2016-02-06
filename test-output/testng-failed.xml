@@ -3,16 +3,15 @@
 <suite name="Failed suite [test-single]">
   <test name="test-single(failed)">
     <classes>
-      <class name="test.engine.cpadTestSingleURL">
+      <class name="test.engine.cpadTestURLsAllInOne">
         <methods>
+          <include name="logOpen"/>
           <include name="logClose"/>
-          <include name="startTime"/>
           <include name="endTime"/>
           <include name="testOrder"/>
-          <include name="closeBrowsers"/>
-          <include name="logOpen"/>
+          <include name="startTime"/>
         </methods>
-      </class> <!-- test.engine.cpadTestSingleURL -->
+      </class> <!-- test.engine.cpadTestURLsAllInOne -->
     </classes>
   </test> <!-- test-single(failed) -->
 </suite> <!-- Failed suite [test-single] -->

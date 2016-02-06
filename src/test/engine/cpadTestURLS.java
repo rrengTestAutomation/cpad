@@ -33,7 +33,7 @@ public class cpadTestURLS{
 		boolean result = function.xmlAnlyzer(driver, Locators.URL[combination-1], combination, false);
 		
 		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
-				         "URL #" + combination + " - found ''Created On'' Records Out of Order!",
+				         "URL #" + combination + " - Out Of Order ''Created On'' Records found!",
 				          result));
 		
 	}
