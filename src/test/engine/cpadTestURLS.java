@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTestURLs{
+public class cpadTestURLS{
 	
 	static WebDriver driver;	
 	Functions function = new Functions();
@@ -38,7 +38,7 @@ public class cpadTestURLs{
 		
 	}
 	catch (Exception exception) { /** Functions.getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver); */ }
-    finally{ cpadTestURLs.closeBrowsers(); }	
+    finally{ cpadTestURLS.closeBrowsers(); }	
 	}
 
 	@BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
