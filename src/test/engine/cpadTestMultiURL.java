@@ -1,7 +1,6 @@
 package test.engine;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 // import org.testng.annotations.AfterClass;
@@ -10,9 +9,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
 import test.common.CreatedOnLocators;
-import test.common.Locators;
 import test.helper.Functions;
 
 public class cpadTestMultiURL{
