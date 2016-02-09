@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import test.common.CreatedOnLocators;
 import test.common.Locators;
 import test.helper.Functions;
 
@@ -26,7 +27,7 @@ public class cpadTestMultiURL{
 	public void testOrder() throws IOException {
 		
 	 // COUNTER
-		if(combination == Locators.URL.length){ combination = 0; }
+		if(combination == CreatedOnLocators.URL.length){ combination = 0; }
 	    combination++;	    
 	    count++;
 	    
@@ -35,11 +36,11 @@ public class cpadTestMultiURL{
 	 // WebDriver driver = new FirefoxDriver();
 		driver = function.getServerName(driver);
 		
-		boolean result = function.xmlAnlyzer(driver, Locators.URL[combination-1], combination, false);
+		boolean result = function.xmlAnlyzer(driver, CreatedOnLocators.URL[combination-1], combination, false);
 		
 		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 				         "TEST # " + count + ", URL # " + combination + 
-				         " OF " + Locators.URL.length + " - Out Of Order ''Created On'' Records found!",
+				         " OF " + CreatedOnLocators.URL.length + " - Out Of Order ''Created On'' Records found!",
 				          result));
 		
 	}

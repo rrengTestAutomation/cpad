@@ -12,6 +12,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import test.common.CreatedOnLocators;
 import test.common.Locators;
 import test.helper.Functions;
 
@@ -29,14 +30,14 @@ public class cpadTestComboURL{
 	    count++;
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	    boolean result = true;
-		for (int i = 0; i < Locators.URL.length; i++) {
+		for (int i = 0; i < CreatedOnLocators.URL.length; i++) {
 
 		try {
 			driver = function.getServerName(driver);
-			result = function.xmlAnlyzer(driver, Locators.URL[i], i+1, false);
+			result = function.xmlAnlyzer(driver, CreatedOnLocators.URL[i], i+1, false);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
-			if (i == Locators.URL.length - 1) {
+			if (i == CreatedOnLocators.URL.length - 1) {
 				Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 		                         "TEST EXECUTION # " + count + " - Out Of Order ''Created On'' Records found!",
 		                          result));
