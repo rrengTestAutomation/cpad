@@ -30,10 +30,15 @@ import javax.xml.parsers.DocumentBuilderFactory;
 // import org.openqa.selenium.WebDriver;
 // import org.testng.Assert;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+
+import org.xml.sax.SAXException;
 
 /** HELPER IMPORT */
 import java.awt.AWTException;
@@ -71,6 +76,7 @@ import java.util.TimeZone;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
+
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -90,6 +96,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -115,6 +122,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
+
+
 
 /** LOCATORS */
 import test.common.Locators;
@@ -1315,10 +1324,36 @@ public class Functions {
 			}
 		
 		/**
-		 * xml Anlyzer
+		 * xml File value reader
+		 * @throws IOException
+		 * @throws ParserConfigurationException
+		 * @throws SAXException
+		 */
+		public String[] xmlValueArray(String path, String fileName, String record, String tag) throws ParserConfigurationException, SAXException, IOException {
+   		    File stocks = new File(path + fileName);
+   		    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+   		    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+   		    Document doc = dBuilder.parse(stocks);
+   		    doc.getDocumentElement().normalize();
+   		    fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":");
+   		    NodeList nodes = doc.getElementsByTagName(record);   		
+		    String[] valueArray = new String[nodes.getLength()];		
+   		    for (int i = 0; i < nodes.getLength(); i++) {
+   		    	Node node = nodes.item(i);
+   		    	if (node.getNodeType() == Node.ELEMENT_NODE) {
+   		    		Element element = (Element) node;
+   		            // fileWriterPrinter(record + " " + tag + ": " + getValue(tag, element));
+   		    		valueArray[i] = getValue(tag, element);
+   		    		}
+   		    	}
+   		    return valueArray;
+   		    }
+		
+		/**
+		 * <video> record "create_on" Anlyzer
 		 * @throws IOException
 		 */
-		public boolean xmlAnlyzer(WebDriver driver, String url, int combination, Boolean ifAssert) throws IOException {
+		public boolean assertCreateOn(WebDriver driver, String url, int combination, Boolean ifAssert) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               
@@ -1330,42 +1365,23 @@ public class Functions {
 		   		String name = "source";
 		   		String extention = "xml";
 		   		String fileName = name + "." + extention;
-		   		String tag = "video";
+		   		String record = "video";
+		   		String tag = "created_on";
 		   		
 		   		sourcePagePrint(driver, url, path, fileName);
 		   		
 		   		// fileWriterPrinter(); 		
 		   		// fileWriterPrinter(path + "\n");
-		   		
-		   		File stocks = new File(path + fileName);
-		   		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		   		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		   		Document doc = dBuilder.parse(stocks);
-		   		doc.getDocumentElement().normalize();
-
 		   		// fileWriterPrinter(path + fileName);
 		   		
-		   		fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":");
-		   		NodeList nodes = doc.getElementsByTagName(tag);
 		   		fileWriterPrinter();
 		   		fileWriterPrinter("==========================");
-		   		
-		   		long[] fingerprintArray     = new long[nodes.getLength()];
-				String[] valueArray         = new String[nodes.getLength()];
-				String[] dateCheckArray     = new String[nodes.getLength()];
+		   		   		
+				String[] valueArray     = xmlValueArray(path, fileName, record, tag);			
+				long[] fingerprintArray = new long[valueArray.length];
+				String[] dateCheckArray = new String[valueArray.length];
 				
-		   		for (int i = 0; i < nodes.getLength(); i++) {
-		   		Node node = nodes.item(i);
-		   		 
-		   		if (node.getNodeType() == Node.ELEMENT_NODE) {
-		   		Element element = (Element) node;
-		   		
-//		   	    fileWriterPrinter("    Record ID: " + getValue("record_id", element));
-//		      	fileWriterPrinter("Episode Title: " + getValue("episode_title", element));    		
-//		 		fileWriterPrinter("   Created On: " + getValue("created_on", element));
-		   		
-		   		valueArray[i] = getValue("created_on", element);
-		   		
+		   		for (int i = 0; i < valueArray.length; i++) {		   		
 		   		String created = valueArray[i];
 		   		String date = created.substring(0, created.indexOf("T"));
 		   		String HH = created.substring(created.indexOf("T")+1,created.indexOf("T")+3);
@@ -1376,7 +1392,6 @@ public class Functions {
 		   		String mm = created.substring(created.lastIndexOf(":")+1,created.lastIndexOf(":")+3);
 		   		
 		   		dateCheckArray[i] = "Created On: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm;
-//		     fileWriterPrinter(dateCheckArray[i]);
 		   		
 		   		int hours, min, sec;
 		   		
@@ -1387,34 +1402,19 @@ public class Functions {
 		   		sec = Integer.valueOf(SS);
 
 		   		fingerprintArray[i] = convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
-//		   	 fileWriterPrinter(dateCheckArray[i]); 		
-//		   	 fileWriterPrinter("   Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
-//		   	 fileWriterPrinter();
-		   		}
-		   		}
+		   		}		   		
 		   		
 		   		fileCleaner("cpad.log"); fileWriter("cpad.log", "true");
 		   		
-		   		for (int i = 0; i < nodes.getLength(); i++) {
+		   		for (int i = 0; i < valueArray.length; i++) {
 		   			fileWriterPrinter(" Record ID: " + (i + 1));
 		   			fileWriterPrinter("Created On: " + valueArray[i]);
-		   			
-//		         // TEST VALIDATION OUTPUT:
-//			        fileWriterPrinter(dateCheckArray[i]); 		
-//			        fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i]));
-//			        fileWriterPrinter("Created On: " + fingerprintArray[i]);		   			
-		   			
-		   			
-		   			if (i < (nodes.getLength() - 1)) {
+		   					   			
+		   			if (i < (valueArray.length - 1)) {
 		   				boolean assertion = compareLong(fingerprintArray[i], fingerprintArray[i + 1]);
-		   				
-//		   		    Assert.assertTrue(assertion,
-//		                              getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "Out of order!",
-//		                              assertion));
 		   				
 		   			if (assertion) { fileWriterPrinter("    Result: OK\n"); }
 		   			else {
-//		   				  fileWriterPrinter("\nURL #" + combination + " Record ID: "+ (i + 1) + " FAILED!");
 		   				  fileWriterPrinter("    Result: FAILED!");
 		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...");
 		   				  fileCleaner("cpad.log"); fileWriter("cpad.log", "false");
@@ -1423,12 +1423,7 @@ public class Functions {
 		   					  fileWriterPrinter();
 		   					  fileWriterPrinter(" Record ID: " + (i + 2));
 		   					  fileWriterPrinter("Created On: " + valueArray[i + 1]);
-		   					  }
-		   				  
-//		         // TEST VALIDATION OUTPUT:
-//			        fileWriterPrinter(dateCheckArray[i]); 		
-//			        fileWriterPrinter("Created On: " + convertCalendarMillisecondsAsLongToDateTimeHourMinSec(fingerprintArray[i + 1]));
-//			        fileWriterPrinter("Created On: " + fingerprintArray[i + 1]);	
+		   					  }	
 		   				  
 		   				  fileWriterPrinter();
 		   			}
@@ -1448,6 +1443,62 @@ public class Functions {
 		   		return result;
 		   		
 		   		} catch (Exception exception) { /**exception.printStackTrace();*/ return false; } // finally { driver.quit(); }
-		   }			 
+		   }
+		
+		/**
+		 * <program> records Anlyzer
+		 * @throws IOException
+		 */
+		public boolean assertProgram(WebDriver driver, String url, int combination, String tag, String expected, Boolean ifAssert) throws IOException {
+		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
+		    // COUNTER
+		    try {               
+		   		// ENTRY
+		   		fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
+		   		fileWriterPrinter(url);
+		   		
+		   		String path = Locators.testOutputFileDir;
+		   		String name = "source";
+		   		String extention = "xml";
+		   		String fileName = name + "." + extention;
+		   		String record = "program";
+		   		
+		   		sourcePagePrint(driver, url, path, fileName);
+		   		
+		   		fileWriterPrinter();
+		   		fileWriterPrinter("==========================");
+		   		   		
+				String[] valueArray     = xmlValueArray(path, fileName, record, tag);			
+
+		   		fileCleaner("cpad.log"); fileWriter("cpad.log", "true");
+		   		
+		   		for (int i = 0; i < valueArray.length; i++) {
+		   			fileWriterPrinter("Record ID: " + (i + 1));
+		   			fileWriterPrinter("Tag Value: " + valueArray[i]);
+		   					   			
+		   			if (i < (valueArray.length - 1)) {
+		   				boolean assertion = valueArray[i].equals(expected);
+		   				
+		   			if (assertion) { fileWriterPrinter("   Result: OK\n"); }
+		   			else {
+		   				  fileWriterPrinter("    Result: FAILED!");
+		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS NOT AS EXPECTED...");
+		   				  fileCleaner("cpad.log"); fileWriter("cpad.log", "false");
+		   				  fileWriterPrinter();
+		   			}
+		   			
+		   			if (ifAssert) { Assert.assertTrue(assertion, "    Result: FAILED\n"); }
+		   			}
+		   		}
+		   		
+		   		fileWriterPrinter("==========================");
+		   		fileWriterPrinter();
+		   		
+		   		boolean result = Boolean.valueOf(fileScanner("cpad.log"));
+		   		fileCleaner("cpad.log");
+		   		return result;
+		   		
+		   		} catch (Exception exception) { /**exception.printStackTrace();*/ return false; } // finally { driver.quit(); }
+		   }
 		
 }

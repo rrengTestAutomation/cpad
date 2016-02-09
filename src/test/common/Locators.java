@@ -19,6 +19,27 @@ public class Locators {
                                  };
 		return combination;
 	}
+	
+    public static String[][] combination(String a, String b, String c, String d) {
+        String[][] combination = { {a},{b},{c},{d},
+                                   {a,b},{a,c},{a,d},{b,a},
+                                   {b,c},{b,d},{c,a},{c,b},
+                                   {c,d},{d,a},{d,b},{d,c},
+                                   {a,b,c},{a,b,d},{a,c,b},{a,c,d},
+                                   {a,d,b},{a,d,c},{b,a,c},{b,a,d},
+                                   {b,c,a},{b,c,d},{b,d,a},{b,d,c},
+                                   {c,a,b},{c,a,d},{c,b,a},{c,b,d},
+                                   {c,d,a},{c,d,b},{d,a,b},{d,a,c},
+                                   {d,b,a},{d,b,c},{d,c,a},{d,c,b},
+                                   {a,b,c,d},{a,b,d,c},{a,c,b,d},{a,c,d,b},
+                                   {a,d,b,c},{a,d,c,b},{b,a,c,d},{b,a,d,c},
+                                   {b,c,a,d},{b,c,d,a},{b,d,a,c},{b,d,c,a},
+                                   {c,a,b,d},{c,a,d,b},{c,b,a,d},{c,b,d,a},
+                                   {c,d,a,b},{c,d,b,a},{d,a,b,c},{d,a,c,b},
+                                   {d,b,a,c},{d,b,c,a},{d,c,a,b},{d,c,b,a}
+                                 };
+        return combination;
+    }
 
 	public static String[] url(String root, String[][] join) {
 		String[] url = new String[join.length];
@@ -28,10 +49,7 @@ public class Locators {
 	
 	public static String join(String[] combination) {
 		String result = "";
-		for (int i = 0; i < combination.length; i++) {
-			if (i == 0) { result = result + combination[i]; }
-			       else { result = result + "&" + combination[i]; }
-		}
+		for (int i = 0; i < combination.length; i++) { result = result + "&" + combination[i]; }
 		return result;
 	}
 	

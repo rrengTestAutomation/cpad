@@ -30,7 +30,7 @@ public class cpadTestComboURL{
 
 		try {
 			driver = function.getServerName(driver);
-			result = function.xmlAnlyzer(driver, CreatedOnLocators.URL[i], i+1, false);
+			result = function.assertCreateOn(driver, CreatedOnLocators.URL[i], i+1, false);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == CreatedOnLocators.URL.length - 1) {
