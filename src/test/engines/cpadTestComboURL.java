@@ -1,15 +1,17 @@
-package test.engine;
+package test.engines;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import test.common.CreatedOnLocators;
+import test.common.Locators;
 import test.helper.Functions;
 
 public class cpadTestComboURL{
@@ -24,16 +26,23 @@ public class cpadTestComboURL{
 		
 	 // COUNTER
 	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc";
+		String a = "program_asset_id=2790";
+		String b = "group=Adult";
+		String c = "size=80";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	    boolean result = true;
-		for (int i = 0; i < CreatedOnLocators.URL.length; i++) {
+		for (int i = 0; i < URL.length; i++) {
 
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCreateOn(driver, CreatedOnLocators.URL[i], i+1, false);
+			result = function.assertCreateOn(driver, URL[i], i+1, false);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
-			if (i == CreatedOnLocators.URL.length - 1) {
+			if (i == URL.length - 1) {
 				Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 		                         "TEST EXECUTION # " + count + " - Out Of Order ''Created On'' Records found!",
 		                          result));

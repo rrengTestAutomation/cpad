@@ -1,6 +1,7 @@
-package test.engine;
+package test.engines;
 
 import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 // import org.testng.annotations.AfterClass;
@@ -9,7 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import test.common.CreatedOnLocators;
+import test.common.Locators;
 import test.helper.Functions;
 
 public class cpadTestMultiURL{
@@ -19,12 +20,18 @@ public class cpadTestMultiURL{
 	int combination = 0;
 	int count = 0;
 	
+	String root = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc";
+	String a = "program_asset_id=2790";
+	String b = "group=Adult";
+	String c = "size=80";	
+	String[] URL = Locators.url(root, Locators.combination(a, b, c));
+	
 	@SuppressWarnings("static-access")
 	@Test(enabled = true, invocationCount = 2025)
 	public void testOrder() throws IOException {
 		
 	 // COUNTER
-		if(combination == CreatedOnLocators.URL.length){ combination = 0; }
+		if(combination == URL.length){ combination = 0; }
 	    combination++;	    
 	    count++;
 	    
@@ -33,11 +40,11 @@ public class cpadTestMultiURL{
 	 // WebDriver driver = new FirefoxDriver();
 		driver = function.getServerName(driver);
 		
-		boolean result = function.assertCreateOn(driver, CreatedOnLocators.URL[combination-1], combination, false);
+		boolean result = function.assertCreateOn(driver, URL[combination-1], combination, false);
 		
 		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 				         "TEST # " + count + ", URL # " + combination + 
-				         " OF " + CreatedOnLocators.URL.length + " - Out Of Order ''Created On'' Records found!",
+				         " OF " + URL.length + " - Out Of Order ''Created On'' Records found!",
 				          result));
 		
 	}
