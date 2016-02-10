@@ -1,97 +1,529 @@
 
        Test: #1
-      Start: 2016-02-09 16:59:55
-   XML Path: <class name="test.engine.cpadTestComboURL"><methods><include name="testOrder"/></methods></class>
+      Start: 2016-02-10 10:52:47
+   XML Path: <class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrder"/></methods></class>
 
  TEST EXECUTION #1:
 
 URL COMBINATION #1:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790
 
+Record Name: video
+   Tag Name: created_on
+
 
 
 ==========================
 videos:
- Record ID: 1
-Created On: 2016-02-08T18:39:41-05:00
-    Result: OK
 
- Record ID: 2
-Created On: 2016-02-08T18:39:21-05:00
-    Result: OK
+Record ID: 1
+Tag Value: 2016-02-08T18:40:26-05:00
+   Result: OK
 
- Record ID: 3
-Created On: 2016-02-05T16:00:37-05:00
-    Result: OK
+Record ID: 2
+Tag Value: 2016-02-08T18:39:41-05:00
+   Result: OK
 
- Record ID: 4
-Created On: 2016-02-05T15:47:13-05:00
-    Result: OK
+Record ID: 3
+Tag Value: 2016-02-08T18:39:21-05:00
+   Result: OK
 
- Record ID: 5
-Created On: 2016-02-04T16:31:06-05:00
-    Result: OK
+Record ID: 4
+Tag Value: 2016-02-05T16:00:37-05:00
+   Result: OK
 
- Record ID: 6
-Created On: 2016-02-04T16:30:51-05:00
-    Result: OK
+Record ID: 5
+Tag Value: 2016-02-05T15:47:13-05:00
+   Result: OK
 
- Record ID: 7
-Created On: 2016-02-03T17:11:51-05:00
-    Result: OK
+Record ID: 6
+Tag Value: 2016-02-04T16:31:06-05:00
+   Result: OK
 
- Record ID: 8
-Created On: 2016-02-03T16:52:32-05:00
-    Result: OK
+Record ID: 7
+Tag Value: 2016-02-04T16:30:51-05:00
+   Result: OK
 
- Record ID: 9
-Created On: 2016-02-03T16:35:17-05:00
-    Result: OK
+Record ID: 8
+Tag Value: 2016-02-03T17:11:51-05:00
+   Result: OK
 
- Record ID: 10
-Created On: 2016-02-03T16:31:37-05:00
-    Result: OK
+Record ID: 9
+Tag Value: 2016-02-03T16:52:32-05:00
+   Result: OK
 
- Record ID: 11
-Created On: 2016-02-02T19:11:51-05:00
-    Result: OK
+Record ID: 10
+Tag Value: 2016-02-03T16:35:17-05:00
+   Result: OK
 
- Record ID: 12
-Created On: 2016-02-02T19:11:27-05:00
-    Result: OK
+Record ID: 11
+Tag Value: 2016-02-03T16:31:37-05:00
+   Result: OK
 
- Record ID: 13
-Created On: 2016-02-02T18:40:33-05:00
-    Result: OK
+Record ID: 12
+Tag Value: 2016-02-03T15:22:59-05:00
+   Result: OK
 
- Record ID: 14
-Created On: 2016-02-01T18:10:30-05:00
-    Result: OK
+Record ID: 13
+Tag Value: 2016-02-02T19:11:51-05:00
+   Result: OK
 
- Record ID: 15
-Created On: 2016-02-01T18:01:59-05:00
-    Result: OK
+Record ID: 14
+Tag Value: 2016-02-02T19:11:27-05:00
+   Result: OK
 
- Record ID: 16
-Created On: 2016-02-01T16:03:57-05:00
-    Result: OK
+Record ID: 15
+Tag Value: 2016-02-02T18:40:33-05:00
+   Result: OK
 
- Record ID: 17
-Created On: 2016-01-29T18:10:30-05:00
-    Result: OK
+Record ID: 16
+Tag Value: 2016-02-01T18:10:30-05:00
+   Result: OK
 
- Record ID: 18
-Created On: 2016-01-29T18:00:30-05:00
-    Result: OK
+Record ID: 17
+Tag Value: 2016-02-01T18:01:59-05:00
+   Result: OK
 
- Record ID: 19
-Created On: 2016-01-29T17:11:37-05:00
-    Result: OK
+Record ID: 18
+Tag Value: 2016-02-01T16:03:57-05:00
+   Result: OK
 
- Record ID: 20
-Created On: 2016-01-28T17:14:08-05:00
+Record ID: 19
+Tag Value: 2016-01-29T18:10:30-05:00
+   Result: OK
+
+Record ID: 20
+Tag Value: 2016-01-29T18:00:30-05:00
 ==========================
 
 
 URL COMBINATION #2:
 http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&group=Adult
+
+Record Name: video
+   Tag Name: created_on
+
+
+
+==========================
+videos:
+
+Record ID: 1
+Tag Value: 2016-02-08T18:40:26-05:00
+   Result: OK
+
+Record ID: 2
+Tag Value: 2016-02-08T18:39:41-05:00
+   Result: OK
+
+Record ID: 3
+Tag Value: 2016-02-08T18:39:21-05:00
+   Result: OK
+
+Record ID: 4
+Tag Value: 2016-02-05T21:06:16-05:00
+   Result: OK
+
+Record ID: 5
+Tag Value: 2016-02-05T16:00:37-05:00
+   Result: OK
+
+Record ID: 6
+Tag Value: 2016-02-05T15:47:13-05:00
+   Result: OK
+
+Record ID: 7
+Tag Value: 2016-02-04T16:31:06-05:00
+   Result: OK
+
+Record ID: 8
+Tag Value: 2016-02-04T16:30:51-05:00
+   Result: OK
+
+Record ID: 9
+Tag Value: 2016-02-03T17:11:51-05:00
+   Result: OK
+
+Record ID: 10
+Tag Value: 2016-02-03T16:52:32-05:00
+   Result: OK
+
+Record ID: 11
+Tag Value: 2016-02-03T16:35:17-05:00
+   Result: OK
+
+Record ID: 12
+Tag Value: 2016-02-03T16:31:37-05:00
+   Result: OK
+
+Record ID: 13
+Tag Value: 2016-02-03T15:22:59-05:00
+   Result: OK
+
+Record ID: 14
+Tag Value: 2016-02-02T19:11:51-05:00
+   Result: OK
+
+Record ID: 15
+Tag Value: 2016-02-02T19:11:27-05:00
+   Result: OK
+
+Record ID: 16
+Tag Value: 2016-02-02T18:40:33-05:00
+   Result: OK
+
+Record ID: 17
+Tag Value: 2016-02-01T18:10:30-05:00
+   Result: OK
+
+Record ID: 18
+Tag Value: 2016-02-01T18:01:59-05:00
+   Result: OK
+
+Record ID: 19
+Tag Value: 2016-02-01T16:03:57-05:00
+   Result: OK
+
+Record ID: 20
+Tag Value: 2016-02-01T12:41:50-05:00
+==========================
+
+
+URL COMBINATION #3:
+http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80
+
+Record Name: video
+   Tag Name: created_on
+
+
+
+==========================
+videos:
+
+Record ID: 1
+Tag Value: 2016-02-08T18:40:26-05:00
+   Result: OK
+
+Record ID: 2
+Tag Value: 2016-02-08T18:39:41-05:00
+   Result: OK
+
+Record ID: 3
+Tag Value: 2016-02-08T18:39:21-05:00
+   Result: OK
+
+Record ID: 4
+Tag Value: 2016-02-05T21:06:16-05:00
+   Result: OK
+
+Record ID: 5
+Tag Value: 2016-02-05T16:00:37-05:00
+   Result: OK
+
+Record ID: 6
+Tag Value: 2016-02-05T15:47:13-05:00
+   Result: OK
+
+Record ID: 7
+Tag Value: 2016-02-04T16:31:06-05:00
+   Result: OK
+
+Record ID: 8
+Tag Value: 2016-02-04T16:30:51-05:00
+   Result: OK
+
+Record ID: 9
+Tag Value: 2016-02-03T17:11:51-05:00
+   Result: OK
+
+Record ID: 10
+Tag Value: 2016-02-03T16:52:32-05:00
+   Result: OK
+
+Record ID: 11
+Tag Value: 2016-02-03T16:35:17-05:00
+   Result: OK
+
+Record ID: 12
+Tag Value: 2016-02-03T16:31:37-05:00
+   Result: OK
+
+Record ID: 13
+Tag Value: 2016-02-03T15:22:59-05:00
+   Result: OK
+
+Record ID: 14
+Tag Value: 2016-02-02T19:11:51-05:00
+   Result: OK
+
+Record ID: 15
+Tag Value: 2016-02-02T19:11:27-05:00
+   Result: OK
+
+Record ID: 16
+Tag Value: 2016-02-02T18:40:33-05:00
+   Result: OK
+
+Record ID: 17
+Tag Value: 2016-02-01T18:10:30-05:00
+   Result: OK
+
+Record ID: 18
+Tag Value: 2016-02-01T18:01:59-05:00
+   Result: OK
+
+Record ID: 19
+Tag Value: 2016-02-01T16:03:57-05:00
+   Result: OK
+
+Record ID: 20
+Tag Value: 2016-02-01T12:41:50-05:00
+   Result: OK
+
+Record ID: 21
+Tag Value: 2016-01-29T18:10:30-05:00
+   Result: OK
+
+Record ID: 22
+Tag Value: 2016-01-29T18:00:30-05:00
+   Result: OK
+
+Record ID: 23
+Tag Value: 2016-01-29T17:11:37-05:00
+   Result: OK
+
+Record ID: 24
+Tag Value: 2016-01-29T11:20:18-05:00
+   Result: OK
+
+Record ID: 25
+Tag Value: 2016-01-28T17:14:08-05:00
+   Result: OK
+
+Record ID: 26
+Tag Value: 2016-01-28T17:01:14-05:00
+   Result: OK
+
+Record ID: 27
+Tag Value: 2016-01-28T10:54:12-05:00
+   Result: OK
+
+Record ID: 28
+Tag Value: 2016-01-27T16:09:01-05:00
+   Result: OK
+
+Record ID: 29
+Tag Value: 2016-01-26T16:51:02-05:00
+   Result: OK
+
+Record ID: 30
+Tag Value: 2016-01-25T15:20:22-05:00
+   Result: OK
+
+Record ID: 31
+Tag Value: 2016-01-25T15:01:39-05:00
+   Result: OK
+
+Record ID: 32
+Tag Value: 2016-01-22T19:39:50-05:00
+   Result: OK
+
+Record ID: 33
+Tag Value: 2016-01-22T19:36:37-05:00
+   Result: OK
+
+Record ID: 34
+Tag Value: 2016-01-22T12:11:00-05:00
+   Result: OK
+
+Record ID: 35
+Tag Value: 2016-01-21T20:10:30-05:00
+   Result: OK
+
+Record ID: 36
+Tag Value: 2016-01-21T19:50:23-05:00
+   Result: OK
+
+Record ID: 37
+Tag Value: 2016-01-21T17:54:22-05:00
+   Result: OK
+
+Record ID: 38
+Tag Value: 2016-01-20T18:40:48-05:00
+   Result: OK
+
+Record ID: 39
+Tag Value: 2016-01-20T18:30:14-05:00
+   Result: OK
+
+Record ID: 40
+Tag Value: 2016-01-20T18:10:24-05:00
+   Result: OK
+
+Record ID: 41
+Tag Value: 2016-01-20T12:41:38-05:00
+   Result: OK
+
+Record ID: 42
+Tag Value: 2016-01-19T23:50:13-05:00
+   Result: OK
+
+Record ID: 43
+Tag Value: 2016-01-19T18:55:06-05:00
+   Result: OK
+
+Record ID: 44
+Tag Value: 2016-01-19T18:31:57-05:00
+   Result: OK
+
+Record ID: 45
+Tag Value: 2016-01-19T17:30:13-05:00
+   Result: OK
+
+Record ID: 46
+Tag Value: 2016-01-19T10:10:11-05:00
+   Result: OK
+
+Record ID: 47
+Tag Value: 2016-01-18T19:00:26-05:00
+   Result: OK
+
+Record ID: 48
+Tag Value: 2016-01-18T18:10:12-05:00
+   Result: OK
+
+Record ID: 49
+Tag Value: 2016-01-18T18:00:11-05:00
+   Result: OK
+
+Record ID: 50
+Tag Value: 2016-01-15T17:10:12-05:00
+   Result: OK
+
+Record ID: 51
+Tag Value: 2016-01-15T16:30:25-05:00
+   Result: OK
+
+Record ID: 52
+Tag Value: 2016-01-14T18:40:11-05:00
+   Result: OK
+
+Record ID: 53
+Tag Value: 2016-01-14T17:40:11-05:00
+   Result: OK
+
+Record ID: 54
+Tag Value: 2016-01-14T16:52:13-05:00
+   Result: OK
+
+Record ID: 55
+Tag Value: 2016-01-13T19:43:17-05:00
+   Result: OK
+
+Record ID: 56
+Tag Value: 2016-01-13T16:10:14-05:00
+   Result: OK
+
+Record ID: 57
+Tag Value: 2016-01-13T15:10:39-05:00
+   Result: OK
+
+Record ID: 58
+Tag Value: 2016-01-13T12:30:14-05:00
+   Result: OK
+
+Record ID: 59
+Tag Value: 2016-01-12T18:10:29-05:00
+   Result: OK
+
+Record ID: 60
+Tag Value: 2016-01-12T18:00:27-05:00
+   Result: OK
+
+Record ID: 61
+Tag Value: 2016-01-11T17:10:48-05:00
+   Result: OK
+
+Record ID: 62
+Tag Value: 2016-01-11T17:01:17-05:00
+   Result: OK
+
+Record ID: 63
+Tag Value: 2016-01-11T16:40:48-05:00
+   Result: OK
+
+Record ID: 64
+Tag Value: 2016-01-11T13:40:14-05:00
+   Result: OK
+
+Record ID: 65
+Tag Value: 2016-01-11T11:50:18-05:00
+   Result: OK
+
+Record ID: 66
+Tag Value: 2016-01-11T11:30:32-05:00
+   Result: OK
+
+Record ID: 67
+Tag Value: 2016-01-08T18:30:27-05:00
+   Result: OK
+
+Record ID: 68
+Tag Value: 2016-01-08T18:20:58-05:00
+   Result: OK
+
+Record ID: 69
+Tag Value: 2016-01-08T10:10:11-05:00
+   Result: OK
+
+Record ID: 70
+Tag Value: 2016-01-07T23:40:12-05:00
+   Result: OK
+
+Record ID: 71
+Tag Value: 2016-01-07T18:10:12-05:00
+   Result: OK
+
+Record ID: 72
+Tag Value: 2016-01-07T16:20:13-05:00
+   Result: OK
+
+Record ID: 73
+Tag Value: 2016-01-07T16:00:41-05:00
+   Result: OK
+
+Record ID: 74
+Tag Value: 2016-01-06T18:00:29-05:00
+   Result: OK
+
+Record ID: 75
+Tag Value: 2016-01-06T17:50:28-05:00
+   Result: OK
+
+Record ID: 76
+Tag Value: 2016-01-06T11:00:14-05:00
+   Result: OK
+
+Record ID: 77
+Tag Value: 2016-01-05T22:38:04-05:00
+   Result: OK
+
+Record ID: 78
+Tag Value: 2016-01-05T22:36:00-05:00
+   Result: OK
+
+Record ID: 79
+Tag Value: 2016-01-05T16:02:16-05:00
+   Result: OK
+
+Record ID: 80
+Tag Value: 2016-01-05T14:30:12-05:00
+==========================
+
+
+URL COMBINATION #4:
+http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&program_asset_id=2790&group=Adult
+
+Record Name: video
+   Tag Name: created_on
+

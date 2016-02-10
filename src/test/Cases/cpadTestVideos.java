@@ -1,4 +1,4 @@
-package test.engines;
+package test.Cases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,14 +15,14 @@ import org.testng.annotations.BeforeSuite;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTestComboURL{
+public class cpadTestVideos{
 	static WebDriver driver;
 	Functions function = new Functions();
 	int count = 0;
 	
 	@SuppressWarnings("static-access")
 	@Test(enabled = true, invocationCount = 1)
-	public void testOrder() throws IOException {
+	public void testCreateOnOrder() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER

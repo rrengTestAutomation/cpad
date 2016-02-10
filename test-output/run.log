@@ -1,6 +1,6 @@
- TEST START: 2016-02-09 16:59:55
+ TEST START: 2016-02-10 10:52:47
 
 
        Test: #1
-      Start: 2016-02-09 16:59:55
-   XML Path: <class name="test.engine.cpadTestComboURL"><methods><include name="testOrder"/></methods></class>
+      Start: 2016-02-10 10:52:47
+   XML Path: <class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrder"/></methods></class>

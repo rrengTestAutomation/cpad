@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test-single]">
-  <test name="test-single(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="test.engine.cpadTestComboURL">
+      <class name="test.Cases.cpadTestVideos">
         <methods>
+          <include name="logClose"/>
+          <include name="logOpen"/>
           <include name="startTime"/>
           <include name="endTime"/>
-          <include name="logClose"/>
-          <include name="testOrder"/>
-          <include name="logOpen"/>
+          <include name="testCreateOnOrder"/>
         </methods>
-      </class> <!-- test.engine.cpadTestComboURL -->
+      </class> <!-- test.Cases.cpadTestVideos -->
     </classes>
-  </test> <!-- test-single(failed) -->
-</suite> <!-- Failed suite [test-single] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

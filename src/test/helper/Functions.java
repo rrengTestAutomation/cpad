@@ -36,9 +36,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
-
 import org.xml.sax.SAXException;
+
 
 /** HELPER IMPORT */
 import java.awt.AWTException;
@@ -122,6 +121,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
+
 
 
 
@@ -1323,6 +1323,32 @@ public class Functions {
 			catch (Exception e) { return false; }
 			}
 		
+		/** Convert CPAD Date and Time Stamp to long Milliseconds 
+		  * @throws ParseException 
+		  */
+		@SuppressWarnings("unused")
+		public static long convertCpadDateStampToMillisecondsAsLong(String cpadDateStamp) throws ParseException {		   		
+   		String date = cpadDateStamp.substring(0, cpadDateStamp.indexOf("T"));
+   		String HH = cpadDateStamp.substring(cpadDateStamp.indexOf("T")+1,cpadDateStamp.indexOf("T")+3);
+   		String MM = cpadDateStamp.substring(cpadDateStamp.indexOf(":")+1,cpadDateStamp.indexOf(":")+3);
+   		String SS = cpadDateStamp.substring(cpadDateStamp.indexOf(":")+4,cpadDateStamp.indexOf(":")+6);
+   		String math = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":")-3,cpadDateStamp.lastIndexOf(":")-2);
+   		String hh = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":")-2,cpadDateStamp.lastIndexOf(":"));
+   		String mm = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":")+1,cpadDateStamp.lastIndexOf(":")+3);
+   		
+   		String dateCheck = "Dare: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm;
+   		
+   		int hours, min, sec;
+   		
+   		if (math.equals("-")) { hours = Integer.valueOf(HH) - Integer.valueOf(hh); }
+   		                 else { hours = Integer.valueOf(HH) + Integer.valueOf(hh); }		
+   		if (math.equals("-")) {   min = Integer.valueOf(MM) - Integer.valueOf(mm); }
+   		                 else {   min = Integer.valueOf(MM) + Integer.valueOf(mm); }
+   		sec = Integer.valueOf(SS);
+
+   		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
+   		}
+		
 		/**
 		 * xml File value reader
 		 * @throws IOException
@@ -1335,7 +1361,7 @@ public class Functions {
    		    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
    		    Document doc = dBuilder.parse(stocks);
    		    doc.getDocumentElement().normalize();
-   		    fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":");
+   		    fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":" + "\n");
    		    NodeList nodes = doc.getElementsByTagName(record);   		
 		    String[] valueArray = new String[nodes.getLength()];		
    		    for (int i = 0; i < nodes.getLength(); i++) {
@@ -1350,23 +1376,23 @@ public class Functions {
    		    }
 		
 		/**
-		 * <video> record "create_on" Anlyzer
+		 * Assert CPAD record tags as dates
 		 * @throws IOException
 		 */
-		public boolean assertCreateOn(WebDriver driver, String url, int combination, Boolean ifAssert) throws IOException {
+		public boolean assertCpadDates(WebDriver driver, String url, int combination, Boolean ifAssert, String record, String tag) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               
 		   		// ENTRY
 		   		fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
 		   		fileWriterPrinter(url);
+		   		fileWriterPrinter("\n" + "Record Name: " + record);
+		   		fileWriterPrinter(       "   Tag Name: " + tag);
 		   		
 		   		String path = Locators.testOutputFileDir;
 		   		String name = "source";
 		   		String extention = "xml";
 		   		String fileName = name + "." + extention;
-		   		String record = "video";
-		   		String tag = "created_on";
 		   		
 		   		sourcePagePrint(driver, url, path, fileName);
 		   		
@@ -1379,44 +1405,22 @@ public class Functions {
 		   		   		
 				String[] valueArray     = xmlValueArray(path, fileName, record, tag);			
 				long[] fingerprintArray = new long[valueArray.length];
-				String[] dateCheckArray = new String[valueArray.length];
 				
-		   		for (int i = 0; i < valueArray.length; i++) {		   		
-		   		String created = valueArray[i];
-		   		String date = created.substring(0, created.indexOf("T"));
-		   		String HH = created.substring(created.indexOf("T")+1,created.indexOf("T")+3);
-		   		String MM = created.substring(created.indexOf(":")+1,created.indexOf(":")+3);
-		   		String SS = created.substring(created.indexOf(":")+4,created.indexOf(":")+6);
-		   		String math = created.substring(created.lastIndexOf(":")-3,created.lastIndexOf(":")-2);
-		   		String hh = created.substring(created.lastIndexOf(":")-2,created.lastIndexOf(":"));
-		   		String mm = created.substring(created.lastIndexOf(":")+1,created.lastIndexOf(":")+3);
-		   		
-		   		dateCheckArray[i] = "Created On: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm;
-		   		
-		   		int hours, min, sec;
-		   		
-		   		if (math.equals("-")) { hours = Integer.valueOf(HH) - Integer.valueOf(hh); }
-		   		                 else { hours = Integer.valueOf(HH) + Integer.valueOf(hh); }		
-		   		if (math.equals("-")) {   min = Integer.valueOf(MM) - Integer.valueOf(mm); }
-		   		                 else {   min = Integer.valueOf(MM) + Integer.valueOf(mm); }
-		   		sec = Integer.valueOf(SS);
-
-		   		fingerprintArray[i] = convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
-		   		}		   		
+		   		for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }		   		
 		   		
 		   		fileCleaner("cpad.log"); fileWriter("cpad.log", "true");
 		   		
 		   		for (int i = 0; i < valueArray.length; i++) {
-		   			fileWriterPrinter(" Record ID: " + (i + 1));
-		   			fileWriterPrinter("Created On: " + valueArray[i]);
+		   			fileWriterPrinter("Record ID: " + (i + 1));		   			
+		   			fileWriterPrinter("Tag Value: " + valueArray[i]);
 		   					   			
 		   			if (i < (valueArray.length - 1)) {
 		   				boolean assertion = compareLong(fingerprintArray[i], fingerprintArray[i + 1]);
 		   				
-		   			if (assertion) { fileWriterPrinter("    Result: OK\n"); }
+		   			if (assertion) { fileWriterPrinter("   Result: OK\n"); }
 		   			else {
-		   				  fileWriterPrinter("    Result: FAILED!");
-		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...");
+		   				  fileWriterPrinter("   Result: FAILED!");
+		   				  fileWriterPrinter("   Reason: CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...");
 		   				  fileCleaner("cpad.log"); fileWriter("cpad.log", "false");
 		   				  
 		   				  if (ifAssert) {
@@ -1429,7 +1433,7 @@ public class Functions {
 		   			}
 		   			
 		   			if (ifAssert) { 
-		   				Assert.assertTrue(assertion, "    Result: FAILED\n");
+		   				Assert.assertTrue(assertion, "   Result: FAILED\n");
 		   				}
 		   			
 		   			}
@@ -1449,7 +1453,7 @@ public class Functions {
 		 * <program> records Anlyzer
 		 * @throws IOException
 		 */
-		public boolean assertProgram(WebDriver driver, String url, int combination, String tag, String expected, Boolean ifAssert) throws IOException {
+		public boolean assertCpadTags(WebDriver driver, String url, int combination, Boolean ifAssert, String record, String tag, String expected) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               
@@ -1461,7 +1465,6 @@ public class Functions {
 		   		String name = "source";
 		   		String extention = "xml";
 		   		String fileName = name + "." + extention;
-		   		String record = "program";
 		   		
 		   		sourcePagePrint(driver, url, path, fileName);
 		   		
@@ -1475,19 +1478,19 @@ public class Functions {
 		   		for (int i = 0; i < valueArray.length; i++) {
 		   			fileWriterPrinter("Record ID: " + (i + 1));
 		   			fileWriterPrinter("Tag Value: " + valueArray[i]);
-		   					   			
+
 		   			if (i < (valueArray.length - 1)) {
 		   				boolean assertion = valueArray[i].equals(expected);
 		   				
 		   			if (assertion) { fileWriterPrinter("   Result: OK\n"); }
 		   			else {
-		   				  fileWriterPrinter("    Result: FAILED!");
-		   				  fileWriterPrinter("    Reason: CURRENT RECORD IS NOT AS EXPECTED...");
+		   				  fileWriterPrinter("   Result: FAILED!");
+		   				  fileWriterPrinter("   Reason: CURRENT RECORD IS NOT AS EXPECTED...");
 		   				  fileCleaner("cpad.log"); fileWriter("cpad.log", "false");
 		   				  fileWriterPrinter();
 		   			}
 		   			
-		   			if (ifAssert) { Assert.assertTrue(assertion, "    Result: FAILED\n"); }
+		   			if (ifAssert) { Assert.assertTrue(assertion, "   Result: FAILED\n"); }
 		   			}
 		   		}
 		   		
