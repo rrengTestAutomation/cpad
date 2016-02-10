@@ -20,9 +20,19 @@ public class cpadTestVideos{
 	Functions function = new Functions();
 	int count = 0;
 	
+	/**
+	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in DESC order
+	 * <p>Date Created: 2016-02-10</p>
+	 * <p>Date Modified: 2016-02-10</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: video-06</p>
+	 * @throws IOException
+	 */
 	@SuppressWarnings("static-access")
 	@Test(enabled = true, invocationCount = 1)
-	public void testCreateOnOrder() throws IOException {
+	public void testCreateOnOrderIsDescendant() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -36,14 +46,13 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "created_on";
    		
-		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	    boolean result = true;
 		for (int i = 0; i < URL.length; i++) {
 
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCpadDates(driver, URL[i], i+1, false, record, tag);
+			result = function.assertCpadDates(driver, URL[i], i+1, URL.length, false, record, tag);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == URL.length - 1) {
@@ -55,11 +64,7 @@ public class cpadTestVideos{
 			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { driver.quit(); }
 		}
 		
-		// SCREENSHOT-UNABLED ASSERTION:
-//		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
-//		                 "TEST EXECUTION #" + count + "  - Out Of Order ''Created On'' Records found!",
-//		                  result));
-		}
+	}
 
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }

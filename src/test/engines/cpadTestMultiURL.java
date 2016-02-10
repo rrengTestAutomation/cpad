@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+// import org.testng.annotations.Test;
 
 import test.common.Locators;
 import test.helper.Functions;
@@ -30,7 +30,7 @@ public class cpadTestMultiURL{
     String tag = "created_on";
 	
 	@SuppressWarnings("static-access")
-	@Test(enabled = true, invocationCount = 2025)
+//	@Test(enabled = true, invocationCount = 2025)
 	public void testOrder() throws IOException {
 		
 	 // COUNTER
@@ -43,7 +43,7 @@ public class cpadTestMultiURL{
 	 // WebDriver driver = new FirefoxDriver();
 		driver = function.getServerName(driver);
 		
-		boolean result = function.assertCpadDates(driver, URL[combination-1], combination, false, record, tag);
+		boolean result = function.assertCpadDates(driver, URL[combination-1], combination, URL.length, false, record, tag);
 		
 		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 				         "TEST # " + count + ", URL # " + combination + 

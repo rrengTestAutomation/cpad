@@ -9,10 +9,11 @@
 <class name="test.helper.Functions"></class>
 -->
     
-<class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrder"/></methods></class>
+ 
+<class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescendant"/></methods></class>
 
-<!-- 
-<class name="test.developer.validation"><methods><include name="testAnnualHeader"/></methods></class>
+<!--
+<class name="test.Cases.cpadTestPrograms"><methods><include name="testGroupTagIsAdult"/></methods></class>
 -->
 		
     </classes>

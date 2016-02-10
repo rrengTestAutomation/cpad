@@ -12,7 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+// import org.testng.annotations.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -32,7 +32,7 @@ public class cpadTestSingleURL {
 	/**
 	 * @throws IOException
 	 */
-    @Test(enabled = true, invocationCount = 1)
+//  @Test(enabled = true, invocationCount = 1)
 	public void testOrder() throws IOException {
     Functions function = new Functions();
     function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	

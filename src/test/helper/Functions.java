@@ -20,8 +20,6 @@ package test.helper;
 // import java.util.zip.GZIPInputStream;
 // import java.util.zip.Inflater;
 // import java.util.zip.InflaterInputStream;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 // import org.apache.commons.io.FileUtils;
 // import org.openqa.selenium.chrome.ChromeDriver;
 // import org.openqa.selenium.firefox.FirefoxDriver;
@@ -29,56 +27,34 @@ import javax.xml.parsers.DocumentBuilderFactory;
 // import org.openqa.selenium.TakesScreenshot;
 // import org.openqa.selenium.WebDriver;
 // import org.testng.Assert;
-
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
 /** HELPER IMPORT */
-import java.awt.AWTException;
-import java.awt.Component;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.Toolkit;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.text.DateFormat;
-import java.text.DateFormatSymbols;
-import java.text.DecimalFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.concurrent.TimeUnit;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Properties;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.Inflater;
-import java.util.zip.InflaterInputStream;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
+//import java.awt.AWTException;
+//import java.awt.Component;
+//import java.awt.datatransfer.Clipboard;
+//import java.awt.datatransfer.StringSelection;
+//import java.awt.Toolkit;
+//import java.text.DateFormatSymbols;
+//import java.util.ArrayList;
+//import java.util.Calendar;
+//import java.util.Iterator;
+//import java.util.List;
+//import java.util.NoSuchElementException;
+//import java.util.Properties;
+//import java.util.Random;
+//import java.util.Set;
+//import java.util.TimeZone;
+//import javax.activation.DataHandler;
+//import javax.activation.DataSource;
+//import javax.activation.FileDataSource;
 //import javax.mail.BodyPart;
 //import javax.mail.internet.AddressException;
 //import javax.mail.internet.InternetAddress;
@@ -90,40 +66,56 @@ import javax.activation.FileDataSource;
 //import javax.mail.Multipart;
 //import javax.mail.Session;
 //import javax.mail.Transport;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JCheckBox;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-
+//import javax.swing.Icon;
+//import javax.swing.ImageIcon;
+//import javax.swing.JCheckBox;
+//import javax.swing.JOptionPane;
+//import javax.swing.UIManager;
+//import org.openqa.selenium.Dimension;
+//import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.interactions.internal.Coordinates;
+//import org.openqa.selenium.internal.Locatable;
+//import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.StaleElementReferenceException;
+//import org.openqa.selenium.support.pagefactory.ByAll;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.WebElement;
+//import org.testng.annotations.AfterSuite;
+//import org.testng.annotations.BeforeSuite;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.Inflater;
+import java.util.zip.InflaterInputStream;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.internal.Coordinates;
-import org.openqa.selenium.internal.Locatable;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.support.pagefactory.ByAll;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 import org.testng.Assert;
-
-
-
 
 /** LOCATORS */
 import test.common.Locators;
@@ -1379,12 +1371,12 @@ public class Functions {
 		 * Assert CPAD record tags as dates
 		 * @throws IOException
 		 */
-		public boolean assertCpadDates(WebDriver driver, String url, int combination, Boolean ifAssert, String record, String tag) throws IOException {
+		public boolean assertCpadDates(WebDriver driver, String url, int combination, int total, Boolean ifAssert, String record, String tag) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               
 		   		// ENTRY
-		   		fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
+		   		fileWriterPrinter("\n" + "URL COMBINATION #" + combination + " OF " + total + ":");
 		   		fileWriterPrinter(url);
 		   		fileWriterPrinter("\n" + "Record Name: " + record);
 		   		fileWriterPrinter(       "   Tag Name: " + tag);
@@ -1453,12 +1445,12 @@ public class Functions {
 		 * <program> records Anlyzer
 		 * @throws IOException
 		 */
-		public boolean assertCpadTags(WebDriver driver, String url, int combination, Boolean ifAssert, String record, String tag, String expected) throws IOException {
+		public boolean assertCpadTags(WebDriver driver, String url, int combination, int total, Boolean ifAssert, String record, String tag, String expected) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               
 		   		// ENTRY
-		   		fileWriterPrinter("\n" + "URL COMBINATION #" + combination + ":");
+		    	fileWriterPrinter("\n" + "URL COMBINATION #" + combination + " OF " + total + ":");
 		   		fileWriterPrinter(url);
 		   		
 		   		String path = Locators.testOutputFileDir;
