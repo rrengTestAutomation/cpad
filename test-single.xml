@@ -9,12 +9,12 @@
 <class name="test.helper.Functions"></class>
 -->
     
- 
+<!-- 
 <class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescendant"/></methods></class>
-
-<!--
-<class name="test.Cases.cpadTestPrograms"><methods><include name="testGroupTagIsAdult"/></methods></class>
 -->
+
+<class name="test.Cases.cpadTestPrograms"><methods><include name="testProgramRecordsMaxNumber"/></methods></class>
+
 		
     </classes>
   </test>

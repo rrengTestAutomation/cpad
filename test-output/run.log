@@ -1,6 +1,8 @@
- TEST START: 2016-02-10 10:52:47
+ TEST START: 2016-02-10 14:36:50
 
 
        Test: #1
-      Start: 2016-02-10 10:52:47
-   XML Path: <class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrder"/></methods></class>
+      Start: 2016-02-10 14:36:50
+   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testProgramRecordsMaxNumber"/></methods></class>
+     Finish: 2016-02-10 14:55:09
+   Duration: 0:18:19

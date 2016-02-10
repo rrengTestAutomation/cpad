@@ -1,64 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45" started-at="2016-02-10T15:51:54Z" finished-at="2016-02-10T15:51:54Z">
+  <suite name="test-single" duration-ms="1099529" started-at="2016-02-10T19:36:50Z" finished-at="2016-02-10T19:55:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45" started-at="2016-02-10T15:51:54Z" finished-at="2016-02-10T15:51:54Z">
-      <class name="test.Cases.cpadTestVideos">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.cpadTestVideos@7e0babb1]" name="logOpen" is-config="true" duration-ms="47" started-at="2016-02-10T10:51:54Z" finished-at="2016-02-10T10:51:54Z">
+    <test name="test-single" duration-ms="1099529" started-at="2016-02-10T19:36:50Z" finished-at="2016-02-10T19:55:09Z">
+      <class name="test.Cases.cpadTestPrograms">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.cpadTestPrograms@3f0ee7cb]" name="logOpen" is-config="true" duration-ms="58" started-at="2016-02-10T14:36:49Z" finished-at="2016-02-10T14:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.cpadTestVideos@7e0babb1]" name="startTime" is-config="true" duration-ms="14" started-at="2016-02-10T10:51:54Z" finished-at="2016-02-10T10:51:54Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.cpadTestPrograms@3f0ee7cb]" name="startTime" is-config="true" duration-ms="21" started-at="2016-02-10T14:36:50Z" finished-at="2016-02-10T14:36:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="FAIL" signature="testCreateOnOrder()[pri:0, instance:test.Cases.cpadTestVideos@7e0babb1]" name="testCreateOnOrder" duration-ms="8" started-at="2016-02-10T10:51:54Z" finished-at="2016-02-10T10:51:54Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at test.Cases.cpadTestVideos.testCreateOnOrder(cpadTestVideos.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="testProgramRecordsMaxNumber()[pri:0, instance:test.Cases.cpadTestPrograms@3f0ee7cb]" name="testProgramRecordsMaxNumber" duration-ms="1099481" started-at="2016-02-10T14:36:50Z" finished-at="2016-02-10T14:55:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateOnOrder -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.cpadTestVideos@7e0babb1]" name="endTime" is-config="true" duration-ms="11" started-at="2016-02-10T10:51:54Z" finished-at="2016-02-10T10:51:54Z">
+        </test-method> <!-- testProgramRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.cpadTestPrograms@3f0ee7cb]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-10T14:55:09Z" finished-at="2016-02-10T14:55:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.cpadTestVideos@7e0babb1]" name="logClose" is-config="true" duration-ms="3" started-at="2016-02-10T10:51:54Z" finished-at="2016-02-10T10:51:54Z">
+        <test-method status="PASS" signature="closeBrowsers()[pri:0, instance:test.Cases.cpadTestPrograms@3f0ee7cb]" name="closeBrowsers" is-config="true" duration-ms="0" started-at="2016-02-10T14:55:09Z" finished-at="2016-02-10T14:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowsers -->
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.cpadTestPrograms@3f0ee7cb]" name="logClose" is-config="true" duration-ms="2" started-at="2016-02-10T14:55:09Z" finished-at="2016-02-10T14:55:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->
-      </class> <!-- test.Cases.cpadTestVideos -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- test.Cases.cpadTestPrograms -->
+    </test> <!-- test-single -->
+  </suite> <!-- test-single -->
 </testng-results>

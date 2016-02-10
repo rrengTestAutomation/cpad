@@ -41,7 +41,7 @@ public class cpadTestComboURL{
 
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCpadDates(driver, URL[i], i+1, URL.length, false, record, tag);
+			result = function.assertCpadTagsDateDesc(driver, URL[i], i+1, URL.length, false, record, tag);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == URL.length - 1) {

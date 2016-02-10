@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 // import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -21,7 +22,7 @@ public class cpadTestPrograms{
 	int count = 0;
 	
 	/**
-	 * Test all of the possible given URL combinations are having the "group" tags of "program" record containing "Adult"
+	 * Test all of the possible given URL combinations are having the "group" tags of "program" record equals "Adult" [1]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
 	 * <p>Original Version: V1</p>
@@ -53,25 +54,118 @@ public class cpadTestPrograms{
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCpadTags(driver, URL[i], i+1, URL.length, false, record, tag, expected);
+			result = function.assertCpadTagsEqualExpected(driver, URL[i], i+1, URL.length, false, record, tag, expected);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == URL.length - 1) {
 				Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
-		                         "TEST EXECUTION # " + count + " - Out Of Order ''Created On'' Records found!",
+		                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
 		                          result));
 				}
 			
-			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { driver.quit(); }
+			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { closeBrowsers(); }
 		}
 		
 	}
 
+	/**
+	 * Test all of the possible given URL combinations are having the "single_program" tags of "program" record equals "1" [2]
+	 * <p>Date Created: 2016-02-10</p>
+	 * <p>Date Modified: 2016-02-10</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: video-06</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(enabled = true, invocationCount = 1)
+	public void testSingleProgramTagIsOne() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?single_program=1";
+		String a = "group=Adult";
+		String b = "size=60";
+		String c = "sort_order=DESC";
+		String d = "sort_by=UPDATED_ON";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "program";
+   		String tag = "single_program";
+   		String expected = "1";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	    boolean result = true;
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			result = function.assertCpadTagsEqualExpected(driver, URL[i], i+1, URL.length, false, record, tag, expected);
+			
+			// SCREENSHOT-CAPABLE ASSERTION:
+			if (i == URL.length - 1) {
+				Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+		                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+		                          result));
+				}
+			
+			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { closeBrowsers(); }
+		}
+		
+	}
+	
+	/**
+	 * Test all of the possible given URL combinations having 7 or less "program" records returned [3]
+	 * <p>Date Created: 2016-02-10</p>
+	 * <p>Date Modified: 2016-02-10</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: video-06</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(enabled = true, invocationCount = 1)
+	public void testProgramRecordsMaxNumber() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?size=7";
+		String a = "group=Kids";
+		String b = "single_program=0";
+		String c = "sort_order=ASC";
+		String d = "sort_by=CREATED_ON";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "program";
+   		int max = 7;
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	    boolean result = true;
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			result = function.assertCpadTagsMaxNumber(driver, URL[i], i+1, URL.length, false, record, max);
+			
+			// SCREENSHOT-CAPABLE ASSERTION:
+			if (i == URL.length - 1) {
+				Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+		                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+		                          result));
+				}
+			
+			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { closeBrowsers(); }
+		}
+		
+	}	
+	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
 // @AfterMethod   public static void closeBrowsers() { driver.quit(); }
-// @AfterClass   public static void closeBrowsers() { driver.quit(); }
+   @AfterClass   public static void closeBrowsers() { driver.quit(); }
 
 }

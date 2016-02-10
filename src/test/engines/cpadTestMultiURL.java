@@ -43,7 +43,7 @@ public class cpadTestMultiURL{
 	 // WebDriver driver = new FirefoxDriver();
 		driver = function.getServerName(driver);
 		
-		boolean result = function.assertCpadDates(driver, URL[combination-1], combination, URL.length, false, record, tag);
+		boolean result = function.assertCpadTagsDateDesc(driver, URL[combination-1], combination, URL.length, false, record, tag);
 		
 		Assert.assertTrue(result, function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
 				         "TEST # " + count + ", URL # " + combination + 
