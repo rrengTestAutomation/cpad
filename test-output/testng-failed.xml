@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test-single]">
-  <test name="test-single(failed)">
+<suite name="Failed suite [test-regression]">
+  <test name="test-regression(failed)">
     <classes>
+      <class name="test.engines.cpadTestSingleURL">
+        <methods>
+          <include name="logOpen"/>
+          <include name="logClose"/>
+        </methods>
+      </class> <!-- test.engines.cpadTestSingleURL -->
+      <class name="test.engines.cpadTestMultiURL">
+        <methods>
+          <include name="logClose"/>
+          <include name="logOpen"/>
+        </methods>
+      </class> <!-- test.engines.cpadTestMultiURL -->
       <class name="test.Cases.cpadTestPrograms">
         <methods>
           <include name="logOpen"/>
@@ -13,6 +25,21 @@
           <include name="endTime"/>
         </methods>
       </class> <!-- test.Cases.cpadTestPrograms -->
+      <class name="test.Cases.cpadTestVideos">
+        <methods>
+          <include name="logClose"/>
+          <include name="logOpen"/>
+          <include name="startTime"/>
+          <include name="endTime"/>
+          <include name="closeBrowsers"/>
+        </methods>
+      </class> <!-- test.Cases.cpadTestVideos -->
+      <class name="test.engines.cpadTestComboURL">
+        <methods>
+          <include name="logClose"/>
+          <include name="logOpen"/>
+        </methods>
+      </class> <!-- test.engines.cpadTestComboURL -->
     </classes>
-  </test> <!-- test-single(failed) -->
-</suite> <!-- Failed suite [test-single] -->
+  </test> <!-- test-regression(failed) -->
+</suite> <!-- Failed suite [test-regression] -->

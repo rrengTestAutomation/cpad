@@ -982,8 +982,7 @@ public class Functions {
 		}
 	}
 
-	public static String getAssertTrue(StackTraceElement l, WebDriver driver,
-			String description, Boolean b) throws IOException {
+	public static String getAssertTrue(StackTraceElement l, WebDriver driver, String description, Boolean b) throws IOException {
 		String packageNameOnly = l.getClassName().substring(0,
 				l.getClassName().lastIndexOf("."));
 		String classNameOnly = l.getClassName().substring(
