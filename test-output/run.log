@@ -1,20 +1,6 @@
- TEST START: 2016-02-12 18:27:52
+ TEST START: 2016-02-12 23:13:19
 
 
        Test: #1
-      Start: 2016-02-12 18:27:52
-   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testCreateOnOrderIsAscending"/></methods></class>
-Error Cause: ---> Out of order! (URL 3 OF 15)
-   Location: ---> test.Cases\cpadTestPrograms\testCreateOnOrderIsAscending, line # 205
-   Expected: ---> true
-     Actual: ---> false
-Error Cause: ---> XML is invalid! (URL 5 OF 15)
-   Location: ---> test.Cases\cpadTestPrograms\testCreateOnOrderIsAscending, line # 205
-   Expected: ---> true
-     Actual: ---> false
-Error Cause: ---> XML is invalid! (URL 8 OF 15)
-   Location: ---> test.Cases\cpadTestPrograms\testCreateOnOrderIsAscending, line # 205
-   Expected: ---> true
-     Actual: ---> false
-     Finish: 2016-02-12 18:32:17
-   Duration: 0:04:24
+      Start: 2016-02-12 23:13:19
+   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testProgramRecordsMaxNumber"/></methods></class>

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="test-single" duration-ms="264690" started-at="2016-02-12T23:27:52Z" finished-at="2016-02-12T23:32:17Z">
+  <suite name="test-single" duration-ms="271198" started-at="2016-02-13T02:31:13Z" finished-at="2016-02-13T02:35:44Z">
     <groups>
     </groups>
-    <test name="test-single" duration-ms="264690" started-at="2016-02-12T23:27:52Z" finished-at="2016-02-12T23:32:17Z">
+    <test name="test-single" duration-ms="271198" started-at="2016-02-13T02:31:13Z" finished-at="2016-02-13T02:35:44Z">
       <class name="test.Cases.cpadTestPrograms">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="logOpen" is-config="true" duration-ms="46" started-at="2016-02-12T18:27:52Z" finished-at="2016-02-12T18:27:52Z">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="logOpen" is-config="true" duration-ms="45" started-at="2016-02-12T21:31:13Z" finished-at="2016-02-12T21:31:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="startTime" is-config="true" duration-ms="11" started-at="2016-02-12T18:27:52Z" finished-at="2016-02-12T18:27:52Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="startTime" is-config="true" duration-ms="14" started-at="2016-02-12T21:31:13Z" finished-at="2016-02-12T21:31:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="FAIL" signature="testCreateOnOrderIsAscending()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="testCreateOnOrderIsAscending" duration-ms="264595" started-at="2016-02-12T18:27:52Z" finished-at="2016-02-12T18:32:17Z">
+        <test-method status="FAIL" signature="testCreateOnOrderIsAscending()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="testCreateOnOrderIsAscending" duration-ms="271118" started-at="2016-02-12T21:31:13Z" finished-at="2016-02-12T21:35:44Z">
           <exception class="org.openqa.selenium.remote.SessionNotFoundException">
             <message>
               <![CDATA[Session ID is null. Using WebDriver after calling quit()?
@@ -35,7 +35,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:324)
 	at test.helper.Functions.getScreenShot(Functions.java:968)
 	at test.helper.Functions.getAssertTrue(Functions.java:786)
-	at test.Cases.cpadTestPrograms.testCreateOnOrderIsAscending(cpadTestPrograms.java:216)
+	at test.Cases.cpadTestPrograms.testCreateOnOrderIsAscending(cpadTestPrograms.java:215)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -66,15 +66,15 @@ Driver info: driver.version: RemoteWebDriver
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateOnOrderIsAscending -->
-        <test-method status="PASS" signature="closeBrowsers()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="closeBrowsers" is-config="true" duration-ms="1" started-at="2016-02-12T18:32:17Z" finished-at="2016-02-12T18:32:17Z">
+        <test-method status="PASS" signature="closeBrowsers()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="closeBrowsers" is-config="true" duration-ms="0" started-at="2016-02-12T21:35:44Z" finished-at="2016-02-12T21:35:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowsers -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="endTime" is-config="true" duration-ms="13" started-at="2016-02-12T18:32:17Z" finished-at="2016-02-12T18:32:17Z">
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-12T21:35:44Z" finished-at="2016-02-12T21:35:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="logClose" is-config="true" duration-ms="4" started-at="2016-02-12T18:32:17Z" finished-at="2016-02-12T18:32:17Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.cpadTestPrograms@c818063]" name="logClose" is-config="true" duration-ms="4" started-at="2016-02-12T21:35:44Z" finished-at="2016-02-12T21:35:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->

@@ -10,10 +10,12 @@
 -->
     
 <!-- 
-<class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescendant"/></methods></class>
+<class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescending"/></methods></class>
 -->
 
-<class name="test.Cases.cpadTestPrograms"><methods><include name="testCreateOnOrderIsAscending"/></methods></class>
+<class name="test.Cases.cpadTestPrograms"><methods>
+<include name="testProgramRecordsMaxNumber"/>
+</methods></class>
 
 		
     </classes>

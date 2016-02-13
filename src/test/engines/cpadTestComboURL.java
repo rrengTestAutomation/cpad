@@ -1,8 +1,10 @@
 package test.engines;
 
 import org.testng.Assert;
+
 // import org.testng.annotations.Test;
 import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -41,7 +43,7 @@ public class cpadTestComboURL{
 
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCpadTagsDateDesc(driver, URL[i], i+1, URL.length, false, record, tag);
+			function.assertCpadTagsDateDesc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == URL.length - 1) {
