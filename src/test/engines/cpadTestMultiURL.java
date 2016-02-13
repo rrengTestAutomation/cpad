@@ -30,7 +30,7 @@ public class cpadTestMultiURL{
     String tag = "created_on";
 	
 	@SuppressWarnings("static-access")
-//	@Test(enabled = true, invocationCount = 2025)
+//	@Test(enabled = false, invocationCount = 2025)
 	public void testOrder() throws IOException {
 		
 	 // COUNTER

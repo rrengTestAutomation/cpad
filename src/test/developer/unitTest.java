@@ -18,7 +18,7 @@ import test.helper.Functions;
 public class unitTest {
 	static WebDriver driver;
 	
-	@Test
+	@Test(enabled = false)
 	public void testAnnualHeader() throws IOException, InterruptedException, IllegalArgumentException, MalformedURLException{
 
 		try{

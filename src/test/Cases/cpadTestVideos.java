@@ -31,8 +31,8 @@ public class cpadTestVideos{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(enabled = true, invocationCount = 1)
-	public void testCreateOnOrderIsDescendant() throws IOException {
+	@Test(invocationCount = 1)
+	public void testCreateOnOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER

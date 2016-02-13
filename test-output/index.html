@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-test-single">
-              <span class="suite-name border-passed">test-single</span>
+              <span class="suite-name border-failed">test-single</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-test-single" class="hide-methods passed suite-test-single"> (hide)</a> <!-- hide-methods passed suite-test-single -->
-                      <a href="#" panel-name="suite-test-single" class="show-methods passed suite-test-single"> (show)</a> <!-- show-methods passed suite-test-single -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-test-single" class="hide-methods failed suite-test-single"> (hide)</a> <!-- hide-methods failed suite-test-single -->
+                      <a href="#" panel-name="suite-test-single" class="show-methods failed suite-test-single"> (show)</a> <!-- show-methods failed suite-test-single -->
                     </span>
-                    <div class="method-list-content passed suite-test-single">
+                    <div class="method-list-content failed suite-test-single">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-test-single" title="test.Cases.cpadTestPrograms" hash-for-method="testProgramRecordsMaxNumber">testProgramRecordsMaxNumber</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-test-single" title="test.Cases.cpadTestPrograms" hash-for-method="testCreateOnOrderIsAscending">testCreateOnOrderIsAscending</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-test-single -->
+                    </div> <!-- method-list-content failed suite-test-single -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,21 +116,35 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-test-single" class="panel test-single">
-          <div class="suite-test-single-class-passed">
+          <div class="suite-test-single-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">test.Cases.cpadTestPrograms</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testProgramRecordsMaxNumber">
-                  </a> <!-- testProgramRecordsMaxNumber -->
-                  <span class="method-name">testProgramRecordsMaxNumber</span>
+                  <a name="testCreateOnOrderIsAscending">
+                  </a> <!-- testCreateOnOrderIsAscending -->
+                  <span class="method-name">testCreateOnOrderIsAscending</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;2.45.0&apos;, revision: &apos;32a636c&apos;, time: &apos;2015-03-05 22:01:35&apos;
+System info: host: &apos;WIN-K1RO6HNCMPU&apos;, ip: &apos;192.168.126.129&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_72&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:324)
+	at test.helper.Functions.getScreenShot(Functions.java:968)
+	at test.helper.Functions.getAssertTrue(Functions.java:786)
+	at test.Cases.cpadTestPrograms.testCreateOnOrderIsAscending(cpadTestPrograms.java:216)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-test-single-class-passed -->
+          </div> <!-- suite-test-single-class-failed -->
         </div> <!-- panel test-single -->
         <div panel-name="test-xml-test-single" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -145,7 +159,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;test.Cases.cpadTestPrograms&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testProgramRecordsMaxNumber&quot;/&gt;
+          &lt;include name=&quot;testCreateOnOrderIsAscending&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- test.Cases.cpadTestPrograms --&gt;
     &lt;/classes&gt;
@@ -189,14 +203,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testProgramRecordsMaxNumber')
+data.setCell(0, 1, 'testCreateOnOrderIsAscending')
 data.setCell(0, 2, 'test.Cases.cpadTestPrograms')
-data.setCell(0, 3, 1099481);
+data.setCell(0, 3, 264595);
 window.suiteTableData['test-single']= { tableData: data, tableDiv: 'times-div-test-single'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-test-single">
               </div> <!-- times-div-test-single -->
             </div> <!-- times-div -->
@@ -211,13 +225,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-test-single" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">test.Cases.cpadTestPrograms</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">testSingleProgramTagIsOne</span>
+                <br/>
+                <span class="ignored-method-name">testProgramRecordsMaxNumber</span>
                 <br/>
                 <span class="ignored-method-name">testGroupTagIsAdult</span>
                 <br/>
@@ -238,23 +254,25 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startTime</span>
-                <span class="method-start">65 ms</span>
+                <span class="method-start">60 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testProgramRecordsMaxNumber</span>
-                <span class="method-start">86 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCreateOnOrderIsAscending</span>
+                <span class="method-start">71 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">endTime</span>
-                <span class="method-start">1099577 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
                 <span class="method-name">closeBrowsers</span>
-                <span class="method-start">1099582 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">264721 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">endTime</span>
+                <span class="method-start">264722 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">logClose</span>
-                <span class="method-start">1099620 ms</span>
+                <span class="method-start">264774 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

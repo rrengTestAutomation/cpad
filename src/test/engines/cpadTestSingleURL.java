@@ -32,7 +32,7 @@ public class cpadTestSingleURL {
 	/**
 	 * @throws IOException
 	 */
-//  @Test(enabled = true, invocationCount = 1)
+//  @Test(enabled = false, invocationCount = 1)
 	public void testOrder() throws IOException {
     Functions function = new Functions();
     function.printXmlPath(new RuntimeException().getStackTrace()[0]);  	

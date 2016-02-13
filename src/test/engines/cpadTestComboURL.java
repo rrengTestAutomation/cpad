@@ -19,7 +19,7 @@ public class cpadTestComboURL{
 	int count = 0;
 	
 	@SuppressWarnings("static-access")
-//  @Test(enabled = true, invocationCount = 1)
+//  @Test(enabled = false, invocationCount = 1)
 	public void testOrder() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		

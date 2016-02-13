@@ -30,11 +30,15 @@ package test.helper;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 /** HELPER IMPORT */
 //import java.awt.AWTException;
@@ -1240,6 +1244,8 @@ public class Functions {
 		public void startTime() throws IOException {
 		   String date = getCurrentDateTimeFull();
 		   fileCleaner("start.time");
+		   fileCleaner("xml.log"   );
+		   fileCleaner("cpad.log"  );
 		   fileWriter("start.time", convertLongToString(System.currentTimeMillis()));
 		// Creating New or Updating existing Test Counter record:  
 		   int n = counter("test.num");
@@ -1258,6 +1264,8 @@ public class Functions {
 		public void endTime() throws IOException {
 		   long finish = System.currentTimeMillis();
 		   fileCleaner("finish.time");
+		   fileCleaner("xml.log"    );
+		   fileCleaner("cpad.log"   );
 		   fileWriter("finish.time", convertLongToString(finish));
 		// Scanning Test Counter record:
 		   int n = 1;
@@ -1342,6 +1350,61 @@ public class Functions {
    		}
 		
 		/**
+		 * xml File validity check
+		 * @throws IOException
+		 * @throws SAXException
+		 * @throws ParserConfigurationException 
+		 */
+		public Boolean xmlValidityChecker(String path, String fileName) throws SAXException, IOException, ParserConfigurationException{
+//		    URL schemaFile = new URL("http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd");
+//		    Source xmlFile = new StreamSource(new File(path + fileName));
+//		    SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+//		    Schema schema = schemaFactory.newSchema(schemaFile);
+//		    Validator validator = schema.newValidator();
+//		    try {
+//		    	validator.validate(xmlFile);
+//		        fileWriterPrinter(xmlFile.getSystemId() + " is valid");
+//		    	return true;	    	
+//		    } catch (SAXException e) {
+//		    	fileWriterPrinter("\n" + xmlFile.getSystemId() + " is NOT valid");
+//		    	fileWriterPrinter("Reason: " + e.getLocalizedMessage() + "\n");		    	
+//	   		 // Assert.assertTrue(false, getAssertTrue(new RuntimeException().getStackTrace()[0], driver, "XML is NOT valid!", false));		    	
+//		    	return false;
+//		    	}
+			
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			factory.setValidating(false);
+			factory.setNamespaceAware(true);
+
+			DocumentBuilder builder = factory.newDocumentBuilder();
+
+			builder.setErrorHandler(new SimpleErrorHandler());
+			
+			// PARSE method:
+			// (1) validates XML;
+            // (2) will throw an exception if miss-formatted;
+			try { builder.parse(new InputSource(path + fileName)); return true; }
+			catch (Exception e) { return false; }
+
+		    }
+		
+		
+		public class SimpleErrorHandler implements ErrorHandler {
+		    public void warning(SAXParseException e) throws SAXException {
+		    	try { fileWriterPrinter(e.getMessage()); } catch (Exception exception) {}
+		    }
+
+		    public void error(SAXParseException e) throws SAXException {
+		    	try { fileWriterPrinter(e.getMessage()); } catch (Exception exception) {}
+		    }
+
+		    public void fatalError(SAXParseException e) throws SAXException {
+		    	try { fileWriterPrinter(e.getMessage()); } catch (Exception exception) {}
+		    }
+		}
+		
+		
+		/**
 		 * xml File value reader
 		 * @throws IOException
 		 * @throws ParserConfigurationException
@@ -1354,7 +1417,7 @@ public class Functions {
    		    Document doc = dBuilder.parse(stocks);
    		    doc.getDocumentElement().normalize();
    		    fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":" + "\n");
-   		    NodeList nodes = doc.getElementsByTagName(record);   		
+   		    NodeList nodes = doc.getElementsByTagName(record);
 		    String[] valueArray = new String[nodes.getLength()];		
    		    for (int i = 0; i < nodes.getLength(); i++) {
    		    	Node node = nodes.item(i);
@@ -1363,7 +1426,7 @@ public class Functions {
    		            // fileWriterPrinter(record + " " + tag + ": " + getValue(tag, element));
    		    		valueArray[i] = getValue(tag, element);
    		    		}
-   		    	}
+   		    	}  		    
    		    return valueArray;
    		    }
 		
@@ -1382,9 +1445,104 @@ public class Functions {
    		    NodeList nodes = doc.getElementsByTagName(record);
    		    return nodes.getLength();
    		    }
+
+		/**
+		 * Assert CPAD record tags as dates are in ascending order
+		 * @throws IOException
+		 */
+		public boolean assertCpadTagsDateAsc(WebDriver driver, StackTraceElement trace, String url, int combination, int total, Boolean ifAssert, String record, String tag) throws IOException {
+		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
+		    // COUNTER
+		    try {               
+		   		// ENTRY
+		   		fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
+		   		fileWriterPrinter(url);
+		   		fileWriterPrinter("\n" + "Record Name: " + record);
+		   		fileWriterPrinter(       "   Tag Name: " + tag);
+		   		
+		   		String path = Locators.testOutputFileDir;
+		   		String name = "source";
+		   		String extention = "xml";
+		   		String fileName = name + "." + extention;
+		   		
+		   		sourcePagePrint(driver, url, path, fileName);
+		   		
+		   		// fileWriterPrinter(); 		
+		   		// fileWriterPrinter(path + "\n");
+		   		// fileWriterPrinter(path + fileName);
+		   		
+		   		fileWriterPrinter();
+		   		fileWriterPrinter("==========================");
+		   		
+		   		if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+		   		if (!fileExist("xml.log",  false)) { fileWriter("xml.log", "true");  }
+		   		
+		   		boolean assertXML = xmlValidityChecker(path, fileName);
+		   		if (!assertXML) { fileCleaner("xml.log"); fileWriter("xml.log", "false"); }		   		
+	   			getAssertTrue(trace, driver,
+                        "XML is invalid! (URL " + combination + " OF " + total + ")",
+                        assertXML);
+	   			
+				String[] valueArray     = xmlValueArray(path, fileName, record, tag);			
+				long[] fingerprintArray = new long[valueArray.length];
+				
+		   		for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+		   		
+		   		if (!fileExist("order.log")) { fileWriter("order.log", "true"); }
+		   		
+		   		for (int i = 0; i < valueArray.length; i++) {
+		   			fileWriterPrinter("Record ID: " + (i + 1));		   			
+		   			fileWriterPrinter("Tag Value: " + valueArray[i]);
+		   					   			
+		   			if (i < (valueArray.length - 1)) {
+		   				boolean assertORDER = compareLong(fingerprintArray[i + 1], fingerprintArray[i]);
+		   				
+		   			if (assertORDER) { fileWriterPrinter("   Result: OK\n"); }
+		   			else {
+		   				  fileWriterPrinter("   Result: FAILED!");
+		   				  fileWriterPrinter("   Reason: PREVIOUS RECORD, SHOWN BELOW - IS OLDER THEN THE CURRENT ONE...");
+		   				  fileCleaner("order.log"); fileWriter("order.log", "false");
+
+		   				  if (ifAssert) {
+		   					  fileWriterPrinter();
+		   					  fileWriterPrinter(" Record ID: " + (i + 2));
+		   					  fileWriterPrinter("Created On: " + valueArray[i + 1]);
+		   					  }	
+		   				  
+		   				  fileWriterPrinter();
+		   			}
+		   			
+		   			if (ifAssert) { 
+		   				Assert.assertTrue(assertORDER, "   Result: FAILED\n");
+		   				}
+		   			
+		   			}
+		   		}
+		   		
+		   		fileWriterPrinter("==========================");
+		   		fileWriterPrinter();
+		   		
+ 				getAssertTrue(trace, driver,
+                          "Out of order! (URL " + combination + " OF " + total + ")",
+                          Boolean.valueOf(fileScanner("order.log")));	   		
+
+		   		boolean result = Boolean.valueOf(fileScanner("order.log")) & Boolean.valueOf(fileScanner("xml.log"));
+		   		if (fileExist("cpad.log", false)) { 
+		   			if (!result){
+		   				fileCleaner("cpad.log"); fileWriter("cpad.log", result);
+		   			}
+		   		}
+		   		
+		   		fileCleaner("order.log");
+		   		fileCleaner("xml.log");
+		   		return result;
+
+		   		} catch (Exception exception) { /**exception.printStackTrace();*/ return false; } // finally { driver.quit(); }
+		   		
+		   }
 		
 		/**
-		 * Assert CPAD record tags as dates are in descendant order
+		 * Assert CPAD record tags as dates are in descending order
 		 * @throws IOException
 		 */
 		public boolean assertCpadTagsDateDesc(WebDriver driver, String url, int combination, int total, Boolean ifAssert, String record, String tag) throws IOException {
@@ -1461,7 +1619,7 @@ public class Functions {
 		 * Assert CPAD record tags are equal to expected
 		 * @throws IOException
 		 */
-		public boolean assertCpadTagsEqualExpected(WebDriver driver, String url, int combination, int total, Boolean ifAssert, String record, String tag, String expected) throws IOException {
+		public boolean assertCpadTagsEqualToExpected(WebDriver driver, String url, int combination, int total, Boolean ifAssert, String record, String tag, String expected) throws IOException {
 		    // printXmlPath(new RuntimeException().getStackTrace()[0]);  	
 		    // COUNTER
 		    try {               

@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
 import test.common.Locators;
 import test.helper.Functions;
 
-//@Test(enabled = true /** , invocationCount = 100 */)
+//@Test(enabled = false /** , invocationCount = 100 */)
 public class Main {
 	static WebDriver driver;
 	static Functions function = new Functions();

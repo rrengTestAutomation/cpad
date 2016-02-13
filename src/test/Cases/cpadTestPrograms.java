@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
+// import org.testng.annotations.AfterClass;
 // import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -28,11 +28,11 @@ public class cpadTestPrograms{
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: video-06</p>
+	 * <p>User Stories: programs-01</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(enabled = true, invocationCount = 1)
+	@Test(invocationCount = 1)
 	public void testGroupTagIsAdult() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
@@ -54,7 +54,7 @@ public class cpadTestPrograms{
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCpadTagsEqualExpected(driver, URL[i], i+1, URL.length, false, record, tag, expected);
+			result = function.assertCpadTagsEqualToExpected(driver, URL[i], i+1, URL.length, false, record, tag, expected);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == URL.length - 1) {
@@ -75,11 +75,11 @@ public class cpadTestPrograms{
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: video-06</p>
+	 * <p>User Stories: programs-02</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(enabled = true, invocationCount = 1)
+	@Test(invocationCount = 1)
 	public void testSingleProgramTagIsOne() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
@@ -101,7 +101,7 @@ public class cpadTestPrograms{
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			result = function.assertCpadTagsEqualExpected(driver, URL[i], i+1, URL.length, false, record, tag, expected);
+			result = function.assertCpadTagsEqualToExpected(driver, URL[i], i+1, URL.length, false, record, tag, expected);
 			
 			// SCREENSHOT-CAPABLE ASSERTION:
 			if (i == URL.length - 1) {
@@ -122,11 +122,11 @@ public class cpadTestPrograms{
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: video-06</p>
+	 * <p>User Stories: programs-03</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(enabled = true, invocationCount = 1)
+	@Test(invocationCount = 1)
 	public void testProgramRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
@@ -159,13 +159,69 @@ public class cpadTestPrograms{
 			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { closeBrowsers(); }
 		}
 		
-	}	
+	}
+	
+	
+	/**
+	 * Test sorting programs by its created date in ascending order [4]
+	 * <p>Date Created: 2016-02-12</p>
+	 * <p>Date Modified: 2016-02-12</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-04</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testCreateOnOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON";
+		String a = "group=Adult";
+		String b = "single_program=0";
+		String c = "size=70";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+	    
+//	    // UNIT TEST
+//        String[] URL = { "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&group=Adult&size=70",
+//		                   "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&single_pr"
+//		                 };
+
+   		String record = "program";
+   		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	    
+	    @SuppressWarnings("unused")
+		boolean result = true;
+	    
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			result = function.assertCpadTagsDateAsc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-UNABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - unexpected results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ result = false; } finally { closeBrowsers(); }
+		}
+		
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - unexpected results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
+	}
 	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
-// @AfterMethod   public static void closeBrowsers() { driver.quit(); }
-   @AfterClass   public static void closeBrowsers() { driver.quit(); }
+   @AfterMethod  public static void closeBrowsers() { driver.quit(); }
+// @AfterClass   public static void closeBrowsers() { driver.quit(); }
 
 }
