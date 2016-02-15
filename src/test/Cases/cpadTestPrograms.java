@@ -329,7 +329,7 @@ public class cpadTestPrograms{
 	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=UPDATED_ON";
-		String a = "group=Kids";
+		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
