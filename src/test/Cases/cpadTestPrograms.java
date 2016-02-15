@@ -258,7 +258,7 @@ public class cpadTestPrograms{
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			function.assertCpadTagsDateAsc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			function.assertCpadTagsDateDesc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
 			
 //			// SCREENSHOT-DISABLED ASSERTION:
 //			if (i == URL.length - 1) {
