@@ -181,7 +181,7 @@ public class cpadTestPrograms{
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testCreateOnOrderIsAscending() throws IOException {
+	public void testCreatedOnOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -191,12 +191,9 @@ public class cpadTestPrograms{
 		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
-	    
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));	    
    //// UNIT TEST
-     // String[] URL = { "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&group=Adult&size=70",
-     //                  "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&single_pr"
-     //                };
+     // String[] URL = { root + "&" + c, root + "&" + b };
 
    		String record = "program";
    		String tag = "created_on";
@@ -233,7 +230,7 @@ public class cpadTestPrograms{
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testCreateOnOrderIsDescending() throws IOException {
+	public void testCreatedOnOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -244,14 +241,100 @@ public class cpadTestPrograms{
 		String b = "single_program=0";
 		String c = "size=70";
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
-	    
-   //// UNIT TEST
-     // String[] URL = { "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&group=Adult&size=70",
-     //                  "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&single_pr"
-     //                };
-
    		String record = "program";
    		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateDesc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
+		}
+		
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
+	}
+	
+	/**
+	 * Test sorting programs by its updated date in ascending order [6]
+	 * <p>Date Created: 2016-02-15</p>
+	 * <p>Date Modified: 2016-02-15</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-06</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=UPDATED_ON";
+		String a = "group=Adult";
+		String b = "single_program=1";
+		String c = "size=70";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "program";
+   		String tag = "updated_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateAsc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
+		}
+		
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
+	}
+	
+	/**
+	 * Test sorting programs by its updated date in descending order [7]
+	 * <p>Date Created: 2016-02-15</p>
+	 * <p>Date Modified: 2016-02-15</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-07</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=UPDATED_ON";
+		String a = "group=Kids";
+		String b = "single_program=0";
+		String c = "size=70";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "program";
+   		String tag = "updated_on";
    		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
