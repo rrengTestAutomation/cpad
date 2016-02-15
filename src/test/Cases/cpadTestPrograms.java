@@ -221,6 +221,58 @@ public class cpadTestPrograms{
                           Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
+	/**
+	 * Test sorting programs by its created date in descending order [5]
+	 * <p>Date Created: 2016-02-15</p>
+	 * <p>Date Modified: 2016-02-15</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-05</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testCreateOnOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=CREATED_ON";
+		String a = "group=Kids";
+		String b = "single_program=0";
+		String c = "size=70";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+	    
+   //// UNIT TEST
+     // String[] URL = { "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&group=Adult&size=70",
+     //                  "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON&single_pr"
+     //                };
+
+   		String record = "program";
+   		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateAsc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
+		}
+		
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
+	}
+	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 

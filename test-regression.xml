@@ -5,7 +5,7 @@
 
   <test verbose="1" name="test-regression">
     <packages>	
-    <package name="test.*"></package>
+    <package name="test.Cases.*"></package>
     </packages>   
   </test>
   
