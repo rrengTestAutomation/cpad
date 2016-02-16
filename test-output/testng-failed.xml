@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test-regression]">
-  <test name="test-regression(failed)">
+<suite name="Failed suite [test-single]">
+  <test name="test-single(failed)">
     <classes>
-      <class name="test.Cases.cpadTestPrograms">
+      <class name="test.Cases.Xml.Parse.cpadTestPrograms">
         <methods>
           <include name="logOpen"/>
-          <include name="testCreatedOnOrderIsDescending"/>
+          <include name="logClose"/>
           <include name="startTime"/>
           <include name="testCreatedOnOrderIsAscending"/>
-          <include name="closeBrowsers"/>
-          <include name="logClose"/>
-          <include name="testUpdatedOnOrderIsAscending"/>
           <include name="endTime"/>
         </methods>
-      </class> <!-- test.Cases.cpadTestPrograms -->
-      <class name="test.Cases.cpadTestVideos">
-        <methods>
-          <include name="logClose"/>
-          <include name="logOpen"/>
-          <include name="startTime"/>
-          <include name="endTime"/>
-          <include name="closeBrowsers"/>
-        </methods>
-      </class> <!-- test.Cases.cpadTestVideos -->
+      </class> <!-- test.Cases.Xml.Parse.cpadTestPrograms -->
     </classes>
-  </test> <!-- test-regression(failed) -->
-</suite> <!-- Failed suite [test-regression] -->
+  </test> <!-- test-single(failed) -->
+</suite> <!-- Failed suite [test-single] -->

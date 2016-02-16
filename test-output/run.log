@@ -1,6 +1,35 @@
- TEST START: 2016-02-16 12:39:59
+ TEST START: 2016-02-16 17:11:02
 
 
        Test: #1
-      Start: 2016-02-16 12:39:59
-   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testTitleTagIsAllanGregg"/></methods></class>
+      Start: 2016-02-16 17:11:02
+   XML Path: <class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsAscending"/></methods></class>
+Error Cause: ---> Out of order! (URL 3 OF 15)
+   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsAscending, line # 173
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> TEST EXECUTION # 1 - Unexpected Results found!
+   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsAscending, line # 178
+   Expected: ---> true
+     Actual: ---> false
+     Finish: 2016-02-16 17:11:49
+   Duration: 0:00:47
+
+       Test: #2
+      Start: 2016-02-16 17:11:49
+   XML Path: <class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsDescending"/></methods></class>
+Error Cause: ---> Out of order! (URL 3 OF 15)
+   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsDescending, line # 212
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> TEST EXECUTION # 2 - Unexpected Results found!
+   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsDescending, line # 217
+   Expected: ---> true
+     Actual: ---> false
+     Finish: 2016-02-16 17:12:33
+   Duration: 0:00:44
+   Subtotal: 0:01:31
+
+       Test: #3
+      Start: 2016-02-16 17:12:33
+   XML Path: <class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods><include name="testGroupTagIsAdult"/></methods></class>

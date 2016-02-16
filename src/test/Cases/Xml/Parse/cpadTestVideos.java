@@ -8,12 +8,12 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
 import test.common.Locators;
 import test.helper.Functions;
 
 
 public class cpadTestVideos{
-	// static WebDriver driver;
 	Functions function = new Functions();
 	int count = 0;
 	
@@ -46,36 +46,19 @@ public class cpadTestVideos{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try {
-			// driver = function.getServerName(driver);
-			// function.assertCpadTagsDateDesc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
-			function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
-			
-//			// SCREENSHOT-UNABLED ASSERTION:
-//			if (i == URL.length - 1) {
-//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
-//				}			
-			} catch (Exception e) { /** e.printStackTrace(); */ } finally { 
-				// SCREENSHOT-CAPABLE ASSERTION:
-				if(Boolean.valueOf(function.fileScanner("cpad.log"))) {
-				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], root,
-		                        "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		                        Boolean.valueOf(function.fileScanner("cpad.log"))));
-				}
-			}
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
-//		// SCREENSHOT-CAPABLE ASSERTION:
-//		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], root,
-//                        "TEST EXECUTION # " + count + " - Unexpected Results found!",
-//                        Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
+		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
-// @AfterMethod  public static void closeBrowsers() { driver.quit(); }
-// @AfterClass   public static void closeBrowsers() { driver.quit(); }
 
 }
