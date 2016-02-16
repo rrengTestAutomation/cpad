@@ -356,6 +356,56 @@ public class cpadTestPrograms{
                           Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
+	/**
+	 * Test all of the possible given URL combinations are having the "title" tags of "program" record equals "Allan Gregg" [8]
+	 * <p>Date Created: 2016-02-16</p>
+	 * <p>Date Modified: 2016-02-16</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-01</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testTitleTagIsAllanGregg() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/?title=Allan Gregg";
+		String a = "group=Adult";
+		String b = "single_program=0";
+		String c = "size=70";
+		String d = "sort_order=DESC";
+		String e = "sort_by=UPDATED_ON";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+   		String record = "program";
+   		String tag = "title";
+   		String expected = "Allan Gregg";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
+					                               URL[i], i+1, URL.length, false, record, tag, expected);
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
+//				}
+			
+			} catch (Exception exception) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
+		}
+		
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
+	}
+	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 

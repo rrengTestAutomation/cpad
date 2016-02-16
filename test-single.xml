@@ -14,7 +14,7 @@
 -->
 
 <class name="test.Cases.cpadTestPrograms"><methods>
-<include name="testProgramRecordsMaxNumber"/>
+<include name="testTitleTagIsAllanGregg"/>
 </methods></class>
 
 		

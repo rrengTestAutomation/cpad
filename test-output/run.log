@@ -1,55 +1,6 @@
- TEST START: 2016-02-12 23:47:23
+ TEST START: 2016-02-16 12:39:59
 
 
        Test: #1
-      Start: 2016-02-12 23:47:23
-   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testCreateOnOrderIsAscending"/></methods></class>
-Error Cause: ---> Out of order! (URL 3 OF 15)
-   Location: ---> test.Cases\cpadTestPrograms\testCreateOnOrderIsAscending, line # 209
-   Expected: ---> true
-     Actual: ---> false
-Error Cause: ---> XML is invalid! (URL 5 OF 15)
-   Location: ---> test.Cases\cpadTestPrograms\testCreateOnOrderIsAscending, line # 209
-   Expected: ---> true
-     Actual: ---> false
-Error Cause: ---> XML is invalid! (URL 8 OF 15)
-   Location: ---> test.Cases\cpadTestPrograms\testCreateOnOrderIsAscending, line # 209
-   Expected: ---> true
-     Actual: ---> false
-     Finish: 2016-02-12 23:51:57
-   Duration: 0:04:33
-
-       Test: #2
-      Start: 2016-02-12 23:51:57
-   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testGroupTagIsAdult"/></methods></class>
-     Finish: 2016-02-13 00:09:54
-   Duration: 0:17:56
-   Subtotal: 0:22:30
-
-       Test: #3
-      Start: 2016-02-13 00:09:54
-   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testProgramRecordsMaxNumber"/></methods></class>
-     Finish: 2016-02-13 00:27:29
-   Duration: 0:17:35
-   Subtotal: 0:40:05
-
-       Test: #4
-      Start: 2016-02-13 00:27:29
-   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testSingleProgramTagIsOne"/></methods></class>
-     Finish: 2016-02-13 00:45:20
-   Duration: 0:17:51
-   Subtotal: 0:57:57
-
-       Test: #5
-      Start: 2016-02-13 00:45:20
-   XML Path: <class name="test.Cases.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescending"/></methods></class>
-     Finish: 2016-02-13 00:56:22
-   Duration: 0:11:01
-   Subtotal: 1:08:59
-
-TOTAL TESTS: 5
-     FAILED: 3
-TEST  START: 2016-02-12 23:47:23
-TEST FINISH: 2016-02-13 00:56:22
-TOTAL  TIME: 1:08:59
-
+      Start: 2016-02-16 12:39:59
+   XML Path: <class name="test.Cases.cpadTestPrograms"><methods><include name="testTitleTagIsAllanGregg"/></methods></class>

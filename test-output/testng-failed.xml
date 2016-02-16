@@ -3,25 +3,15 @@
 <suite name="Failed suite [test-regression]">
   <test name="test-regression(failed)">
     <classes>
-      <class name="test.engines.cpadTestSingleURL">
-        <methods>
-          <include name="logOpen"/>
-          <include name="logClose"/>
-        </methods>
-      </class> <!-- test.engines.cpadTestSingleURL -->
-      <class name="test.engines.cpadTestMultiURL">
-        <methods>
-          <include name="logClose"/>
-          <include name="logOpen"/>
-        </methods>
-      </class> <!-- test.engines.cpadTestMultiURL -->
       <class name="test.Cases.cpadTestPrograms">
         <methods>
           <include name="logOpen"/>
+          <include name="testCreatedOnOrderIsDescending"/>
           <include name="startTime"/>
+          <include name="testCreatedOnOrderIsAscending"/>
           <include name="closeBrowsers"/>
           <include name="logClose"/>
-          <include name="testCreateOnOrderIsAscending"/>
+          <include name="testUpdatedOnOrderIsAscending"/>
           <include name="endTime"/>
         </methods>
       </class> <!-- test.Cases.cpadTestPrograms -->
@@ -34,12 +24,6 @@
           <include name="closeBrowsers"/>
         </methods>
       </class> <!-- test.Cases.cpadTestVideos -->
-      <class name="test.engines.cpadTestComboURL">
-        <methods>
-          <include name="logClose"/>
-          <include name="logOpen"/>
-        </methods>
-      </class> <!-- test.engines.cpadTestComboURL -->
     </classes>
   </test> <!-- test-regression(failed) -->
 </suite> <!-- Failed suite [test-regression] -->
