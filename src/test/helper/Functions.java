@@ -902,13 +902,13 @@ public class Functions {
 	}
 
 	/**
-	 * Gets the first (main) line of any thrown Exception Message Regardless it
-	 * is single or multi-line Prompt
+	/**
+	 * Gets the first (main) line of any thrown Exception Message Regardless is this a single or multi-line Prompt
+	 * Uses user defined WebDriver driver over user-opened URL
 	 * 
 	 * @param e
 	 */
-	public static void getExceptionDescriptive(Exception e,
-			StackTraceElement l, WebDriver driver) throws IOException {
+	public static void getExceptionDescriptive(Exception e, StackTraceElement l, WebDriver driver) throws IOException {
 		String message1 = null;
 		try {
 			message1 = e.getCause().toString();
@@ -981,7 +981,174 @@ public class Functions {
 					+ "\nStack Traces:");
 		}
 	}
+	
+	/**
+	 * Gets the first (main) line of any thrown Exception Message Regardless is this a single or multi-line Prompt
+	 * Uses independent WebDriver driver;
+	 * Opens user defined URL
+	 * @param e
+	 */
+	public void getExceptionDescriptive(Exception e, StackTraceElement l, String url) throws IOException {
+		WebDriver driver = null;
+		driver = getServerName(driver);
+		getUrlWaitUntil(driver, 30, url);
+		String message1 = null;
+		try {
+			message1 = e.getCause().toString();
+		} catch (NullPointerException e1) {
+			message1 = ".getCause() by NullPointerException:";
+		} finally {
+			String message2 = e.getMessage();
+			String[] multiline1 = message1.replaceAll("\\r", "").split("\\n");
+			String[] multiline2 = message2.replaceAll("\\r", "").split("\\n");
+			String firstLine = multiline1[0];
+			String secondLine = multiline2[0];
+			String errorCause = firstLine.substring(0, firstLine.indexOf(":"));
+			String exceptionThrown = errorCause.substring(
+					1 + errorCause.lastIndexOf("."), errorCause.length());
+			String packageNameOnly = l.getClassName().substring(0,
+					l.getClassName().lastIndexOf("."));
+			String classNameOnly = l.getClassName().substring(
+					1 + l.getClassName().lastIndexOf("."),
+					l.getClassName().length());
+			String location = packageNameOnly + File.separator + classNameOnly
+					+ File.separator + l.getMethodName() + ", line # "
+					+ l.getLineNumber();
+			String xml = "<class name=\"" + packageNameOnly + "."
+					+ classNameOnly + "\"><methods><include name=\""
+					+ l.getMethodName() + "\"/></methods></class>";
+			String description = exceptionThrown;
+			String detected = getCurrentDateTimeFull();
+			String runtime = testRunTime("start.time",
+					System.currentTimeMillis());
+			String subtotal = testRunTime("ini.time",
+					System.currentTimeMillis());
+			fileWriterPrinter("\nError Cause: ---> " + errorCause
+					+ "\nDescription: ---> " + secondLine
+					+ "\n   Location: ---> " + location);
+			getScreenShot(l, description, driver);
+			driver.close();
+			// Creating New or Updating existing Failed Counter record:
+			counter("failed.num");
+			// Append a New Log record:
+			if (fileExist("run.log")) {
+				fileWriter("run.log", "Error Cause: ---> " + errorCause);
+				fileWriter("run.log", "Description: ---> " + secondLine);
+				fileWriter("run.log", "   Location: ---> " + location);
+				// fileWriter("run.log", "   Detected: ---> " + detected);
+				// fileWriter("run.log", "    Runtime: ---> " + runtime);
+				// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+			}
+			// Append an Error record:
+			fileWriter("failed.log", "    Failure: #"
+					+ fileScanner("failed.num"));
+			fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
+			fileWriter(
+					"failed.log",
+					"      Start: "
+							+ convertCalendarMillisecondsAsStringToDateTimeHourMinSec(fileScanner("start.time")));
+			fileWriter("failed.log", "   XML Path: " + xml);
+			fileWriter("failed.log", "Error Cause: ---> " + errorCause);
+			fileWriter("failed.log", "Description: ---> " + secondLine);
+			fileWriter("failed.log", "   Location: ---> " + location);
+			fileWriter("failed.log", "   Detected: " + detected);
+			fileWriter("failed.log", "    Runtime: " + runtime);
+			fileWriter("failed.log", "   Subtotal: " + subtotal);
+			fileWriter("failed.log", "");
+			// Append Descriptive record:
+			Assert.assertFalse(true, "\n  Error Cause: ---> " + errorCause
+					+ "\n  Description: ---> " + secondLine
+					+ "\n     Location: ---> " + location
+					+ "\n     Detected: ---> " + detected
+					+ "\n      Runtime: ---> " + runtime
+					+ "\n     Subtotal: ---> " + subtotal + "\n" + xml + "\n"
+					+ "\nStack Traces:");
+		}
+	}
+	
+	/**
+	 * "AssertTrue" with Screen-Shot and descriptive Error Message
+	 * Uses independent WebDriver driver by opening user defined URL
+	 * @param e
+	 */
+	public String getAssertTrue(StackTraceElement l, String url, String description, Boolean b) throws IOException {
 
+		String packageNameOnly = l.getClassName().substring(0,
+				l.getClassName().lastIndexOf("."));
+		String classNameOnly = l.getClassName().substring(
+				1 + l.getClassName().lastIndexOf("."),
+				l.getClassName().length());
+		String location = packageNameOnly + File.separator + classNameOnly
+				+ File.separator + l.getMethodName() + ", line # "
+				+ l.getLineNumber();
+		String xml = "<class name=\"" + packageNameOnly + "." + classNameOnly
+				+ "\"><methods><include name=\"" + l.getMethodName()
+				+ "\"/></methods></class>";
+		String detected = getCurrentDateTimeFull();
+		String runtime = testRunTime("start.time", System.currentTimeMillis());
+		String subtotal = testRunTime("ini.time", System.currentTimeMillis());
+		if (b == false) {
+			fileWriterPrinter("\nError Cause: ---> " + description
+					+ "\n   Location: ---> " + location
+					+ "\n   Expected: ---> " + "true" + "\n     Actual: ---> "
+					+ b + "\n");
+			
+			if(!b){
+				WebDriver driver = null;
+				driver = getServerName(driver);
+				getUrlWaitUntil(driver, 30, url);
+				getScreenShot(l, description, driver);
+				driver.close();
+				}
+
+			// Creating New or Updating existing Failed Counter record:
+			counter("failed.num");
+			// Append a New Log record:
+			if (fileExist("run.log")) {
+				fileWriter("run.log", "Error Cause: ---> " + description);
+				fileWriter("run.log", "   Location: ---> " + location);
+				fileWriter("run.log", "   Expected: ---> " + "true");
+				fileWriter("run.log", "     Actual: ---> " + b);
+				// fileWriter("run.log", "   Detected: ---> " + detected);
+				// fileWriter("run.log", "    Runtime: ---> " + runtime);
+				// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+			}
+			// Append an Error record:
+			fileWriter("failed.log", "    Failure: #"
+					+ fileScanner("failed.num"));
+			fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
+			fileWriter(
+					"failed.log",
+					"      Start: "
+							+ convertCalendarMillisecondsAsStringToDateTimeHourMinSec(fileScanner("start.time")));
+			fileWriter("failed.log", "   XML Path: " + xml);
+			fileWriter("failed.log", "Error Cause: ---> " + description);
+			fileWriter("failed.log", "   Location: ---> " + location);
+			fileWriter("failed.log", "   Expected: ---> " + "true");
+			fileWriter("failed.log", "     Actual: ---> " + b);
+			fileWriter("failed.log", "   Detected: " + detected);
+			fileWriter("failed.log", "    Runtime: " + runtime);
+			fileWriter("failed.log", "   Subtotal: " + subtotal);
+			fileWriter("failed.log", "");
+		} else {
+			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b
+					+ "\n  Result: OK\n");
+		}
+		// Descriptive record output:
+		return "\nError Cause: ---> " + description + "\n   Location: ---> "
+				+ location + "\n   Expected: ---> " + "true"
+				+ "\n     Actual: ---> " + b + "\n   Detected: ---> "
+				+ detected + "\n    Runtime: ---> " + runtime
+				+ "\n   Subtotal: ---> " + subtotal + "\n" + xml + "\n"
+				+ "\nStack Traces:";
+	}
+	
+	/**
+	 * "AssertTrue" with Screen-Shot and descriptive Error Message
+	 * Uses independent WebDriver driver;
+	 * Opens user defined URL
+	 * @param e
+	 */
 	public static String getAssertTrue(StackTraceElement l, WebDriver driver, String description, Boolean b) throws IOException {
 		String packageNameOnly = l.getClassName().substring(0,
 				l.getClassName().lastIndexOf("."));
@@ -1629,8 +1796,28 @@ public class Functions {
 			}
 		}
 	}
+	
+	/**
+	 * Print the Source Page
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public void sourcePagePrint(String url, String path,
+			String fileName) throws IOException {
+		try {
+			fileCleaner(path, fileName);
+			fileWriterPrinter();
+			getUrlSourcePagePrint(url, path, fileName);
+			fileWriterPrinter();
+			// Thread.sleep(2000);
+		} catch (Exception exception) {
+			getExceptionDescriptive(exception, new Exception().getStackTrace()[0], url);
+		}
+	}
 
 	/**
+	 * Print the Source Page
+	 * Uses Selenium WebDriver
 	 * @throws IOException
 	 */
 	public void sourcePagePrint(WebDriver driver, String url, String path,
@@ -1751,10 +1938,43 @@ public class Functions {
 		}
 
 	}
+	
+	/**
+	 * xml File validity check
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 * @throws SAXException
+	 * @throws ParserConfigurationException
+	 */
+	public Boolean xmlValidityChecker(String path, String fileName,
+			StackTraceElement trace, String url, int number, int total)
+			throws SAXException, IOException, ParserConfigurationException {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setValidating(false);
+		factory.setNamespaceAware(true);
+
+		DocumentBuilder builder = factory.newDocumentBuilder();
+
+		builder.setErrorHandler(new SimpleErrorHandler());
+		boolean result;
+		// PARSE method:
+		// (1) validates XML;
+		// (2) will throw an exception if miss-formatted;
+		try {
+			builder.parse(new InputSource(path + fileName));
+			result = true;
+		} catch (Exception e) {
+			fileCleaner("xml.log");
+			fileWriter("xml.log", "false");
+			result = false;
+		}
+		getAssertTrue(trace, url, "XML is invalid! (URL " + number + " OF " + total + ")", result);
+		return result;
+	}
 
 	/**
 	 * xml File validity check
-	 * 
+	 * Uses Selenium WebDriver
 	 * @throws IOException
 	 * @throws SAXException
 	 * @throws ParserConfigurationException
@@ -1956,10 +2176,105 @@ public class Functions {
 
 		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
 	}
+	
+	/**
+	 * Assert CPAD record tags as dates are in descending order
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsDateDesc(
+	           StackTraceElement trace, String url, int combination, int total,
+		       Boolean ifAssert, String record, String tag) 
+    throws IOException {
+		// printXmlPath(new RuntimeException().getStackTrace()[0]);
+		// COUNTER
+		try {
+			// ENTRY
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
+					+ " OF " + total + ":");
+			fileWriterPrinter(url);
+			fileWriterPrinter("\n" + "Record Name: " + record);
+			fileWriterPrinter("   Tag Name: " + tag);
+
+			String path = Locators.testOutputFileDir;
+			String name = "source";
+			String extention = "xml";
+			String fileName = name + "." + extention;
+
+			sourcePagePrint(url, path, fileName);
+
+			// fileWriterPrinter();
+			// fileWriterPrinter(path + "\n");
+			// fileWriterPrinter(path + fileName);
+
+			fileWriterPrinter();
+			fileWriterPrinter("==========================");
+
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
+
+			xmlValidityChecker(path, fileName, trace, url, combination, total);
+
+			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			long[] fingerprintArray = new long[valueArray.length];
+
+			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+
+			if (!fileExist("order.log", false)) { fileWriter("order.log", "true"); }
+
+			for (int i = 0; i < valueArray.length; i++) {
+				fileWriterPrinter("Record ID: " + (i + 1));
+				fileWriterPrinter("Tag Value: " + valueArray[i]);
+
+				if (i < (valueArray.length - 1)) {
+					boolean assertORDER = compareLong(fingerprintArray[i],
+							fingerprintArray[i + 1]);
+
+					if (assertORDER) {
+						fileWriterPrinter("   Result: OK\n");
+					} else {
+						fileWriterPrinter("   Result: FAILED!");
+						fileWriterPrinter("   Reason: " + cpadDescOrderError);
+						fileCleaner("order.log");
+						fileWriter("order.log", "false");
+
+						if (ifAssert) {
+							fileWriterPrinter();
+							fileWriterPrinter(" Record ID: " + (i + 2));
+							fileWriterPrinter("Created On: "
+									+ valueArray[i + 1]);
+						}
+
+						fileWriterPrinter();
+					}
+
+					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
+				}
+			}
+
+			fileWriterPrinter("==========================");
+			fileWriterPrinter();
+
+			getAssertTrue(trace, url, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
+
+			boolean result = Boolean.valueOf(fileScanner("order.log")) & Boolean.valueOf(fileScanner("xml.log"));
+			if (fileExist("cpad.log", false)) {
+				if (!result) {
+					fileCleaner("cpad.log");
+					fileWriter("cpad.log", result);
+				}
+			}
+
+			fileCleaner("order.log");
+			fileCleaner("xml.log");
+			return result;
+
+		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+	}
 
 	/**
 	 * Assert CPAD record tags as dates are in descending order
-	 * 
+	 * Uses Selenium WebDriver!
 	 * @throws IOException
 	 */
 	public boolean assertCpadTagsDateDesc(WebDriver driver,
