@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6299" started-at="2016-02-17T16:49:05Z" finished-at="2016-02-17T16:49:11Z">
+  <suite name="Default suite" duration-ms="3133" started-at="2016-02-17T19:25:34Z" finished-at="2016-02-17T19:25:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6299" started-at="2016-02-17T16:49:05Z" finished-at="2016-02-17T16:49:11Z">
+    <test name="Default test" duration-ms="3133" started-at="2016-02-17T19:25:34Z" finished-at="2016-02-17T19:25:37Z">
       <class name="test.Cases.Java.cpadTestPrograms">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logOpen" is-config="true" duration-ms="44" started-at="2016-02-17T11:49:05Z" finished-at="2016-02-17T11:49:05Z">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logOpen" is-config="true" duration-ms="40" started-at="2016-02-17T14:25:34Z" finished-at="2016-02-17T14:25:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="startTime" is-config="true" duration-ms="11" started-at="2016-02-17T11:49:05Z" finished-at="2016-02-17T11:49:05Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="startTime" is-config="true" duration-ms="13" started-at="2016-02-17T14:25:34Z" finished-at="2016-02-17T14:25:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="FAIL" signature="testTitleTagIsAllanGregg()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="testTitleTagIsAllanGregg" duration-ms="6264" started-at="2016-02-17T11:49:05Z" finished-at="2016-02-17T11:49:11Z">
+        <test-method status="FAIL" signature="testTitleTagIsAllanGregg()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="testTitleTagIsAllanGregg" duration-ms="3017" started-at="2016-02-17T14:25:34Z" finished-at="2016-02-17T14:25:37Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[TEST EXECUTION # 1 - Unexpected Results found! expected [true] but found [false]]]>
@@ -25,7 +25,7 @@
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertTrue(Assert.java:42)
-	at test.Cases.Java.cpadTestPrograms.testTitleTagIsAllanGregg(cpadTestPrograms.java:351)
+	at test.Cases.Java.cpadTestPrograms.testTitleTagIsAllanGregg(cpadTestPrograms.java:356)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,11 +56,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTitleTagIsAllanGregg -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="endTime" is-config="true" duration-ms="2" started-at="2016-02-17T11:49:11Z" finished-at="2016-02-17T11:49:11Z">
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="endTime" is-config="true" duration-ms="5" started-at="2016-02-17T14:25:37Z" finished-at="2016-02-17T14:25:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logClose" is-config="true" duration-ms="16" started-at="2016-02-17T11:49:11Z" finished-at="2016-02-17T11:49:11Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logClose" is-config="true" duration-ms="7" started-at="2016-02-17T14:25:37Z" finished-at="2016-02-17T14:25:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->

@@ -10,6 +10,13 @@ public class Locators {
                                            + File.separator + "resources" + File.separator + "drivers" + File.separator;
 
 	/************************URL's**************************/
+	public static String[][] combination(String a, String b) {
+		String[][] combination = { { a }, { b },
+                                   { a, b }, { b, a }
+                                 };
+		return combination;
+	}
+	
 	public static String[][] combination(String a, String b, String c) {
 		String[][] combination = { { a }, { b }, { c },
                                    { a, b }, { a, c }, { b, a },
@@ -79,7 +86,7 @@ public class Locators {
 
 	public static String[] url(String root, String[][] join) {
 		String[] url = new String[join.length];
-		for (int i = 0; i < join.length; i++) { url[i] = root + join(join[i]); }
+		for (int i = 0; i < join.length; i++) { url[i] = root.replace(" ", "%20") + join(join[i]); }
 		return url;
 	};	
 	

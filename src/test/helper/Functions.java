@@ -50,6 +50,7 @@ import org.xml.sax.SAXParseException;
 
 
 
+
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -131,6 +132,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
+
 
 
 
@@ -950,7 +952,15 @@ public class Functions {
 	        sResponse = sbResponse.toString();
 	        return sResponse;
 	        }
-	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	    catch(Exception e) {
+	    	/** e.printStackTrace(); */ 
+	    	String error = null;
+	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
+	    	fileCleaner("error.log");
+	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
+	    	else { fileWriter("error.log", sourseURL); }
+	    	return null;
+	    	}
 	}
 	
 	/**
@@ -983,7 +993,15 @@ public class Functions {
 	        sResponse = sbResponse.toString();
 	        return sResponse;
 	        }
-	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	    catch(Exception e) {
+	    	/** e.printStackTrace(); */ 
+	    	String error = null;
+	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
+	    	fileCleaner("error.log");
+	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
+	    	else { fileWriter("error.log", sourseURL); }
+	    	return null;
+	    	}
 	}
 
 	/**
@@ -1016,7 +1034,15 @@ public class Functions {
 	        sResponse = sbResponse.toString();
 	        return sResponse;
 	        }
-	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	    catch(Exception e) {
+	    	/** e.printStackTrace(); */ 
+	    	String error = null;
+	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
+	    	fileCleaner("error.log");
+	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
+	    	else { fileWriter("error.log", sourseURL); }
+	    	return null;
+	    	}
 	}
 	
 	/**
@@ -1049,7 +1075,15 @@ public class Functions {
 	        sResponse = sbResponse.toString();
 	        return sResponse;
 	        }
-	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	    catch(Exception e) {
+	    	/** e.printStackTrace(); */ 
+	    	String error = null;
+	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
+	    	fileCleaner("error.log");
+	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
+	    	else { fileWriter("error.log", sourseURL); }
+	    	return null;
+	    	}
 	}
 	
 	/**
@@ -2054,8 +2088,15 @@ public class Functions {
 	public void startTime() throws IOException {
 		String date = getCurrentDateTimeFull();
 		fileCleaner("start.time");
-		fileCleaner("xml.log");
+		
+		// CPAD cleaning:
 		fileCleaner("cpad.log");
+		fileCleaner("match.log");
+		fileCleaner("max.log");
+		fileCleaner("order.log");
+		fileCleaner("xml.log");
+		fileCleaner("error.log");
+		
 		fileWriter("start.time",
 				convertLongToString(System.currentTimeMillis()));
 		// Creating New or Updating existing Test Counter record:
@@ -2075,8 +2116,15 @@ public class Functions {
 	public void endTime() throws IOException {
 		long finish = System.currentTimeMillis();
 		fileCleaner("finish.time");
-		fileCleaner("xml.log");
+
+		// CPAD cleaning:
 		fileCleaner("cpad.log");
+		fileCleaner("match.log");
+		fileCleaner("max.log");
+		fileCleaner("order.log");
+		fileCleaner("xml.log");
+		fileCleaner("error.log");
+		
 		fileWriter("finish.time", convertLongToString(finish));
 		// Scanning Test Counter record:
 		int n = 1;
@@ -2135,7 +2183,6 @@ public class Functions {
 			fileWriterPrinter();
 			getUrlPageSourceSave(url, path, fileName);
 			fileWriterPrinter();
-			// Thread.sleep(2000);
 		} catch (Exception exception) {
 			getExceptionDescriptive(exception, new Exception().getStackTrace()[0]);
 		}
@@ -2164,8 +2211,7 @@ public class Functions {
 			Thread.sleep(2000);
 			// driver.quit();
 		} catch (Exception exception) {
-			getExceptionDescriptive(exception,
-					new Exception().getStackTrace()[0], driver);
+			getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver);
 		}
 		// finally { driver.quit(); }
 	}
@@ -2193,8 +2239,7 @@ public class Functions {
 			Thread.sleep(2000);
 			// driver.quit();
 		} catch (Exception exception) {
-			getExceptionDescriptive(exception,
-					new Exception().getStackTrace()[0], driver);
+			getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver);
 		}
 		// finally { driver.quit(); }
 	}
@@ -2266,7 +2311,6 @@ public class Functions {
 
 	/**
 	 * xml File validity check
-	 * 
 	 * @throws IOException
 	 * @throws SAXException
 	 * @throws ParserConfigurationException
@@ -2323,7 +2367,7 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ")", result);
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2358,7 +2402,7 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, url, "XML is invalid! (URL " + number + " OF " + total + ")", result);
+		getAssertTrue(trace, url, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2392,8 +2436,7 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, driver, "XML is invalid! (URL " + number + " OF "
-				+ total + ")", result);
+		getAssertTrue(trace, driver, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2509,16 +2552,15 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(path, fileName, trace, combination, total);
 
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
-			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -2599,16 +2641,15 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
-			xmlValidityChecker(path, fileName, trace, driver, combination, total);
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
 
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
-			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -2689,16 +2730,15 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(path, fileName, trace, combination, total);
 
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
-			if (!fileExist("order.log", false)) { fileWriter("order.log", "true"); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -2780,16 +2820,15 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
-			xmlValidityChecker(path, fileName, trace, driver, combination, total);
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
 
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
-			if (!fileExist("order.log", false)) { fileWriter("order.log", "true"); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -2867,10 +2906,10 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
 			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }
 			
-			if (!xmlValidityChecker(path, fileName, trace, combination, total)) { fileCleaner("match.log"); fileWriter("match.log", "false"); }
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
 			
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
 
@@ -2943,13 +2982,12 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
-			xmlValidityChecker(path, fileName, trace, driver, combination, total);
+			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }		
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
 			
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
-			
-			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -3018,11 +3056,10 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }		
 			
-			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
 			
 			fileWriterPrinter("Records Number: " + xmlRecrdLength(path, fileName, record));
 			boolean assertion = (xmlRecrdLength(path, fileName, record) <= max);
@@ -3081,11 +3118,10 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
-			xmlValidityChecker(path, fileName, trace, driver, combination, total);
+			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }		
 			
-			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
 			
 			fileWriterPrinter("Records Number: " + xmlRecrdLength(path, fileName, record));
 			boolean assertion = (xmlRecrdLength(path, fileName, record) <= max);

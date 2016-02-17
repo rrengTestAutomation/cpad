@@ -335,7 +335,12 @@ public class cpadTestPrograms{
 		String c = "size=70";
 		String d = "sort_order=DESC";
 		String e = "sort_by=UPDATED_ON";
+		
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		
+		//// UNIT TEST
+		// String[] URL = Locators.url(root, Locators.combination(b, c));
+		
    		String record = "program";
    		String tag = "title";
    		String expected = "Allan Gregg";
