@@ -5,7 +5,7 @@
 
   <test verbose="1" name="test-regression">
     <packages>	
-    <package name="test.Cases.Xml.Browse.*"></package>
+    <package name="test.Cases.Java.*"></package>
     </packages>   
   </test>
   
