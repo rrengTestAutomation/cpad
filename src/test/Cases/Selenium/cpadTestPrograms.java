@@ -1,18 +1,24 @@
-package test.Cases.Xml.Parse;
+package test.Cases.Selenium;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import org.testng.Assert;
+import org.openqa.selenium.WebDriver;
+// import org.openqa.selenium.firefox.FirefoxDriver;
+
+//import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
 
 import test.common.Locators;
 import test.helper.Functions;
 
 public class cpadTestPrograms{
+	static WebDriver driver;
 	Functions function = new Functions();
 	int count = 0;
 	
@@ -47,15 +53,23 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
+					                               URL[i], i+1, URL.length, false, record, tag, expected);
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
+//				}
+			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
-		}
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
+	}
 
 	/**
 	 * Test all of the possible given URL combinations are having the "single_program" tags of "program" record equals "1" [2]
@@ -88,14 +102,22 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
+					                               URL[i], i+1, URL.length, false, record, tag, expected);
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
+//				}
+			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
 	/**
@@ -128,14 +150,23 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsMaxNumber(driver, new RuntimeException().getStackTrace()[0],
+					                         URL[i], i+1, URL.length, false, record, max);
+
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
+//				}
+			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 		
 	/**
@@ -170,14 +201,21 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateAsc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
 	/**
@@ -209,14 +247,21 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateDesc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
 	/**
@@ -248,14 +293,21 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateAsc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
 	/**
@@ -287,14 +339,21 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsDateDesc(driver, new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Results found!");
+//				}			
+			} catch (Exception e) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Results found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
 	/**
@@ -329,19 +388,29 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
-		catch (Exception exception) { /** e.printStackTrace(); */ }
+		try {
+			driver = function.getServerName(driver);
+			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
+					                               URL[i], i+1, URL.length, false, record, tag, expected);
+//			// SCREENSHOT-DISABLED ASSERTION:
+//			if (i == URL.length - 1) {
+//				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
+//				}
+			
+			} catch (Exception exception) { /** e.printStackTrace(); */ } finally { closeBrowsers(); }
 		}
 		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		// SCREENSHOT-CAPABLE ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0], driver,
+                         "TEST EXECUTION # " + count + " - Unexpected Records found!",
+                          Boolean.valueOf(function.fileScanner("cpad.log"))));
 	}
 	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
+   @AfterMethod  public static void closeBrowsers() { driver.quit(); }
+// @AfterClass   public static void closeBrowsers() { driver.quit(); }
 
 }

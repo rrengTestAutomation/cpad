@@ -9,12 +9,10 @@
 <class name="test.helper.Functions"></class>
 -->
 <!--
-<class name="test.Cases.Xml.Parse.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescending"/></methods></class>
+<class name="test.Cases.Javae.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescending"/></methods></class>
 -->
 
-<class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods>
-<include name="testCreatedOnOrderIsAscending"/>
-</methods></class>
+<class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsAscending"/></methods></class>
 		
     </classes>
   </test>

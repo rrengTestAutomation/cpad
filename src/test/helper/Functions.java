@@ -48,6 +48,8 @@ import org.xml.sax.SAXParseException;
 
 
 
+
+
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -138,6 +140,8 @@ import org.testng.Assert;
 
 
 
+
+
 /** LOCATORS */
 import test.common.Locators;
 
@@ -212,20 +216,8 @@ public class Functions {
 		}
 	}
 
-	/**
-	 * @throws IOException
-	 * @throws NumberFormatException
-	 */
-	public void fileCleaner(String path, String fileName)
-			throws NumberFormatException, IOException {
-		if (fileExist(path, fileName, false)) {
-			(new File(path + fileName)).delete();
-		}
-	}
-
 	/*
-	 * @throws IOException
-	 * 
+	 * @throws IOException 
 	 * @throws NumberFormatException
 	 */
 	public static Boolean fileExist(String fileName)
@@ -236,10 +228,22 @@ public class Functions {
 		}
 		return (f.exists() && f.isFile());
 	}
+	
+	/*
+	 * @throws IOException 
+	 * @throws NumberFormatException
+	 */
+	public static Boolean fileExist(String path, String fileName)
+			throws NumberFormatException, IOException {
+		File f = new File(path + fileName);
+		if (!(f.exists() && f.isFile())) {
+			fileWriterPrinter(f + " is missing...");
+		}
+		return (f.exists() && f.isFile());
+	}
 
 	/*
 	 * @throws IOException
-	 * 
 	 * @throws NumberFormatException
 	 */
 	public static Boolean fileExist(String fileName, Boolean silentMode)
@@ -311,8 +315,6 @@ public class Functions {
 		PrintWriter pw = new PrintWriter(fw);
 		pw.println(printLine);
 		pw.close();
-		// System Out Print Line:
-		fileWriter(fileName, printLine);
 	}
 
 	/**
@@ -917,8 +919,139 @@ public class Functions {
 
 		return sb.toString();
 	}
+	
+	/**
+	 * Gets the URL Sourse Code and saves as a file
+	 * Won't use WebDriver driver
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public String getUrlPageSourceSave(String sourseURL, String fileName) throws NumberFormatException, IOException {
+		
+		fileCleaner(fileName);
+	    URL url;
+	    URLConnection connection;
+	    BufferedReader reader;
+	    String line;
+	    StringBuilder sbResponse;
+	    String sResponse = null;
+
+	    try {
+	        url = new URL(sourseURL);
+	        connection = url.openConnection();
+	        reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	        sbResponse = new StringBuilder();
+
+	        while((line = reader.readLine()) != null)
+	        {
+	        	sbResponse.append(line);
+	        	fileWriter(fileName, line);      	
+	        }
+	        sResponse = sbResponse.toString();
+	        return sResponse;
+	        }
+	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	}
+	
+	/**
+	 * Gets the URL Sourse Code and saves as a file
+	 * Won't use WebDriver driver
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public String getUrlPageSourceSave(String sourseURL, String path, String fileName) throws NumberFormatException, IOException {
+		
+		fileCleaner(path, fileName);
+	    URL url;
+	    URLConnection connection;
+	    BufferedReader reader;
+	    String line;
+	    StringBuilder sbResponse;
+	    String sResponse = null;
+
+	    try {
+	        url = new URL(sourseURL);
+	        connection = url.openConnection();
+	        reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	        sbResponse = new StringBuilder();
+
+	        while((line = reader.readLine()) != null)
+	        {
+	        	sbResponse.append(line);
+	        	fileWriter(path, fileName, line);
+	        }
+	        sResponse = sbResponse.toString();
+	        return sResponse;
+	        }
+	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	}
 
 	/**
+	 * Gets the URL Sourse Code, saves as a file, and prints it out
+	 * Won't use WebDriver driver
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public String getUrlPageSourcePrint(String sourseURL, String fileName) throws NumberFormatException, IOException {
+		
+		fileCleaner(fileName);
+	    URL url;
+	    URLConnection connection;
+	    BufferedReader reader;
+	    String line;
+	    StringBuilder sbResponse;
+	    String sResponse = null;
+
+	    try {
+	        url = new URL(sourseURL);
+	        connection = url.openConnection();
+	        reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	        sbResponse = new StringBuilder();
+
+	        while((line = reader.readLine()) != null)
+	        {
+	        	sbResponse.append(line);
+	        	fileWriterPrinter(fileName, line);      	
+	        }
+	        sResponse = sbResponse.toString();
+	        return sResponse;
+	        }
+	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	}
+	
+	/**
+	 * Gets the URL Sourse Code, saves as a file, and prints it out
+	 * Won't use WebDriver driver
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public String getUrlPageSourcePrint(String sourseURL, String path, String fileName) throws NumberFormatException, IOException {
+		
+		fileCleaner(path, fileName);
+	    URL url;
+	    URLConnection connection;
+	    BufferedReader reader;
+	    String line;
+	    StringBuilder sbResponse;
+	    String sResponse = null;
+
+	    try {
+	        url = new URL(sourseURL);
+	        connection = url.openConnection();
+	        reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	        sbResponse = new StringBuilder();
+
+	        while((line = reader.readLine()) != null)
+	        {
+	        	sbResponse.append(line);
+	        	fileWriterPrinter(path, fileName, line);
+	        }
+	        sResponse = sbResponse.toString();
+	        return sResponse;
+	        }
+	    catch(Exception e) { /** e.printStackTrace(); */ return null; }
+	}
+	
 	/**
 	 * Gets the first (main) line of any thrown Exception Message Regardless is this a single or multi-line Prompt
 	 * Uses user defined WebDriver driver over user-opened URL
@@ -1668,13 +1801,21 @@ public class Functions {
 
 	/*
 	 * @throws IOException
-	 * 
 	 * @throws NumberFormatException
 	 */
-	public void fileCleaner(String fileName) throws NumberFormatException,
-			IOException {
+	public void fileCleaner(String fileName) throws NumberFormatException, IOException {
 		if (fileExist(fileName, false)) {
 			(new File(Locators.testOutputFileDir + fileName)).delete();
+		}
+	}
+	
+	/*
+	 * @throws IOException
+	 * @throws NumberFormatException
+	 */
+	public void fileCleaner(String path, String fileName) throws NumberFormatException, IOException {
+		if (fileExist(path, fileName, false)) {
+			(new File(path + fileName)).delete();
 		}
 	}
 
@@ -1970,17 +2111,63 @@ public class Functions {
 	 * @throws IOException
 	 * @throws InterruptedException 
 	 */
-	public void sourcePagePrint(String url, String path,
-			String fileName) throws IOException, InterruptedException {
+	public void sourcePagePrint(String url, String fileName) throws IOException, InterruptedException {
 		try {
-			fileCleaner(path, fileName);
+			fileCleaner(fileName);
 			fileWriterPrinter();
-			getUrlSourcePagePrint(url, path, fileName);
+			getUrlPageSourceSave(url, fileName);
 			fileWriterPrinter();
 			// Thread.sleep(2000);
 		} catch (Exception exception) {
-			getExceptionDescriptive(exception, new Exception().getStackTrace()[0], url);
+			getExceptionDescriptive(exception, new Exception().getStackTrace()[0]);
 		}
+	}
+	
+	/**
+	 * Print the Source Page
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 * @throws InterruptedException 
+	 */
+	public void sourcePagePrint(String url, String path, String fileName) throws IOException, InterruptedException {
+		try {
+			fileCleaner(path, fileName);
+			fileWriterPrinter();
+			getUrlPageSourceSave(url, path, fileName);
+			fileWriterPrinter();
+			// Thread.sleep(2000);
+		} catch (Exception exception) {
+			getExceptionDescriptive(exception, new Exception().getStackTrace()[0]);
+		}
+	}
+	
+	/**
+	 * Print the Source Page
+	 * Uses Selenium WebDriver
+	 * @throws IOException
+	 */
+	public void sourcePagePrint(WebDriver driver, String url, String fileName) throws IOException {
+		try {
+			// Functions function = new Functions();
+			fileCleaner(fileName);
+
+			while (!driver.getCurrentUrl().equals(url)) {
+				driver.get(url);
+				Thread.sleep(5000);
+			}
+
+			fileWriterPrinter();
+			// function.
+			getUrlSourcePagePrint(driver.getCurrentUrl(), fileName);
+			fileWriterPrinter();
+
+			Thread.sleep(2000);
+			// driver.quit();
+		} catch (Exception exception) {
+			getExceptionDescriptive(exception,
+					new Exception().getStackTrace()[0], driver);
+		}
+		// finally { driver.quit(); }
 	}
 
 	/**
@@ -1988,8 +2175,7 @@ public class Functions {
 	 * Uses Selenium WebDriver
 	 * @throws IOException
 	 */
-	public void sourcePagePrint(WebDriver driver, String url, String path,
-			String fileName) throws IOException {
+	public void sourcePagePrint(WebDriver driver, String url, String path, String fileName) throws IOException {
 		try {
 			// Functions function = new Functions();
 			fileCleaner(path, fileName);
@@ -2138,6 +2324,7 @@ public class Functions {
 			result = false;
 		}
 		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ")", result);
+		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
 	
@@ -2172,6 +2359,7 @@ public class Functions {
 			result = false;
 		}
 		getAssertTrue(trace, url, "XML is invalid! (URL " + number + " OF " + total + ")", result);
+		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
 
@@ -2206,6 +2394,7 @@ public class Functions {
 		}
 		getAssertTrue(trace, driver, "XML is invalid! (URL " + number + " OF "
 				+ total + ")", result);
+		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
 
@@ -2365,19 +2554,15 @@ public class Functions {
 
 			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("order.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("order.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 	
 	/**
@@ -2459,19 +2644,15 @@ public class Functions {
 
 			getAssertTrue(trace, driver, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("order.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("order.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 	
 	/**
@@ -2554,19 +2735,15 @@ public class Functions {
 
 			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("order.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("order.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 
 	/**
@@ -2649,19 +2826,15 @@ public class Functions {
 
 			getAssertTrue(trace, driver, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("order.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("order.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 
 	/**
@@ -2695,12 +2868,11 @@ public class Functions {
 			
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }
-
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }
+			
+			if (!xmlValidityChecker(path, fileName, trace, combination, total)) { fileCleaner("match.log"); fileWriter("match.log", "false"); }
 			
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
-			
-			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -2730,19 +2902,15 @@ public class Functions {
 
 			getAssertTrue(trace, "Not the same! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("match.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("match.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("match.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("match.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 
 	/**
@@ -2811,19 +2979,15 @@ public class Functions {
 
 			getAssertTrue(trace, driver, "Not the same! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("match.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("match.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("match.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("match.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 
 	/**
@@ -2878,19 +3042,15 @@ public class Functions {
 			
 			getAssertTrue(trace, "Out of maximum! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("max.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("max.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("max.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("max.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 
 	/**
@@ -2945,19 +3105,15 @@ public class Functions {
 			
 			getAssertTrue(trace, driver, "Out of maximum! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("max.log")));
 
-			boolean result = Boolean.valueOf(fileScanner("max.log")) & Boolean.valueOf(fileScanner("xml.log"));
-			if (fileExist("cpad.log", false)) {
-				if (!result) {
-					fileCleaner("cpad.log");
-					fileWriter("cpad.log", result);
-				}
-			}
-
+			boolean result = Boolean.valueOf(fileScanner("max.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
 			fileCleaner("max.log");
 			fileCleaner("xml.log");
 			return result;
 
-		} catch (Exception exception) { /** exception.printStackTrace(); */ return false; } // finally { driver.quit(); }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
 
 }

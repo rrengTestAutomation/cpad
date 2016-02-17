@@ -1,4 +1,4 @@
-package test.Cases.Xml.Browse;
+package test.Cases.Selenium;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

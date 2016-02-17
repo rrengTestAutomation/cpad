@@ -1,35 +1,1308 @@
- TEST START: 2016-02-16 17:11:02
+ TEST START: 2016-02-17 11:49:05
 
 
        Test: #1
-      Start: 2016-02-16 17:11:02
-   XML Path: <class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsAscending"/></methods></class>
-Error Cause: ---> Out of order! (URL 3 OF 15)
-   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsAscending, line # 173
+      Start: 2016-02-17 11:49:05
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testTitleTagIsAllanGregg"/></methods></class>
+Error Cause: ---> XML is invalid! (URL 1 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
    Expected: ---> true
      Actual: ---> false
-Error Cause: ---> TEST EXECUTION # 1 - Unexpected Results found!
-   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsAscending, line # 178
+Error Cause: ---> XML is invalid! (URL 2 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
    Expected: ---> true
      Actual: ---> false
-     Finish: 2016-02-16 17:11:49
-   Duration: 0:00:47
-
-       Test: #2
-      Start: 2016-02-16 17:11:49
-   XML Path: <class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsDescending"/></methods></class>
-Error Cause: ---> Out of order! (URL 3 OF 15)
-   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsDescending, line # 212
+Error Cause: ---> XML is invalid! (URL 3 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
    Expected: ---> true
      Actual: ---> false
-Error Cause: ---> TEST EXECUTION # 2 - Unexpected Results found!
-   Location: ---> test.Cases.Xml.Parse\cpadTestPrograms\testCreatedOnOrderIsDescending, line # 217
+Error Cause: ---> XML is invalid! (URL 4 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
    Expected: ---> true
      Actual: ---> false
-     Finish: 2016-02-16 17:12:33
-   Duration: 0:00:44
-   Subtotal: 0:01:31
-
-       Test: #3
-      Start: 2016-02-16 17:12:33
-   XML Path: <class name="test.Cases.Xml.Parse.cpadTestPrograms"><methods><include name="testGroupTagIsAdult"/></methods></class>
+Error Cause: ---> XML is invalid! (URL 5 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 6 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 7 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 8 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 9 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 10 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 11 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 12 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 13 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 14 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 15 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 16 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 17 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 18 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 19 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 20 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 21 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 22 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 23 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 24 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 25 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 26 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 27 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 28 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 29 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 30 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 31 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 32 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 33 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 34 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 35 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 36 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 37 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 38 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 39 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 40 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 41 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 42 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 43 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 44 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 45 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 46 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 47 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 48 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 49 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 50 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 51 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 52 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 53 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 54 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 55 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 56 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 57 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 58 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 59 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 60 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 61 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 62 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 63 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 64 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 65 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 66 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 67 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 68 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 69 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 70 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 71 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 72 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 73 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 74 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 75 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 76 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 77 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 78 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 79 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 80 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 81 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 82 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 83 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 84 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 85 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 86 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 87 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 88 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 89 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 90 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 91 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 92 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 93 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 94 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 95 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 96 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 97 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 98 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 99 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 100 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 101 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 102 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 103 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 104 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 105 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 106 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 107 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 108 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 109 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 110 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 111 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 112 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 113 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 114 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 115 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 116 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 117 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 118 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 119 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 120 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 121 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 122 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 123 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 124 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 125 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 126 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 127 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 128 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 129 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 130 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 131 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 132 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 133 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 134 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 135 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 136 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 137 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 138 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 139 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 140 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 141 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 142 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 143 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 144 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 145 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 146 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 147 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 148 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 149 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 150 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 151 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 152 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 153 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 154 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 155 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 156 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 157 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 158 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 159 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 160 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 161 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 162 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 163 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 164 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 165 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 166 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 167 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 168 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 169 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 170 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 171 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 172 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 173 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 174 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 175 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 176 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 177 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 178 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 179 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 180 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 181 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 182 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 183 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 184 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 185 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 186 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 187 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 188 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 189 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 190 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 191 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 192 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 193 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 194 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 195 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 196 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 197 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 198 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 199 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 200 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 201 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 202 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 203 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 204 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 205 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 206 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 207 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 208 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 209 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 210 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 211 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 212 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 213 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 214 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 215 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 216 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 217 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 218 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 219 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 220 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 221 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 222 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 223 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 224 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 225 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 226 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 227 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 228 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 229 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 230 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 231 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 232 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 233 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 234 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 235 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 236 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 237 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 238 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 239 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 240 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 241 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 242 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 243 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 244 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 245 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 246 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 247 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 248 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 249 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 250 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 251 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 252 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 253 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 254 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 255 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 256 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 257 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 258 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 259 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 260 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 261 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 262 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 263 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 264 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 265 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 266 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 267 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 268 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 269 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 270 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 271 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 272 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 273 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 274 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 275 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 276 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 277 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 278 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 279 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 280 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 281 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 282 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 283 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 284 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 285 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 286 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 287 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 288 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 289 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 290 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 291 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 292 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 293 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 294 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 295 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 296 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 297 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 298 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 299 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 300 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 301 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 302 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 303 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 304 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 305 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 306 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 307 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 308 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 309 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 310 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 311 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 312 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 313 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 314 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 315 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 316 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 317 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 318 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 319 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 320 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 321 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 322 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 323 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 324 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+Error Cause: ---> XML is invalid! (URL 325 OF 325)
+   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 346
+   Expected: ---> true
+     Actual: ---> false
+     Finish: 2016-02-17 11:49:11
+   Duration: 0:00:06

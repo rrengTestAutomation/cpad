@@ -1,4 +1,4 @@
-package test.Cases.Xml.Parse;
+package test.Cases.Java;
 
 import java.io.IOException;
 
@@ -51,9 +51,11 @@ public class cpadTestVideos{
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!",
-		        		  Boolean.valueOf(function.fileScanner("cpad.log"))));
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
 	}
 
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
