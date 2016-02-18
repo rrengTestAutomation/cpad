@@ -51,6 +51,7 @@ import org.xml.sax.SAXParseException;
 
 
 
+
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -132,6 +133,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
+
 
 
 
@@ -2520,6 +2522,8 @@ public class Functions {
 	
 	public String cpadFilterError = "CURRENT RECORD IS EARLIER THEN EXPECTED AS PER FILTER...";
 	
+	public String cpadBetweenError = "CURRENT RECORD IS NOT BETWEEN FROM AND TO...";
+	
 	/**
 	 * Assert CPAD record tags as dates are in ascending order
 	 * Won't use Selenium WebDriver
@@ -3151,7 +3155,7 @@ public class Functions {
 	}
 
 	/**
-	 * Assert CPAD record tags as dates filter correctly (not earlier then filter)
+	 * Assert CPAD record tags as dates filtered correctly
 	 * Won't use Selenium WebDriver
 	 * @throws IOException
 	 */
@@ -3174,8 +3178,8 @@ public class Functions {
 			String extention = "xml";
 			String fileName = name + "." + extention;
 
-			String filter = url.substring(url.toString().indexOf("=") + 1, url.toString().indexOf("&"));
-			long value = convertCpadDateStampToMillisecondsAsLong(filter);
+			String filter = url.substring(url.indexOf("=") + 1, url.lastIndexOf(":") + 3);
+			long Filter = convertCpadDateStampToMillisecondsAsLong(filter);
 			
 			sourcePagePrint(url, path, fileName);
 
@@ -3201,7 +3205,7 @@ public class Functions {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 
-					boolean assertFILTER = (fingerprintArray[i] >= value);
+					boolean assertFILTER = (fingerprintArray[i] >= Filter);
 
 					if (assertFILTER) {
 						fileWriterPrinter("   Result: OK\n");
@@ -3233,6 +3237,97 @@ public class Functions {
 			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
 			
 			fileCleaner("filter.log");
+			fileCleaner("xml.log");
+			return result;
+
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
+	}
+
+	/**
+	 * Assert CPAD record tags as dates are between the times from and to
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsDateBetween(
+		           StackTraceElement trace, String url, int combination, int total,
+			       Boolean ifAssert, String record, String tag) 
+	throws IOException {
+		// printXmlPath(new RuntimeException().getStackTrace()[0]);
+		// COUNTER
+		try {
+			// ENTRY
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
+					+ " OF " + total + ":");
+			fileWriterPrinter(url);
+			fileWriterPrinter("\n" + "Record Name: " + record);
+			fileWriterPrinter("   Tag Name: " + tag);
+
+			String path = Locators.testOutputFileDir;
+			String name = "source";
+			String extention = "xml";
+			String fileName = name + "." + extention;
+			
+			String time = url.substring(url.indexOf("from=") + 5, url.indexOf("&to="));
+			  long from = convertCpadDateStampToMillisecondsAsLong(time);
+			       time =  url.substring(url.indexOf("&to=") + 4, url.lastIndexOf(":") + 3);
+			  long to   = convertCpadDateStampToMillisecondsAsLong(time);
+			  
+			sourcePagePrint(url, path, fileName);
+
+			// fileWriterPrinter();
+			// fileWriterPrinter(path + "\n");
+			// fileWriterPrinter(path + fileName);
+
+			fileWriterPrinter();
+			fileWriterPrinter("==========================");
+
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("between.log", false )) { fileWriter("between.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
+
+			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			long[] fingerprintArray = new long[valueArray.length];
+
+			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+
+			for (int i = 0; i < valueArray.length; i++) {
+				fileWriterPrinter("Record ID: " + (i + 1));
+				fileWriterPrinter("Tag Value: " + valueArray[i]);
+
+					boolean assertBETWEEN = ((fingerprintArray[i] >= from) && (fingerprintArray[i] <= to));
+
+					if (assertBETWEEN) {
+						fileWriterPrinter("   Result: OK\n");
+					} else {
+						fileWriterPrinter("   Result: FAILED!");
+						fileWriterPrinter("   Reason: " + cpadBetweenError);
+						fileCleaner("between.log");
+						fileWriter("between.log", "false");
+
+						if (ifAssert) {
+							fileWriterPrinter();
+							fileWriterPrinter(" Record ID: " + (i + 2));
+							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+						}
+
+						fileWriterPrinter();
+					}
+
+					if (ifAssert) { Assert.assertTrue(assertBETWEEN, "   Result: FAILED\n"); }
+			}
+
+			fileWriterPrinter("==========================");
+			fileWriterPrinter();
+
+			getAssertTrue(trace, "Earlier then filter! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")));
+
+			boolean result = Boolean.valueOf(fileScanner("between.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
+			fileCleaner("between.log");
 			fileCleaner("xml.log");
 			return result;
 

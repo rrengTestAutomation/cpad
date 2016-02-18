@@ -103,7 +103,7 @@ public class cpadTestPrograms{
 	}
 	
 	/**
-	 * Test all of the possible given URL combinations having 7 or less "program" records returned [3]
+	 * Test all of the possible given URL combinations having maximum or less "program" records returned [3]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
 	 * <p>Original Version: V1</p>
@@ -312,7 +312,7 @@ public class cpadTestPrograms{
 	}
 	
 	/**
-	 * Test all of the possible given URL combinations are having the "title" tags of "program" record equals "Allan Gregg" [8]
+	 * Test all of the possible given URL combinations are having the "title" tags of "program" record are correct [8]
 	 * <p>Date Created: 2016-02-16</p>
 	 * <p>Date Modified: 2016-02-16</p>
 	 * <p>Original Version: V1</p>
@@ -439,7 +439,7 @@ public class cpadTestPrograms{
 	}
 	
 	/**
-	 * Test the "updated_on" tag of all the "program" records are returning values greater than or equal to filter for programs [11]
+	 * Test the "updated_on" tag of all the "program" records are returning dates greater than or equal to filter for programs [11]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V1</p>
@@ -450,7 +450,7 @@ public class cpadTestPrograms{
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testUpdatedOnIsNotLessThenFilter() throws IOException {
+	public void testUpdatedOnTagIsFiltered() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -465,6 +465,44 @@ public class cpadTestPrograms{
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+}
+	
+	/**
+	 * Test the "updated_on" tag of all the "program" records are returning dates between "from-to" for programs [12]
+	 * <p>Date Created: 2016-02-18</p>
+	 * <p>Date Modified: 2016-02-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-12</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnTagIsBetween() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10";
+		String[] URL = { root };
+   		String record = "program";
+   		String tag = "updated_on";
+
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateBetween(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		

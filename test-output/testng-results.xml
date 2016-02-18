@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3411" started-at="2016-02-18T19:12:00Z" finished-at="2016-02-18T19:12:03Z">
+  <suite name="Default suite" duration-ms="3238" started-at="2016-02-18T20:26:11Z" finished-at="2016-02-18T20:26:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3411" started-at="2016-02-18T19:12:00Z" finished-at="2016-02-18T19:12:03Z">
+    <test name="Default test" duration-ms="3238" started-at="2016-02-18T20:26:11Z" finished-at="2016-02-18T20:26:14Z">
       <class name="test.Cases.Java.cpadTestPrograms">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logOpen" is-config="true" duration-ms="39" started-at="2016-02-18T14:12:00Z" finished-at="2016-02-18T14:12:00Z">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logOpen" is-config="true" duration-ms="36" started-at="2016-02-18T15:26:11Z" finished-at="2016-02-18T15:26:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="startTime" is-config="true" duration-ms="13" started-at="2016-02-18T14:12:00Z" finished-at="2016-02-18T14:12:00Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="startTime" is-config="true" duration-ms="11" started-at="2016-02-18T15:26:11Z" finished-at="2016-02-18T15:26:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testUpdatedOnIsNotLessThenFilter()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="testUpdatedOnIsNotLessThenFilter" duration-ms="3374" started-at="2016-02-18T14:12:00Z" finished-at="2016-02-18T14:12:03Z">
+        <test-method status="PASS" signature="testUpdatedOnTagIsBetween()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="testUpdatedOnTagIsBetween" duration-ms="3203" started-at="2016-02-18T15:26:11Z" finished-at="2016-02-18T15:26:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUpdatedOnIsNotLessThenFilter -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="endTime" is-config="true" duration-ms="6" started-at="2016-02-18T14:12:03Z" finished-at="2016-02-18T14:12:03Z">
+        </test-method> <!-- testUpdatedOnTagIsBetween -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="endTime" is-config="true" duration-ms="7" started-at="2016-02-18T15:26:14Z" finished-at="2016-02-18T15:26:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logClose" is-config="true" duration-ms="4" started-at="2016-02-18T14:12:03Z" finished-at="2016-02-18T14:12:03Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logClose" is-config="true" duration-ms="4" started-at="2016-02-18T15:26:14Z" finished-at="2016-02-18T15:26:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->

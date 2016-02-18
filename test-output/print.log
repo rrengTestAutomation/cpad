@@ -1,12 +1,12 @@
 
        Test: #1
-      Start: 2016-02-18 14:12:00
-   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnIsNotLessThenFilter"/></methods></class>
+      Start: 2016-02-18 15:26:11
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsBetween"/></methods></class>
 
  TEST EXECUTION #1:
 
 URL COMBINATION # 1 OF 1:
-http://tomcat-dev:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult
+http://tomcat-dev:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10
 
 Record Name: program
    Tag Name: updated_on
@@ -22,83 +22,43 @@ Expected: true
 programs:
 
 Record ID: 1
-Tag Value: 2016-02-18T13:56:17-05:00
+Tag Value: 2015-09-18T13:58:55-04:00
    Result: OK
 
 Record ID: 2
-Tag Value: 2016-02-18T13:15:33-05:00
+Tag Value: 2015-09-17T12:46:38-04:00
    Result: OK
 
 Record ID: 3
-Tag Value: 2016-02-18T13:15:32-05:00
+Tag Value: 2015-09-17T12:06:04-04:00
    Result: OK
 
 Record ID: 4
-Tag Value: 2016-02-18T13:15:32-05:00
+Tag Value: 2015-09-17T10:35:19-04:00
    Result: OK
 
 Record ID: 5
-Tag Value: 2016-02-18T13:15:32-05:00
+Tag Value: 2015-09-13T23:45:02-04:00
    Result: OK
 
 Record ID: 6
-Tag Value: 2016-02-18T12:23:53-05:00
+Tag Value: 2015-09-13T23:45:02-04:00
    Result: OK
 
 Record ID: 7
-Tag Value: 2016-02-18T12:12:07-05:00
+Tag Value: 2015-09-13T23:45:02-04:00
    Result: OK
 
 Record ID: 8
-Tag Value: 2016-02-18T10:15:01-05:00
+Tag Value: 2015-09-11T14:21:18-04:00
    Result: OK
 
 Record ID: 9
-Tag Value: 2016-02-18T10:15:01-05:00
+Tag Value: 2015-09-11T11:42:09-04:00
    Result: OK
 
 Record ID: 10
-Tag Value: 2016-02-18T06:15:03-05:00
-   Result: OK
-
-Record ID: 11
-Tag Value: 2016-02-17T23:45:35-05:00
-   Result: OK
-
-Record ID: 12
-Tag Value: 2016-02-17T23:45:35-05:00
-   Result: OK
-
-Record ID: 13
-Tag Value: 2016-02-17T23:45:35-05:00
-   Result: OK
-
-Record ID: 14
-Tag Value: 2016-02-17T23:45:35-05:00
-   Result: OK
-
-Record ID: 15
-Tag Value: 2016-02-17T23:45:34-05:00
-   Result: OK
-
-Record ID: 16
-Tag Value: 2016-02-17T23:45:34-05:00
-   Result: OK
-
-Record ID: 17
-Tag Value: 2016-02-17T23:45:34-05:00
-   Result: OK
-
-Record ID: 18
-Tag Value: 2016-02-17T10:12:41-05:00
-   Result: OK
-
-Record ID: 19
-Tag Value: 2016-02-16T23:45:36-05:00
-   Result: OK
-
-Record ID: 20
-Tag Value: 2016-02-16T23:45:36-05:00
+Tag Value: 2015-09-09T23:45:07-04:00
    Result: OK
 
 ==========================
@@ -108,6 +68,6 @@ Expected: true
   Actual: true
   Result: OK
 
-     Finish: 2016-02-18 14:12:03
+     Finish: 2016-02-18 15:26:14
    Duration: 0:00:03
 

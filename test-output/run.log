@@ -1,8 +1,8 @@
- TEST START: 2016-02-18 14:12:00
+ TEST START: 2016-02-18 15:26:11
 
 
        Test: #1
-      Start: 2016-02-18 14:12:00
-   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnIsNotLessThenFilter"/></methods></class>
-     Finish: 2016-02-18 14:12:03
+      Start: 2016-02-18 15:26:11
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsBetween"/></methods></class>
+     Finish: 2016-02-18 15:26:14
    Duration: 0:00:03
