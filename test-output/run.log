@@ -1,20 +1,8 @@
- TEST START: 2016-02-17 14:25:34
+ TEST START: 2016-02-18 14:12:00
 
 
        Test: #1
-      Start: 2016-02-17 14:25:34
-   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testTitleTagIsAllanGregg"/></methods></class>
-Error Cause: ---> XML is invalid! (URL 1 OF 4) - Server returned HTTP response code: 500, http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&single_program=0
-   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 351
-   Expected: ---> true
-     Actual: ---> false
-Error Cause: ---> XML is invalid! (URL 3 OF 4) - Server returned HTTP response code: 500, http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&single_program=0&size=70
-   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 351
-   Expected: ---> true
-     Actual: ---> false
-Error Cause: ---> XML is invalid! (URL 4 OF 4) - Server returned HTTP response code: 500, http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&size=70&single_program=0
-   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 351
-   Expected: ---> true
-     Actual: ---> false
-     Finish: 2016-02-17 14:25:37
+      Start: 2016-02-18 14:12:00
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnIsNotLessThenFilter"/></methods></class>
+     Finish: 2016-02-18 14:12:03
    Duration: 0:00:03

@@ -2518,6 +2518,8 @@ public class Functions {
 	
 	public String cpadMatchError = "CURRENT RECORD IS NOT AS EXPECTED...";
 	
+	public String cpadFilterError = "CURRENT RECORD IS EARLIER THEN EXPECTED AS PER FILTER...";
+	
 	/**
 	 * Assert CPAD record tags as dates are in ascending order
 	 * Won't use Selenium WebDriver
@@ -2917,7 +2919,6 @@ public class Functions {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 
-				if (i < (valueArray.length - 1)) {
 					boolean assertion = valueArray[i].equals(expected);
 
 					if (assertion) {
@@ -2933,7 +2934,6 @@ public class Functions {
 					if (ifAssert) {
 						Assert.assertTrue(assertion, "   Result: FAILED\n");
 					}
-				}
 			}
 
 			fileWriterPrinter("==========================");
@@ -2993,7 +2993,6 @@ public class Functions {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 
-				if (i < (valueArray.length - 1)) {
 					boolean assertion = valueArray[i].equals(expected);
 
 					if (assertion) {
@@ -3009,7 +3008,6 @@ public class Functions {
 					if (ifAssert) {
 						Assert.assertTrue(assertion, "   Result: FAILED\n");
 					}
-				}
 			}
 
 			fileWriterPrinter("==========================");
@@ -3146,6 +3144,95 @@ public class Functions {
 			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
 			
 			fileCleaner("max.log");
+			fileCleaner("xml.log");
+			return result;
+
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
+	}
+
+	/**
+	 * Assert CPAD record tags as dates filter correctly (not earlier then filter)
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsDateFilter(
+		           StackTraceElement trace, String url, int combination, int total,
+			       Boolean ifAssert, String record, String tag) 
+	throws IOException {
+		// printXmlPath(new RuntimeException().getStackTrace()[0]);
+		// COUNTER
+		try {
+			// ENTRY
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
+					+ " OF " + total + ":");
+			fileWriterPrinter(url);
+			fileWriterPrinter("\n" + "Record Name: " + record);
+			fileWriterPrinter("   Tag Name: " + tag);
+
+			String path = Locators.testOutputFileDir;
+			String name = "source";
+			String extention = "xml";
+			String fileName = name + "." + extention;
+
+			String filter = url.substring(url.toString().indexOf("=") + 1, url.toString().indexOf("&"));
+			long value = convertCpadDateStampToMillisecondsAsLong(filter);
+			
+			sourcePagePrint(url, path, fileName);
+
+			// fileWriterPrinter();
+			// fileWriterPrinter(path + "\n");
+			// fileWriterPrinter(path + fileName);
+
+			fileWriterPrinter();
+			fileWriterPrinter("==========================");
+
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("filter.log", false )) { fileWriter("filter.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(path, fileName, trace, combination, total);
+
+			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			long[] fingerprintArray = new long[valueArray.length];
+
+			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+
+			for (int i = 0; i < valueArray.length; i++) {
+				fileWriterPrinter("Record ID: " + (i + 1));
+				fileWriterPrinter("Tag Value: " + valueArray[i]);
+
+					boolean assertFILTER = (fingerprintArray[i] >= value);
+
+					if (assertFILTER) {
+						fileWriterPrinter("   Result: OK\n");
+					} else {
+						fileWriterPrinter("   Result: FAILED!");
+						fileWriterPrinter("   Reason: " + cpadFilterError);
+						fileCleaner("filter.log");
+						fileWriter("filter.log", "false");
+
+						if (ifAssert) {
+							fileWriterPrinter();
+							fileWriterPrinter(" Record ID: " + (i + 2));
+							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+						}
+
+						fileWriterPrinter();
+					}
+
+					if (ifAssert) { Assert.assertTrue(assertFILTER, "   Result: FAILED\n"); }
+			}
+
+			fileWriterPrinter("==========================");
+			fileWriterPrinter();
+
+			getAssertTrue(trace, "Earlier then filter! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("filter.log")));
+
+			boolean result = Boolean.valueOf(fileScanner("filter.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
+			fileCleaner("filter.log");
 			fileCleaner("xml.log");
 			return result;
 

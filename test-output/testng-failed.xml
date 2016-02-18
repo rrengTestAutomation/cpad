@@ -6,9 +6,9 @@
       <class name="test.Cases.Java.cpadTestPrograms">
         <methods>
           <include name="logClose"/>
+          <include name="testUpdatedOnIsNotLessThenFilter"/>
           <include name="endTime"/>
           <include name="startTime"/>
-          <include name="testTitleTagIsAllanGregg"/>
           <include name="logOpen"/>
         </methods>
       </class> <!-- test.Cases.Java.cpadTestPrograms -->

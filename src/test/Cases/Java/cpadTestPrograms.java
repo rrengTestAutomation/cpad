@@ -17,7 +17,7 @@ public class cpadTestPrograms{
 	int count = 0;
 	
 	/**
-	 * Test all of the possible given URL combinations are having the "group" tags of "program" record equals "Adult" [1]
+	 * Test all of the possible given URL combinations are having the "group" tags of "program" record are correct [1]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
 	 * <p>Original Version: V1</p>
@@ -28,7 +28,7 @@ public class cpadTestPrograms{
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testGroupTagIsAdult() throws IOException {
+	public void testGroupTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -60,7 +60,7 @@ public class cpadTestPrograms{
 		}
 
 	/**
-	 * Test all of the possible given URL combinations are having the "single_program" tags of "program" record equals "1" [2]
+	 * Test all of the possible given URL combinations are having the "single_program" tags of "program" record are correct [2]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
 	 * <p>Original Version: V1</p>
@@ -71,7 +71,7 @@ public class cpadTestPrograms{
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testSingleProgramTagIsOne() throws IOException {
+	public void testSingleProgramTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -318,7 +318,7 @@ public class cpadTestPrograms{
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-01</p>
+	 * <p>User Stories: programs-08</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -350,6 +350,122 @@ public class cpadTestPrograms{
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
 		catch (Exception exception) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
+	/**
+	 * Test given URL is having the "program_asset_id" tag of "program" record is correct [9]
+	 * <p>Date Created: 2016-02-18</p>
+	 * <p>Date Modified: 2016-02-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-09</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testProgramAssetIdTagIsCorrect() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/program_asset_id=2790";
+		String[] URL = { root };
+   		String record = "program";
+   		String tag = "program_asset_id";
+   		String expected = "2790";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
+	/**
+	 * Test given URL is having the "record_id" tag of "program" record is correct [10]
+	 * <p>Date Created: 2016-02-18</p>
+	 * <p>Date Modified: 2016-02-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-10</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testRecordIdTagIsCorrect() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/record_id=1579281";
+		String[] URL = { root };
+   		String record = "program";
+   		String tag = "record_id";
+   		String expected = "1579281";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
+	/**
+	 * Test the "updated_on" tag of all the "program" records are returning values greater than or equal to filter for programs [11]
+	 * <p>Date Created: 2016-02-18</p>
+	 * <p>Date Modified: 2016-02-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-11</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnIsNotLessThenFilter() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult";
+		String[] URL = { root };
+   		String record = "program";
+   		String tag = "updated_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:

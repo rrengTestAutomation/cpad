@@ -1,33 +1,15 @@
 
        Test: #1
-      Start: 2016-02-17 14:25:34
-   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testTitleTagIsAllanGregg"/></methods></class>
+      Start: 2016-02-18 14:12:00
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnIsNotLessThenFilter"/></methods></class>
 
  TEST EXECUTION #1:
 
-URL COMBINATION # 1 OF 4:
-http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&single_program=0
+URL COMBINATION # 1 OF 1:
+http://tomcat-dev:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult
 
 Record Name: program
-   Tag Name: title
-
-
-
-==========================
-
-Error Cause: ---> XML is invalid! (URL 1 OF 4) - Server returned HTTP response code: 500, http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&single_program=0
-   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 351
-   Expected: ---> true
-     Actual: ---> false
-
-==========================
-
-
-URL COMBINATION # 2 OF 4:
-http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&size=70
-
-Record Name: program
-   Tag Name: title
+   Tag Name: updated_on
 
 
 
@@ -40,7 +22,85 @@ Expected: true
 programs:
 
 Record ID: 1
-Tag Value: Allan Gregg
+Tag Value: 2016-02-18T13:56:17-05:00
+   Result: OK
+
+Record ID: 2
+Tag Value: 2016-02-18T13:15:33-05:00
+   Result: OK
+
+Record ID: 3
+Tag Value: 2016-02-18T13:15:32-05:00
+   Result: OK
+
+Record ID: 4
+Tag Value: 2016-02-18T13:15:32-05:00
+   Result: OK
+
+Record ID: 5
+Tag Value: 2016-02-18T13:15:32-05:00
+   Result: OK
+
+Record ID: 6
+Tag Value: 2016-02-18T12:23:53-05:00
+   Result: OK
+
+Record ID: 7
+Tag Value: 2016-02-18T12:12:07-05:00
+   Result: OK
+
+Record ID: 8
+Tag Value: 2016-02-18T10:15:01-05:00
+   Result: OK
+
+Record ID: 9
+Tag Value: 2016-02-18T10:15:01-05:00
+   Result: OK
+
+Record ID: 10
+Tag Value: 2016-02-18T06:15:03-05:00
+   Result: OK
+
+Record ID: 11
+Tag Value: 2016-02-17T23:45:35-05:00
+   Result: OK
+
+Record ID: 12
+Tag Value: 2016-02-17T23:45:35-05:00
+   Result: OK
+
+Record ID: 13
+Tag Value: 2016-02-17T23:45:35-05:00
+   Result: OK
+
+Record ID: 14
+Tag Value: 2016-02-17T23:45:35-05:00
+   Result: OK
+
+Record ID: 15
+Tag Value: 2016-02-17T23:45:34-05:00
+   Result: OK
+
+Record ID: 16
+Tag Value: 2016-02-17T23:45:34-05:00
+   Result: OK
+
+Record ID: 17
+Tag Value: 2016-02-17T23:45:34-05:00
+   Result: OK
+
+Record ID: 18
+Tag Value: 2016-02-17T10:12:41-05:00
+   Result: OK
+
+Record ID: 19
+Tag Value: 2016-02-16T23:45:36-05:00
+   Result: OK
+
+Record ID: 20
+Tag Value: 2016-02-16T23:45:36-05:00
+   Result: OK
+
 ==========================
 
 
@@ -48,42 +108,6 @@ Expected: true
   Actual: true
   Result: OK
 
-
-URL COMBINATION # 3 OF 4:
-http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&single_program=0&size=70
-
-Record Name: program
-   Tag Name: title
-
-
-
-==========================
-
-Error Cause: ---> XML is invalid! (URL 3 OF 4) - Server returned HTTP response code: 500, http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&single_program=0&size=70
-   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 351
-   Expected: ---> true
-     Actual: ---> false
-
-==========================
-
-
-URL COMBINATION # 4 OF 4:
-http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&size=70&single_program=0
-
-Record Name: program
-   Tag Name: title
-
-
-
-==========================
-
-Error Cause: ---> XML is invalid! (URL 4 OF 4) - Server returned HTTP response code: 500, http://tomcat-dev:8080/CPAD/programs/?title=Allan%20Gregg&size=70&single_program=0
-   Location: ---> test.Cases.Java\cpadTestPrograms\testTitleTagIsAllanGregg, line # 351
-   Expected: ---> true
-     Actual: ---> false
-
-==========================
-
-     Finish: 2016-02-17 14:25:37
+     Finish: 2016-02-18 14:12:03
    Duration: 0:00:03
 
