@@ -146,6 +146,55 @@ public class cpadTestVideos{
 	}
 
 	/**
+	 * Test all of the possible given URL combinations are having the "title" tags of "video" record are correct [4]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-04</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testTitleTagIsCorrect() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?title=American Conservatism at the Crossroads";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=20";
+		String d = "sort_order=asc";
+		String e = "sort_by=born_date";
+		
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		
+		//// UNIT TEST
+		// String[] URL = Locators.url(root, Locators.combination(b, c));
+		
+   		String record = "video";
+   		String tag = "title";
+   		String expected = "American Conservatism at the Crossroads";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		catch (Exception exception) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
 	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in DESC order [6]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>

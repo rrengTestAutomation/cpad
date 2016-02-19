@@ -323,7 +323,7 @@ public class cpadTestPrograms{
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testTitleTagIsAllanGregg() throws IOException {
+	public void testTitleTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
