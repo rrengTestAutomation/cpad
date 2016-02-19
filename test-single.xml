@@ -8,11 +8,8 @@
 <!--
 <class name="test.helper.Functions"></class>
 -->
-<!--
-<class name="test.Cases.Javae.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescending"/></methods></class>
--->
 
-<class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testTitleTagIsAllanGregg"/></methods></class>
+<class name="test.Cases.Java.cpadTestVideos"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
 		
     </classes>
   </test>

@@ -102,19 +102,7 @@ public class cpadTestVideos{
 		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
-	
-	/*
-	3. Testing the size filter for videos:
-	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/videos/?size=5
-	, 5 or less  
-	<video> records should be returned.
 
-			String a = "group=Adult";
-			String a = "program_asset_id=2790";
-			String a = "sort_order=asc";
-			String a = "sort_by=born_date";
-	*/
 	/**
 	 * Test all of the possible given URL combinations having maximum or less "video" records returned [3]
 	 * <p>Date Created: 2016-02-19</p>
