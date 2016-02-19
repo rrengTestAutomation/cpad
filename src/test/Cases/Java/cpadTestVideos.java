@@ -102,6 +102,60 @@ public class cpadTestVideos{
 		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
+	
+	/*
+	3. Testing the size filter for videos:
+	Using the all of the possible combinations of the following query parameters with the endpoint url  
+	http://tomcat-dev:8080/CPAD/videos/?size=5
+	, 5 or less  
+	<video> records should be returned.
+
+			String a = "group=Adult";
+			String a = "program_asset_id=2790";
+			String a = "sort_order=asc";
+			String a = "sort_by=born_date";
+	*/
+	/**
+	 * Test all of the possible given URL combinations having maximum or less "video" records returned [3]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-03</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testVideoRecordsMaxNumber() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?size=5";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "sort_order=asc";
+		String d = "sort_by=born_date";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "video";
+   		int max = 5;
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
 
 	/**
 	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in DESC order [6]
