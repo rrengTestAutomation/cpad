@@ -11,6 +11,13 @@
 
 <class name="test.Cases.Java.cpadTestVideos"><methods>
 <include name="testBornDateOrderIsAscending"/>
+<include name="testBornDateOrderIsDescending"/>
+<include name="testKillDateOrderIsAscending"/>
+<include name="testKillDateOrderIsDescending"/>
+<include name="testVideoAssetIdTagIsCorrect"/>
+<include name="testRecordIdTagIsCorrect"/>
+<include name="testIsCaptionedTagIsCorrect"/>
+<include name="testBrightcoveRefIdTagIsCorrect"/>
 </methods></class>
 
 <!--
