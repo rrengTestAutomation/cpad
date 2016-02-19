@@ -1,15 +1,15 @@
 
        Test: #1
-      Start: 2016-02-18 15:26:11
-   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsBetween"/></methods></class>
+      Start: 2016-02-19 10:42:19
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testGroupTagIsCorrect"/></methods></class>
 
  TEST EXECUTION #1:
 
-URL COMBINATION # 1 OF 1:
-http://tomcat-dev:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10
+URL COMBINATION # 1 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106
 
-Record Name: program
-   Tag Name: updated_on
+Record Name: video
+   Tag Name: group
 
 
 
@@ -19,46 +19,46 @@ Expected: true
   Actual: true
   Result: OK
 
-programs:
+videos:
 
 Record ID: 1
-Tag Value: 2015-09-18T13:58:55-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 2
-Tag Value: 2015-09-17T12:46:38-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 3
-Tag Value: 2015-09-17T12:06:04-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 4
-Tag Value: 2015-09-17T10:35:19-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 5
-Tag Value: 2015-09-13T23:45:02-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 6
-Tag Value: 2015-09-13T23:45:02-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 7
-Tag Value: 2015-09-13T23:45:02-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 8
-Tag Value: 2015-09-11T14:21:18-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 9
-Tag Value: 2015-09-11T11:42:09-04:00
+Tag Value: Adult
    Result: OK
 
 Record ID: 10
-Tag Value: 2015-09-09T23:45:07-04:00
+Tag Value: Adult
    Result: OK
 
 ==========================
@@ -68,6 +68,6398 @@ Expected: true
   Actual: true
   Result: OK
 
-     Finish: 2016-02-18 15:26:14
-   Duration: 0:00:03
+
+URL COMBINATION # 2 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 3 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 4 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 5 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 6 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 7 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 8 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 9 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 10 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 11 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 12 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 13 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 14 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 15 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 16 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 17 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&size=60&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 18 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&size=60&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 19 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_order=desc&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 20 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_order=desc&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 21 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_by=created_on&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 22 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_by=created_on&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 23 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&program_asset_id=3106&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 24 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&program_asset_id=3106&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 25 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_order=desc&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 26 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_order=desc&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 27 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_by=created_on&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 28 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_by=created_on&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 29 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&program_asset_id=3106&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 30 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&program_asset_id=3106&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 31 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&size=60&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 32 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&size=60&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 33 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&sort_by=created_on&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 34 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&sort_by=created_on&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 35 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&program_asset_id=3106&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 36 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&program_asset_id=3106&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 37 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&size=60&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 38 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&size=60&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 39 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&sort_order=desc&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 40 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&sort_order=desc&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+Record ID: 11
+Tag Value: Adult
+   Result: OK
+
+Record ID: 12
+Tag Value: Adult
+   Result: OK
+
+Record ID: 13
+Tag Value: Adult
+   Result: OK
+
+Record ID: 14
+Tag Value: Adult
+   Result: OK
+
+Record ID: 15
+Tag Value: Adult
+   Result: OK
+
+Record ID: 16
+Tag Value: Adult
+   Result: OK
+
+Record ID: 17
+Tag Value: Adult
+   Result: OK
+
+Record ID: 18
+Tag Value: Adult
+   Result: OK
+
+Record ID: 19
+Tag Value: Adult
+   Result: OK
+
+Record ID: 20
+Tag Value: Adult
+   Result: OK
+
+Record ID: 21
+Tag Value: Adult
+   Result: OK
+
+Record ID: 22
+Tag Value: Adult
+   Result: OK
+
+Record ID: 23
+Tag Value: Adult
+   Result: OK
+
+Record ID: 24
+Tag Value: Adult
+   Result: OK
+
+Record ID: 25
+Tag Value: Adult
+   Result: OK
+
+Record ID: 26
+Tag Value: Adult
+   Result: OK
+
+Record ID: 27
+Tag Value: Adult
+   Result: OK
+
+Record ID: 28
+Tag Value: Adult
+   Result: OK
+
+Record ID: 29
+Tag Value: Adult
+   Result: OK
+
+Record ID: 30
+Tag Value: Adult
+   Result: OK
+
+Record ID: 31
+Tag Value: Adult
+   Result: OK
+
+Record ID: 32
+Tag Value: Adult
+   Result: OK
+
+Record ID: 33
+Tag Value: Adult
+   Result: OK
+
+Record ID: 34
+Tag Value: Adult
+   Result: OK
+
+Record ID: 35
+Tag Value: Adult
+   Result: OK
+
+Record ID: 36
+Tag Value: Adult
+   Result: OK
+
+Record ID: 37
+Tag Value: Adult
+   Result: OK
+
+Record ID: 38
+Tag Value: Adult
+   Result: OK
+
+Record ID: 39
+Tag Value: Adult
+   Result: OK
+
+Record ID: 40
+Tag Value: Adult
+   Result: OK
+
+Record ID: 41
+Tag Value: Adult
+   Result: OK
+
+Record ID: 42
+Tag Value: Adult
+   Result: OK
+
+Record ID: 43
+Tag Value: Adult
+   Result: OK
+
+Record ID: 44
+Tag Value: Adult
+   Result: OK
+
+Record ID: 45
+Tag Value: Adult
+   Result: OK
+
+Record ID: 46
+Tag Value: Adult
+   Result: OK
+
+Record ID: 47
+Tag Value: Adult
+   Result: OK
+
+Record ID: 48
+Tag Value: Adult
+   Result: OK
+
+Record ID: 49
+Tag Value: Adult
+   Result: OK
+
+Record ID: 50
+Tag Value: Adult
+   Result: OK
+
+Record ID: 51
+Tag Value: Adult
+   Result: OK
+
+Record ID: 52
+Tag Value: Adult
+   Result: OK
+
+Record ID: 53
+Tag Value: Adult
+   Result: OK
+
+Record ID: 54
+Tag Value: Adult
+   Result: OK
+
+Record ID: 55
+Tag Value: Adult
+   Result: OK
+
+Record ID: 56
+Tag Value: Adult
+   Result: OK
+
+Record ID: 57
+Tag Value: Adult
+   Result: OK
+
+Record ID: 58
+Tag Value: Adult
+   Result: OK
+
+Record ID: 59
+Tag Value: Adult
+   Result: OK
+
+Record ID: 60
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 41 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&size=60&sort_order=desc&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 42 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&size=60&sort_by=created_on&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 43 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_order=desc&size=60&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 44 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_order=desc&sort_by=created_on&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 45 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_by=created_on&size=60&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 46 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&program_asset_id=3106&sort_by=created_on&sort_order=desc&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 47 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&program_asset_id=3106&sort_order=desc&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 48 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&program_asset_id=3106&sort_by=created_on&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 49 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_order=desc&program_asset_id=3106&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 50 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_order=desc&sort_by=created_on&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 51 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_by=created_on&program_asset_id=3106&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 52 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&size=60&sort_by=created_on&sort_order=desc&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 53 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&program_asset_id=3106&size=60&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 54 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&program_asset_id=3106&sort_by=created_on&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 55 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&size=60&program_asset_id=3106&sort_by=created_on
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 56 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&size=60&sort_by=created_on&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 57 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&sort_by=created_on&program_asset_id=3106&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 58 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_order=desc&sort_by=created_on&size=60&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 59 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&program_asset_id=3106&size=60&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 60 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&program_asset_id=3106&sort_order=desc&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 61 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&size=60&program_asset_id=3106&sort_order=desc
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 62 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&size=60&sort_order=desc&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 63 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&sort_order=desc&program_asset_id=3106&size=60
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+
+URL COMBINATION # 64 OF 64:
+http://tomcat-dev:8080/CPAD/videos/?group=Adult&sort_by=created_on&sort_order=desc&size=60&program_asset_id=3106
+
+Record Name: video
+   Tag Name: group
+
+
+
+==========================
+
+Expected: true
+  Actual: true
+  Result: OK
+
+videos:
+
+Record ID: 1
+Tag Value: Adult
+   Result: OK
+
+Record ID: 2
+Tag Value: Adult
+   Result: OK
+
+Record ID: 3
+Tag Value: Adult
+   Result: OK
+
+Record ID: 4
+Tag Value: Adult
+   Result: OK
+
+Record ID: 5
+Tag Value: Adult
+   Result: OK
+
+Record ID: 6
+Tag Value: Adult
+   Result: OK
+
+Record ID: 7
+Tag Value: Adult
+   Result: OK
+
+Record ID: 8
+Tag Value: Adult
+   Result: OK
+
+Record ID: 9
+Tag Value: Adult
+   Result: OK
+
+Record ID: 10
+Tag Value: Adult
+   Result: OK
+
+==========================
+
+
+Expected: true
+  Actual: true
+  Result: OK
+
+     Finish: 2016-02-19 11:00:47
+   Duration: 0:18:28
 

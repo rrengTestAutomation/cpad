@@ -1,8 +1,8 @@
- TEST START: 2016-02-18 15:26:11
+ TEST START: 2016-02-19 10:42:19
 
 
        Test: #1
-      Start: 2016-02-18 15:26:11
-   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsBetween"/></methods></class>
-     Finish: 2016-02-18 15:26:14
-   Duration: 0:00:03
+      Start: 2016-02-19 10:42:19
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 11:00:47
+   Duration: 0:18:28

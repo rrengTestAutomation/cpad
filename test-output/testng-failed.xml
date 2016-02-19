@@ -6,10 +6,10 @@
       <class name="test.Cases.Java.cpadTestPrograms">
         <methods>
           <include name="logClose"/>
-          <include name="testUpdatedOnIsNotLessThenFilter"/>
           <include name="endTime"/>
           <include name="startTime"/>
           <include name="logOpen"/>
+          <include name="testUpdatedOnTagIsBetween"/>
         </methods>
       </class> <!-- test.Cases.Java.cpadTestPrograms -->
     </classes>

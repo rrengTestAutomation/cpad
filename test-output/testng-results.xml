@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3238" started-at="2016-02-18T20:26:11Z" finished-at="2016-02-18T20:26:14Z">
+  <suite name="Default suite" duration-ms="1108156" started-at="2016-02-19T15:42:19Z" finished-at="2016-02-19T16:00:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3238" started-at="2016-02-18T20:26:11Z" finished-at="2016-02-18T20:26:14Z">
-      <class name="test.Cases.Java.cpadTestPrograms">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logOpen" is-config="true" duration-ms="36" started-at="2016-02-18T15:26:11Z" finished-at="2016-02-18T15:26:11Z">
+    <test name="Default test" duration-ms="1108156" started-at="2016-02-19T15:42:19Z" finished-at="2016-02-19T16:00:47Z">
+      <class name="test.Cases.Java.cpadTestVideos">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestVideos@c818063]" name="logOpen" is-config="true" duration-ms="61" started-at="2016-02-19T10:42:19Z" finished-at="2016-02-19T10:42:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="startTime" is-config="true" duration-ms="11" started-at="2016-02-18T15:26:11Z" finished-at="2016-02-18T15:26:11Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestVideos@c818063]" name="startTime" is-config="true" duration-ms="29" started-at="2016-02-19T10:42:19Z" finished-at="2016-02-19T10:42:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testUpdatedOnTagIsBetween()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="testUpdatedOnTagIsBetween" duration-ms="3203" started-at="2016-02-18T15:26:11Z" finished-at="2016-02-18T15:26:14Z">
+        <test-method status="PASS" signature="testGroupTagIsCorrect()[pri:0, instance:test.Cases.Java.cpadTestVideos@c818063]" name="testGroupTagIsCorrect" duration-ms="1108109" started-at="2016-02-19T10:42:19Z" finished-at="2016-02-19T11:00:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUpdatedOnTagIsBetween -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="endTime" is-config="true" duration-ms="7" started-at="2016-02-18T15:26:14Z" finished-at="2016-02-18T15:26:14Z">
+        </test-method> <!-- testGroupTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestVideos@c818063]" name="endTime" is-config="true" duration-ms="3" started-at="2016-02-19T11:00:47Z" finished-at="2016-02-19T11:00:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestPrograms@3f0ee7cb]" name="logClose" is-config="true" duration-ms="4" started-at="2016-02-18T15:26:14Z" finished-at="2016-02-18T15:26:14Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestVideos@c818063]" name="logClose" is-config="true" duration-ms="2" started-at="2016-02-19T11:00:47Z" finished-at="2016-02-19T11:00:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->
-      </class> <!-- test.Cases.Java.cpadTestPrograms -->
+      </class> <!-- test.Cases.Java.cpadTestVideos -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
