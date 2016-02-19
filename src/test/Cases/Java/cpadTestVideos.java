@@ -358,6 +358,47 @@ public class cpadTestVideos{
 		        		 );
 	}
 
+	/**
+	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [9]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-09</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testBornDateOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=born_date";
+		String a = "group=Adult";
+		String b = "program_asset_id=8620";
+		String c = "size=50";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "born_date";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
