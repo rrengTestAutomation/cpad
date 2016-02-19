@@ -1,8 +1,204 @@
- TEST START: 2016-02-19 10:42:19
+ TEST START: 2016-02-19 14:13:33
 
 
        Test: #1
-      Start: 2016-02-19 10:42:19
+      Start: 2016-02-19 14:13:33
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsAscending"/></methods></class>
+     Finish: 2016-02-19 14:14:19
+   Duration: 0:00:45
+
+       Test: #2
+      Start: 2016-02-19 14:14:19
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testCreatedOnOrderIsDescending"/></methods></class>
+     Finish: 2016-02-19 14:15:03
+   Duration: 0:00:44
+   Subtotal: 0:01:30
+
+       Test: #3
+      Start: 2016-02-19 14:15:03
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 14:18:17
+   Duration: 0:03:13
+   Subtotal: 0:04:43
+
+       Test: #4
+      Start: 2016-02-19 14:18:17
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 14:18:20
+   Duration: 0:00:02
+   Subtotal: 0:04:46
+
+       Test: #5
+      Start: 2016-02-19 14:18:20
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testProgramRecordsMaxNumber"/></methods></class>
+     Finish: 2016-02-19 14:21:32
+   Duration: 0:03:12
+   Subtotal: 0:07:59
+
+       Test: #6
+      Start: 2016-02-19 14:21:32
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testRecordIdTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 14:21:35
+   Duration: 0:00:02
+   Subtotal: 0:08:01
+
+       Test: #7
+      Start: 2016-02-19 14:21:35
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testSingleProgramTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 14:24:48
+   Duration: 0:03:13
+   Subtotal: 0:11:15
+
+       Test: #8
+      Start: 2016-02-19 14:24:48
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testTitleTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 14:40:34
+   Duration: 0:15:45
+   Subtotal: 0:27:00
+
+       Test: #9
+      Start: 2016-02-19 14:40:34
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnOrderIsAscending"/></methods></class>
+     Finish: 2016-02-19 14:41:25
+   Duration: 0:00:51
+   Subtotal: 0:27:52
+
+       Test: #10
+      Start: 2016-02-19 14:41:25
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnOrderIsDescending"/></methods></class>
+     Finish: 2016-02-19 14:42:14
+   Duration: 0:00:48
+   Subtotal: 0:28:41
+
+       Test: #11
+      Start: 2016-02-19 14:42:14
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsBetween"/></methods></class>
+     Finish: 2016-02-19 14:42:17
+   Duration: 0:00:02
+   Subtotal: 0:28:43
+
+       Test: #12
+      Start: 2016-02-19 14:42:17
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsFiltered"/></methods></class>
+     Finish: 2016-02-19 14:42:19
+   Duration: 0:00:02
+   Subtotal: 0:28:46
+
+       Test: #13
+      Start: 2016-02-19 14:42:19
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testBornDateOrderIsAscending"/></methods></class>
+     Finish: 2016-02-19 14:46:39
+   Duration: 0:04:19
+   Subtotal: 0:33:06
+
+       Test: #14
+      Start: 2016-02-19 14:46:39
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testBornDateOrderIsDescending"/></methods></class>
+     Finish: 2016-02-19 14:51:04
+   Duration: 0:04:24
+   Subtotal: 0:37:30
+
+       Test: #15
+      Start: 2016-02-19 14:51:04
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testBrightcoveRefIdTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 14:51:07
+   Duration: 0:00:03
+   Subtotal: 0:37:34
+
+       Test: #16
+      Start: 2016-02-19 14:51:07
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testCreateOnOrderIsAscending"/></methods></class>
+     Finish: 2016-02-19 14:55:19
+   Duration: 0:04:12
+   Subtotal: 0:41:46
+
+       Test: #17
+      Start: 2016-02-19 14:55:19
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testCreateOnOrderIsDescending"/></methods></class>
+     Finish: 2016-02-19 14:59:43
+   Duration: 0:04:23
+   Subtotal: 0:46:09
+
+       Test: #18
+      Start: 2016-02-19 14:59:43
    XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testGroupTagIsCorrect"/></methods></class>
-     Finish: 2016-02-19 11:00:47
-   Duration: 0:18:28
+     Finish: 2016-02-19 15:17:54
+   Duration: 0:18:11
+   Subtotal: 1:04:21
+
+       Test: #19
+      Start: 2016-02-19 15:17:54
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testIsCaptionedTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 15:18:11
+   Duration: 0:00:16
+   Subtotal: 1:04:38
+
+       Test: #20
+      Start: 2016-02-19 15:18:11
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testKillDateOrderIsAscending"/></methods></class>
+     Finish: 2016-02-19 15:22:24
+   Duration: 0:04:13
+   Subtotal: 1:08:51
+
+       Test: #21
+      Start: 2016-02-19 15:22:24
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testKillDateOrderIsDescending"/></methods></class>
+     Finish: 2016-02-19 15:26:40
+   Duration: 0:04:15
+   Subtotal: 1:13:06
+
+       Test: #22
+      Start: 2016-02-19 15:26:40
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 15:44:57
+   Duration: 0:18:16
+   Subtotal: 1:31:23
+
+       Test: #23
+      Start: 2016-02-19 15:44:57
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testRecordIdTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 15:45:00
+   Duration: 0:00:03
+   Subtotal: 1:31:27
+
+       Test: #24
+      Start: 2016-02-19 15:45:00
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testTitleTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 16:02:42
+   Duration: 0:17:42
+   Subtotal: 1:49:09
+
+       Test: #25
+      Start: 2016-02-19 16:02:42
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testUpdatedOnOrderIsAscending"/></methods></class>
+     Finish: 2016-02-19 16:07:00
+   Duration: 0:04:17
+   Subtotal: 1:53:26
+
+       Test: #26
+      Start: 2016-02-19 16:07:00
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testUpdatedOnOrderIsDescending"/></methods></class>
+     Finish: 2016-02-19 16:11:18
+   Duration: 0:04:17
+   Subtotal: 1:57:44
+
+       Test: #27
+      Start: 2016-02-19 16:11:18
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testVideoAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-02-19 16:11:21
+   Duration: 0:00:03
+   Subtotal: 1:57:48
+
+       Test: #28
+      Start: 2016-02-19 16:11:21
+   XML Path: <class name="test.Cases.Java.cpadTestVideos"><methods><include name="testVideoRecordsMaxNumber"/></methods></class>
+     Finish: 2016-02-19 16:29:49
+   Duration: 0:18:27
+   Subtotal: 2:16:16
+
+TOTAL TESTS: 28
+     FAILED: 0
+TEST  START: 2016-02-19 14:13:33
+TEST FINISH: 2016-02-19 16:29:49
+TOTAL  TIME: 2:16:16
+
