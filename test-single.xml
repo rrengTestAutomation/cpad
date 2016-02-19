@@ -9,8 +9,17 @@
 <class name="test.helper.Functions"></class>
 -->
 
-<class name="test.Cases.Java.cpadTestVideos"><methods><include name="testTitleTagIsCorrect"/></methods></class>
-		
+<class name="test.Cases.Java.cpadTestVideos"><methods>
+<include name="testCreateOnOrderIsAscending"/>
+<include name="testCreateOnOrderIsDescending"/>
+<include name="testUpdatedOnOrderIsAscending"/>
+<include name="testUpdatedOnOrderIsDescending"/>
+</methods></class>
+
+<!--
+<include name=""/>
+-->
+
     </classes>
   </test>
 </suite>

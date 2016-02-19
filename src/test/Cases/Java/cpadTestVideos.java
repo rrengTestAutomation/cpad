@@ -195,13 +195,54 @@ public class cpadTestVideos{
 	}
 
 	/**
-	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in DESC order [6]
-	 * <p>Date Created: 2016-02-10</p>
-	 * <p>Date Modified: 2016-02-10</p>
+	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in ascending order [5]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: video-06</p>
+	 * <p>User Stories: videos-05</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testCreateOnOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=created_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=1778";
+		String c = "size=20";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
+	/**
+	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in descending order [6]
+	 * <p>Date Created: 2016-02-10</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-06</p>
 	 * @throws IOException
 	 */	
 	@SuppressWarnings("static-access")
@@ -212,13 +253,95 @@ public class cpadTestVideos{
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc";
-		String a = "program_asset_id=2790";
-		String b = "group=Adult";
-		String c = "size=80";	
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=created_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=1778";
+		String c = "size=20";	
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
    		String record = "video";
    		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "updated_on" tags of "video" record in ascending order [7]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-07</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=updated_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=50";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "updated_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "updated_on" tags of "video" record in descending order [8]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-08</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=updated_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=50";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "updated_on";
    		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
