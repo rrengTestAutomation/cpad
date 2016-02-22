@@ -52,6 +52,8 @@ import org.xml.sax.SAXParseException;
 
 
 
+
+
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -114,6 +116,7 @@ import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.concurrent.TimeUnit;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.zip.GZIPInputStream;
@@ -133,6 +136,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
+
+
 
 
 
@@ -1954,22 +1959,21 @@ public class Functions {
 	}
 
 	/** Convert long Milliseconds to Duration "Hours:Min:Sec" auto-format */
-	public static String convertTimeMillisecondsAsLongToDuration(
-			long milliseconds) {
+	public static String convertTimeMillisecondsAsLongToDuration(long milliseconds) {
 		String hours = String.format("%02d",
 				TimeUnit.MILLISECONDS.toHours(milliseconds));
+		
 		String minutes = String.format(
 				"%02d",
 				TimeUnit.MILLISECONDS.toMinutes(milliseconds)
-						- TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS
-								.toHours(milliseconds)));
+			  - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(milliseconds)));
+		
 		String seconds = String.format(
 				"%02d",
 				TimeUnit.MILLISECONDS.toSeconds(milliseconds)
-						- TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS
-								.toMinutes(milliseconds)));
-		String duration = Integer.valueOf(hours) + ":" + minutes + ":"
-				+ seconds;
+			  - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milliseconds)));
+		
+		String duration = Integer.valueOf(hours) + ":" + minutes + ":" + seconds;
 		return duration;
 	}
 
@@ -1990,7 +1994,46 @@ public class Functions {
 	// return convertCalendarDateToMillisecondsAsLong(date) + ((hours * 3600) +
 	// (min * 60) + sec) * 1000;
 	// }
+	
+	/** Convert long Milliseconds to Timestamp */
+	public String convertCalendarMillisecondsAsLongToTimestamp(long fingerprint) {	
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date(fingerprint);
+		String Date = dateFormat.format(date);
+		
+		dateFormat = new SimpleDateFormat("HH:mm:ss");
+		date = new Date(fingerprint);
+		
+		return Date + "T" + dateFormat.format(date);
+	}
 
+	/** Date Calculator per days step: adding or reducing number of days */
+	public long todayAddDaysToCurrentTimeMilliseconds(int addDays) {
+		long mills = System.currentTimeMillis() + addDays * 24 * 3600 * 1000; // add "days";
+		return mills;
+	}
+
+	/** Date Calculator per yearss step: adding or reducing number of years 
+	 * @throws ParseException */
+	public long todayAddYearsToCurrentTimeMilliseconds(int addYears) throws ParseException {
+	    Calendar date = Calendar.getInstance();
+	    date.setTime(new Date());
+	    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    date.add(Calendar.YEAR, addYears);
+	    String newDate = formatter.format(date.getTime());
+	    Date newdate = formatter.parse(newDate);
+	    long mills = newdate.getTime();
+		return mills;
+	}
+	
+	/** Convert Date and Time (Hour:Min:Sec) to long Milliseconds */
+	public long convertCalendarDateTimeHourMinSecToMillisecondsAsLong(String stringDate) throws ParseException {
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = formatter.parse(stringDate);
+		long mills = date.getTime();
+		return mills;
+	}
+	
 	/**
 	 * Creates a new Test Log record as a text file named "run.log" create file
 	 * example: File f = new File(<full path string>); f.createNewFile();
@@ -2503,7 +2546,7 @@ public class Functions {
 	 * @throws ParserConfigurationException
 	 * @throws SAXException
 	 */
-	public int xmlRecrdLength(String path, String fileName, String record)
+	public int xmlRecordLength(String path, String fileName, String record)
 			throws ParserConfigurationException, SAXException, IOException {
 		File stocks = new File(path + fileName);
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -2513,7 +2556,22 @@ public class Functions {
 		NodeList nodes = doc.getElementsByTagName(record);
 		return nodes.getLength();
 	}
-
+	
+	/**
+	 * Timestamp plus Days from NOW
+	 */ 
+	public String timestampPlusDays(int days){
+	return convertCalendarMillisecondsAsLongToTimestamp(todayAddDaysToCurrentTimeMilliseconds(days));
+	}
+	
+	/**
+	 * Timestamp plus Years from NOW
+	 * @throws ParseException 
+	 */ 
+	public String timestampPlusYears(int years) throws ParseException{
+	return convertCalendarMillisecondsAsLongToTimestamp(todayAddYearsToCurrentTimeMilliseconds(years));
+	}
+	
 	public String cpadAscOrderError = "PREVIOUS RECORD, SHOWN BELOW - IS OLDER THEN THE CURRENT ONE...";
 
 	public String cpadDescOrderError = "CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...";
@@ -2916,9 +2974,11 @@ public class Functions {
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(path, fileName, trace, combination, total);
-			
+		    
+			String error = null;
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
-
+			if (valueArray.length == 0) {fileCleaner("match.log"); fileWriter("match.log", "false"); error = "No records found!"; }
+			
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
@@ -2928,6 +2988,7 @@ public class Functions {
 					if (assertion) {
 						fileWriterPrinter("   Result: OK\n");
 					} else {
+						error = "Not the same!";
 						fileWriterPrinter("   Result: FAILED!");
 						fileWriterPrinter("   Reason: " + cpadMatchError);
 						fileCleaner("match.log");
@@ -2943,7 +3004,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Not the same! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("match.log")));
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("match.log")));
 
 			boolean result = Boolean.valueOf(fileScanner("match.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3063,8 +3124,8 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(path, fileName, trace, combination, total);
 			
-			fileWriterPrinter("Records Number: " + xmlRecrdLength(path, fileName, record));
-			boolean assertion = (xmlRecrdLength(path, fileName, record) <= max);
+			fileWriterPrinter("Records Number: " + xmlRecordLength(path, fileName, record));
+			boolean assertion = (xmlRecordLength(path, fileName, record) <= max);
 
 			if (assertion) { fileWriterPrinter("        Result: OK");
 			        } else {
@@ -3125,8 +3186,8 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(path, fileName, trace, combination, total);
 			
-			fileWriterPrinter("Records Number: " + xmlRecrdLength(path, fileName, record));
-			boolean assertion = (xmlRecrdLength(path, fileName, record) <= max);
+			fileWriterPrinter("Records Number: " + xmlRecordLength(path, fileName, record));
+			boolean assertion = (xmlRecordLength(path, fileName, record) <= max);
 
 			if (assertion) { fileWriterPrinter("        Result: OK");
 			        } else {
