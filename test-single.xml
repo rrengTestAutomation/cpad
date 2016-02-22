@@ -9,7 +9,7 @@
 <class name="test.helper.Functions"></class>
 -->
 
-<class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
+<class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testGroupTagIsCorrect"/></methods></class>
 
 <!--
 <include name=""/>

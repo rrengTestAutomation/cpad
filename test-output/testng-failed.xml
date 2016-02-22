@@ -5,8 +5,8 @@
     <classes>
       <class name="test.Cases.Java.cpadTestSchedules">
         <methods>
-          <include name="testProgramAssetIdTagIsCorrect"/>
           <include name="logOpen"/>
+          <include name="testGroupTagIsCorrect"/>
           <include name="startTime"/>
           <include name="endTime"/>
           <include name="logClose"/>

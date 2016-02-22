@@ -39,8 +39,8 @@ public class cpadTestSchedules {
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?program_asset_id=2790";
 		String a = "group=Adult";
 		String b = "size=60";
-		String c = "airing_time_gt=" + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
-		String d = "airing_time_lte=" + function.timestampPlusDays(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
+		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "program_asset_id";
@@ -61,19 +61,49 @@ public class cpadTestSchedules {
 		        		 );
 		}
 
-	/*
-	2. Testing the group filter for schedules:
-	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/schedules/?group=Adult
-	, all the  
-	<schedule> records returned should ONLY have a  
-	<group> tag equal to “Adult”.
+	/**
+	 * Test all of the possible given URL combinations are having the "group" tags of "schedule" record are correct [2]
+	 * <p>Date Created: 2016-02-22</p>
+	 * <p>Date Modified: 2016-02-22</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: schedules-02</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testGroupTagIsCorrect() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/schedules/?group=Adult";
+		String a = "program_asset_id=2790";
+		String b = "size=30";
+		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "schedule";
+   		String tag = "group";
+   		String expected = "Adult";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
-			String a = "program_asset_id=2790";
-			String b = "size=30";
-			String c = "airing_time_gt= (a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today)";
-			String d = "airing_time_lte=(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today)
-	*/
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				          //function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 //,Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+		}
 
 	/*
 	3. Testing the size filter for schedules:

@@ -1,8 +1,8 @@
- TEST START: 2016-02-22 13:52:06
+ TEST START: 2016-02-22 13:59:54
 
 
        Test: #1
-      Start: 2016-02-22 13:52:06
-   XML Path: <class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
-     Finish: 2016-02-22 13:52:09
-   Duration: 0:00:03
+      Start: 2016-02-22 13:59:54
+   XML Path: <class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+     Finish: 2016-02-22 13:59:58
+   Duration: 0:00:04
