@@ -105,18 +105,47 @@ public class cpadTestSchedules {
 		        		 );
 		}
 
-	/*
-	3. Testing the size filter for schedules:
-	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/schedules/?size=10
-	, 10 or less  
-	<schedule> records should be returned.
+	/**
+	 * Test all of the possible given URL combinations having maximum or less "schedule" records returned [3]
+	 * <p>Date Created: 2016-02-10</p>
+	 * <p>Date Modified: 2016-02-10</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: schedules-03</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testScheduleRecordsMaxNumber() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/schedules/?size=10";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "schedule";
+   		int max = 10;
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
-			String a = "group=Adult";
-			String b = "program_asset_id=2790";
-			String c = "airing_time_gt= (a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today)";
-			String d = "airing_time_lte=(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today)
-	*/
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
 
 	/*
 	4. Testing the greater than airing time filter for schedules:

@@ -1,16 +1,14 @@
 
        Test: #1
-      Start: 2016-02-22 13:59:54
-   XML Path: <class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+      Start: 2016-02-22 14:06:02
+   XML Path: <class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testScheduleRecordsMaxNumber"/></methods></class>
 
  TEST EXECUTION #1:
 
 URL COMBINATION # 1 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -19,88 +17,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -110,11 +28,9 @@ Expected: true
 
 
 URL COMBINATION # 2 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -123,128 +39,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -254,11 +50,9 @@ Expected: true
 
 
 URL COMBINATION # 3 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -267,88 +61,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -358,11 +72,9 @@ Expected: true
 
 
 URL COMBINATION # 4 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -371,88 +83,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -462,11 +94,9 @@ Expected: true
 
 
 URL COMBINATION # 5 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -475,128 +105,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -606,11 +116,9 @@ Expected: true
 
 
 URL COMBINATION # 6 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -619,88 +127,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -710,11 +138,9 @@ Expected: true
 
 
 URL COMBINATION # 7 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -723,88 +149,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -814,11 +160,9 @@ Expected: true
 
 
 URL COMBINATION # 8 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -827,128 +171,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -958,11 +182,9 @@ Expected: true
 
 
 URL COMBINATION # 9 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -971,128 +193,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1102,11 +204,9 @@ Expected: true
 
 
 URL COMBINATION # 10 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1115,128 +215,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1246,11 +226,9 @@ Expected: true
 
 
 URL COMBINATION # 11 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1259,88 +237,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1350,11 +248,9 @@ Expected: true
 
 
 URL COMBINATION # 12 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1363,128 +259,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1494,11 +270,9 @@ Expected: true
 
 
 URL COMBINATION # 13 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1507,88 +281,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1598,11 +292,9 @@ Expected: true
 
 
 URL COMBINATION # 14 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1611,88 +303,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1702,11 +314,9 @@ Expected: true
 
 
 URL COMBINATION # 15 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1715,128 +325,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1846,11 +336,9 @@ Expected: true
 
 
 URL COMBINATION # 16 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1859,88 +347,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -1950,11 +358,9 @@ Expected: true
 
 
 URL COMBINATION # 17 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&size=30&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -1963,128 +369,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2094,11 +380,9 @@ Expected: true
 
 
 URL COMBINATION # 18 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&size=30&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2107,128 +391,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2238,11 +402,9 @@ Expected: true
 
 
 URL COMBINATION # 19 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2251,128 +413,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2382,11 +424,9 @@ Expected: true
 
 
 URL COMBINATION # 20 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2395,72 +435,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2470,11 +446,9 @@ Expected: true
 
 
 URL COMBINATION # 21 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2483,128 +457,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2614,11 +468,9 @@ Expected: true
 
 
 URL COMBINATION # 22 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2627,72 +479,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2702,11 +490,9 @@ Expected: true
 
 
 URL COMBINATION # 23 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&group=Adult&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2715,128 +501,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2846,11 +512,9 @@ Expected: true
 
 
 URL COMBINATION # 24 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&group=Adult&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -2859,128 +523,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -2990,11 +534,9 @@ Expected: true
 
 
 URL COMBINATION # 25 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3003,128 +545,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3134,11 +556,9 @@ Expected: true
 
 
 URL COMBINATION # 26 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3147,128 +567,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3278,11 +578,9 @@ Expected: true
 
 
 URL COMBINATION # 27 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3291,128 +589,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3422,11 +600,9 @@ Expected: true
 
 
 URL COMBINATION # 28 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3435,128 +611,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3566,11 +622,9 @@ Expected: true
 
 
 URL COMBINATION # 29 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&group=Adult&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3579,128 +633,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3710,11 +644,9 @@ Expected: true
 
 
 URL COMBINATION # 30 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&group=Adult&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3723,72 +655,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3798,11 +666,9 @@ Expected: true
 
 
 URL COMBINATION # 31 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&size=30&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3811,128 +677,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -3942,11 +688,9 @@ Expected: true
 
 
 URL COMBINATION # 32 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&size=30&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -3955,128 +699,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4086,11 +710,9 @@ Expected: true
 
 
 URL COMBINATION # 33 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4099,72 +721,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4174,11 +732,9 @@ Expected: true
 
 
 URL COMBINATION # 34 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4187,128 +743,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4318,11 +754,9 @@ Expected: true
 
 
 URL COMBINATION # 35 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&group=Adult&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4331,128 +765,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4462,11 +776,9 @@ Expected: true
 
 
 URL COMBINATION # 36 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&group=Adult&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4475,72 +787,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4550,11 +798,9 @@ Expected: true
 
 
 URL COMBINATION # 37 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&size=30&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4563,128 +809,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4694,11 +820,9 @@ Expected: true
 
 
 URL COMBINATION # 38 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&size=30&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4707,128 +831,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4838,11 +842,9 @@ Expected: true
 
 
 URL COMBINATION # 39 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4851,72 +853,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -4926,11 +864,9 @@ Expected: true
 
 
 URL COMBINATION # 40 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -4939,128 +875,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
-Record ID: 17
-Tag Value: Adult
-   Result: OK
-
-Record ID: 18
-Tag Value: Adult
-   Result: OK
-
-Record ID: 19
-Tag Value: Adult
-   Result: OK
-
-Record ID: 20
-Tag Value: Adult
-   Result: OK
-
-Record ID: 21
-Tag Value: Adult
-   Result: OK
-
-Record ID: 22
-Tag Value: Adult
-   Result: OK
-
-Record ID: 23
-Tag Value: Adult
-   Result: OK
-
-Record ID: 24
-Tag Value: Adult
-   Result: OK
-
-Record ID: 25
-Tag Value: Adult
-   Result: OK
-
-Record ID: 26
-Tag Value: Adult
-   Result: OK
-
-Record ID: 27
-Tag Value: Adult
-   Result: OK
-
-Record ID: 28
-Tag Value: Adult
-   Result: OK
-
-Record ID: 29
-Tag Value: Adult
-   Result: OK
-
-Record ID: 30
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5070,11 +886,9 @@ Expected: true
 
 
 URL COMBINATION # 41 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&size=30&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5083,72 +897,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5158,11 +908,9 @@ Expected: true
 
 
 URL COMBINATION # 42 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&size=30&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5171,72 +919,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5246,11 +930,9 @@ Expected: true
 
 
 URL COMBINATION # 43 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54&size=30&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5259,72 +941,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5334,11 +952,9 @@ Expected: true
 
 
 URL COMBINATION # 44 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5347,72 +963,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5422,11 +974,9 @@ Expected: true
 
 
 URL COMBINATION # 45 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54&size=30&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5435,72 +985,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5510,11 +996,9 @@ Expected: true
 
 
 URL COMBINATION # 46 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&group=Adult&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5523,72 +1007,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5598,11 +1018,9 @@ Expected: true
 
 
 URL COMBINATION # 47 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&group=Adult&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5611,72 +1029,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5686,11 +1040,9 @@ Expected: true
 
 
 URL COMBINATION # 48 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&group=Adult&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5699,72 +1051,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5774,11 +1062,9 @@ Expected: true
 
 
 URL COMBINATION # 49 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02&group=Adult&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5787,72 +1073,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5862,11 +1084,9 @@ Expected: true
 
 
 URL COMBINATION # 50 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5875,72 +1095,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -5950,11 +1106,9 @@ Expected: true
 
 
 URL COMBINATION # 51 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02&group=Adult&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -5963,72 +1117,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6038,11 +1128,9 @@ Expected: true
 
 
 URL COMBINATION # 52 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&size=30&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6051,72 +1139,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6126,11 +1150,9 @@ Expected: true
 
 
 URL COMBINATION # 53 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790&size=30&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&group=Adult&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6139,72 +1161,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6214,11 +1172,9 @@ Expected: true
 
 
 URL COMBINATION # 54 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&group=Adult&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6227,72 +1183,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6302,11 +1194,9 @@ Expected: true
 
 
 URL COMBINATION # 55 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&size=30&program_asset_id=2790&airing_time_lte=2016-02-29T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790&group=Adult&airing_time_lte=2016-02-29T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6315,72 +1205,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6390,11 +1216,9 @@ Expected: true
 
 
 URL COMBINATION # 56 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&size=30&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790&airing_time_lte=2016-02-29T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6403,72 +1227,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6478,11 +1238,9 @@ Expected: true
 
 
 URL COMBINATION # 57 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02&group=Adult&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6491,72 +1249,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6566,11 +1260,9 @@ Expected: true
 
 
 URL COMBINATION # 58 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_gt=2016-02-20T13:59:54&airing_time_lte=2016-02-29T13:59:54&size=30&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_gt=2016-02-20T14:06:02&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6579,72 +1271,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6654,11 +1282,9 @@ Expected: true
 
 
 URL COMBINATION # 59 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790&size=30&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&group=Adult&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6667,72 +1293,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6742,11 +1304,9 @@ Expected: true
 
 
 URL COMBINATION # 60 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&group=Adult&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6755,72 +1315,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6830,11 +1326,9 @@ Expected: true
 
 
 URL COMBINATION # 61 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&size=30&program_asset_id=2790&airing_time_gt=2016-02-20T13:59:54
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790&group=Adult&airing_time_gt=2016-02-20T14:06:02
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6843,72 +1337,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -6918,11 +1348,9 @@ Expected: true
 
 
 URL COMBINATION # 62 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&size=30&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&program_asset_id=2790&airing_time_gt=2016-02-20T14:06:02&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -6931,72 +1359,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -7006,11 +1370,9 @@ Expected: true
 
 
 URL COMBINATION # 63 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54&program_asset_id=2790&size=30
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02&group=Adult&program_asset_id=2790
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -7019,72 +1381,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -7094,11 +1392,9 @@ Expected: true
 
 
 URL COMBINATION # 64 OF 64:
-http://tomcat-dev:8080/CPAD/schedules/?group=Adult&airing_time_lte=2016-02-29T13:59:54&airing_time_gt=2016-02-20T13:59:54&size=30&program_asset_id=2790
+http://tomcat-dev:8080/CPAD/schedules/?size=10&airing_time_lte=2016-02-29T14:06:02&airing_time_gt=2016-02-20T14:06:02&program_asset_id=2790&group=Adult
 
 Record Name: schedule
-   Tag Name: group
-
 
 
 ==========================
@@ -7107,72 +1403,8 @@ Expected: true
   Actual: true
   Result: OK
 
-schedules:
-
-Record ID: 1
-Tag Value: Adult
-   Result: OK
-
-Record ID: 2
-Tag Value: Adult
-   Result: OK
-
-Record ID: 3
-Tag Value: Adult
-   Result: OK
-
-Record ID: 4
-Tag Value: Adult
-   Result: OK
-
-Record ID: 5
-Tag Value: Adult
-   Result: OK
-
-Record ID: 6
-Tag Value: Adult
-   Result: OK
-
-Record ID: 7
-Tag Value: Adult
-   Result: OK
-
-Record ID: 8
-Tag Value: Adult
-   Result: OK
-
-Record ID: 9
-Tag Value: Adult
-   Result: OK
-
-Record ID: 10
-Tag Value: Adult
-   Result: OK
-
-Record ID: 11
-Tag Value: Adult
-   Result: OK
-
-Record ID: 12
-Tag Value: Adult
-   Result: OK
-
-Record ID: 13
-Tag Value: Adult
-   Result: OK
-
-Record ID: 14
-Tag Value: Adult
-   Result: OK
-
-Record ID: 15
-Tag Value: Adult
-   Result: OK
-
-Record ID: 16
-Tag Value: Adult
-   Result: OK
-
+Records Number: 10
+        Result: OK
 ==========================
 
 
@@ -7180,6 +1412,6 @@ Expected: true
   Actual: true
   Result: OK
 
-     Finish: 2016-02-22 13:59:58
+     Finish: 2016-02-22 14:06:06
    Duration: 0:00:04
 

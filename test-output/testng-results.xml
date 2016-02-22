@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="test-single" duration-ms="4175" started-at="2016-02-22T18:59:54Z" finished-at="2016-02-22T18:59:58Z">
+  <suite name="test-single" duration-ms="4819" started-at="2016-02-22T19:06:02Z" finished-at="2016-02-22T19:06:06Z">
     <groups>
     </groups>
-    <test name="test-single" duration-ms="4175" started-at="2016-02-22T18:59:54Z" finished-at="2016-02-22T18:59:58Z">
+    <test name="test-single" duration-ms="4819" started-at="2016-02-22T19:06:02Z" finished-at="2016-02-22T19:06:06Z">
       <class name="test.Cases.Java.cpadTestSchedules">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="logOpen" is-config="true" duration-ms="49" started-at="2016-02-22T13:59:54Z" finished-at="2016-02-22T13:59:54Z">
+        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="logOpen" is-config="true" duration-ms="55" started-at="2016-02-22T14:06:02Z" finished-at="2016-02-22T14:06:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="startTime" is-config="true" duration-ms="17" started-at="2016-02-22T13:59:54Z" finished-at="2016-02-22T13:59:54Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="startTime" is-config="true" duration-ms="14" started-at="2016-02-22T14:06:02Z" finished-at="2016-02-22T14:06:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testGroupTagIsCorrect()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="testGroupTagIsCorrect" duration-ms="4137" started-at="2016-02-22T13:59:54Z" finished-at="2016-02-22T13:59:58Z">
+        <test-method status="PASS" signature="testScheduleRecordsMaxNumber()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="testScheduleRecordsMaxNumber" duration-ms="4782" started-at="2016-02-22T14:06:02Z" finished-at="2016-02-22T14:06:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGroupTagIsCorrect -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="endTime" is-config="true" duration-ms="4" started-at="2016-02-22T13:59:58Z" finished-at="2016-02-22T13:59:58Z">
+        </test-method> <!-- testScheduleRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="endTime" is-config="true" duration-ms="3" started-at="2016-02-22T14:06:06Z" finished-at="2016-02-22T14:06:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="logClose" is-config="true" duration-ms="2" started-at="2016-02-22T13:59:58Z" finished-at="2016-02-22T13:59:58Z">
+        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="logClose" is-config="true" duration-ms="2" started-at="2016-02-22T14:06:06Z" finished-at="2016-02-22T14:06:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logClose -->
