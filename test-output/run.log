@@ -1,8 +1,8 @@
- TEST START: 2016-02-22 14:06:02
+ TEST START: 2016-02-22 17:11:57
 
 
        Test: #1
-      Start: 2016-02-22 14:06:02
-   XML Path: <class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testScheduleRecordsMaxNumber"/></methods></class>
-     Finish: 2016-02-22 14:06:06
-   Duration: 0:00:04
+      Start: 2016-02-22 17:11:57
+   XML Path: <class name="test.Cases.Java.cpadTestPrograms"><methods><include name="testUpdatedOnTagIsFiltered"/></methods></class>
+     Finish: 2016-02-22 17:12:00
+   Duration: 0:00:03

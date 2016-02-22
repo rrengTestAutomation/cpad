@@ -40,7 +40,7 @@ public class cpadTestSchedules {
 		String a = "group=Adult";
 		String b = "size=60";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
-		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "program_asset_id";
@@ -84,7 +84,7 @@ public class cpadTestSchedules {
 		String a = "program_asset_id=2790";
 		String b = "size=30";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
-		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "group";
@@ -107,8 +107,8 @@ public class cpadTestSchedules {
 
 	/**
 	 * Test all of the possible given URL combinations having maximum or less "schedule" records returned [3]
-	 * <p>Date Created: 2016-02-10</p>
-	 * <p>Date Modified: 2016-02-10</p>
+	 * <p>Date Created: 2016-02-22</p>
+	 * <p>Date Modified: 2016-02-22</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
@@ -127,7 +127,7 @@ public class cpadTestSchedules {
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
-		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days  after today
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		int max = 10;
@@ -150,7 +150,8 @@ public class cpadTestSchedules {
 	/*
 	4. Testing the greater than airing time filter for schedules:
 	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt={placeholder} where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today
+	http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt={placeholder} 
+	where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today
 	, all the  
 	<schedule> records should not contain an  
 	<airing_time> date that is less than or equal to {placeholder}.
@@ -159,7 +160,51 @@ public class cpadTestSchedules {
 			String b = "program_asset_id=2790";
 			String c = "size=50";
 			String d = "airing_time_lte=(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today)
+	
+	String filter = url.substring(url.indexOf("=") + 1, url.lastIndexOf(":") + 3);
+	
 	*/
+	/**
+	 * Test all of the possible given URL combinations having the "airing_time" tags of all the "schedule" records returning dates not less than or equal to filter placeholder for schedules [4]
+	 * <p>Date Created: 2016-02-22</p>
+	 * <p>Date Modified: 2016-02-22</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-04</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testAiringTimeTagIsFiltered() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=50";
+		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "schedule";
+   		String tag = "airing_time";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "after"); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+}
 
 	/*
 	5. Testing the less than or equal to airing time filter for schedules:

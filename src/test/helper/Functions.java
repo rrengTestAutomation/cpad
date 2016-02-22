@@ -1003,7 +1003,11 @@ public class Functions {
 	    catch(Exception e) {
 	    	/** e.printStackTrace(); */ 
 	    	String error = null;
-	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
+	    	try { 
+	    		if (e.toString().contains(":") && e.toString().contains("for URL")){
+	    		error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL"));
+	    		}
+	    		} catch (Exception exception) { }
 	    	fileCleaner("error.log");
 	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
 	    	else { fileWriter("error.log", sourseURL); }
@@ -2578,7 +2582,9 @@ public class Functions {
 	
 	public String cpadMatchError = "CURRENT RECORD IS NOT AS EXPECTED...";
 	
-	public String cpadFilterError = "CURRENT RECORD IS EARLIER THEN EXPECTED AS PER FILTER...";
+	public String cpadFilterNotBeforeError = "CURRENT RECORD IS OLDER THEN EXPECTED AS PER FILTER...";
+	
+	public String cpadFilterAfterError = "CURRENT RECORD IS NOT NEWER THEN EXPECTED AS PER FILTER...";
 	
 	public String cpadBetweenError = "CURRENT RECORD IS NOT BETWEEN FROM AND TO...";
 	
@@ -3222,7 +3228,7 @@ public class Functions {
 	 */
 	public boolean assertCpadTagsDateFilter(
 		           StackTraceElement trace, String url, int combination, int total,
-			       Boolean ifAssert, String record, String tag) 
+			       Boolean ifAssert, String record, String tag, String condition) 
 	throws IOException {
 		// printXmlPath(new RuntimeException().getStackTrace()[0]);
 		// COUNTER
@@ -3239,7 +3245,7 @@ public class Functions {
 			String extention = "xml";
 			String fileName = name + "." + extention;
 
-			String filter = url.substring(url.indexOf("=") + 1, url.lastIndexOf(":") + 3);
+			String filter = url.substring(url.indexOf("=") + 1, url.indexOf("=") + 20);
 			long Filter = convertCpadDateStampToMillisecondsAsLong(filter);
 			
 			sourcePagePrint(url, path, fileName);
@@ -3257,6 +3263,7 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(path, fileName, trace, combination, total);
 
+			String error = ""; String reason = "";
 			String[] valueArray = xmlValueArray(path, fileName, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
@@ -3265,14 +3272,16 @@ public class Functions {
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
-
-					boolean assertFILTER = (fingerprintArray[i] >= Filter);
-
-					if (assertFILTER) {
-						fileWriterPrinter("   Result: OK\n");
-					} else {
+				
+				boolean assertFILTER = true;
+				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before filter date!"; reason = cpadFilterNotBeforeError; }
+				if (condition.equals("after"))      { assertFILTER = (fingerprintArray[i] >  Filter); error = "Not after filter date!"; reason = cpadFilterAfterError; }
+					
+				if (assertFILTER) {
+					fileWriterPrinter("   Result: OK\n");
+				} else {
 						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadFilterError);
+						fileWriterPrinter("   Reason: " + reason);
 						fileCleaner("filter.log");
 						fileWriter("filter.log", "false");
 
@@ -3291,7 +3300,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Earlier then filter! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("filter.log")));
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("filter.log")));
 
 			boolean result = Boolean.valueOf(fileScanner("filter.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			

@@ -464,7 +464,7 @@ public class cpadTestPrograms{
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not before"); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		

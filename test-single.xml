@@ -9,7 +9,7 @@
 <class name="test.helper.Functions"></class>
 -->
 
-<class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testScheduleRecordsMaxNumber"/></methods></class>
+<class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testAiringTimeTagIsFiltered"/></methods></class>
 
 <!--
 <include name=""/>
