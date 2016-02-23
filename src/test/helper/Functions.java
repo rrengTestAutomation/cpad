@@ -54,6 +54,7 @@ import org.xml.sax.SAXParseException;
 
 
 
+
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -107,6 +108,7 @@ import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -136,6 +138,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
+
 
 
 
@@ -927,6 +930,42 @@ public class Functions {
 		fileWriterPrinter(path, (fileName + "." + extention), sb.toString());
 
 		return sb.toString();
+	}
+	
+	/**
+	 * Gets the URL Sourse Code and saves as a file
+	 * Won't use WebDriver driver
+	 * @throws IOException 
+	 * @throws NumberFormatException 
+	 */
+	public String getUrlPageSourceSave(String sourseURL) throws NumberFormatException, IOException {
+		
+	    URL url;
+	    URLConnection connection;
+	    BufferedReader reader;
+	    String line;
+	    StringBuilder sbResponse;
+	    String sResponse = null;
+
+	    try {
+	        url = new URL(sourseURL);
+	        connection = url.openConnection();
+	        reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	        sbResponse = new StringBuilder();
+
+	        while((line = reader.readLine()) != null)  { sbResponse.append(line); }
+	        sResponse = sbResponse.toString();
+	        return sResponse;
+	        }
+	    catch(Exception e) {
+	    	/** e.printStackTrace(); */ 
+	    	String error = null;
+	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
+	    	fileCleaner("error.log");
+	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
+	    	else { fileWriter("error.log", sourseURL); }
+	    	return null;
+	    	}
 	}
 	
 	/**
@@ -2387,6 +2426,41 @@ public class Functions {
 	}
 	
 	/**
+	 * xml String validity check
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 * @throws SAXException
+	 * @throws ParserConfigurationException
+	 * @throws InterruptedException 
+	 */
+	public Boolean xmlValidityChecker(String xml,
+		   StackTraceElement trace, int number, int total)
+	throws SAXException, IOException, ParserConfigurationException, InterruptedException {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		factory.setValidating(false);
+		factory.setNamespaceAware(true);
+
+		DocumentBuilder builder = factory.newDocumentBuilder();
+
+		builder.setErrorHandler(new SimpleErrorHandler());
+		boolean result;
+		// PARSE method:
+		// (1) validates XML;
+		// (2) will throw an exception if miss-formatted;
+		try {
+			builder.parse(new InputSource(new StringReader(xml)));
+			result = true;
+		} catch (Exception e) {
+			fileCleaner("xml.log");
+			fileWriter("xml.log", "false");
+			result = false;
+		}
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
+		return result;
+	}
+	
+	/**
 	 * xml File validity check
 	 * Won't use Selenium WebDriver
 	 * @throws IOException
@@ -2512,6 +2586,36 @@ public class Functions {
 			}
 		}
 	}
+	
+	/**
+	 * xml String value reader
+	 * 
+	 * @throws IOException
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 */
+	public String[] xmlValueArray(String xml, String record,
+			String tag) throws ParserConfigurationException, SAXException,
+			IOException {
+
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(new InputSource(new StringReader(xml)));
+		doc.getDocumentElement().normalize();
+		fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":" + "\n");
+		NodeList nodes = doc.getElementsByTagName(record);
+		String[] valueArray = new String[nodes.getLength()];
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Node node = nodes.item(i);
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				// fileWriterPrinter(record + " " + tag + ": " + getValue(tag,
+				// element));
+				valueArray[i] = getValue(tag, element);
+			}
+		}
+		return valueArray;
+	}
 
 	/**
 	 * xml File value reader
@@ -2607,16 +2711,7 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
-			sourcePagePrint(url, path, fileName);
-
-			// fileWriterPrinter();
-			// fileWriterPrinter(path + "\n");
-			// fileWriterPrinter(path + fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -2625,9 +2720,9 @@ public class Functions {
 			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -2696,16 +2791,7 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
-			sourcePagePrint(driver, url, path, fileName);
-
-			// fileWriterPrinter();
-			// fileWriterPrinter(path + "\n");
-			// fileWriterPrinter(path + fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -2714,9 +2800,9 @@ public class Functions {
 			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -2785,16 +2871,7 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
-			sourcePagePrint(url, path, fileName);
-
-			// fileWriterPrinter();
-			// fileWriterPrinter(path + "\n");
-			// fileWriterPrinter(path + fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -2803,9 +2880,9 @@ public class Functions {
 			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -2875,16 +2952,7 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
-			sourcePagePrint(driver, url, path, fileName);
-
-			// fileWriterPrinter();
-			// fileWriterPrinter(path + "\n");
-			// fileWriterPrinter(path + fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -2893,9 +2961,9 @@ public class Functions {
 			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -2965,12 +3033,7 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
-			sourcePagePrint(url, path, fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -2979,10 +3042,10 @@ public class Functions {
 			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 		    
 			String error = null;
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			if (valueArray.length == 0) {fileCleaner("match.log"); fileWriter("match.log", "false"); error = "No records found!"; }
 			
 			for (int i = 0; i < valueArray.length; i++) {
@@ -3042,13 +3105,8 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
-			sourcePagePrint(driver, url, path, fileName);
-
+			String xml = getUrlPageSourceSave(url);
+			
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
 			
@@ -3056,9 +3114,9 @@ public class Functions {
 			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }		
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 			
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -3120,7 +3178,7 @@ public class Functions {
 			String extention = "xml";
 			String fileName = name + "." + extention;
 
-			sourcePagePrint(url, path, fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter("==========================");
 
@@ -3128,7 +3186,7 @@ public class Functions {
 			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }		
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 			
 			fileWriterPrinter("Records Number: " + xmlRecordLength(path, fileName, record));
 			boolean assertion = (xmlRecordLength(path, fileName, record) <= max);
@@ -3182,7 +3240,7 @@ public class Functions {
 			String extention = "xml";
 			String fileName = name + "." + extention;
 
-			sourcePagePrint(driver, url, path, fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter("==========================");
 
@@ -3190,7 +3248,7 @@ public class Functions {
 			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }		
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 			
 			fileWriterPrinter("Records Number: " + xmlRecordLength(path, fileName, record));
 			boolean assertion = (xmlRecordLength(path, fileName, record) <= max);
@@ -3240,19 +3298,10 @@ public class Functions {
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
 			String filter = url.substring(url.indexOf("=") + 1, url.indexOf("=") + 20);
 			long Filter = convertCpadDateStampToMillisecondsAsLong(filter);
-			
-			sourcePagePrint(url, path, fileName);
 
-			// fileWriterPrinter();
-			// fileWriterPrinter(path + "\n");
-			// fileWriterPrinter(path + fileName);
+			String xml = getUrlPageSourceSave(url);;
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -3261,10 +3310,10 @@ public class Functions {
 			if (!fileExist("filter.log", false )) { fileWriter("filter.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
-
+			xmlValidityChecker(xml, trace, combination, total);
+			
 			String error = ""; String reason = "";
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -3274,8 +3323,8 @@ public class Functions {
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 				
 				boolean assertFILTER = true;
-				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before filter date!"; reason = cpadFilterNotBeforeError; }
-				if (condition.equals("after"))      { assertFILTER = (fingerprintArray[i] >  Filter); error = "Not after filter date!"; reason = cpadFilterAfterError; }
+				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before expected date!"; reason = cpadFilterNotBeforeError; }
+				if (condition.equals("after"))      { assertFILTER = (fingerprintArray[i] >  Filter); error = "Not after expected date!"; reason = cpadFilterAfterError; }
 					
 				if (assertFILTER) {
 					fileWriterPrinter("   Result: OK\n");
@@ -3331,22 +3380,13 @@ public class Functions {
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
-
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
 			
 			String time = url.substring(url.indexOf("from=") + 5, url.indexOf("&to="));
 			  long from = convertCpadDateStampToMillisecondsAsLong(time);
 			       time =  url.substring(url.indexOf("&to=") + 4, url.lastIndexOf(":") + 3);
 			  long to   = convertCpadDateStampToMillisecondsAsLong(time);
 			  
-			sourcePagePrint(url, path, fileName);
-
-			// fileWriterPrinter();
-			// fileWriterPrinter(path + "\n");
-			// fileWriterPrinter(path + fileName);
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
@@ -3355,9 +3395,9 @@ public class Functions {
 			if (!fileExist("between.log", false )) { fileWriter("between.log", "true"); }
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(path, fileName, trace, combination, total);
+			xmlValidityChecker(xml, trace, combination, total);
 
-			String[] valueArray = xmlValueArray(path, fileName, record, tag);
+			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -3391,7 +3431,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Earlier then filter! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")));
+			getAssertTrue(trace, "Not between expected dates! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")));
 
 			boolean result = Boolean.valueOf(fileScanner("between.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
