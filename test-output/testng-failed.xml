@@ -5,7 +5,7 @@
     <classes>
       <class name="test.Cases.Java.cpadTestSchedules">
         <methods>
-          <include name="testAiringTimeTagIsFiltered"/>
+          <include name="testCreatedOnOrderIsDescending"/>
           <include name="logOpen"/>
           <include name="startTime"/>
           <include name="endTime"/>

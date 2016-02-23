@@ -154,7 +154,7 @@ public class cpadTestSchedules {
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-04</p>
+	 * <p>User Stories: schedules-04</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -196,7 +196,7 @@ public class cpadTestSchedules {
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-05</p>
+	 * <p>User Stories: schedules-05</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -229,6 +229,49 @@ public class cpadTestSchedules {
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
 		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );	
+	}
+
+	/**
+	 * Test sorting schedules by its "airing_time" tags of "schedule" records are in descending order [6]
+	 * <p>Date Created: 2016-02-23</p>
+	 * <p>Date Modified: 2016-02-23</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: schedules-06</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testCreatedOnOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/schedules/";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=60";
+		String d = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
+		String e = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+   		String record = "schedule";
+   		String tag = "airing_time";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
 	}
 	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }

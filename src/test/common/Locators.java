@@ -86,7 +86,9 @@ public class Locators {
 
 	public static String[] url(String root, String[][] join) {
 		String[] url = new String[join.length];
-		for (int i = 0; i < join.length; i++) { url[i] = root.replace(" ", "%20") + join(join[i]); }
+		for (int i = 0; i < join.length; i++) {
+			if ( !root.contains("?") ) { root = root + "?";}
+			url[i] = (root.replace(" ", "%20") + join(join[i])).replace("?&", "?"); }
 		return url;
 	};	
 	

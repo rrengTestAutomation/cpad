@@ -2292,6 +2292,20 @@ public class Functions {
 	 * @throws IOException
 	 * @throws InterruptedException 
 	 */
+	public void sourcePagePrint(String url) throws IOException, InterruptedException {
+		try {
+			getUrlPageSourceSave(url);
+		} catch (Exception exception) {
+			getExceptionDescriptive(exception, new Exception().getStackTrace()[0]);
+		}
+	}
+	
+	/**
+	 * Print the Source Page
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 * @throws InterruptedException 
+	 */
 	public void sourcePagePrint(String url, String fileName) throws IOException, InterruptedException {
 		try {
 			fileCleaner(fileName);
@@ -2440,8 +2454,8 @@ public class Functions {
 	 * @throws SAXException
 	 * @throws ParserConfigurationException
 	 */
-	public Boolean xmlValidityChecker(String path, String fileName)
-			throws SAXException, IOException, ParserConfigurationException {
+	public Boolean xmlValidityChecker(StackTraceElement trace, String fileName, int number, int total)
+	throws SAXException, IOException, ParserConfigurationException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setNamespaceAware(true);
@@ -2449,18 +2463,36 @@ public class Functions {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 
 		builder.setErrorHandler(new SimpleErrorHandler());
-
+		boolean result;
+		
 		// PARSE method:
 		// (1) validates XML;
 		// (2) will throw an exception if miss-formatted;
 		try {
-			builder.parse(new InputSource(path + fileName));
-			return true;
-		} catch (Exception e) {
-			return false;
+			builder.parse(new InputSource(Locators.testOutputFileDir + fileName));		
+			result = true;
+			} catch (Exception e) {
+			fileCleaner("xml.log");
+			fileWriter("xml.log", "false");
+			result = false;
 		}
-
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
+		return result;
 	}
+	
+//	try {
+//		builder.parse(new InputSource(path + fileName));
+//		result = true;
+//	} catch (Exception e) {
+//		fileCleaner("xml.log");
+//		fileWriter("xml.log", "false");
+//		result = false;
+//	}
+//	getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+//	if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
+//	return result;
+//}
 	
 	/**
 	 * xml String validity check
@@ -2921,14 +2953,13 @@ public class Functions {
 		// COUNTER
 		try {
 			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
 
 			String xml = getUrlPageSourceSave(url);
-
+			
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
 
@@ -2937,8 +2968,9 @@ public class Functions {
 			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
-
-			String[] valueArray = xmlValueArray(xml, record, tag);
+			
+			String error = "Out of order!"; String reason = cpadDescOrderError;
+			String[] valueArray = xmlValueArray(xml, record, tag);			
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -2955,18 +2987,24 @@ public class Functions {
 						fileWriterPrinter("   Result: OK\n");
 					} else {
 						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadDescOrderError);
+						fileWriterPrinter("   Reason: " + reason);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
 						if (ifAssert) {
 							fileWriterPrinter();
 							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: "
-									+ valueArray[i + 1]);
+							fileWriterPrinter("Created On: " + valueArray[i + 1]);
 						}
 
 						fileWriterPrinter();
+						
+						fileWriter("record.log", "");					
+						fileWriter("record.log", "Record ID: " + (i + 1));
+						fileWriter("record.log", "Tag Value: " + valueArray[i]);
+						fileWriter("record.log", "   Result: FAILED!");
+						fileWriter("record.log", "   Reason: " + reason);
+						fileWriter("record.log", "");
 					}
 
 					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
@@ -2976,8 +3014,8 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
-
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+			
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
 			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
