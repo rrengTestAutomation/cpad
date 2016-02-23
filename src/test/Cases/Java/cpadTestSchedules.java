@@ -147,23 +147,6 @@ public class cpadTestSchedules {
 		        		 );
 	}
 
-	/*
-	4. Testing the greater than airing time filter for schedules:
-	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt={placeholder} 
-	where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today
-	, all the  
-	<schedule> records should not contain an  
-	<airing_time> date that is less than or equal to {placeholder}.
-
-			String a = "group=Adult";
-			String b = "program_asset_id=2790";
-			String c = "size=50";
-			String d = "airing_time_lte=(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today)
-	
-	String filter = url.substring(url.indexOf("=") + 1, url.lastIndexOf(":") + 3);
-	
-	*/
 	/**
 	 * Test all of the possible given URL combinations having the "airing_time" tags of all the "schedule" records returning dates not less than or equal to filter placeholder for schedules [4]
 	 * <p>Date Created: 2016-02-22</p>
@@ -209,7 +192,8 @@ public class cpadTestSchedules {
 	/*
 	5. Testing the less than or equal to airing time filter for schedules:
 	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte={placeholder} where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
+	http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte={placeholder} 
+	where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
 	, all the  
 	<schedule> records should not contain an  
 	<airing_time> date that is greater than {placeholder}.
