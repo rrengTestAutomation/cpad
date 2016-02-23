@@ -2734,17 +2734,19 @@ public class Functions {
 	return convertCalendarMillisecondsAsLongToTimestamp(todayAddYearsToCurrentTimeMilliseconds(years));
 	}
 	
-	public String cpadAscOrderError = "PREVIOUS RECORD, SHOWN BELOW - IS OLDER THEN THE CURRENT ONE...";
+	public String cpadAscOrderError        = "PREVIOUS RECORD, SHOWN BELOW - IS OLDER THEN THE CURRENT ONE...";
 
-	public String cpadDescOrderError = "CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...";
+	public String cpadDescOrderError       = "CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...";
 	
-	public String cpadMatchError = "CURRENT RECORD IS NOT AS EXPECTED...";
+	public String cpadMatchError           = "CURRENT RECORD IS NOT AS EXPECTED...";
 	
 	public String cpadFilterNotBeforeError = "CURRENT RECORD IS OLDER THEN EXPECTED AS PER FILTER...";
 	
-	public String cpadFilterAfterError = "CURRENT RECORD IS NOT NEWER THEN EXPECTED AS PER FILTER...";
+	public String cpadFilterAfterError     = "CURRENT RECORD IS NOT NEWER THEN EXPECTED AS PER FILTER...";
 	
-	public String cpadBetweenError = "CURRENT RECORD IS NOT BETWEEN FROM AND TO...";
+	public String cpadFilterNotAfterError  = "CURRENT RECORD IS NEWER THEN EXPECTED AS PER FILTER...";
+	
+	public String cpadBetweenError         = "CURRENT RECORD IS NOT BETWEEN FROM AND TO...";
 	
 	/**
 	 * Assert CPAD record tags as dates are in ascending order
@@ -3367,9 +3369,10 @@ public class Functions {
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 				
 				boolean assertFILTER = true;
-				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before expected date!"; reason = cpadFilterNotBeforeError; }
+				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before expected date!";    reason = cpadFilterNotBeforeError; }
 				if (condition.equals("after"))      { assertFILTER = (fingerprintArray[i] >  Filter); error = "Not after expected date!"; reason = cpadFilterAfterError; }
-					
+				if (condition.equals("not after"))  { assertFILTER = (fingerprintArray[i] <= Filter); error = "After expected date!";     reason = cpadFilterNotAfterError; }
+						
 				if (assertFILTER) {
 					fileWriterPrinter("   Result: OK\n");
 				} else {

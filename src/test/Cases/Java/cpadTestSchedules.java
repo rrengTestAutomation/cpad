@@ -159,13 +159,13 @@ public class cpadTestSchedules {
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testAiringTimeTagIsFiltered() throws IOException {
+	public void testAiringTimeTagIsFilteredAsAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
+		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
 	    String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";
@@ -189,22 +189,47 @@ public class cpadTestSchedules {
 		        		 );	
 	}
 
-	
-	/*
-	5. Testing the less than or equal to airing time filter for schedules:
-	Using the all of the possible combinations of the following query parameters with the endpoint url  
-	http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte={placeholder} 
-	where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
-	, all the  
-	<schedule> records should not contain an  
-	<airing_time> date that is greater than {placeholder}.
-
-			String a = "group=Adult";
-			String b = "program_asset_id=2790";
-			String c = "size=50";
-			String d = "airing_time_gt=(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today)
-	*/
-	
+	/**
+	 * Test all of the possible given URL combinations having the "airing_time" tags of all the "schedule" records returning dates that are not greater than placeholder for schedules [5]
+	 * <p>Date Created: 2016-02-23</p>
+	 * <p>Date Modified: 2016-02-23</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-05</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testAiringTimeTagIsFilteredAsNotAfter() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=50";
+		String d = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today		
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "schedule";
+   		String tag = "airing_time";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not after"); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );	
+	}
 	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
