@@ -3386,7 +3386,6 @@ public class Functions {
 
 						fileWriterPrinter();
 						
-						// fileCleaner("record.log");
 						fileWriter("record.log", "");					
 						fileWriter("record.log", "Record ID: " + (i + 1));
 						fileWriter("record.log", "Tag Value: " + valueArray[i]);
