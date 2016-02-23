@@ -125,7 +125,7 @@ public class cpadTestPrograms{
 		String b = "single_program=0";
 		String c = "sort_order=ASC";
 		String d = "sort_by=CREATED_ON";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));		
    		String record = "program";
    		int max = 7;
 		

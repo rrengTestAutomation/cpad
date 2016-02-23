@@ -2646,6 +2646,23 @@ public class Functions {
 		}
 		return valueArray;
 	}
+	
+	/**
+	 * xml String record length
+	 * 
+	 * @throws IOException
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 */
+	public int xmlRecordLength(String xml, String record)
+	throws ParserConfigurationException, SAXException, IOException {
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Document doc = dBuilder.parse(new InputSource(new StringReader(xml)));
+		doc.getDocumentElement().normalize();
+		NodeList nodes = doc.getElementsByTagName(record);
+		return nodes.getLength();
+	}
 
 	/**
 	 * xml File record length
@@ -2655,7 +2672,7 @@ public class Functions {
 	 * @throws SAXException
 	 */
 	public int xmlRecordLength(String path, String fileName, String record)
-			throws ParserConfigurationException, SAXException, IOException {
+	throws ParserConfigurationException, SAXException, IOException {
 		File stocks = new File(path + fileName);
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -3173,11 +3190,6 @@ public class Functions {
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
 			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter("==========================");
@@ -3188,8 +3200,8 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 			
-			fileWriterPrinter("Records Number: " + xmlRecordLength(path, fileName, record));
-			boolean assertion = (xmlRecordLength(path, fileName, record) <= max);
+			fileWriterPrinter("Records Number: " + xmlRecordLength(xml, record));
+			boolean assertion = (xmlRecordLength(xml, record) <= max);
 
 			if (assertion) { fileWriterPrinter("        Result: OK");
 			        } else {
@@ -3235,11 +3247,6 @@ public class Functions {
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 
-			String path = Locators.testOutputFileDir;
-			String name = "source";
-			String extention = "xml";
-			String fileName = name + "." + extention;
-
 			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter("==========================");
@@ -3250,8 +3257,8 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 			
-			fileWriterPrinter("Records Number: " + xmlRecordLength(path, fileName, record));
-			boolean assertion = (xmlRecordLength(path, fileName, record) <= max);
+			fileWriterPrinter("Records Number: " + xmlRecordLength(xml, record));
+			boolean assertion = (xmlRecordLength(xml, record) <= max);
 
 			if (assertion) { fileWriterPrinter("        Result: OK");
 			        } else {
