@@ -40,21 +40,6 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -138,21 +123,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** LOCATORS */
 import test.common.Locators;
@@ -1451,6 +1421,81 @@ public class Functions {
 	
 	/**
 	 * "AssertTrue" with Screen-Shot and descriptive Error Message
+	 * Screenshot-Disabled
+	 * @param e
+	 */
+	public String getAssertTrue(StackTraceElement l, String description, Boolean b, String url) throws IOException {
+
+		String packageNameOnly = l.getClassName().substring(0,
+				l.getClassName().lastIndexOf("."));
+		String classNameOnly = l.getClassName().substring(
+				1 + l.getClassName().lastIndexOf("."),
+				l.getClassName().length());
+		String location = packageNameOnly + File.separator + classNameOnly
+				+ File.separator + l.getMethodName() + ", line # "
+				+ l.getLineNumber();
+		String xml = "<class name=\"" + packageNameOnly + "." + classNameOnly
+				+ "\"><methods><include name=\"" + l.getMethodName()
+				+ "\"/></methods></class>";
+		String detected = getCurrentDateTimeFull();
+		String runtime = testRunTime("start.time", System.currentTimeMillis());
+		String subtotal = testRunTime("ini.time", System.currentTimeMillis());
+		if (b == false) {
+			fileWriterPrinter("\nError Cause: ---> " + description
+					+ "\n        URL: ---> " + url
+					+ "\n   Location: ---> " + location
+					+ "\n   Expected: ---> " + "true" + "\n     Actual: ---> "
+					+ b + "\n");
+
+			// Creating New or Updating existing Failed Counter record:
+			counter("failed.num");
+			// Append a New Log record:
+			if (fileExist("run.log")) {
+				fileWriter("run.log", "    Failure: #" + fileScanner("failed.num"));
+				fileWriter("run.log", "Error Cause: ---> " + description);
+				fileWriter("run.log", "        URL: ---> " + url);
+				fileWriter("run.log", "   Location: ---> " + location);
+				fileWriter("run.log", "   Expected: ---> " + "true");
+				fileWriter("run.log", "     Actual: ---> " + b);
+				fileWriter("run.log", "");
+				// fileWriter("run.log", "   Detected: ---> " + detected);
+				// fileWriter("run.log", "    Runtime: ---> " + runtime);
+				// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+			}
+			// Append an Error record:
+			fileWriter("failed.log", "    Failure: #" + fileScanner("failed.num"));
+			fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
+			fileWriter("failed.log", "      Start: " + convertCalendarMillisecondsAsStringToDateTimeHourMinSec(fileScanner("start.time")));
+			fileWriter("failed.log", "   XML Path: " + xml);
+			fileWriter("failed.log", "Error Cause: ---> " + description);
+			fileWriter("failed.log", "        URL: ---> " + url);
+			fileWriter("failed.log", "   Location: ---> " + location);
+			fileWriter("failed.log", "   Expected: ---> " + "true");
+			fileWriter("failed.log", "     Actual: ---> " + b);
+            if(fileExist("record.log")) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
+			fileWriter("failed.log", "   Detected: " + detected);
+			fileWriter("failed.log", "    Runtime: " + runtime);
+			fileWriter("failed.log", "   Subtotal: " + subtotal);
+			fileWriter("failed.log", "\n\n");	
+		} else {
+			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b
+					+ "\n  Result: OK\n");
+		}
+		// Descriptive record output:
+		return "\nError Cause: ---> " + description +
+			   "\n        URL: ---> " + url +
+			   "\n   Location: ---> " + location +
+			   "\n   Expected: ---> " + "true" +
+			   "\n     Actual: ---> " + b +
+			   "\n   Detected: ---> " + detected +
+			   "\n    Runtime: ---> " + runtime +
+			   "\n   Subtotal: ---> " + subtotal +
+			   "\n" + xml + "\n"+
+			   "\nStack Traces:";
+	}
+	
+	/**
+	 * "AssertTrue" with Screen-Shot and descriptive Error Message
 	 * Uses independent WebDriver driver by opening user defined URL
 	 * @param e
 	 * @throws InterruptedException 
@@ -2359,42 +2404,34 @@ public class Functions {
 	 * @throws ParseException
 	 */
 	@SuppressWarnings("unused")
-	public static long convertCpadDateStampToMillisecondsAsLong(
-			String cpadDateStamp) throws ParseException {
+	public static long convertCpadDateStampToMillisecondsAsLong(String cpadDateStamp)
+	throws ParseException {
 		String date = cpadDateStamp.substring(0, cpadDateStamp.indexOf("T"));
-		String HH = cpadDateStamp.substring(cpadDateStamp.indexOf("T") + 1,
-				cpadDateStamp.indexOf("T") + 3);
-		String MM = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 1,
-				cpadDateStamp.indexOf(":") + 3);
-		String SS = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 4,
-				cpadDateStamp.indexOf(":") + 6);
-		String math = cpadDateStamp.substring(
-				cpadDateStamp.lastIndexOf(":") - 3,
-				cpadDateStamp.lastIndexOf(":") - 2);
-		String hh = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":") - 2,
-				cpadDateStamp.lastIndexOf(":"));
-		String mm = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":") + 1,
-				cpadDateStamp.lastIndexOf(":") + 3);
+		String HH = cpadDateStamp.substring(cpadDateStamp.indexOf("T") + 1, cpadDateStamp.indexOf("T") + 3);
+		String MM = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 1, cpadDateStamp.indexOf(":") + 3);
+		String SS = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 4, cpadDateStamp.indexOf(":") + 6);
 
-		String dateCheck = "Dare: " + date + " " + HH + ":" + MM + ":" + SS
-				+ math + hh + ":" + mm;
+        int hours, min, sec;
+        String math = null, hh = null, mm = null;
 
-		int hours, min, sec;
+        if(cpadDateStamp.length() == 25){
+	        	math = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":") - 3, cpadDateStamp.lastIndexOf(":") - 2);
+	        	hh = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":") - 2, cpadDateStamp.lastIndexOf(":"));
+		        mm = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":") + 1, cpadDateStamp.lastIndexOf(":") + 3);
+        } 
 
-		if (math.equals("-")) {
-			hours = Integer.valueOf(HH) - Integer.valueOf(hh);
-		} else {
-			hours = Integer.valueOf(HH) + Integer.valueOf(hh);
-		}
-		if (math.equals("-")) {
-			min = Integer.valueOf(MM) - Integer.valueOf(mm);
-		} else {
-			min = Integer.valueOf(MM) + Integer.valueOf(mm);
-		}
+        if(cpadDateStamp.length() == 19) { math = "+"; hh = "00"; mm = "00"; }
+
+		String dateUnitTest = "Date: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm;
+
+		if (math.equals("-")) { hours = Integer.valueOf(HH) - Integer.valueOf(hh); }
+		else                  { hours = Integer.valueOf(HH) + Integer.valueOf(hh); }
+		
+		if (math.equals("-")) { min = Integer.valueOf(MM) - Integer.valueOf(mm); }
+		else                  { min = Integer.valueOf(MM) + Integer.valueOf(mm); }
+		
 		sec = Integer.valueOf(SS);
-
-		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours,
-				min, sec);
+		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
 	}
 
 	/**
@@ -3348,6 +3385,15 @@ public class Functions {
 						}
 
 						fileWriterPrinter();
+						
+						// fileCleaner("record.log");
+						fileWriter("record.log", "");					
+						fileWriter("record.log", "Record ID: " + (i + 1));
+						fileWriter("record.log", "Tag Value: " + valueArray[i]);
+						fileWriter("record.log", " Expected: " + filter);
+						fileWriter("record.log", "   Result: FAILED!");
+						fileWriter("record.log", "   Reason: " + reason);
+						fileWriter("record.log", "");
 					}
 
 					if (ifAssert) { Assert.assertTrue(assertFILTER, "   Result: FAILED\n"); }
@@ -3356,7 +3402,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("filter.log")));
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("filter.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("filter.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			

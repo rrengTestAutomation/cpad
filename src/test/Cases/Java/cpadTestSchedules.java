@@ -166,7 +166,7 @@ public class cpadTestSchedules {
 	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // where {placeholder} is a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
-		String a = "group=Adult";
+	    String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";
 		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
@@ -186,9 +186,10 @@ public class cpadTestSchedules {
 				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
 		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-}
+		        		 );	
+	}
 
+	
 	/*
 	5. Testing the less than or equal to airing time filter for schedules:
 	Using the all of the possible combinations of the following query parameters with the endpoint url  
