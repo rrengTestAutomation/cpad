@@ -2772,6 +2772,8 @@ public class Functions {
 	
 	public String cpadMatchError           = "CURRENT RECORD IS NOT AS EXPECTED...";
 	
+	public String cpadGreaterError          = "CURRENT RECORD IS LESS THEN EXPECTED MINIMUM...";
+	
 	public String cpadFilterNotBeforeError = "CURRENT RECORD IS OLDER THEN EXPECTED AS PER FILTER...";
 	
 	public String cpadFilterAfterError     = "CURRENT RECORD IS NOT NEWER THEN EXPECTED AS PER FILTER...";
@@ -3250,7 +3252,79 @@ public class Functions {
 	}
 
 	/**
-	 * Assert CPAD record tags are equal to expected
+	 * Assert CPAD record tags are greater then minimum
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsGreaterThenMinimum(
+		           StackTraceElement trace, String url, int combination, int total,
+			       Boolean ifAssert, String record, String tag, int min) 
+	throws IOException {	
+		// printXmlPath(new RuntimeException().getStackTrace()[0]);
+		// COUNTER
+		try {
+			// ENTRY
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
+					+ " OF " + total + ":");
+			fileWriterPrinter(url);
+			fileWriterPrinter("\n" + "Record Name: " + record);
+			fileWriterPrinter("   Tag Name: " + tag);
+
+			String xml = getUrlPageSourceSave(url);
+
+			fileWriterPrinter();
+			fileWriterPrinter("==========================");
+			
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("greater.log", false)) { fileWriter("greater.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(xml, trace, combination, total);
+		    
+			String error = null;
+			String[] valueArray = xmlValueArray(xml, record, tag);
+			if (valueArray.length == 0) {fileCleaner("greater.log"); fileWriter("greater.log", "false"); error = "No records found!"; }
+			
+			for (int i = 0; i < valueArray.length; i++) {
+				fileWriterPrinter("Record ID: " + (i + 1));
+				fileWriterPrinter("Tag Value: " + valueArray[i]);
+
+					boolean assertion = Integer.valueOf(valueArray[i]) > min;
+
+					if (assertion) {
+						fileWriterPrinter("   Result: OK\n");
+					} else {
+						error = "Less then expected minimum!";
+						fileWriterPrinter("   Result: FAILED!");
+						fileWriterPrinter("   Reason: " + cpadGreaterError);
+						fileCleaner("greater.log");
+						fileWriter("greater.log", "false");
+						fileWriterPrinter();
+					}
+
+					if (ifAssert) {
+						Assert.assertTrue(assertion, "   Result: FAILED\n");
+					}
+			}
+
+			fileWriterPrinter("==========================");
+			fileWriterPrinter();
+
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("greater.log")));
+
+			boolean result = Boolean.valueOf(fileScanner("greater.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
+			fileCleaner("greater.log");
+			fileCleaner("xml.log");
+			return result;
+
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
+	}
+	
+	/**
+	 * Assert number of CPAD record tags is less then maximum
 	 * Won't use Selenium WebDriver
 	 * @throws IOException
 	 */
