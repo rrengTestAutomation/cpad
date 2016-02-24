@@ -108,7 +108,7 @@ public class cpadTestAssetChange {
 		}
 
 	/**
-	 * Test all of the possible given URL combinations are having the "access_type" tags of "change_log" record is correct [3]
+	 * Test all of the possible given URL combinations are having the "access_type" tags of "change_log" record is equal to "Create" [3]
 	 * <p>Date Created: 2016-02-24</p>
 	 * <p>Date Modified: 2016-02-24</p>
 	 * <p>Original Version: V1</p>
@@ -120,7 +120,7 @@ public class cpadTestAssetChange {
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testAccessTypeTagIsCorrect() throws IOException, ParseException {
+	public void testAccessTypeTagIsCreate() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -151,21 +151,52 @@ public class cpadTestAssetChange {
 		        		 //,Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 		}
-			
-	/*
-	4. Testing the asset type filter for asset changes:
-	Using the all of the possible combinations of the following query parameters with the endpoint url
-	http://tomcat-dev:8080/CPAD/assetChanges/?asset_type=Video
-	,
-	<change_log> records returned have their
-	<asset_type> tags equal to "Video".
-			String a = "object_id=632923";
-			String b = "access_time_gt=";(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today)
-			String c = "access_time_lte=";(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today)
-			String d = "access_type=Update";
-			String e = "size=20";
-	*/
-			
+
+	/**
+	 * Test all of the possible given URL combinations are having the "access_type" tags of "change_log" record is equal to "Video" [4]
+	 * <p>Date Created: 2016-02-24</p>
+	 * <p>Date Modified: 2016-02-24</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: assetchange-04</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testAccessTypeTagIsVideo() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?asset_type=Video";	
+		String a = "object_id=632923";		
+		String b = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
+		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
+		String d = "access_type=Update";
+		String e = "size=20";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+   		String record = "change_log";
+   		String tag = "access_type";
+   		String expected = "Video";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				          //function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 //,Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+		}
+	
 	/*
 	5. Testing the size filter for asset changes:
 	Using the all of the possible combinations of the following query parameters with the endpoint url
