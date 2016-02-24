@@ -44,11 +44,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "group";
    		String expected = "Adult";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -87,11 +88,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "program_asset_id";
    		String expected = "2790";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -178,11 +180,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "title";
    		String expected = "American Conservatism at the Crossroads";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** e.printStackTrace(); */ }
 		}
 		
@@ -206,7 +209,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testCreateOnOrderIsAscending() throws IOException {
+	public void testCreateOnTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -247,7 +250,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testCreateOnOrderIsDescending() throws IOException {
+	public void testCreateOnTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -288,7 +291,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testUpdatedOnOrderIsAscending() throws IOException {
+	public void testUpdatedOnTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -329,7 +332,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testUpdatedOnOrderIsDescending() throws IOException {
+	public void testUpdatedOnTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -370,7 +373,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testBornDateOrderIsAscending() throws IOException {
+	public void testBornDateTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -411,7 +414,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testBornDateOrderIsDescending() throws IOException {
+	public void testBornDateTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -452,7 +455,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testKillDateOrderIsAscending() throws IOException {
+	public void testKillDateTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -493,7 +496,7 @@ public class cpadTestVideos{
 	 */	
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testKillDateOrderIsDescending() throws IOException {
+	public void testKillDateTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -545,11 +548,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "video_asset_id";
    		String expected = "281405";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -584,11 +588,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "record_id";
    		String expected = "2349866";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -623,11 +628,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "is_captioned";
    		String expected = "1";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -662,11 +668,12 @@ public class cpadTestVideos{
    		String record = "video";
    		String tag = "brightcove_ref_id";
    		String expected = "4737449177001";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		

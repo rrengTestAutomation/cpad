@@ -45,11 +45,12 @@ public class cpadTestSchedules {
    		String record = "schedule";
    		String tag = "program_asset_id";
    		String expected = "2790";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -89,11 +90,12 @@ public class cpadTestSchedules {
    		String record = "schedule";
    		String tag = "group";
    		String expected = "Adult";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		

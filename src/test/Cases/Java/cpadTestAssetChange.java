@@ -51,8 +51,7 @@ public class cpadTestAssetChange {
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-	 // try { function.assertCpadTagsGreaterThenMinimum(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, minimum); }
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+	    try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -98,7 +97,6 @@ public class cpadTestAssetChange {
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-	 // try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -145,7 +143,6 @@ public class cpadTestAssetChange {
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-	 // try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -192,7 +189,6 @@ public class cpadTestAssetChange {
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-	 // try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
