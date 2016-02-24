@@ -3258,7 +3258,7 @@ public class Functions {
 	 */
 	public boolean assertCpadTagsGreaterThenMinimum(
 		           StackTraceElement trace, String url, int combination, int total,
-			       Boolean ifAssert, String record, String tag, int min) 
+			       Boolean ifAssert, String record, String tag, String min) 
 	throws IOException {	
 		// printXmlPath(new RuntimeException().getStackTrace()[0]);
 		// COUNTER
@@ -3289,7 +3289,7 @@ public class Functions {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 
-					boolean assertion = Integer.valueOf(valueArray[i]) > min;
+					boolean assertion = Integer.valueOf(valueArray[i]) > Integer.valueOf(min);
 
 					if (assertion) {
 						fileWriterPrinter("   Result: OK\n");
