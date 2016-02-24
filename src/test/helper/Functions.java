@@ -2766,9 +2766,13 @@ public class Functions {
 	return convertCalendarMillisecondsAsLongToTimestamp(todayAddYearsToCurrentTimeMilliseconds(years));
 	}
 	
-	public String cpadAscOrderError        = "PREVIOUS RECORD, SHOWN BELOW - IS OLDER THEN THE CURRENT ONE...";
+	public String cpadAscOrderError        = "NEXT RECORD, SHOWN BELOW - IS LESS THEN THE CURRENT ONE...";
 
-	public String cpadDescOrderError       = "CURRENT RECORD IS OLDER THEN THE PREVIOUS ONE, SHOWN BELOW...";
+	public String cpadDescOrderError       = "NEXT RECORD, SHOWN BELOW - IS GREATER THEN THE CURRENT ONE...";
+	
+	public String cpadAscDateOrderError    = "NEXT RECORD, SHOWN BELOW - IS OLDER THEN THE CURRENT ONE...";
+
+	public String cpadDescDateOrderError   = "NEXT RECORD, SHOWN BELOW - IS NEWER THEN THE PREVIOUS ONE...";
 	
 	public String cpadMatchError           = "CURRENT RECORD IS NOT AS EXPECTED...";
 	
@@ -2783,6 +2787,82 @@ public class Functions {
 	public String cpadFilterNotAfterError  = "CURRENT RECORD IS NEWER THEN EXPECTED AS PER FILTER...";
 	
 	public String cpadBetweenError         = "CURRENT RECORD IS NOT BETWEEN FROM AND TO...";
+	
+	/**
+	 * Assert CPAD record tags are in ascending order
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsAsc(
+		           StackTraceElement trace, String url, int combination, int total,
+			       Boolean ifAssert, String record, String tag) 
+	throws IOException {
+		// printXmlPath(new RuntimeException().getStackTrace()[0]);
+		// COUNTER
+		try {
+			// ENTRY
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
+					+ " OF " + total + ":");
+			fileWriterPrinter(url);
+			fileWriterPrinter("\n" + "Record Name: " + record);
+			fileWriterPrinter("   Tag Name: " + tag);
+
+			String xml = getUrlPageSourceSave(url);
+
+			fileWriterPrinter();
+			fileWriterPrinter("==========================");
+
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(xml, trace, combination, total);
+
+			String[] valueArray = xmlValueArray(xml, record, tag);
+
+			for (int i = 0; i < valueArray.length; i++) {
+				fileWriterPrinter("Record ID: " + (i + 1));
+				fileWriterPrinter("Tag Value: " + valueArray[i]);
+
+				if (i < (valueArray.length - 1)) {
+					boolean assertORDER = ( Integer.valueOf(valueArray[i + 1]) >= Integer.valueOf(valueArray[i]) );
+
+					if (assertORDER) {
+						fileWriterPrinter("   Result: OK\n");
+					} else {
+						fileWriterPrinter("  Result: FAILED!");
+						fileWriterPrinter("  Reason: " + cpadAscOrderError);
+						fileCleaner("order.log");
+						fileWriter("order.log", "false");
+
+						if (ifAssert) {
+							fileWriterPrinter();
+							fileWriterPrinter("Record ID: " + (i + 2));
+							fileWriterPrinter("    Value: " + valueArray[i + 1]);
+						}
+
+						fileWriterPrinter();
+					}
+
+					if (ifAssert) { Assert.assertTrue(assertORDER, "  Result: FAILED\n"); }
+				}
+			}
+
+			fileWriterPrinter("==========================");
+			fileWriterPrinter();
+
+			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
+
+			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
+			fileCleaner("order.log");
+			fileCleaner("xml.log");
+			return result;
+
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
+	}
 	
 	/**
 	 * Assert CPAD record tags as dates are in ascending order
@@ -2831,7 +2911,7 @@ public class Functions {
 						fileWriterPrinter("   Result: OK\n");
 					} else {
 						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadAscOrderError);
+						fileWriterPrinter("   Reason: " + cpadAscDateOrderError);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
@@ -2911,7 +2991,7 @@ public class Functions {
 						fileWriterPrinter("   Result: OK\n");
 					} else {
 						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadAscOrderError);
+						fileWriterPrinter("   Reason: " + cpadAscDateOrderError);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
@@ -2973,7 +3053,7 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 			
-			String error = "Out of order!"; String reason = cpadDescOrderError;
+			String error = "Out of order!"; String reason = cpadDescDateOrderError;
 			String[] valueArray = xmlValueArray(xml, record, tag);			
 			long[] fingerprintArray = new long[valueArray.length];
 
@@ -3078,7 +3158,7 @@ public class Functions {
 						fileWriterPrinter("   Result: OK\n");
 					} else {
 						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadDescOrderError);
+						fileWriterPrinter("   Reason: " + cpadDescDateOrderError);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 

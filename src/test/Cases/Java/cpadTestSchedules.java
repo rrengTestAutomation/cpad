@@ -243,7 +243,7 @@ public class cpadTestSchedules {
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testCreatedOnOrderIsDescending() throws IOException {
+	public void testAiringTimeTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
