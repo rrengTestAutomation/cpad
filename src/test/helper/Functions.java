@@ -2851,8 +2851,8 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
-
+			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+			
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
 			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
@@ -2931,7 +2931,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
+			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3087,7 +3087,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
+			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3550,8 +3550,8 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("compare.log")));
-
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("compare.log")), url);
+			
 			boolean result = Boolean.valueOf(fileScanner("compare.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
 			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
@@ -3607,7 +3607,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 			
-			getAssertTrue(trace, "Out of maximum! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("max.log")));
+			getAssertTrue(trace, "Out of maximum! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("max.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("max.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3838,7 +3838,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Not between expected timestamps! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")));
+			getAssertTrue(trace, "Not between expected timestamps! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("between.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
