@@ -3721,9 +3721,9 @@ public class Functions {
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 				
 				boolean assertFILTER = true;
-				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before expected date!";    reason = cpadFilterNotBeforeError; }
-				if (condition.equals("after"))      { assertFILTER = (fingerprintArray[i] >  Filter); error = "Not after expected date!"; reason = cpadFilterAfterError; }
-				if (condition.equals("not after"))  { assertFILTER = (fingerprintArray[i] <= Filter); error = "After expected date!";     reason = cpadFilterNotAfterError; }
+				if (condition.equals("not before")) { assertFILTER = (fingerprintArray[i] >= Filter); error = "Before expected timestamp!";    reason = cpadFilterNotBeforeError; }
+				if (condition.equals("after"))      { assertFILTER = (fingerprintArray[i] >  Filter); error = "Not after expected timestamp!"; reason = cpadFilterAfterError; }
+				if (condition.equals("not after"))  { assertFILTER = (fingerprintArray[i] <= Filter); error = "After expected timestamp!";     reason = cpadFilterNotAfterError; }
 						
 				if (assertFILTER) {
 					fileWriterPrinter("   Result: OK\n");
@@ -3838,7 +3838,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Not between expected dates! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")));
+			getAssertTrue(trace, "Not between expected timestamps! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")));
 
 			boolean result = Boolean.valueOf(fileScanner("between.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
