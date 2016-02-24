@@ -49,14 +49,15 @@ public class cpadTestPrograms{
    		String record = "program";
    		String tag = "group";
    		String expected = "Adult";
-		
+   		String condition = "equal";
+   		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
-					                               URL[i], i+1, URL.length, false, record, tag, expected);
+			function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition);
+			
 //			// SCREENSHOT-DISABLED ASSERTION:
 //			if (i == URL.length - 1) {
 //				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
@@ -98,14 +99,15 @@ public class cpadTestPrograms{
    		String record = "program";
    		String tag = "single_program";
    		String expected = "1";
-		
+   		String condition = "equal";
+   		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
-					                               URL[i], i+1, URL.length, false, record, tag, expected);
+			function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition);
+			
 //			// SCREENSHOT-DISABLED ASSERTION:
 //			if (i == URL.length - 1) {
 //				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
@@ -384,14 +386,15 @@ public class cpadTestPrograms{
    		String record = "program";
    		String tag = "title";
    		String expected = "Allan Gregg";
-		
+   		String condition = "equal";
+   		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try {
 			driver = function.getServerName(driver);
-			function.assertCpadTagsEqualToExpected(driver, new RuntimeException().getStackTrace()[0],
-					                               URL[i], i+1, URL.length, false, record, tag, expected);
+			function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition);
+			
 //			// SCREENSHOT-DISABLED ASSERTION:
 //			if (i == URL.length - 1) {
 //				Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), "TEST EXECUTION # " + count + " - Unexpected Records found!");
