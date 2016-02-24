@@ -24,13 +24,13 @@ public class cpadTestAssetChange {
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: assetchange-01</p>
+	 * <p>User Stories: assetchanges-01</p>
 	 * @throws IOException
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testIdTagIsGreaterThenMinimum() throws IOException, ParseException {
+	public void testIdTagIsBeyondMinimum() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -45,12 +45,14 @@ public class cpadTestAssetChange {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "id";
-   		String minimum = "16257024";
-		
+   		String expected = "16257024";
+   		String condition = "greater";
+   		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsGreaterThenMinimum(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, minimum); }
+	 // try { function.assertCpadTagsGreaterThenMinimum(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, minimum); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -69,7 +71,7 @@ public class cpadTestAssetChange {
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: assetchange-02</p>
+	 * <p>User Stories: assetchanges-02</p>
 	 * @throws IOException
 	 * @throws ParseException 
 	 */
@@ -91,11 +93,13 @@ public class cpadTestAssetChange {
    		String record = "change_log";
    		String tag = "object_id";
    		String expected = "119845";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+	 // try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -114,7 +118,7 @@ public class cpadTestAssetChange {
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: assetchange-03</p>
+	 * <p>User Stories: assetchanges-03</p>
 	 * @throws IOException
 	 * @throws ParseException 
 	 */
@@ -136,11 +140,13 @@ public class cpadTestAssetChange {
    		String record = "change_log";
    		String tag = "access_type";
    		String expected = "Create";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+	 // try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -159,7 +165,7 @@ public class cpadTestAssetChange {
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: assetchange-04</p>
+	 * <p>User Stories: assetchanges-04</p>
 	 * @throws IOException
 	 * @throws ParseException 
 	 */
@@ -181,11 +187,13 @@ public class cpadTestAssetChange {
    		String record = "change_log";
    		String tag = "access_type";
    		String expected = "Video";
+   		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+	 // try { function.assertCpadTagsEqualToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -196,34 +204,93 @@ public class cpadTestAssetChange {
 		        		 //,Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 		}
-	
-	/*
-	5. Testing the size filter for asset changes:
-	Using the all of the possible combinations of the following query parameters with the endpoint url
-	http://tomcat-dev:8080/CPAD/assetChanges/?size=5
-	,
-	the amount of
-	<change_log> records returned should be less than or equal to 5.
-			String a = "object_id=2335251";
-			String b = "access_time_gt=";(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today)
-			String c = "access_time_lte=";(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today)
-			String d = "access_type=Update";
-			String e = "asset_type=Video";
-	*/
-			
-	/*
-	6. Testing the access time greater than filter for asset changes:
-	Using the all of the possible combinations of the following query parameters with the endpoint url
-	http://tomcat-dev:8080/CPAD/assetChanges/?access_time_gt={timestamp}
-	,
-	where {timestamp} is a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today. All returned
-	<change_log> records should contain an
-	<access_time> greater than {timestamp}.
-			String a = "access_time_lte=";(a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today)
-			String b = "access_type=Update";
-			String c = "asset_type=Video";
-			String d = "size=40";
-	*/
+
+	/**
+	 * Test all of the possible given URL combinations having maximum or less "change_log" records returned [5]
+	 * <p>Date Created: 2016-02-24</p>
+	 * <p>Date Modified: 2016-02-24</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: assetchanges-05</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testChangeLogRecordsMaxNumber() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?size=5";
+		String a = "object_id=2335251";
+		String b = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
+		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today	
+		String d = "access_type=Update";
+		String e = "asset_type=Video";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+   		String record = "change_log";
+   		int max = 5;
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
+		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having the "access_time" tags of all the "change_log" records returning dates greater than timestamp filter [6]
+	 * <p>Date Created: 2016-02-24</p>
+	 * <p>Date Modified: 2016-02-24</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: assetchanges-06</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testAccessTimeTagIsFilteredAsAfter() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
+		String a = "access_time_lte=" + function.timestampPlusDays(5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today)
+		String b = "access_type=Update";
+		String c = "asset_type=Video";
+		String d = "size=40";				
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "change_log";
+   		String tag = "access_time";
+   		String condition = "after";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
+		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );	
+	}
 			
 	/*
 	7. Testing the access time less than or equal to filter for asset changes:
