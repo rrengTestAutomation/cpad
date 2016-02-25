@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTestComboURL{
+public class cpadComboURL{
 	Functions function = new Functions();
 	int count = 0;
 	

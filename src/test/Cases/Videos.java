@@ -1,4 +1,4 @@
-package test.Cases.Java;
+package test.Cases;
 
 import java.io.IOException;
 
@@ -12,18 +12,19 @@ import org.testng.annotations.Test;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTestPrograms{
+
+public class Videos{
 	Functions function = new Functions();
 	int count = 0;
 	
 	/**
-	 * Test all of the possible given URL combinations are having the "group" tags of "program" record are correct [1]
-	 * <p>Date Created: 2016-02-10</p>
-	 * <p>Date Modified: 2016-02-10</p>
+	 * Test all of the possible given URL combinations are having the "group" tags of "video" record are correct [1]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-01</p>
+	 * <p>User Stories: videos-01</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -34,13 +35,13 @@ public class cpadTestPrograms{
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?group=Adult";
-		String a = "single_program=0";
+		String root = "http://tomcat-dev:8080/CPAD/videos/?group=Adult";
+		String a = "program_asset_id=3106";
 		String b = "size=60";
-		String c = "sort_order=DESC";
-		String d = "sort_by=CREATED_ON";
+		String c = "sort_order=desc";
+		String d = "sort_by=created_on";
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
-   		String record = "program";
+   		String record = "video";
    		String tag = "group";
    		String expected = "Adult";
    		String condition = "equal";
@@ -59,318 +60,15 @@ public class cpadTestPrograms{
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 		}
-
-	/**
-	 * Test all of the possible given URL combinations are having the "single_program" tags of "program" record are correct [2]
-	 * <p>Date Created: 2016-02-10</p>
-	 * <p>Date Modified: 2016-02-10</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-02</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testSingleProgramTagIsCorrect() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?single_program=1";
-		String a = "group=Adult";
-		String b = "size=60";
-		String c = "sort_order=DESC";
-		String d = "sort_by=UPDATED_ON";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
-   		String record = "program";
-   		String tag = "single_program";
-   		String expected = "1";
-   		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
 	
-	/**
-	 * Test all of the possible given URL combinations having maximum or less "program" records returned [3]
-	 * <p>Date Created: 2016-02-10</p>
-	 * <p>Date Modified: 2016-02-10</p>
+	/** 
+	 * Test all of the possible given URL combinations are having the "program_asset_id" tags of "video" record are correct [2]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-03</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testProgramRecordsMaxNumber() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?size=7";
-		String a = "group=Kids";
-		String b = "single_program=0";
-		String c = "sort_order=ASC";
-		String d = "sort_by=CREATED_ON";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));		
-   		String record = "program";
-   		int max = 7;
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
-		
-	/**
-	 * Test sorting programs by its created date in ascending order [4]
-	 * <p>Date Created: 2016-02-12</p>
-	 * <p>Date Modified: 2016-02-12</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-04</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testCreatedOnOrderIsAscending() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON";
-		String a = "group=Adult";
-		String b = "single_program=0";
-		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));	    
-   //// UNIT TEST
-     // String[] URL = { root + "&" + c, root + "&" + b };
-
-   		String record = "program";
-   		String tag = "created_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-	        
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
-	
-	/**
-	 * Test sorting programs by its created date in descending order [5]
-	 * <p>Date Created: 2016-02-15</p>
-	 * <p>Date Modified: 2016-02-15</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-05</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testCreatedOnOrderIsDescending() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=CREATED_ON";
-		String a = "group=Kids";
-		String b = "single_program=0";
-		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
-   		String record = "program";
-   		String tag = "created_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-	        
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
-	
-	/**
-	 * Test sorting programs by its updated date in ascending order [6]
-	 * <p>Date Created: 2016-02-15</p>
-	 * <p>Date Modified: 2016-02-15</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-06</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testUpdatedOnOrderIsAscending() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=UPDATED_ON";
-		String a = "group=Adult";
-		String b = "single_program=1";
-		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
-   		String record = "program";
-   		String tag = "updated_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-	        
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
-	
-	/**
-	 * Test sorting programs by its updated date in descending order [7]
-	 * <p>Date Created: 2016-02-15</p>
-	 * <p>Date Modified: 2016-02-15</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-07</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testUpdatedOnOrderIsDescending() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=UPDATED_ON";
-		String a = "group=Adult";
-		String b = "single_program=0";
-		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
-   		String record = "program";
-   		String tag = "updated_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-	        
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
-	
-	/**
-	 * Test all of the possible given URL combinations are having the "title" tags of "program" record are correct [8]
-	 * <p>Date Created: 2016-02-16</p>
-	 * <p>Date Modified: 2016-02-16</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-08</p>
-	 * @throws IOException
-	 */
-	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
-	public void testTitleTagIsCorrect() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
-	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?title=Allan Gregg";
-		String a = "group=Adult";
-		String b = "single_program=0";
-		String c = "size=70";
-		String d = "sort_order=DESC";
-		String e = "sort_by=UPDATED_ON";
-		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
-		
-		//// UNIT TEST
-		// String[] URL = Locators.url(root, Locators.combination(b, c));
-		
-   		String record = "program";
-   		String tag = "title";
-   		String expected = "Allan Gregg";
-   		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
-		catch (Exception exception) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
-		        		 );
-	}
-	
-	/**
-	 * Test given URL is having the "program_asset_id" tag of "program" record is correct [9]
-	 * <p>Date Created: 2016-02-18</p>
-	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-09</p>
+	 * <p>User Stories: video-02</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -381,9 +79,13 @@ public class cpadTestPrograms{
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/program_asset_id=2790";
-		String[] URL = { root };
-   		String record = "program";
+		String root = "http://tomcat-dev:8080/CPAD/videos/?program_asset_id=2790";		
+		String a = "group=Adult";
+		String b = "size=40";
+		String c = "sort_order=desc";
+		String d = "sort_by=born_date";		
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "video";
    		String tag = "program_asset_id";
    		String expected = "2790";
    		String condition = "equal";
@@ -402,30 +104,450 @@ public class cpadTestPrograms{
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
-	
+
 	/**
-	 * Test given URL is having the "record_id" tag of "program" record is correct [10]
-	 * <p>Date Created: 2016-02-18</p>
-	 * <p>Date Modified: 2016-02-18</p>
+	 * Test all of the possible given URL combinations having maximum or less "video" records returned [3]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-10</p>
+	 * <p>User Stories: videos-03</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testRecordIdTagIsCorrect() throws IOException {
+	public void testVideoRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/record_id=1579281";
+		String root = "http://tomcat-dev:8080/CPAD/videos/?size=5";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "sort_order=asc";
+		String d = "sort_by=born_date";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+   		String record = "video";
+   		int max = 5;
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations are having the "title" tags of "video" record are correct [4]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-04</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testTitleTagIsCorrect() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?title=American Conservatism at the Crossroads";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=20";
+		String d = "sort_order=asc";
+		String e = "sort_by=born_date";
+		
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		
+		//// UNIT TEST
+		// String[] URL = Locators.url(root, Locators.combination(b, c));
+		
+   		String record = "video";
+   		String tag = "title";
+   		String expected = "American Conservatism at the Crossroads";
+   		String condition = "equal";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		catch (Exception exception) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in ascending order [5]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-05</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testCreateOnTagOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=created_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=1778";
+		String c = "size=20";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
+	/**
+	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in descending order [6]
+	 * <p>Date Created: 2016-02-10</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-06</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testCreateOnTagOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=created_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=1778";
+		String c = "size=20";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "created_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "updated_on" tags of "video" record in ascending order [7]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-07</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnTagOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=updated_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=50";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "updated_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "updated_on" tags of "video" record in descending order [8]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-08</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testUpdatedOnTagOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=updated_on";
+		String a = "group=Adult";
+		String b = "program_asset_id=2790";
+		String c = "size=50";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "updated_on";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [9]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-09</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testBornDateTagOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=born_date";
+		String a = "group=Adult";
+		String b = "program_asset_id=8620";
+		String c = "size=50";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "born_date";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in descending order [10]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-10</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testBornDateTagOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=born_date";
+		String a = "group=Adult";
+		String b = "program_asset_id=8620";
+		String c = "size=40";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "born_date";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in ascending order [11]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-11</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testKillDateTagOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=kill_date";
+		String a = "group=Adult";
+		String b = "program_asset_id=8620";
+		String c = "size=50";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "kill_date";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in descending order [12]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-12</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testKillDateTagOrderIsDescending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=kill_date";
+		String a = "group=Adult";
+		String b = "program_asset_id=8620";
+		String c = "size=40";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "kill_date";
+   		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+	
+	/**
+	 * Test given URL is having the "video_asset_id" filter for "video" record is correct [13]
+	 * <p>Date Created: 2016-02-18</p>
+	 * <p>Date Modified: 2016-02-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-13</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testVideoAssetIdTagIsCorrect() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/video_asset_id=281405";
 		String[] URL = { root };
-   		String record = "program";
-   		String tag = "record_id";
-   		String expected = "1579281";
+   		String record = "video";
+   		String tag = "video_asset_id";
+   		String expected = "281405";
    		String condition = "equal";
 		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
@@ -442,34 +564,36 @@ public class cpadTestPrograms{
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
-	
+
 	/**
-	 * Test the "updated_on" tag of all the "program" records are returning dates greater than or equal to filter for programs [11]
+	 * Test given URL is having the "record_id" filter for "video" record is correct [14]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-11</p>
+	 * <p>User Stories: videos-14</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testUpdatedOnTagIsFiltered() throws IOException {
+	public void testRecordIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult";
+		String root = "http://tomcat-dev:8080/CPAD/videos/record_id=2349866";
 		String[] URL = { root };
-   		String record = "program";
-   		String tag = "updated_on";
-   		
+   		String record = "video";
+   		String tag = "record_id";
+   		String expected = "2349866";
+   		String condition = "equal";
+		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-	        
+
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not before"); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -479,35 +603,77 @@ public class cpadTestPrograms{
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
-}
-	
+	}
+
 	/**
-	 * Test the "updated_on" tag of all the "program" records are returning dates between "from-to" for programs [12]
+	 * Test given URL is having the "is_captioned" filter for "video" record is correct [15]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: programs-12</p>
+	 * <p>User Stories: videos-15</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testUpdatedOnTagIsBetween() throws IOException {
+	public void testIsCaptionedTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10";
+		String root = "http://tomcat-dev:8080/CPAD/videos/is_captioned=1";
 		String[] URL = { root };
-   		String record = "program";
-   		String tag = "updated_on";
-
+   		String record = "video";
+   		String tag = "is_captioned";
+   		String expected = "1";
+   		String condition = "equal";
+		
 	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
-	        
+
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateBetween(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        		 );
+	}
+
+	/**
+	 * Test given URL is having the "brightcove_ref_id" filter for "video" record is correct [16]
+	 * <p>Date Created: 2016-02-18</p>
+	 * <p>Date Modified: 2016-02-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-16</p>
+	 * @throws IOException
+	 */
+	@SuppressWarnings("static-access")
+	@Test(invocationCount = 1)
+	public void testBrightcoveRefIdTagIsCorrect() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+	 // COUNTER
+	    count++;
+	    
+		String root = "http://tomcat-dev:8080/CPAD/videos/brightcove_ref_id=4737449177001";
+		String[] URL = { root };
+   		String record = "video";
+   		String tag = "brightcove_ref_id";
+   		String expected = "4737449177001";
+   		String condition = "equal";
+		
+	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		

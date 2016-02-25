@@ -24,7 +24,7 @@ import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class cpadTestSingleURL {
+public class cpadSingleURL {
       static WebDriver driver;
       int combination = 0;
 	
@@ -180,7 +180,7 @@ public class cpadTestSingleURL {
 		                  result));
    		
    		} catch (Exception exception) { // Functions.getExceptionDescriptive(exception, new Exception().getStackTrace()[0], driver);
-   		} finally{ cpadTestSingleURL.closeBrowsers(); }
+   		} finally{ cpadSingleURL.closeBrowsers(); }
     }
    
 	@BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }

@@ -1,4 +1,4 @@
-package test.Cases.Java;
+package test.Cases;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import test.common.Locators;
 import test.helper.Functions;
 
-public class cpadTestAssetChange {
+public class AssetChange {
 	Functions function = new Functions();
 	int count = 0;
 	
