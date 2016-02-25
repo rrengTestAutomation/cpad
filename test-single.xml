@@ -9,7 +9,7 @@
 <class name="test.helper.Functions"></class>
 -->
 
-<class name="test.Cases.Java.cpadTestSchedules"><methods><include name="testCreatedOnOrderIsDescending"/></methods></class>
+<class name="test.Cases.AssetChange"><methods><include name="testAccessTimeTagIsFilteredAsAfter"/></methods></class>
 
 <!--
 <include name=""/>

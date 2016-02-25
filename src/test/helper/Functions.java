@@ -1424,6 +1424,72 @@ public class Functions {
 	 * Screenshot-Disabled
 	 * @param e
 	 */
+	public String getAssertTrue(StackTraceElement l, String description, Boolean b, Boolean ifCount) throws IOException {
+
+		String packageNameOnly = l.getClassName().substring(0,
+				l.getClassName().lastIndexOf("."));
+		String classNameOnly = l.getClassName().substring(
+				1 + l.getClassName().lastIndexOf("."),
+				l.getClassName().length());
+		String location = packageNameOnly + File.separator + classNameOnly
+				+ File.separator + l.getMethodName() + ", line # "
+				+ l.getLineNumber();
+		String xml = "<class name=\"" + packageNameOnly + "." + classNameOnly
+				+ "\"><methods><include name=\"" + l.getMethodName()
+				+ "\"/></methods></class>";
+		String detected = getCurrentDateTimeFull();
+		String runtime = testRunTime("start.time", System.currentTimeMillis());
+		String subtotal = testRunTime("ini.time", System.currentTimeMillis());
+		if (b == false) {
+			fileWriterPrinter("\nError Cause: ---> " + description
+					+ "\n   Location: ---> " + location
+					+ "\n   Expected: ---> " + "true" + "\n     Actual: ---> "
+					+ b + "\n");
+           
+			// Creating New or Updating existing Failed Counter record:
+			if (ifCount){
+				counter("failed.num");
+				// Append a New Log record:
+				if (fileExist("run.log")) {
+					fileWriter("run.log", "Error Cause: ---> " + description);
+					fileWriter("run.log", "   Location: ---> " + location);
+					fileWriter("run.log", "   Expected: ---> " + "true");
+					fileWriter("run.log", "     Actual: ---> " + b);
+					// fileWriter("run.log", "   Detected: ---> " + detected);
+					// fileWriter("run.log", "    Runtime: ---> " + runtime);
+					// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+				}
+				// Append an Error record:
+				fileWriter("failed.log", "    Failure: #" + fileScanner("failed.num"));
+				fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
+				fileWriter("failed.log", "      Start: " + convertCalendarMillisecondsAsStringToDateTimeHourMinSec(fileScanner("start.time")));
+				fileWriter("failed.log", "   XML Path: " + xml);
+				fileWriter("failed.log", "Error Cause: ---> " + description);
+				fileWriter("failed.log", "   Location: ---> " + location);
+				fileWriter("failed.log", "   Expected: ---> " + "true");
+				fileWriter("failed.log", "     Actual: ---> " + b);
+				fileWriter("failed.log", "   Detected: " + detected);
+				fileWriter("failed.log", "    Runtime: " + runtime);
+				fileWriter("failed.log", "   Subtotal: " + subtotal);
+				fileWriter("failed.log", "");
+			}
+		} else {
+			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b + "\n  Result: OK\n");
+		}
+		// Descriptive record output:
+		return "\nError Cause: ---> " + description + "\n   Location: ---> "
+				+ location + "\n   Expected: ---> " + "true"
+				+ "\n     Actual: ---> " + b + "\n   Detected: ---> "
+				+ detected + "\n    Runtime: ---> " + runtime
+				+ "\n   Subtotal: ---> " + subtotal + "\n" + xml + "\n"
+				+ "\nStack Traces:";
+	}
+	
+	/**
+	 * "AssertTrue" with Screen-Shot and descriptive Error Message, with an URL trace
+	 * Screenshot-Disabled
+	 * @param e
+	 */
 	public String getAssertTrue(StackTraceElement l, String description, Boolean b, String url) throws IOException {
 
 		String packageNameOnly = l.getClassName().substring(0,
@@ -1484,6 +1550,85 @@ public class Functions {
 		// Descriptive record output:
 		return "\nError Cause: ---> " + description +
 			   "\n        URL: ---> " + url +
+			   "\n   Location: ---> " + location +
+			   "\n   Expected: ---> " + "true" +
+			   "\n     Actual: ---> " + b +
+			   "\n   Detected: ---> " + detected +
+			   "\n    Runtime: ---> " + runtime +
+			   "\n   Subtotal: ---> " + subtotal +
+			   "\n" + xml + "\n"+
+			   "\nStack Traces:";
+	}
+	
+	/**
+	 * "AssertTrue" with Screen-Shot and descriptive Error Message, with an URL trace, with Error Code
+	 * Screenshot-Disabled
+	 * @param e
+	 */
+	public String getAssertTrue(StackTraceElement l, String description, Boolean b, String url, String code) throws IOException {
+
+		String packageNameOnly = l.getClassName().substring(0,
+				l.getClassName().lastIndexOf("."));
+		String classNameOnly = l.getClassName().substring(
+				1 + l.getClassName().lastIndexOf("."),
+				l.getClassName().length());
+		String location = packageNameOnly + File.separator + classNameOnly
+				+ File.separator + l.getMethodName() + ", line # "
+				+ l.getLineNumber();
+		String xml = "<class name=\"" + packageNameOnly + "." + classNameOnly
+				+ "\"><methods><include name=\"" + l.getMethodName()
+				+ "\"/></methods></class>";
+		String detected = getCurrentDateTimeFull();
+		String runtime = testRunTime("start.time", System.currentTimeMillis());
+		String subtotal = testRunTime("ini.time", System.currentTimeMillis());
+		if (b == false) {
+			fileWriterPrinter("\nError Cause: ---> " + description
+					+ "\n        URL: ---> " + url
+					+ "\n       CODE: ---> " + code
+					+ "\n   Location: ---> " + location
+					+ "\n   Expected: ---> " + "true" + "\n     Actual: ---> "
+					+ b + "\n");
+
+			// Creating New or Updating existing Failed Counter record:
+			counter("failed.num");
+			// Append a New Log record:
+			if (fileExist("run.log")) {
+				fileWriter("run.log", "    Failure: #" + fileScanner("failed.num"));
+				fileWriter("run.log", "Error Cause: ---> " + description);
+				fileWriter("run.log", "        URL: ---> " + url);
+				fileWriter("run.log", "       CODE: ---> " + code);
+				fileWriter("run.log", "   Location: ---> " + location);
+				fileWriter("run.log", "   Expected: ---> " + "true");
+				fileWriter("run.log", "     Actual: ---> " + b);
+				fileWriter("run.log", "");
+				// fileWriter("run.log", "   Detected: ---> " + detected);
+				// fileWriter("run.log", "    Runtime: ---> " + runtime);
+				// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+			}
+			// Append an Error record:
+			fileWriter("failed.log", "    Failure: #" + fileScanner("failed.num"));
+			fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
+			fileWriter("failed.log", "      Start: " + convertCalendarMillisecondsAsStringToDateTimeHourMinSec(fileScanner("start.time")));
+			fileWriter("failed.log", "   XML Path: " + xml);
+			fileWriter("failed.log", "Error Cause: ---> " + description);
+			fileWriter("failed.log", "        URL: ---> " + url);
+			fileWriter("failed.log", "       CODE: ---> " + code);
+			fileWriter("failed.log", "   Location: ---> " + location);
+			fileWriter("failed.log", "   Expected: ---> " + "true");
+			fileWriter("failed.log", "     Actual: ---> " + b);
+            if(fileExist("record.log")) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
+			fileWriter("failed.log", "   Detected: " + detected);
+			fileWriter("failed.log", "    Runtime: " + runtime);
+			fileWriter("failed.log", "   Subtotal: " + subtotal);
+			fileWriter("failed.log", "\n\n");	
+		} else {
+			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b
+					+ "\n  Result: OK\n");
+		}
+		// Descriptive record output:
+		return "\nError Cause: ---> " + description +
+			   "\n        URL: ---> " + url +
+			   "\n       CODE: ---> " + code +
 			   "\n   Location: ---> " + location +
 			   "\n   Expected: ---> " + "true" +
 			   "\n     Actual: ---> " + b +

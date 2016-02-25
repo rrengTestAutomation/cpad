@@ -58,7 +58,7 @@ public class Schedules {
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
 
@@ -103,7 +103,7 @@ public class Schedules {
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
 
@@ -145,7 +145,7 @@ public class Schedules {
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
 
@@ -187,7 +187,7 @@ public class Schedules {
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );	
 	}
 
@@ -229,7 +229,7 @@ public class Schedules {
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );	
 	}
 
@@ -272,7 +272,7 @@ public class Schedules {
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
 	
