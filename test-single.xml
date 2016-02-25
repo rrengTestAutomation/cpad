@@ -9,7 +9,9 @@
 <class name="test.helper.Functions"></class>
 -->
 
-<class name="test.Cases.AssetChange"><methods><include name="testAccessTimeTagIsFilteredAsAfter"/></methods></class>
+<class name="test.Cases.Videos"><methods><include name="testKillDateTagOrderIsAscending"/></methods></class>
+
+<!-- <class name="test.Cases.AssetChange"><methods><include name="testAccessTimeTagIsFilteredAsAfter"/></methods></class> -->
 
 <!--
 <include name=""/>

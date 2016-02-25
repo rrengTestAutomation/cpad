@@ -932,8 +932,8 @@ public class Functions {
 	    	String error = null;
 	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
 	    	fileCleaner("error.log");
-	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
-	    	else { fileWriter("error.log", sourseURL); }
+	    	if(error.length() > 0) { fileWriter("error.log", error); }
+	    	else { fileWriter("error.log", ""); }
 	    	return null;
 	    	}
 	}
@@ -973,8 +973,8 @@ public class Functions {
 	    	String error = null;
 	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
 	    	fileCleaner("error.log");
-	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
-	    	else { fileWriter("error.log", sourseURL); }
+	    	if(error.length() > 0) { fileWriter("error.log", error); }
+	    	else { fileWriter("error.log", ""); }
 	    	return null;
 	    	}
 	}
@@ -1018,8 +1018,8 @@ public class Functions {
 	    		}
 	    		} catch (Exception exception) { }
 	    	fileCleaner("error.log");
-	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
-	    	else { fileWriter("error.log", sourseURL); }
+	    	if(error.length() > 0) { fileWriter("error.log", error); }
+	    	else { fileWriter("error.log", ""); }
 	    	return null;
 	    	}
 	}
@@ -1059,8 +1059,8 @@ public class Functions {
 	    	String error = null;
 	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
 	    	fileCleaner("error.log");
-	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
-	    	else { fileWriter("error.log", sourseURL); }
+	    	if(error.length() > 0) { fileWriter("error.log", error); }
+	    	else { fileWriter("error.log", ""); }
 	    	return null;
 	    	}
 	}
@@ -1100,8 +1100,8 @@ public class Functions {
 	    	String error = null;
 	    	try { error = e.toString().substring(e.toString().indexOf(": ") + 2, e.toString().indexOf(" for URL")); } catch (Exception exception) { }
 	    	fileCleaner("error.log");
-	    	if(error.length() > 0) { fileWriter("error.log", error + ", " + sourseURL); }
-	    	else { fileWriter("error.log", sourseURL); }
+	    	if(error.length() > 0) { fileWriter("error.log", error); }
+	    	else { fileWriter("error.log", ""); }
 	    	return null;
 	    	}
 	}
@@ -2621,7 +2621,7 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2634,7 +2634,7 @@ public class Functions {
 //		fileWriter("xml.log", "false");
 //		result = false;
 //	}
-//	getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+//	getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
 //	if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 //	return result;
 //}
@@ -2669,7 +2669,7 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2704,76 +2704,7 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
-		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
-		return result;
-	}
-	
-	/**
-	 * xml File validity check
-	 * Uses Selenium WebDriver on Assertion
-	 * @throws IOException
-	 * @throws SAXException
-	 * @throws ParserConfigurationException
-	 * @throws InterruptedException 
-	 */
-	public Boolean xmlValidityChecker(String path, String fileName,
-			StackTraceElement trace, String url, int number, int total)
-			throws SAXException, IOException, ParserConfigurationException, InterruptedException {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setValidating(false);
-		factory.setNamespaceAware(true);
-
-		DocumentBuilder builder = factory.newDocumentBuilder();
-
-		builder.setErrorHandler(new SimpleErrorHandler());
-		boolean result;
-		// PARSE method:
-		// (1) validates XML;
-		// (2) will throw an exception if miss-formatted;
-		try {
-			builder.parse(new InputSource(path + fileName));
-			result = true;
-		} catch (Exception e) {
-			fileCleaner("xml.log");
-			fileWriter("xml.log", "false");
-			result = false;
-		}
-		getAssertTrue(trace, url, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
-		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
-		return result;
-	}
-
-	/**
-	 * xml File validity check
-	 * Uses Selenium WebDriver
-	 * @throws IOException
-	 * @throws SAXException
-	 * @throws ParserConfigurationException
-	 */
-	public Boolean xmlValidityChecker(String path, String fileName,
-			StackTraceElement trace, WebDriver driver, int number, int total)
-			throws SAXException, IOException, ParserConfigurationException {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setValidating(false);
-		factory.setNamespaceAware(true);
-
-		DocumentBuilder builder = factory.newDocumentBuilder();
-
-		builder.setErrorHandler(new SimpleErrorHandler());
-		boolean result;
-		// PARSE method:
-		// (1) validates XML;
-		// (2) will throw an exception if miss-formatted;
-		try {
-			builder.parse(new InputSource(path + fileName));
-			result = true;
-		} catch (Exception e) {
-			fileCleaner("xml.log");
-			fileWriter("xml.log", "false");
-			result = false;
-		}
-		getAssertTrue(trace, driver, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result);
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2943,6 +2874,7 @@ public class Functions {
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3015,6 +2947,7 @@ public class Functions {
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3091,6 +3024,7 @@ public class Functions {
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3163,6 +3097,7 @@ public class Functions {
 		       Boolean ifAssert, String record, String tag) 
     throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3247,6 +3182,7 @@ public class Functions {
 			       Boolean ifAssert, String record, String tag, String expected, String condition) 
 	throws IOException {	
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3325,6 +3261,7 @@ public class Functions {
 			Boolean ifAssert, String record, int max)
 	throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3378,6 +3315,7 @@ public class Functions {
 			       Boolean ifAssert, String record, String tag, String condition) 
 	throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3466,6 +3404,7 @@ public class Functions {
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
 		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
