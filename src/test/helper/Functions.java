@@ -2628,7 +2628,9 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
+		String reason = "";
+		if (fileScanner("error.log").length() > 0) { reason = " - " + fileScanner("error.log"); }
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ")" + reason, result, fileScanner("url.log"));
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2640,8 +2642,10 @@ public class Functions {
 //		fileCleaner("xml.log");
 //		fileWriter("xml.log", "false");
 //		result = false;
-//	}
-//	getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
+//		}
+//		String reason = "";
+//		if (fileScanner("error.log").length() > 0) { reason = " - " + fileScanner("error.log"); }
+//		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ")" + reason, result, fileScanner("url.log"));
 //	if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 //	return result;
 //}
@@ -2676,7 +2680,9 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
+		String reason = "";
+		if (fileScanner("error.log").length() > 0) { reason = " - " + fileScanner("error.log"); }
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ")" + reason, result, fileScanner("url.log"));
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
@@ -2711,7 +2717,9 @@ public class Functions {
 			fileWriter("xml.log", "false");
 			result = false;
 		}
-		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ") - " + fileScanner("error.log"), result, fileScanner("url.log"));
+		String reason = "";
+		if (fileScanner("error.log").length() > 0) { reason = " - " + fileScanner("error.log"); }
+		getAssertTrue(trace, "XML is invalid! (URL " + number + " OF " + total + ")" + reason, result, fileScanner("url.log"));
 		if(!result){ fileWriterPrinter("=========================="); fileWriterPrinter(); }
 		return result;
 	}
