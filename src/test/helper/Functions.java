@@ -2579,7 +2579,13 @@ public class Functions {
 		        mm = cpadDateStamp.substring(cpadDateStamp.lastIndexOf(":") + 1, cpadDateStamp.lastIndexOf(":") + 3);
         } 
 
-        if(cpadDateStamp.length() == 19) { math = "+"; hh = "00"; mm = "00"; }
+        hours = Integer.valueOf(HH);
+          min = Integer.valueOf(MM);
+          sec = Integer.valueOf(SS);
+        
+		// TEMPORARY DISABLED:
+		/**
+        if(cpadDateStamp.length() == 19) { math = " "; hh = "00"; mm = "00"; }
 
 		String dateUnitTest = "Date: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm;
 
@@ -2588,8 +2594,9 @@ public class Functions {
 		
 		if (math.equals("-")) { min = Integer.valueOf(MM) - Integer.valueOf(mm); }
 		else                  { min = Integer.valueOf(MM) + Integer.valueOf(mm); }
+		*/
 		
-		sec = Integer.valueOf(SS);
+		
 		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
 	}
 
