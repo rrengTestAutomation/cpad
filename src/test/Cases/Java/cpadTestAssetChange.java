@@ -156,7 +156,7 @@ public class cpadTestAssetChange {
 		}
 
 	/**
-	 * Test all of the possible given URL combinations are having the "access_type" tags of "change_log" record is equal to "Video" [4]
+	 * Test all of the possible given URL combinations are having the "asset_type" tags of "change_log" record is equal to "Video" [4]
 	 * <p>Date Created: 2016-02-24</p>
 	 * <p>Date Modified: 2016-02-24</p>
 	 * <p>Original Version: V1</p>
@@ -168,7 +168,7 @@ public class cpadTestAssetChange {
 	 */
 	@SuppressWarnings("static-access")
 	@Test(invocationCount = 1)
-	public void testAccessTypeTagIsVideo() throws IOException, ParseException {
+	public void testAssetTypeTagIsVideo() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 		
 	 // COUNTER
@@ -182,7 +182,7 @@ public class cpadTestAssetChange {
 		String e = "size=20";
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
    		String record = "change_log";
-   		String tag = "access_type";
+   		String tag = "asset_type";
    		String expected = "Video";
    		String condition = "equal";
 		
