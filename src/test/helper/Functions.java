@@ -3331,7 +3331,7 @@ public class Functions {
 			String filter = url.substring(url.indexOf("=") + 1, url.indexOf("=") + 20);
 			long Filter = convertCpadDateStampToMillisecondsAsLong(filter);
 
-			String xml = getUrlPageSourceSave(url);;
+			String xml = getUrlPageSourceSave(url);
 
 			fileWriterPrinter();
 			fileWriterPrinter("==========================");
