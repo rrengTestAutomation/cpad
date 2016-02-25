@@ -2566,7 +2566,7 @@ public class Functions {
 	
 	/**
 	 * xml File validity check
-	 * Will use Selenium WebDriver on Assertion
+	 * Uses Selenium WebDriver on Assertion
 	 * @throws IOException
 	 * @throws SAXException
 	 * @throws ParserConfigurationException
@@ -2797,12 +2797,8 @@ public class Functions {
 		           StackTraceElement trace, String url, int combination, int total,
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
@@ -2873,12 +2869,8 @@ public class Functions {
 		           StackTraceElement trace, String url, int combination, int total,
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
@@ -2945,86 +2937,6 @@ public class Functions {
 	}
 	
 	/**
-	 * Assert CPAD record tags as dates are in ascending order
-	 * Uses Selenium WebDriver!
-	 * @throws IOException
-	 */
-	public boolean assertCpadTagsDateAsc(WebDriver driver,
-		           StackTraceElement trace, String url, int combination, int total,
-			       Boolean ifAssert, String record, String tag) 
-	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
-		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
-			fileWriterPrinter(url);
-			fileWriterPrinter("\n" + "Record Name: " + record);
-			fileWriterPrinter("   Tag Name: " + tag);
-
-			String xml = getUrlPageSourceSave(url);
-
-			fileWriterPrinter();
-			fileWriterPrinter("==========================");
-
-			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
-			
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(xml, trace, combination, total);
-
-			String[] valueArray = xmlValueArray(xml, record, tag);
-			long[] fingerprintArray = new long[valueArray.length];
-
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
-			for (int i = 0; i < valueArray.length; i++) {
-				fileWriterPrinter("Record ID: " + (i + 1));
-				fileWriterPrinter("Tag Value: " + valueArray[i]);
-
-				if (i < (valueArray.length - 1)) {
-					boolean assertORDER = compareLong(fingerprintArray[i + 1],
-							fingerprintArray[i]);
-
-					if (assertORDER) {
-						fileWriterPrinter("   Result: OK\n");
-					} else {
-						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadAscDateOrderError);
-						fileCleaner("order.log");
-						fileWriter("order.log", "false");
-
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-						}
-
-						fileWriterPrinter();
-					}
-
-					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
-				}
-			}
-
-			fileWriterPrinter("==========================");
-			fileWriterPrinter();
-
-			getAssertTrue(trace, driver, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
-
-			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
-			
-			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
-			
-			fileCleaner("order.log");
-			fileCleaner("xml.log");
-			return result;
-
-		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
-	}
-	
-	/**
 	 * Assert CPAD record tags are in descending order
 	 * Won't use Selenium WebDriver
 	 * @throws IOException
@@ -3033,12 +2945,8 @@ public class Functions {
 		           StackTraceElement trace, String url, int combination, int total,
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
@@ -3109,10 +3017,7 @@ public class Functions {
 	           StackTraceElement trace, String url, int combination, int total,
 		       Boolean ifAssert, String record, String tag) 
     throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
 			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
@@ -3186,300 +3091,6 @@ public class Functions {
 
 		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
-
-	/**
-	 * Assert CPAD record tags as dates are in descending order
-	 * Uses Selenium WebDriver!
-	 * @throws IOException
-	 */
-	public boolean assertCpadTagsDateDesc(WebDriver driver,
-	           StackTraceElement trace, String url, int combination, int total,
-		       Boolean ifAssert, String record, String tag) 
-    throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
-		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
-			fileWriterPrinter(url);
-			fileWriterPrinter("\n" + "Record Name: " + record);
-			fileWriterPrinter("   Tag Name: " + tag);
-
-			String xml = getUrlPageSourceSave(url);
-
-			fileWriterPrinter();
-			fileWriterPrinter("==========================");
-
-			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
-			
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(xml, trace, combination, total);
-
-			String[] valueArray = xmlValueArray(xml, record, tag);
-			long[] fingerprintArray = new long[valueArray.length];
-
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
-			for (int i = 0; i < valueArray.length; i++) {
-				fileWriterPrinter("Record ID: " + (i + 1));
-				fileWriterPrinter("Tag Value: " + valueArray[i]);
-
-				if (i < (valueArray.length - 1)) {
-					boolean assertORDER = compareLong(fingerprintArray[i],
-							fingerprintArray[i + 1]);
-
-					if (assertORDER) {
-						fileWriterPrinter("   Result: OK\n");
-					} else {
-						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadDescDateOrderError);
-						fileCleaner("order.log");
-						fileWriter("order.log", "false");
-
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: "
-									+ valueArray[i + 1]);
-						}
-
-						fileWriterPrinter();
-					}
-
-					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
-				}
-			}
-
-			fileWriterPrinter("==========================");
-			fileWriterPrinter();
-
-			getAssertTrue(trace, driver, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")));
-
-			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
-			
-			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
-			
-			fileCleaner("order.log");
-			fileCleaner("xml.log");
-			return result;
-
-		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
-	}
-
-//	/**
-//	 * Assert CPAD record tags are equal to expected
-//	 * Won't use Selenium WebDriver
-//	 * @throws IOException
-//	 */
-//	public boolean assertCpadTagsEqualToExpected(
-//		           StackTraceElement trace, String url, int combination, int total,
-//			       Boolean ifAssert, String record, String tag, String expected) 
-//	throws IOException {	
-//		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-//		// COUNTER
-//		try {
-//			// ENTRY
-//			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-//					+ " OF " + total + ":");
-//			fileWriterPrinter(url);
-//			fileWriterPrinter("\n" + "Record Name: " + record);
-//			fileWriterPrinter("   Tag Name: " + tag);
-//
-//			String xml = getUrlPageSourceSave(url);
-//
-//			fileWriterPrinter();
-//			fileWriterPrinter("==========================");
-//			
-//			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-//			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }
-//			
-//			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-//			xmlValidityChecker(xml, trace, combination, total);
-//		    
-//			String error = null;
-//			String[] valueArray = xmlValueArray(xml, record, tag);
-//			if (valueArray.length == 0) {fileCleaner("match.log"); fileWriter("match.log", "false"); error = "No records found!"; }
-//			
-//			for (int i = 0; i < valueArray.length; i++) {
-//				fileWriterPrinter("Record ID: " + (i + 1));
-//				fileWriterPrinter("Tag Value: " + valueArray[i]);
-//
-//					boolean assertion = valueArray[i].equals(expected);
-//
-//					if (assertion) {
-//						fileWriterPrinter("   Result: OK\n");
-//					} else {
-//						error = "Not the same!";
-//						fileWriterPrinter("   Result: FAILED!");
-//						fileWriterPrinter("   Reason: " + cpadMatchError);
-//						fileCleaner("match.log");
-//						fileWriter("match.log", "false");
-//						fileWriterPrinter();
-//					}
-//
-//					if (ifAssert) {
-//						Assert.assertTrue(assertion, "   Result: FAILED\n");
-//					}
-//			}
-//
-//			fileWriterPrinter("==========================");
-//			fileWriterPrinter();
-//
-//			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("match.log")));
-//
-//			boolean result = Boolean.valueOf(fileScanner("match.log")) && Boolean.valueOf(fileScanner("xml.log"));
-//			
-//			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
-//			
-//			fileCleaner("match.log");
-//			fileCleaner("xml.log");
-//			return result;
-//
-//		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
-//	}
-
-//	/**
-//	 * Assert CPAD record tags are equal to expected
-//	 * Uses Selenium WebDriver!
-//	 * @throws IOException
-//	 */
-//	public boolean assertCpadTagsEqualToExpected(WebDriver driver,
-//		           StackTraceElement trace, String url, int combination, int total,
-//			       Boolean ifAssert, String record, String tag, String expected) 
-//	throws IOException {	
-//		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-//		// COUNTER
-//		try {
-//			// ENTRY
-//			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-//					+ " OF " + total + ":");
-//			fileWriterPrinter(url);
-//			fileWriterPrinter("\n" + "Record Name: " + record);
-//			fileWriterPrinter("   Tag Name: " + tag);
-//
-//			String xml = getUrlPageSourceSave(url);
-//			
-//			fileWriterPrinter();
-//			fileWriterPrinter("==========================");
-//			
-//			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-//			if (!fileExist("match.log", false)) { fileWriter("match.log", "true"); }		
-//			
-//			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-//			xmlValidityChecker(xml, trace, combination, total);
-//			
-//			String[] valueArray = xmlValueArray(xml, record, tag);
-//
-//			for (int i = 0; i < valueArray.length; i++) {
-//				fileWriterPrinter("Record ID: " + (i + 1));
-//				fileWriterPrinter("Tag Value: " + valueArray[i]);
-//
-//					boolean assertion = valueArray[i].equals(expected);
-//
-//					if (assertion) {
-//						fileWriterPrinter("   Result: OK\n");
-//					} else {
-//						fileWriterPrinter("   Result: FAILED!");
-//						fileWriterPrinter("   Reason: " + cpadMatchError);
-//						fileCleaner("match.log");
-//						fileWriter("match.log", "false");
-//						fileWriterPrinter();
-//					}
-//
-//					if (ifAssert) {
-//						Assert.assertTrue(assertion, "   Result: FAILED\n");
-//					}
-//			}
-//
-//			fileWriterPrinter("==========================");
-//			fileWriterPrinter();
-//
-//			getAssertTrue(trace, driver, "Not the same! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("match.log")));
-//
-//			boolean result = Boolean.valueOf(fileScanner("match.log")) && Boolean.valueOf(fileScanner("xml.log"));
-//			
-//			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
-//			
-//			fileCleaner("match.log");
-//			fileCleaner("xml.log");
-//			return result;
-//
-//		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
-//	}
-
-//	/**
-//	 * Assert CPAD record tags are greater then minimum
-//	 * Won't use Selenium WebDriver
-//	 * @throws IOException
-//	 */
-//	public boolean assertCpadTagsGreaterThenMinimum(
-//		           StackTraceElement trace, String url, int combination, int total,
-//			       Boolean ifAssert, String record, String tag, String min) 
-//	throws IOException {	
-//		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-//		// COUNTER
-//		try {
-//			// ENTRY
-//			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-//					+ " OF " + total + ":");
-//			fileWriterPrinter(url);
-//			fileWriterPrinter("\n" + "Record Name: " + record);
-//			fileWriterPrinter("   Tag Name: " + tag);
-//
-//			String xml = getUrlPageSourceSave(url);
-//
-//			fileWriterPrinter();
-//			fileWriterPrinter("==========================");
-//			
-//			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-//			if (!fileExist("greater.log", false)) { fileWriter("greater.log", "true"); }
-//			
-//			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-//			xmlValidityChecker(xml, trace, combination, total);
-//		    
-//			String error = null;
-//			String[] valueArray = xmlValueArray(xml, record, tag);
-//			if (valueArray.length == 0) {fileCleaner("greater.log"); fileWriter("greater.log", "false"); error = "No records found!"; }
-//			
-//			for (int i = 0; i < valueArray.length; i++) {
-//				fileWriterPrinter("Record ID: " + (i + 1));
-//				fileWriterPrinter("Tag Value: " + valueArray[i]);
-//
-//					boolean assertion = Integer.valueOf(valueArray[i]) > Integer.valueOf(min);
-//
-//					if (assertion) {
-//						fileWriterPrinter("   Result: OK\n");
-//					} else {
-//						error = "Less then expected minimum!";
-//						fileWriterPrinter("   Result: FAILED!");
-//						fileWriterPrinter("   Reason: " + cpadGreaterError);
-//						fileCleaner("greater.log");
-//						fileWriter("greater.log", "false");
-//						fileWriterPrinter();
-//					}
-//
-//					if (ifAssert) {
-//						Assert.assertTrue(assertion, "   Result: FAILED\n");
-//					}
-//			}
-//
-//			fileWriterPrinter("==========================");
-//			fileWriterPrinter();
-//
-//			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("greater.log")));
-//
-//			boolean result = Boolean.valueOf(fileScanner("greater.log")) && Boolean.valueOf(fileScanner("xml.log"));
-//			
-//			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
-//			
-//			fileCleaner("greater.log");
-//			fileCleaner("xml.log");
-//			return result;
-//
-//		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
-//	}
 	
 	/**
 	 * Assert CPAD record tags by compare with the expected
@@ -3490,12 +3101,8 @@ public class Functions {
 		           StackTraceElement trace, String url, int combination, int total,
 			       Boolean ifAssert, String record, String tag, String expected, String condition) 
 	throws IOException {	
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
@@ -3572,12 +3179,8 @@ public class Functions {
 			StackTraceElement trace, String url, int combination, int total,
 			Boolean ifAssert, String record, int max)
 	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 
@@ -3621,63 +3224,6 @@ public class Functions {
 	}
 
 	/**
-	 * Assert CPAD record tags are equal to expected
-	 * Uses Selenium WebDriver!
-	 * @throws IOException
-	 */
-	public boolean assertCpadTagsMaxNumber(WebDriver driver,
-			StackTraceElement trace, String url, int combination, int total,
-			Boolean ifAssert, String record, int max)
-	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
-		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
-			fileWriterPrinter(url);
-			fileWriterPrinter("\n" + "Record Name: " + record);
-
-			String xml = getUrlPageSourceSave(url);
-
-			fileWriterPrinter("==========================");
-
-			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }		
-			
-			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
-			xmlValidityChecker(xml, trace, combination, total);
-			
-			fileWriterPrinter("Records Number: " + xmlRecordLength(xml, record));
-			boolean assertion = (xmlRecordLength(xml, record) <= max);
-
-			if (assertion) { fileWriterPrinter("        Result: OK");
-			        } else {
-				             fileWriterPrinter("        Result: FAILED!");
-				             fileWriterPrinter("        Reason: MORE THEN " + max + " <" + record + "> RECORDS FOUND...");
-				             fileCleaner("max.log");
-				             fileWriter( "max.log", "false");
-				             }
-
-			if (ifAssert) { Assert.assertTrue(assertion, "        Result: FAILED"); }
-
-			fileWriterPrinter("==========================");
-			fileWriterPrinter();
-			
-			getAssertTrue(trace, driver, "Out of maximum! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("max.log")));
-
-			boolean result = Boolean.valueOf(fileScanner("max.log")) && Boolean.valueOf(fileScanner("xml.log"));
-			
-			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
-			
-			fileCleaner("max.log");
-			fileCleaner("xml.log");
-			return result;
-
-		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
-	}
-
-	/**
 	 * Assert CPAD record tags as dates filtered correctly
 	 * Won't use Selenium WebDriver
 	 * @throws IOException
@@ -3686,12 +3232,8 @@ public class Functions {
 		           StackTraceElement trace, String url, int combination, int total,
 			       Boolean ifAssert, String record, String tag, String condition) 
 	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);
@@ -3778,12 +3320,8 @@ public class Functions {
 		           StackTraceElement trace, String url, int combination, int total,
 			       Boolean ifAssert, String record, String tag) 
 	throws IOException {
-		// printXmlPath(new RuntimeException().getStackTrace()[0]);
-		// COUNTER
 		try {
-			// ENTRY
-			fileWriterPrinter("\n" + "URL COMBINATION # " + combination
-					+ " OF " + total + ":");
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
 			fileWriterPrinter(url);
 			fileWriterPrinter("\n" + "Record Name: " + record);
 			fileWriterPrinter("   Tag Name: " + tag);

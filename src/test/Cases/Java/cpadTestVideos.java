@@ -55,9 +55,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				          //function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
 		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
-		        		 //,Boolean.valueOf(function.fileScanner("cpad.log")))
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 		}
 	
@@ -99,9 +99,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -141,9 +141,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -191,9 +191,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -232,9 +232,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 	
@@ -273,9 +273,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -314,9 +314,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -355,9 +355,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -396,9 +396,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -437,9 +437,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -478,9 +478,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -519,9 +519,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 	
@@ -559,9 +559,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -599,9 +599,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -639,9 +639,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 
@@ -679,9 +679,9 @@ public class cpadTestVideos{
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				       // function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!" //,
-		        	   // Boolean.valueOf(function.fileScanner("cpad.log")))
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")))
 		        		 );
 	}
 	
