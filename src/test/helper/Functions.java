@@ -3223,7 +3223,7 @@ public class Functions {
 
 					boolean assertion = true;
 					if (condition.equals("equal"))         { assertion = (valueArray[i].equals(expected));
-					                                         error = "Not the same!";
+					                                         error = "Not as expected!";
 					                                         reason = cpadMatchError; }
 					
 					if (condition.equals("greater"))       { assertion = (Integer.valueOf(valueArray[i]) > Integer.valueOf(expected));
