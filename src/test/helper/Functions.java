@@ -1447,18 +1447,9 @@ public class Functions {
 					+ b + "\n");
            
 			// Creating New or Updating existing Failed Counter record:
-			if (ifCount){
+			if (ifCount){ 
 				counter("failed.num");
-				// Append a New Log record:
-				if (fileExist("run.log")) {
-					fileWriter("run.log", "Error Cause: ---> " + description);
-					fileWriter("run.log", "   Location: ---> " + location);
-					fileWriter("run.log", "   Expected: ---> " + "true");
-					fileWriter("run.log", "     Actual: ---> " + b);
-					// fileWriter("run.log", "   Detected: ---> " + detected);
-					// fileWriter("run.log", "    Runtime: ---> " + runtime);
-					// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
-				}
+				
 				// Append an Error record:
 				fileWriter("failed.log", "    Failure: #" + fileScanner("failed.num"));
 				fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
@@ -1472,7 +1463,19 @@ public class Functions {
 				fileWriter("failed.log", "    Runtime: " + runtime);
 				fileWriter("failed.log", "   Subtotal: " + subtotal);
 				fileWriter("failed.log", "");
-			}
+				}
+			
+				// Append a New Log record:
+				if (fileExist("run.log")) {
+					fileWriter("run.log", "Error Cause: ---> " + description);
+					fileWriter("run.log", "   Location: ---> " + location);
+					fileWriter("run.log", "   Expected: ---> " + "true");
+					fileWriter("run.log", "     Actual: ---> " + b);
+					// fileWriter("run.log", "   Detected: ---> " + detected);
+					// fileWriter("run.log", "    Runtime: ---> " + runtime);
+					// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+				}
+				
 		} else {
 			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b + "\n  Result: OK\n");
 		}
@@ -1515,19 +1518,21 @@ public class Functions {
 
 			// Creating New or Updating existing Failed Counter record:
 			counter("failed.num");
+			
 			// Append a New Log record:
 			if (fileExist("run.log")) {
-				fileWriter("run.log", "    Failure: #" + fileScanner("failed.num"));
-				fileWriter("run.log", "Error Cause: ---> " + description);
-				fileWriter("run.log", "        URL: ---> " + url);
-				fileWriter("run.log", "   Location: ---> " + location);
-				fileWriter("run.log", "   Expected: ---> " + "true");
-				fileWriter("run.log", "     Actual: ---> " + b);
-				fileWriter("run.log", "");
+				// fileWriter("run.log", "    Failure: #" + fileScanner("failed.num"));
+				// fileWriter("run.log", "Error Cause: ---> " + description);
+				// fileWriter("run.log", "        URL: ---> " + url);
+				// fileWriter("run.log", "   Location: ---> " + location);
+				// fileWriter("run.log", "   Expected: ---> " + "true");
+				// fileWriter("run.log", "     Actual: ---> " + b);
+				// fileWriter("run.log", "");
 				// fileWriter("run.log", "   Detected: ---> " + detected);
 				// fileWriter("run.log", "    Runtime: ---> " + runtime);
 				// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
 			}
+			
 			// Append an Error record:
 			fileWriter("failed.log", "    Failure: #" + fileScanner("failed.num"));
 			fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
@@ -1547,6 +1552,7 @@ public class Functions {
 			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b
 					+ "\n  Result: OK\n");
 		}
+		
 		// Descriptive record output:
 		return "\nError Cause: ---> " + description +
 			   "\n        URL: ---> " + url +
