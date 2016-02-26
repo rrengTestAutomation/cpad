@@ -2915,24 +2915,32 @@ public class Functions {
 					boolean assertORDER = ( Integer.valueOf(valueArray[i + 1]) >= Integer.valueOf(valueArray[i]) );
 
 					if (assertORDER) {
-						fileWriterPrinter("   Result: OK\n");
+						fileWriterPrinter("    Result: OK\n");
 					} else {
-						fileWriterPrinter("  Result: FAILED!");
-						fileWriterPrinter("  Reason: " + cpadAscOrderError);
+						fileWriterPrinter("    Result: FAILED!");
+						fileWriterPrinter("    Reason: " + cpadAscOrderError);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter("Record ID: " + (i + 2));
-							fileWriterPrinter("    Value: " + valueArray[i + 1]);
-						}
+//						if (ifAssert) {
+//							fileWriterPrinter();
+//							fileWriterPrinter(" Record ID: " + (i + 2));
+//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//						}
 
 						fileWriterPrinter();
+						
+						fileWriter("record.log", "");					
+						fileWriter("record.log", " Record ID: " + (i + 1));
+						fileWriter("record.log", " Tag Value: " + valueArray[i]);
+						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
+						fileWriter("record.log", "    Result: FAILED!");
+						fileWriter("record.log", "    Reason: " + cpadAscOrderError);
+						fileWriter("record.log", "");
 					}
 
-					if (ifAssert) { Assert.assertTrue(assertORDER, "  Result: FAILED\n"); }
-				}
+//					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
+				}					
 			}
 
 			fileWriterPrinter("==========================");
@@ -2992,23 +3000,31 @@ public class Functions {
 							fingerprintArray[i]);
 
 					if (assertORDER) {
-						fileWriterPrinter("   Result: OK\n");
+						fileWriterPrinter("    Result: OK\n");
 					} else {
-						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadAscDateOrderError);
+						fileWriterPrinter("    Result: FAILED!");
+						fileWriterPrinter("    Reason: " + cpadAscDateOrderError);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-						}
+//						if (ifAssert) {
+//							fileWriterPrinter();
+//							fileWriterPrinter(" Record ID: " + (i + 2));
+//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//						}
 
 						fileWriterPrinter();
+						
+						fileWriter("record.log", "");					
+						fileWriter("record.log", " Record ID: " + (i + 1));
+						fileWriter("record.log", " Tag Value: " + valueArray[i]);
+						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
+						fileWriter("record.log", "    Result: FAILED!");
+						fileWriter("record.log", "    Reason: " + cpadAscDateOrderError);
+						fileWriter("record.log", "");
 					}
 
-					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
+//					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
 				}
 			}
 
@@ -3065,23 +3081,31 @@ public class Functions {
 					boolean assertORDER = ( Integer.valueOf(valueArray[i + 1]) <= Integer.valueOf(valueArray[i]) );
 
 					if (assertORDER) {
-						fileWriterPrinter("   Result: OK\n");
+						fileWriterPrinter("    Result: OK\n");
 					} else {
-						fileWriterPrinter("  Result: FAILED!");
-						fileWriterPrinter("  Reason: " + cpadDescOrderError);
+						fileWriterPrinter("    Result: FAILED!");
+						fileWriterPrinter("    Reason: " + cpadDescOrderError);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter("Record ID: " + (i + 2));
-							fileWriterPrinter("    Value: " + valueArray[i + 1]);
-						}
+//						if (ifAssert) {
+//							fileWriterPrinter();
+//							fileWriterPrinter(" Record ID: " + (i + 2));
+//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//						}
 
 						fileWriterPrinter();
+						
+						fileWriter("record.log", "");					
+						fileWriter("record.log", " Record ID: " + (i + 1));
+						fileWriter("record.log", " Tag Value: " + valueArray[i]);
+						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
+						fileWriter("record.log", "    Result: FAILED!");
+						fileWriter("record.log", "    Reason: " + cpadDescOrderError);
+						fileWriter("record.log", "");
 					}
 
-					if (ifAssert) { Assert.assertTrue(assertORDER, "  Result: FAILED\n"); }
+//					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
 				}
 			}
 
@@ -3143,30 +3167,31 @@ public class Functions {
 							fingerprintArray[i + 1]);
 
 					if (assertORDER) {
-						fileWriterPrinter("   Result: OK\n");
+						fileWriterPrinter("    Result: OK\n");
 					} else {
-						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + reason);
+						fileWriterPrinter("    Result: FAILED!");
+						fileWriterPrinter("    Reason: " + reason);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-						}
+//						if (ifAssert) {
+//							fileWriterPrinter();
+//							fileWriterPrinter(" Record ID: " + (i + 2));
+//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//						}
 
 						fileWriterPrinter();
 						
 						fileWriter("record.log", "");					
-						fileWriter("record.log", "Record ID: " + (i + 1));
-						fileWriter("record.log", "Tag Value: " + valueArray[i]);
-						fileWriter("record.log", "   Result: FAILED!");
-						fileWriter("record.log", "   Reason: " + reason);
+						fileWriter("record.log", " Record ID: " + (i + 1));
+						fileWriter("record.log", " Tag Value: " + valueArray[i]);
+						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
+						fileWriter("record.log", "    Result: FAILED!");
+						fileWriter("record.log", "    Reason: " + reason);
 						fileWriter("record.log", "");
 					}
 
-					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
+//					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
 				}
 			}
 
@@ -3241,12 +3266,23 @@ public class Functions {
 						fileWriterPrinter("   Reason: " + reason);
 						fileCleaner("compare.log");
 						fileWriter("compare.log", "false");
+						
+						if (ifAssert) {
+							Assert.assertTrue(assertion, "   Result: FAILED\n");
+						}
+						
 						fileWriterPrinter();
+						
+						fileWriter("record.log", "");					
+						fileWriter("record.log", "Record ID: " + (i + 1));
+						fileWriter("record.log", "Tag Value: " + valueArray[i]);
+						fileWriter("record.log", " Expected: " + expected);
+						fileWriter("record.log", "   Result: FAILED!");
+						fileWriter("record.log", "   Reason: " + reason);
+						fileWriter("record.log", "");
 					}
 
-					if (ifAssert) {
-						Assert.assertTrue(assertion, "   Result: FAILED\n");
-					}
+					
 			}
 
 			fileWriterPrinter("==========================");
@@ -3298,10 +3334,20 @@ public class Functions {
 				             fileWriterPrinter("        Result: FAILED!");
 				             fileWriterPrinter("        Reason: MORE THEN " + max + " <" + record + "> RECORDS FOUND...");
 				             fileCleaner("max.log");
-				             fileWriter( "max.log", "false");
-				             }
+				             fileWriter( "max.log", "false");			             
 
-			if (ifAssert) { Assert.assertTrue(assertion, "        Result: FAILED"); }
+							 fileWriterPrinter();
+							
+							 fileWriter("record.log", "");					
+							 fileWriter("record.log", "   Record: " + record);
+							 fileWriter("record.log", "    Found: " + xmlRecordLength(xml, record));
+							 fileWriter("record.log", " Expected: " + max);
+							 fileWriter("record.log", "   Result: FAILED!");
+							 fileWriter("record.log", "   Reason: MORE THEN " + max + " <" + record + "> RECORDS FOUND...");
+							 fileWriter("record.log", "");
+					}
+
+//			if (ifAssert) { Assert.assertTrue(assertion, "        Result: FAILED"); }			
 
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
@@ -3372,11 +3418,11 @@ public class Functions {
 						fileCleaner("filter.log");
 						fileWriter("filter.log", "false");
 
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-						}
+//						if (ifAssert) {
+//							fileWriterPrinter();
+//							fileWriterPrinter(" Record ID: " + (i + 2));
+//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//						}
 
 						fileWriterPrinter();
 						
@@ -3389,7 +3435,7 @@ public class Functions {
 						fileWriter("record.log", "");
 					}
 
-					if (ifAssert) { Assert.assertTrue(assertFILTER, "   Result: FAILED\n"); }
+//					if (ifAssert) { Assert.assertTrue(assertFILTER, "   Result: FAILED\n"); }
 			}
 
 			fileWriterPrinter("==========================");
@@ -3452,23 +3498,33 @@ public class Functions {
 					boolean assertBETWEEN = ((fingerprintArray[i] >= from) && (fingerprintArray[i] <= to));
 
 					if (assertBETWEEN) {
-						fileWriterPrinter("   Result: OK\n");
+						fileWriterPrinter("   Result: OK\n");						
 					} else {
 						fileWriterPrinter("   Result: FAILED!");
 						fileWriterPrinter("   Reason: " + cpadBetweenError);
 						fileCleaner("between.log");
 						fileWriter("between.log", "false");
-
-						if (ifAssert) {
-							fileWriterPrinter();
-							fileWriterPrinter(" Record ID: " + (i + 2));
-							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-						}
-
+						
+//						if (ifAssert) {
+//						    fileWriterPrinter();
+//						    fileWriterPrinter("Record ID: " + (i + 1));
+//						    fileWriterPrinter("Tag Value: " + valueArray[i]);
+//						    fileWriterPrinter(" Expected: between \"" + from + "\" and \"" + to + "\"");
+//							fileWriterPrinter("   Reason: " + cpadBetweenError);
+//						    }
+						
 						fileWriterPrinter();
-					}
+						
+						fileWriter("record.log", "");					
+						fileWriter("record.log", "Record ID: " + (i + 1));
+						fileWriter("record.log", "Tag Value: " + valueArray[i]);
+						fileWriter("record.log", " Expected: between \"" + from + "\" and \"" + to + "\"");
+						fileWriter("record.log", "   Result: FAILED!");
+						fileWriter("record.log", "   Reason: " + cpadBetweenError);
+						fileWriter("record.log", "");
+					}						
 
-					if (ifAssert) { Assert.assertTrue(assertBETWEEN, "   Result: FAILED\n"); }
+//					if (ifAssert) { Assert.assertTrue(assertBETWEEN, "   Result: FAILED\n"); }
 			}
 
 			fileWriterPrinter("==========================");
