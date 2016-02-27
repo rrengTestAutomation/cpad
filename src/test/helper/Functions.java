@@ -2589,8 +2589,7 @@ public class Functions {
           min = Integer.valueOf(MM);
           sec = Integer.valueOf(SS);
         
-		// TEMPORARY DISABLED:
-		/**
+
         if(cpadDateStamp.length() == 19) { math = " "; hh = "00"; mm = "00"; }
 
 		String dateUnitTest = "Date: " + date + " " + HH + ":" + MM + ":" + SS + math + hh + ":" + mm;
@@ -2600,7 +2599,25 @@ public class Functions {
 		
 		if (math.equals("-")) { min = Integer.valueOf(MM) - Integer.valueOf(mm); }
 		else                  { min = Integer.valueOf(MM) + Integer.valueOf(mm); }
-		*/
+				
+		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
+	}
+	
+	/**
+	 * Convert CPAD Date and Time Filter to long Milliseconds
+	 * 
+	 * @throws ParseException
+	 */
+	public static long convertCpadDateFilterToMillisecondsAsLong(String cpadDateStamp)
+	throws ParseException {
+		String date = cpadDateStamp.substring(0, cpadDateStamp.indexOf("T"));
+		String HH = cpadDateStamp.substring(cpadDateStamp.indexOf("T") + 1, cpadDateStamp.indexOf("T") + 3);
+		String MM = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 1, cpadDateStamp.indexOf(":") + 3);
+		String SS = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 4, cpadDateStamp.indexOf(":") + 6);
+
+        int hours = Integer.valueOf(HH);
+        int   min = Integer.valueOf(MM);
+        int   sec = Integer.valueOf(SS);
 				
 		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
 	}
@@ -3405,7 +3422,7 @@ public class Functions {
 			String[] valueArray = xmlValueArray(xml, record, tag);
 			long[] fingerprintArray = new long[valueArray.length];
 
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
