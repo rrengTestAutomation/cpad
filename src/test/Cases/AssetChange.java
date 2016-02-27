@@ -15,7 +15,6 @@ import test.helper.Functions;
 
 public class AssetChange {
 	Functions function = new Functions();
-	int count = 0;
 	
 	/**
 	 * Test all of the possible given URL combinations are having the "id" tags of "change_log" record greater than given minimum [1]
@@ -29,12 +28,9 @@ public class AssetChange {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testIdTagIsBeyondMinimum() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?id_gt=16257024";
 		String a = "object_id=2790";		
@@ -47,8 +43,6 @@ public class AssetChange {
    		String tag = "id";
    		String expected = "16257024";
    		String condition = "greater";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 	    try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -58,7 +52,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -75,12 +69,9 @@ public class AssetChange {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testObjectIdTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?object_id=119845";	
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
@@ -93,8 +84,6 @@ public class AssetChange {
    		String tag = "object_id";
    		String expected = "119845";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -104,7 +93,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -121,12 +110,9 @@ public class AssetChange {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAccessTypeTagIsCreate() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_type=Create";	
 		String a = "object_id=014259";		
@@ -139,8 +125,6 @@ public class AssetChange {
    		String tag = "access_type";
    		String expected = "Create";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -150,7 +134,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -167,12 +151,9 @@ public class AssetChange {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAssetTypeTagIsVideo() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?asset_type=Video";	
 		String a = "object_id=632923";		
@@ -185,8 +166,6 @@ public class AssetChange {
    		String tag = "asset_type";
    		String expected = "Video";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -196,7 +175,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -213,12 +192,9 @@ public class AssetChange {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testChangeLogRecordsMaxNumber() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?size=5";
 		String a = "object_id=2335251";
@@ -229,8 +205,6 @@ public class AssetChange {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
    		String record = "change_log";
    		int max = 5;
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
@@ -240,7 +214,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -256,12 +230,9 @@ public class AssetChange {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAccessTimeTagIsFilteredAsAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
 		String a = "access_time_lte=" + function.timestampPlusDays(5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today)
@@ -272,8 +243,6 @@ public class AssetChange {
    		String record = "change_log";
    		String tag = "access_time";
    		String condition = "after";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -283,7 +252,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );	
 	}
@@ -299,12 +268,9 @@ public class AssetChange {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAccessTimeTagIsFilteredAsNotAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
 		String a = "access_time_gt=" + function.timestampPlusDays(-5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days before today)
@@ -315,8 +281,6 @@ public class AssetChange {
    		String record = "change_log";
    		String tag = "access_time";
    		String condition = "not after";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -326,7 +290,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );	
 	}
@@ -343,12 +307,9 @@ public class AssetChange {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testIdTagOrderIsAscending() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/";
 		String a = "access_type=Update";
@@ -361,8 +322,6 @@ public class AssetChange {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e, f));
    		String record = "change_log";
    		String tag = "id";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -372,7 +331,7 @@ public class AssetChange {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}

@@ -14,7 +14,6 @@ import test.helper.Functions;
 
 public class Programs{
 	Functions function = new Functions();
-	int count = 0;
 	
 	/**
 	 * Test all of the possible given URL combinations are having the "group" tags of "program" record are correct [1]
@@ -27,12 +26,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testGroupTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?group=Adult";
 		String a = "single_program=0";
@@ -44,8 +40,6 @@ public class Programs{
    		String tag = "group";
    		String expected = "Adult";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -55,7 +49,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -71,12 +65,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testSingleProgramTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?single_program=1";
 		String a = "group=Adult";
@@ -88,8 +79,6 @@ public class Programs{
    		String tag = "single_program";
    		String expected = "1";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -99,7 +88,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -115,12 +104,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testProgramRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?size=7";
 		String a = "group=Kids";
@@ -130,8 +116,6 @@ public class Programs{
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));		
    		String record = "program";
    		int max = 7;
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
@@ -141,7 +125,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -157,12 +141,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testCreatedOnOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON";
 		String a = "group=Adult";
@@ -174,8 +155,6 @@ public class Programs{
 
    		String record = "program";
    		String tag = "created_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -185,7 +164,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -201,12 +180,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testCreatedOnOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=CREATED_ON";
 		String a = "group=Kids";
@@ -215,8 +191,6 @@ public class Programs{
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
    		String record = "program";
    		String tag = "created_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -226,7 +200,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -242,12 +216,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testUpdatedOnOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=UPDATED_ON";
 		String a = "group=Adult";
@@ -256,8 +227,6 @@ public class Programs{
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
    		String record = "program";
    		String tag = "updated_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -267,7 +236,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -283,12 +252,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testUpdatedOnOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=UPDATED_ON";
 		String a = "group=Adult";
@@ -297,8 +263,6 @@ public class Programs{
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
    		String record = "program";
    		String tag = "updated_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -308,7 +272,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -324,12 +288,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testTitleTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/?title=Allan Gregg";
 		String a = "group=Adult";
@@ -347,8 +308,6 @@ public class Programs{
    		String tag = "title";
    		String expected = "Allan Gregg";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -358,7 +317,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -374,12 +333,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testProgramAssetIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/program_asset_id=2790";
 		String[] URL = { root };
@@ -387,8 +343,6 @@ public class Programs{
    		String tag = "program_asset_id";
    		String expected = "2790";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -398,7 +352,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -414,12 +368,9 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testRecordIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/record_id=1579281";
 		String[] URL = { root };
@@ -427,8 +378,6 @@ public class Programs{
    		String tag = "record_id";
    		String expected = "1579281";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -438,7 +387,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -454,19 +403,14 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testUpdatedOnTagIsFiltered() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult";
 		String[] URL = { root };
    		String record = "program";
    		String tag = "updated_on";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not before"); }
@@ -476,7 +420,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 }
@@ -492,19 +436,14 @@ public class Programs{
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testUpdatedOnTagIsBetween() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10";
 		String[] URL = { root };
    		String record = "program";
    		String tag = "updated_on";
-
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateBetween(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -514,7 +453,7 @@ public class Programs{
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}

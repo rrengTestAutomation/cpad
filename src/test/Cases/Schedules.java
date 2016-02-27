@@ -15,7 +15,6 @@ import test.helper.Functions;
 
 public class Schedules {
 	Functions function = new Functions();
-	int count = 0;
 	
 	/**
 	 * Test all of the possible given URL combinations are having the "program_asset_id" tags of "schedule" record are correct [1]
@@ -29,12 +28,9 @@ public class Schedules {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testProgramAssetIdTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?program_asset_id=2790";
 		String a = "group=Adult";
@@ -46,8 +42,6 @@ public class Schedules {
    		String tag = "program_asset_id";
    		String expected = "2790";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -57,7 +51,7 @@ public class Schedules {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -74,12 +68,9 @@ public class Schedules {
 	 * @throws ParseException 
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testGroupTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?group=Adult";
 		String a = "program_asset_id=2790";
@@ -91,8 +82,6 @@ public class Schedules {
    		String tag = "group";
    		String expected = "Adult";
    		String condition = "equal";
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
@@ -102,7 +91,7 @@ public class Schedules {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 		}
@@ -118,12 +107,9 @@ public class Schedules {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testScheduleRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?size=10";
 		String a = "group=Adult";
@@ -133,8 +119,6 @@ public class Schedules {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		int max = 10;
-		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
@@ -144,7 +128,7 @@ public class Schedules {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
@@ -160,12 +144,9 @@ public class Schedules {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAiringTimeTagIsFilteredAsAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
 	    String a = "group=Adult";
@@ -175,8 +156,6 @@ public class Schedules {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "airing_time";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "after"); }
@@ -186,7 +165,7 @@ public class Schedules {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );	
 	}
@@ -202,12 +181,9 @@ public class Schedules {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAiringTimeTagIsFilteredAsNotAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
 		String a = "group=Adult";
@@ -217,8 +193,6 @@ public class Schedules {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "airing_time";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not after"); }
@@ -228,7 +202,7 @@ public class Schedules {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );	
 	}
@@ -244,12 +218,9 @@ public class Schedules {
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
-	@Test(invocationCount = 1)
+	@Test
 	public void testAiringTimeTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
-	 // COUNTER
-	    count++;
 	    
 		String root = "http://tomcat-dev:8080/CPAD/schedules/";
 		String a = "group=Adult";
@@ -260,8 +231,6 @@ public class Schedules {
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
    		String record = "schedule";
    		String tag = "airing_time";
-   		
-	    function.fileWriterPrinter("\n" + " TEST EXECUTION #" + count + ":");
 	        
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
@@ -271,7 +240,7 @@ public class Schedules {
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
 				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST EXECUTION # " + count + " - Unexpected Results found!"
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
