@@ -1,14 +1,12 @@
 package test.Cases;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
 import test.common.Locators;
 import test.helper.Functions;
 
@@ -462,5 +460,4 @@ public class Programs{
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
-
 }

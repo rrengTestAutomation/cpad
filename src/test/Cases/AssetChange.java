@@ -2,14 +2,12 @@ package test.Cases;
 
 import java.io.IOException;
 import java.text.ParseException;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
 import test.common.Locators;
 import test.helper.Functions;
 
@@ -235,7 +233,7 @@ public class AssetChange {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
-		String a = "access_time_lte=" + function.timestampPlusDays(5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today)
+		String a = "access_time_lte=" + function.timestampPlusDays(5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
 		String d = "size=40";				
@@ -273,7 +271,7 @@ public class AssetChange {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
 		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
-		String a = "access_time_gt=" + function.timestampPlusDays(-5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days before today)
+		String a = "access_time_gt=" + function.timestampPlusDays(-5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days before today
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
 		String d = "size=40";				
@@ -297,8 +295,8 @@ public class AssetChange {
 
 	/**
 	 * Test all of the possible given URL combinations having sorting for asset changes by its "id" tags of "change_log" records are in ascending order [8]
-	 * <p>Date Created: 2016-02-23</p>
-	 * <p>Date Modified: 2016-02-23</p>
+	 * <p>Date Created: 2016-02-24</p>
+	 * <p>Date Modified: 2016-02-24</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
@@ -338,7 +336,6 @@ public class AssetChange {
 	
    @BeforeSuite  public static void logOpen() throws IOException { new Functions().logOpen(); }
    @AfterSuite   public static void logClose() throws IOException { new Functions().logClose(); }
-   @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); }
+   @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
-
 }
