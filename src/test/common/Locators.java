@@ -8,7 +8,8 @@ public class Locators {
 	public static String testOutputFileDir = System.getProperty("user.dir") + File.separator + "test-output" + File.separator;
 	public static String driverFileDir     = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"                                                 
                                            + File.separator + "resources" + File.separator + "drivers" + File.separator;
-
+	public static String testIconFileDir   = System.getProperty("user.dir") + File.separator + "icons" + File.separator;
+	
 	/************************URL's**************************/
 	public static String[][] combination(String a, String b) {
 		String[][] combination = { { a }, { b },

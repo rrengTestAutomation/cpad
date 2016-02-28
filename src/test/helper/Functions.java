@@ -286,6 +286,18 @@ public class Functions {
 		pw.println(printLine);
 		pw.close();
 	}
+	
+	/** Writes a String line into File */
+	public static void fileWriter(String fileName, String printLine)
+			throws NumberFormatException, IOException {
+		// Create File:
+		File f = new File(Locators.testOutputFileDir + fileName);
+		// Write or add a String line into File:
+		FileWriter fw = new FileWriter(f, true);
+		PrintWriter pw = new PrintWriter(fw);
+		pw.println(printLine);
+		pw.close();
+	}
 
 	/** Writes an Object line into File */
 	public static void fileWriter(String path, String fileName, Object printLine)
@@ -393,6 +405,15 @@ public class Functions {
 		if (ifPrint) {
 			fileWriterPrinter(printLine);
 		}
+	}
+	
+	/** Detects if the entered String is Integer */
+	public static boolean isInteger(String s) {
+	    try { Integer.parseInt(s); }
+	    catch(NumberFormatException e) { return false; }
+	    catch(NullPointerException  e) { return false; }
+	 // only gets here if the entered String is Integer:
+	    return true;
 	}
 
 	/** Returns a String of n spaces long */
@@ -2098,6 +2119,13 @@ public class Functions {
 			(new File(path + fileName)).delete();
 		}
 	}
+	
+	/** @throws IOException */ 
+	public void fileCopy(String fileSource, String fileDest) throws IOException {
+		File s = new File(Locators.testOutputFileDir + fileSource);
+		File d = new File(Locators.testOutputFileDir + fileDest);
+		if (s.exists() && s.isFile()) { FileUtils.copyFile(s, d); }
+	}
 
 	/**
 	 * Counter: Will renew counting starting with "1" if the Counter File is
@@ -2116,6 +2144,43 @@ public class Functions {
 		}
 		FileUtils.writeStringToFile(f, String.valueOf(n));
 		return n;
+	}
+	
+	// ################# CALENDAR START ###########################
+	/** Returns Current Time (hour, min)*/
+		public String getCurrentTimeHourMin() {
+		// DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		// need to change after the date format is decided
+		DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+		Date date = new Date();
+		return dateFormat.format(date);
+	}
+				
+	/** Returns Current Date and Time (hour, min)*/
+	public String getCurrentDateTimeHourMin() {
+		// DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		// need to change after the date format is decided
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		Date date = new Date();
+		return dateFormat.format(date);
+	}
+	
+	/** Returns Current Date and Time (hour, min, sec)*/
+	public String getCurrentDateTimeHourMinSec() {
+		// DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		// need to change after the date format is decided
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = new Date();
+		return dateFormat.format(date);
+	}
+	
+	/** Returns Current Date */
+	public String getCurrentDateYearMonthDay() {
+		// DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		// need to change after the date format is decided
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
+		return dateFormat.format(date);
 	}
 
 	/** Returns Current Date and Time */
@@ -2195,6 +2260,31 @@ public class Functions {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = new Date(fingerprint);
 		return format.format(date);
+	}
+	
+	 // ################# TIME CALCULATOR START ##################		
+	/** Convert Seconds to Hours, Minutes, Seconds */
+	public String convertTimeSecondsToHoursMinSeconds(int totalSeconds) {
+		int MINUTES_IN_AN_HOUR = 60;
+		int SECONDS_IN_A_MINUTE = 60;
+		int hours = totalSeconds / MINUTES_IN_AN_HOUR / SECONDS_IN_A_MINUTE;
+		int minutes = (totalSeconds - (convertTimeHoursToSeconds(hours))) / SECONDS_IN_A_MINUTE;
+		int seconds = totalSeconds
+				- ((convertTimeHoursToSeconds(hours)) + (convertTimeMinutesToSeconds(minutes)));
+		return hours + " hours " + minutes + " minutes " + seconds + " seconds";
+	}
+	
+	/** Convert Hours to Seconds */
+	public static int convertTimeHoursToSeconds(int hours) {
+		int SECONDS_IN_A_MINUTE = 60;
+		int MINUTES_IN_AN_HOUR = 60;
+		return hours * MINUTES_IN_AN_HOUR * SECONDS_IN_A_MINUTE;
+	}
+	
+	/** Convert SMinutes to Seconds */
+	public static int convertTimeMinutesToSeconds(int minutes) {
+		int SECONDS_IN_A_MINUTE = 60;
+		return minutes * SECONDS_IN_A_MINUTE;
 	}
 
 	/** Convert long Milliseconds to Duration "Hours:Min:Sec" auto-format */
