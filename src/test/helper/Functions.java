@@ -2991,6 +2991,8 @@ public class Functions {
 	
 	public String cpadBetweenError         = "CURRENT RECORD IS NOT BETWEEN FROM AND TO...";
 	
+	public String cpadMissingRecordError   = "NO RECORDS FOUND...";
+	
 	/**
 	 * Assert CPAD record tags are in ascending order
 	 * Won't use Selenium WebDriver
@@ -3018,8 +3020,10 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 
+			String error = "Out of order!"; String reason = cpadAscOrderError;
 			String[] valueArray = xmlValueArray(xml, record, tag);
-
+			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
+			
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
@@ -3031,7 +3035,7 @@ public class Functions {
 						fileWriterPrinter("    Result: OK\n");
 					} else {
 						fileWriterPrinter("    Result: FAILED!");
-						fileWriterPrinter("    Reason: " + cpadAscOrderError);
+						fileWriterPrinter("    Reason: " + reason);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
@@ -3048,7 +3052,7 @@ public class Functions {
 						fileWriter("record.log", " Tag Value: " + valueArray[i]);
 						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
 						fileWriter("record.log", "    Result: FAILED!");
-						fileWriter("record.log", "    Reason: " + cpadAscOrderError);
+						fileWriter("record.log", "    Reason: " + reason);
 						fileWriter("record.log", "");
 					}
 
@@ -3059,7 +3063,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
 			
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3099,7 +3103,9 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 
+			String error = "Out of order!"; String reason = cpadAscDateOrderError;
 			String[] valueArray = xmlValueArray(xml, record, tag);
+			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }			
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -3109,14 +3115,13 @@ public class Functions {
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
 
 				if (i < (valueArray.length - 1)) {
-					boolean assertORDER = compareLong(fingerprintArray[i + 1],
-							fingerprintArray[i]);
+					boolean assertORDER = compareLong(fingerprintArray[i + 1], fingerprintArray[i]);
 
 					if (assertORDER) {
 						fileWriterPrinter("    Result: OK\n");
 					} else {
 						fileWriterPrinter("    Result: FAILED!");
-						fileWriterPrinter("    Reason: " + cpadAscDateOrderError);
+						fileWriterPrinter("    Reason: " + reason);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
@@ -3133,7 +3138,7 @@ public class Functions {
 						fileWriter("record.log", " Tag Value: " + valueArray[i]);
 						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
 						fileWriter("record.log", "    Result: FAILED!");
-						fileWriter("record.log", "    Reason: " + cpadAscDateOrderError);
+						fileWriter("record.log", "    Reason: " + reason);
 						fileWriter("record.log", "");
 					}
 
@@ -3144,7 +3149,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3184,7 +3189,9 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 
+			String error = "Out of order!"; String reason = cpadDescOrderError;
 			String[] valueArray = xmlValueArray(xml, record, tag);
+			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
 
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -3197,7 +3204,7 @@ public class Functions {
 						fileWriterPrinter("    Result: OK\n");
 					} else {
 						fileWriterPrinter("    Result: FAILED!");
-						fileWriterPrinter("    Reason: " + cpadDescOrderError);
+						fileWriterPrinter("    Reason: " + reason);
 						fileCleaner("order.log");
 						fileWriter("order.log", "false");
 
@@ -3214,7 +3221,7 @@ public class Functions {
 						fileWriter("record.log", " Tag Value: " + valueArray[i]);
 						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
 						fileWriter("record.log", "    Result: FAILED!");
-						fileWriter("record.log", "    Reason: " + cpadDescOrderError);
+						fileWriter("record.log", "    Reason: " + reason);
 						fileWriter("record.log", "");
 					}
 
@@ -3225,7 +3232,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Out of order! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3266,7 +3273,8 @@ public class Functions {
 			xmlValidityChecker(xml, trace, combination, total);
 			
 			String error = "Out of order!"; String reason = cpadDescDateOrderError;
-			String[] valueArray = xmlValueArray(xml, record, tag);			
+			String[] valueArray = xmlValueArray(xml, record, tag);
+			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }			
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -3353,7 +3361,7 @@ public class Functions {
 		    
 			String error = ""; String reason = "";
 			String[] valueArray = xmlValueArray(xml, record, tag);
-			if (valueArray.length == 0) {fileCleaner("compare.log"); fileWriter("compare.log", "false"); error = "No records found!"; }
+			if (valueArray.length == 0) { fileCleaner("compare.log"); fileWriter("compare.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
 			
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
@@ -3510,6 +3518,7 @@ public class Functions {
 			
 			String error = ""; String reason = "";
 			String[] valueArray = xmlValueArray(xml, record, tag);
+			if (valueArray.length == 0) { fileCleaner("filter.log"); fileWriter("filter.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
@@ -3599,7 +3608,9 @@ public class Functions {
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
 			xmlValidityChecker(xml, trace, combination, total);
 
+			String error = "Not between expected timestamps!"; String reason = cpadBetweenError;
 			String[] valueArray = xmlValueArray(xml, record, tag);
+			if (valueArray.length == 0) { fileCleaner("between.log"); fileWriter("between.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
 			long[] fingerprintArray = new long[valueArray.length];
 
 			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
@@ -3614,7 +3625,7 @@ public class Functions {
 						fileWriterPrinter("   Result: OK\n");						
 					} else {
 						fileWriterPrinter("   Result: FAILED!");
-						fileWriterPrinter("   Reason: " + cpadBetweenError);
+						fileWriterPrinter("   Reason: " + reason);
 						fileCleaner("between.log");
 						fileWriter("between.log", "false");
 						
@@ -3633,7 +3644,7 @@ public class Functions {
 						fileWriter("record.log", "Tag Value: " + valueArray[i]);
 						fileWriter("record.log", " Expected: between \"" + from + "\" and \"" + to + "\"");
 						fileWriter("record.log", "   Result: FAILED!");
-						fileWriter("record.log", "   Reason: " + cpadBetweenError);
+						fileWriter("record.log", "   Reason: " + reason);
 						fileWriter("record.log", "");
 					}						
 
@@ -3643,7 +3654,7 @@ public class Functions {
 			fileWriterPrinter("==========================");
 			fileWriterPrinter();
 
-			getAssertTrue(trace, "Not between expected timestamps! (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")), url);
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("between.log")), url);
 
 			boolean result = Boolean.valueOf(fileScanner("between.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			

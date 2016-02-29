@@ -316,6 +316,11 @@ public class AssetChange {
 		String f = "size=20";
 		
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e, f));
+		
+	 // // UNIT TESTS
+		// String[] URL = Locators.url(root, Locators.combination(b));
+		// String[] URL = { "http://tomcat-dev:8080/CPAD/assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
+		
    		String record = "change_log";
    		String tag = "id";
 	        

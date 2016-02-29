@@ -11,6 +11,11 @@ public class Locators {
 	public static String testIconFileDir   = System.getProperty("user.dir") + File.separator + "icons" + File.separator;
 	
 	/************************URL's**************************/
+	public static String[][] combination(String a) {
+		String[][] combination = { { a } };
+		return combination;
+	}
+	
 	public static String[][] combination(String a, String b) {
 		String[][] combination = { { a }, { b },
                                    { a, b }, { b, a }
