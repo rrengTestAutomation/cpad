@@ -87,9 +87,9 @@ public class Mail {
 		boolean send = emailOptionDouble();
 		if(function.fileExist("email.opt", false)) { function.fileCleaner("email.opt"); }
 		function.fileWriter("email.opt", send);
-		// if(send) { System.out.println("Will send Automated E-Mail notification about Test Results!\n"); }
+		// if(send) { System.out.println("\nWill send Automated E-Mail notification about Test Results!\n"); }
 		if( function.fileExist("email.opt", false) && Boolean.valueOf(function.fileScanner("email.opt")) ) {
-			   System.out.println("Will send Automated E-Mail notification about Test Results!\n");
+			   System.out.println("\nWill send Automated E-Mail notification about Test Results!\n");
 			   
 			   // E-MAIL ADDRESSES SELECTION MANAGEMENT
 			   boolean all = emailAddresses();

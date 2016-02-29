@@ -17,7 +17,7 @@ public class Programs{
 	 * Test all of the possible given URL combinations are having the "group" tags of "program" record are correct [1]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-01</p>
@@ -40,7 +40,7 @@ public class Programs{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -56,7 +56,7 @@ public class Programs{
 	 * Test all of the possible given URL combinations are having the "single_program" tags of "program" record are correct [2]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-02</p>
@@ -79,7 +79,7 @@ public class Programs{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -95,7 +95,7 @@ public class Programs{
 	 * Test all of the possible given URL combinations having maximum or less "program" records returned [3]
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-10</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-03</p>
@@ -132,7 +132,7 @@ public class Programs{
 	 * Test sorting programs by its created date in ascending order [4]
 	 * <p>Date Created: 2016-02-12</p>
 	 * <p>Date Modified: 2016-02-12</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-04</p>
@@ -171,7 +171,7 @@ public class Programs{
 	 * Test sorting programs by its created date in descending order [5]
 	 * <p>Date Created: 2016-02-15</p>
 	 * <p>Date Modified: 2016-02-15</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-05</p>
@@ -207,7 +207,7 @@ public class Programs{
 	 * Test sorting programs by its updated date in ascending order [6]
 	 * <p>Date Created: 2016-02-15</p>
 	 * <p>Date Modified: 2016-02-15</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-06</p>
@@ -243,7 +243,7 @@ public class Programs{
 	 * Test sorting programs by its updated date in descending order [7]
 	 * <p>Date Created: 2016-02-15</p>
 	 * <p>Date Modified: 2016-02-15</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-07</p>
@@ -279,7 +279,7 @@ public class Programs{
 	 * Test all of the possible given URL combinations are having the "title" tags of "program" record are correct [8]
 	 * <p>Date Created: 2016-02-16</p>
 	 * <p>Date Modified: 2016-02-16</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-08</p>
@@ -308,7 +308,7 @@ public class Programs{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** e.printStackTrace(); */ }
 		}
 		
@@ -324,7 +324,7 @@ public class Programs{
 	 * Test given URL is having the "program_asset_id" tag of "program" record is correct [9]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-09</p>
@@ -343,7 +343,7 @@ public class Programs{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -359,7 +359,7 @@ public class Programs{
 	 * Test given URL is having the "record_id" tag of "program" record is correct [10]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-10</p>
@@ -378,7 +378,7 @@ public class Programs{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -394,7 +394,7 @@ public class Programs{
 	 * Test the "updated_on" tag of all the "program" records are returning dates greater than or equal to filter for programs [11]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-11</p>
@@ -427,7 +427,7 @@ public class Programs{
 	 * Test the "updated_on" tag of all the "program" records are returning dates between "from-to" for programs [12]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: programs-12</p>

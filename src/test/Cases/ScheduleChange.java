@@ -18,7 +18,7 @@ public class ScheduleChange {
 	 * Test all of the possible given URL combinations are having the "change_log_id" tags of "schedule_change_log" record greater than given minimum [1]
 	 * <p>Date Created: 2016-02-26</p>
 	 * <p>Date Modified: 2016-02-26</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedulechanges-01</p>
@@ -42,7 +42,7 @@ public class ScheduleChange {
    		String condition = "greater";
 
 		for (int i = 0; i < URL.length; i++) {
-	    try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+	    try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -58,7 +58,7 @@ public class ScheduleChange {
 	 * Test all of the possible given URL combinations are having the "access_type" tags of "schedule_change_log" record is equal to "Create" [2]
 	 * <p>Date Created: 2016-02-26</p>
 	 * <p>Date Modified: 2016-02-26</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedulechanges-02</p>
@@ -82,7 +82,7 @@ public class ScheduleChange {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -98,7 +98,7 @@ public class ScheduleChange {
 	 * Test all of the possible given URL combinations having maximum or less "schedule_change_log" records returned [3]
 	 * <p>Date Created: 2016-02-26</p>
 	 * <p>Date Modified: 2016-02-26</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedulechanges-03</p>
@@ -136,7 +136,7 @@ public class ScheduleChange {
 	 * Test all of the possible given URL combinations having the "access_time" tags of all the "schedule_change_log" records returning dates greater than timestamp filter [4]
 	 * <p>Date Created: 2016-02-26</p>
 	 * <p>Date Modified: 2016-02-26</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V3</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedulechanges-04</p>
@@ -175,7 +175,7 @@ public class ScheduleChange {
 	 * Test all of the possible given URL combinations having the "access_time" tags of all the "schedule_change_log" records returning dates less than or equal to timestamp filter [5]
 	 * <p>Date Created: 2016-02-26</p>
 	 * <p>Date Modified: 2016-02-26</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V3</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedulechanges-05</p>
@@ -214,7 +214,7 @@ public class ScheduleChange {
 	 * Test all of the possible given URL combinations having sorting for asset changes by its "change_log_id" tags of "schedule_change_log" records are in ascending order [6]
 	 * <p>Date Created: 2016-02-26</p>
 	 * <p>Date Modified: 2016-02-26</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedulechanges-06</p>

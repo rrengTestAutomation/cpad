@@ -18,7 +18,7 @@ public class Schedules {
 	 * Test all of the possible given URL combinations are having the "program_asset_id" tags of "schedule" record are correct [1]
 	 * <p>Date Created: 2016-02-22</p>
 	 * <p>Date Modified: 2016-02-22</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedules-01</p>
@@ -42,7 +42,7 @@ public class Schedules {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -58,7 +58,7 @@ public class Schedules {
 	 * Test all of the possible given URL combinations are having the "group" tags of "schedule" record are correct [2]
 	 * <p>Date Created: 2016-02-22</p>
 	 * <p>Date Modified: 2016-02-22</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedules-02</p>
@@ -82,7 +82,7 @@ public class Schedules {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -98,7 +98,7 @@ public class Schedules {
 	 * Test all of the possible given URL combinations having maximum or less "schedule" records returned [3]
 	 * <p>Date Created: 2016-02-22</p>
 	 * <p>Date Modified: 2016-02-22</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedules-03</p>
@@ -134,9 +134,9 @@ public class Schedules {
 	/**
 	 * Test all of the possible given URL combinations having the "airing_time" tags of all the "schedule" records returning dates not less than or equal to filter placeholder for schedules [4]
 	 * <p>Date Created: 2016-02-22</p>
-	 * <p>Date Modified: 2016-02-22</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
+	 * <p>Date Modified: 2016-02-26</p>
+	 * <p>Original Version: V2</p>
+	 * <p>Modified Version: v3</p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedules-04</p>
 	 * @throws IOException
@@ -171,9 +171,9 @@ public class Schedules {
 	/**
 	 * Test all of the possible given URL combinations having the "airing_time" tags of all the "schedule" records returning dates that are not greater than placeholder for schedules [5]
 	 * <p>Date Created: 2016-02-23</p>
-	 * <p>Date Modified: 2016-02-23</p>
-	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
+	 * <p>Date Modified: 2016-02-26</p>
+	 * <p>Original Version: V2</p>
+	 * <p>Modified Version: v3</p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedules-05</p>
 	 * @throws IOException
@@ -209,7 +209,7 @@ public class Schedules {
 	 * Test sorting schedules by its "airing_time" tags of "schedule" records are in descending order [6]
 	 * <p>Date Created: 2016-02-23</p>
 	 * <p>Date Modified: 2016-02-23</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: schedules-06</p>

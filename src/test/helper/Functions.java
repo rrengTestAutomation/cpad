@@ -2885,8 +2885,7 @@ public class Functions {
 			Node node = nodes.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				// fileWriterPrinter(record + " " + tag + ": " + getValue(tag,
-				// element));
+				// fileWriterPrinter(record + " " + tag + ": " + getValue(tag, element));
 				valueArray[i] = getValue(tag, element);
 			}
 		}
@@ -3343,7 +3342,7 @@ public class Functions {
 	 */
 	public boolean assertCpadTagsCompareToExpected(
 		           StackTraceElement trace, String url, int combination, int total,
-			       Boolean ifAssert, String record, String tag, String expected, String condition) 
+			       Boolean ifAssert, String record, String tag, String expected, String condition, Boolean ifInconclusive) 
 	throws IOException {	
 		try {
 			fileCleaner("url.log"); fileWriter("url.log", url);
@@ -3383,6 +3382,11 @@ public class Functions {
 					if (condition.equals("less or equal")) { assertion = (Integer.valueOf(valueArray[i]) <= Integer.valueOf(expected));
                                                              error = "Beyond expected maximum!";
                                                              reason = cpadLessOrEqualError; }
+					
+					if ( (ifInconclusive) && (valueArray.length == 0) ){
+						String[] zeroValueArray = xmlValueArray(xml, record, "reccount");
+						if ((zeroValueArray.length > 0) && zeroValueArray[0].equals("0")) { fileCleaner("compare.log"); fileWriter("compare.log", "true"); assertion = true; }
+					}
 						
 					if (assertion) {
 						fileWriterPrinter("   Result: OK\n");

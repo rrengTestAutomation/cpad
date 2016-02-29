@@ -17,7 +17,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations are having the "group" tags of "video" record are correct [1]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-01</p>
@@ -40,7 +40,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -56,7 +56,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations are having the "program_asset_id" tags of "video" record are correct [2]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: video-02</p>
@@ -79,7 +79,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -95,7 +95,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having maximum or less "video" records returned [3]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-03</p>
@@ -132,7 +132,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations are having the "title" tags of "video" record are correct [4]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-04</p>
@@ -161,7 +161,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** e.printStackTrace(); */ }
 		}
 		
@@ -177,7 +177,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "created_on" tags of "video" record in ascending order [5]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-05</p>
@@ -214,7 +214,7 @@ public class Videos{
 	 * <p>Date Created: 2016-02-10</p>
 	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V1</p>
-	 * <p>Modified Version: </p>
+	 * <p>Modified Version: V2</p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-06</p>
 	 * @throws IOException
@@ -249,7 +249,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "updated_on" tags of "video" record in ascending order [7]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-07</p>
@@ -285,7 +285,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "updated_on" tags of "video" record in descending order [8]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-08</p>
@@ -321,7 +321,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [9]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-09</p>
@@ -357,7 +357,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in descending order [10]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-10</p>
@@ -393,7 +393,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in ascending order [11]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-11</p>
@@ -429,7 +429,7 @@ public class Videos{
 	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in descending order [12]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-12</p>
@@ -465,7 +465,7 @@ public class Videos{
 	 * Test given URL is having the "video_asset_id" filter for "video" record is correct [13]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-13</p>
@@ -484,7 +484,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -500,7 +500,7 @@ public class Videos{
 	 * Test given URL is having the "record_id" filter for "video" record is correct [14]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-14</p>
@@ -519,7 +519,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -535,7 +535,7 @@ public class Videos{
 	 * Test given URL is having the "is_captioned" filter for "video" record is correct [15]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-15</p>
@@ -554,7 +554,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
@@ -570,7 +570,7 @@ public class Videos{
 	 * Test given URL is having the "brightcove_ref_id" filter for "video" record is correct [16]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
-	 * <p>Original Version: V1</p>
+	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: videos-16</p>
@@ -589,7 +589,7 @@ public class Videos{
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
