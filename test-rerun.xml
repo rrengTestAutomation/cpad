@@ -1,1 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="test-rerun">
+  <test verbose="1" name="test-rerun">
+    <classes>
+    <class name="test.Send.Mail"></class>
+
+<class name="test.Cases.AssetChange"><methods><include name="testIdTagOrderIsAscending"/></methods></class>
+
+<!--
+<include name=""/>
+-->
+
+    </classes>
+  </test>
+</suite>

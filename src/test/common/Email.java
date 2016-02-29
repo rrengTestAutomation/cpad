@@ -19,22 +19,21 @@ public class Email {
 	  public static String testerWorkEmail = "rweinbrand@tvo.org";
 	  
 	  // MANAGERS E-MAIL ADDRESSES  			  
-	  public static String managerEmail = "nweinstein@tvo.org";
-			  
+	  public static String managerEmail = "nweinstein@tvo.org";			  
+	  public static String pmEmail = "dhojjati@tvo.org";
+	  public static String baEmail = "msanjevic@tvo.org";
+	  
 	  // PRODUCTION E-MAIL ADDRESSES
-	  public static String[] toAll = { managerEmail };
+	  public static String[] toAll = { pmEmail, baEmail };
 	  public static String[] ccAll = {
 		                               testerWorkEmail,
-		                              "ositbon@tvo.org",
-		                              "jroberts@tvo.org",
-		                              "vli@tvo.org",
-		                              "lkumar@tvo.org",
-		                              "kgiffen@tvo.org",
-		                              "kwong@tvo.org",
-		                              "nvarghese@tvo.org",
-		                              "aporretta@tvo.org",
-		                              "pbandas@tvo.org",
-		                              "sloundine@tvo.org"
+		                               managerEmail,
+		                               "aporretta@tvo.org",
+		                               "ositbon@tvo.org",
+		                               "kgiffen@tvo.org",
+		                               "pbandas@tvo.org",
+		                               "jroberts@tvo.org",
+		                               "egoldberg@tvo.org"
 		                             };
 	  public static String[] bccAll = { /** autoTesterEmail,*/ testerHomeEmail };
 	  

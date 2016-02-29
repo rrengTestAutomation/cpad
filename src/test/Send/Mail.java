@@ -73,17 +73,15 @@ public class Mail {
 		StringSelection stringSelection = new StringSelection(current);
 		Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clpbrd.setContents(stringSelection, null);
-		long currTime = function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(current);
-		long startTime = function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(dateBox());
-		String start = function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(startTime);		
+		long currTime    = function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(current);
+		long startTime   = function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(dateBox());
+		// String start  = function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(startTime);		
 		long updateDelay = (startTime - currTime);
 		int sec = (int) updateDelay/1000;
 		
-		// TEST HOST APPLICATION SERVER MANAGEMENT
-		int server = devBox();		
-		System.out.println("Update will be started in: " + function.convertTimeSecondsToHoursMinSeconds(sec));
-		System.out.println("Update will be started at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay));
-		System.out.println("Update will be started on: dev" + server + ".tvo.org\n");
+		// TEST HOST APPLICATION SERVER MANAGEMENT		
+		System.out.println("Scheduled to start in: " + function.convertTimeSecondsToHoursMinSeconds(sec));
+		System.out.println("Scheduled to start at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay));
 		
 		// E-MAIL PERMEATION MANAGEMENT
 		boolean send = emailOptionDouble();
@@ -106,36 +104,26 @@ public class Mail {
 		
 		// TEST DELAY MANAGEMENT
 		int testDelay = minBox();
-		if (testDelay != 0 ) {
-		System.out.println("  Test will be started in: " + function.convertTimeSecondsToHoursMinSeconds(sec + testDelay*60));
-		System.out.println("  Test will be started at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay + testDelay*60*1000));
+		if ( (testDelay > 0 ) && (currTime + updateDelay + testDelay*60*1000 > System.currentTimeMillis()) ){    // USED TO BE: if (testDelay != 0 ) {
+		System.out.println("  Test additional delay is: " + function.convertTimeSecondsToHoursMinSeconds(sec + testDelay*60));
+		System.out.println("  Test will be  started at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay + testDelay*60*1000));
 		System.out.println("\nwait please...\n");
-		}
+		} else { System.out.println("starting now...\n"); }
 		
-		String date = start.substring(0,start.indexOf(" "));
-		String time = start.substring(start.indexOf(" ") + 1, start.length());
+		// String date = start.substring(0,start.indexOf(" "));
+		// String time = start.substring(start.indexOf(" ") + 1, start.length());
 
-		//System.out.println("\n" + date + "\n" + time + "\n");
-
-		String command = 
-				"clear;CURRENT=$(date +%s);echo;echo $(date +%Y-%m-%d)\" \"$(date +%H\":\"%M\":\"%S);echo;TESTSTARTDATE=\"" +
-                date +
-                "\";TESTSTARTTIME=\"" +
-                time +
-                "\";TESTSTART=$(date --date=\"$TESTSTARTDATE $TESTSTARTTIME\" +%s);DIFF=$(( $TESTSTART - $CURRENT ));HOURS=$(( $DIFF/3600 ));MINUTES=$(( $(( $DIFF%3600 ))/60 ));SECONDS=$(( $DIFF%60 ));SLEEPTIME=$(( $HOURS*3600 + $MINUTES*60 + $SECONDS ));echo;echo \"Sleep time seconds: \"$SLEEPTIME\" seconds\";echo;echo \"Update Start is expected at:\";date \"+%Y-%m-%d\" -d @$(( $(date +%s) + $SLEEPTIME));date \"+%T\" -d @$(( $(date +%s) + $SLEEPTIME));echo;echo;sleep $SLEEPTIME;echo;echo;echo;cd /data/WebSites/dev" +
-                server +
-                ".tvo.org/website;git pull;sh sites/all/scripts/d7-update.sh refresh-dev;echo;echo;FINISH=$(date +%s);DIFF=$(( $FINISH - $TESTSTART ));HOURS=$(( $DIFF/3600 ));MINUTES=$(( $(( $DIFF%3600 ))/60 ));SECONDS=$(( $DIFF%60 ));echo;echo;echo $(date +%Y-%m-%d)\" \"$(date +%H\":\"%M\":\"%S);echo \"Update duration: \"$HOURS\" hours \"$MINUTES\" minutes \"$SECONDS\" seconds\";echo;echo;"
-                ;
+		// System.out.println("\n" + date + "\n" + time + "\n");
 		// System.out.println(command);
 		
-		stringSelection = new StringSelection(command);
 		clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
 		clpbrd.setContents(stringSelection, null);
 		
 		long sleep = (function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay + testDelay*60*1000)) -
 				      function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(function.getCurrentDateTimeHourMinSec()));
 				
-		if (testDelay != 0 ) { Thread.sleep(sleep); }
+		if (testDelay > 0 ) { Thread.sleep(sleep); }   // USED TO BE: if (testDelay != 0 ) { Thread.sleep(sleep); }
+		
 		System.out.println(function.getCurrentDateTimeHourMinSec());
 		System.out.println("Starting...\n");
 		
@@ -229,17 +217,14 @@ public class Mail {
     	    function.fileWriter("email.cont", "    TOTAL  TIME: " + function.convertTimeMillisecondsAsLongToDuration(finish - start));
     	    function.fileWriter("email.cont", "");
         
-    		// Clean-up unnecessary file(s)
-    		function.fileCleaner("failed.num");
+    		// Clean-up unnecessary file(s)  		
     		function.fileCleaner("finish.time");
-    		function.fileCleaner("ini.time");
     		function.fileCleaner("start.time");
     		function.fileCleaner("stack.trace");
     		function.fileCleaner("xml.path");
 		
 	 // Store last test number
 		function.fileCopy("test.num", "last.num");
-		function.fileCleaner("test.num");
 	}
  
 		/** 
@@ -290,7 +275,7 @@ public class Mail {
 					if ( Integer.valueOf(lastTestNum()) == 1 ) { result = "FAILED..."; }
 				}
 				}	
-			String subject = "tvo.org ---> Automated " + function.fileScanner("test.type") + 
+			String subject = "CPAD ---> Automated " + function.fileScanner("test.type") + 
 					         " Result ---> Total tests run: " + lastTestNum() + 
 					         " ---> " + result + "  [ " + function.getCurrentDateYearMonthDay() + "   " + function.getCurrentTimeHourMin() + " ]";
 			function.fileWriter("email.subj", subject);
@@ -308,7 +293,7 @@ public class Mail {
 			function.fileWriter("email.cont", "Hi,");
 			function.fileWriter("email.cont", "");
 			function.fileWriter("email.cont", "FYI:"); 
-			function.fileWriter("email.cont", "tvo.org - AUTOMATED " + function.fileScanner("test.type").toUpperCase() + " RESULT");
+			function.fileWriter("email.cont", "CPAD - AUTOMATED " + function.fileScanner("test.type").toUpperCase() + " RESULT");
 			function.fileWriter("email.cont", "");
 			function.fileWriter("email.cont", "     APP SERVER: " + function.fileScanner("server.info"));
 			function.fileWriter("email.cont", "     GiT BRANCH: develop");
@@ -493,44 +478,44 @@ public class Mail {
 			 return str;				 
 			 }
 		 
-		 /**
-		  * 'dev' Server number entry dialogue 
-		  * @throws IOException 
-		  * @throws NumberFormatException
-		  */
-		 public int devBox() throws NumberFormatException, IOException{
-			 ImageIcon icon = new ImageIcon(Locator.testIconFileDir + "web.server.pc.png");
-			 String Default = "24";
-				StringSelection stringSelection = new StringSelection(Default);
-				Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-				clpbrd.setContents(stringSelection, null);
-			 String dev = null;
-			 boolean isCorrect = false;
-			 while(isCorrect == false) {
-				 dev = (String) JOptionPane.showInputDialog(
-						 null, 
-						 "Enter \"dev\" Server number \n(\"24\" or \"25\")\n\nor paste,\nor click \"CANCEL\" for \"dev24\" as a default\n ",
-						 "\"dev\" Server",
-						 1,
-						 icon, null, Default
-						 );
-				 if(dev != null){
-				       //JOptionPane.showMessageDialog(null, "You entered: " + dev, "\"dev\" Server", 1);
-				       //System.out.println("\nYou entered: " + dev + "\n");
-					 }
-				 else {
-					   dev = "24";
-				       //JOptionPane.showMessageDialog(null, "You pressed cancel button...", "\"dev\" Server", 1);
-				       //System.out.println("\nYou pressed cancel button...\n");
-					 }
-				 String datePattern = "\\d{2}";
-				 isCorrect = ( dev.matches(datePattern) && ( dev.equals("24") || dev.equals("25") ) );
-				 //System.out.println("Is the entry of \"" + dev + "\" satisfying the acceptance criteria? \nAnswer: " + isCorrect + "\n");
-				 } 
-			 if(function.fileExist("server.info", false)) { function.fileCleaner("server.info"); }
-			 function.fileWriter("server.info", "dev" + dev + ".tvo.org");
-			 return Integer.valueOf(dev);
-			 }
+//		 /**
+//		  * 'dev' Server number entry dialogue 
+//		  * @throws IOException 
+//		  * @throws NumberFormatException
+//		  */
+//		 public int devBox() throws NumberFormatException, IOException{
+//			 ImageIcon icon = new ImageIcon(Locator.testIconFileDir + "web.server.pc.png");
+//			 String Default = "24";
+//				StringSelection stringSelection = new StringSelection(Default);
+//				Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+//				clpbrd.setContents(stringSelection, null);
+//			 String dev = null;
+//			 boolean isCorrect = false;
+//			 while(isCorrect == false) {
+//				 dev = (String) JOptionPane.showInputDialog(
+//						 null, 
+//						 "Enter \"dev\" Server number \n(\"24\" or \"25\")\n\nor paste,\nor click \"CANCEL\" for \"dev24\" as a default\n ",
+//						 "\"dev\" Server",
+//						 1,
+//						 icon, null, Default
+//						 );
+//				 if(dev != null){
+//				       //JOptionPane.showMessageDialog(null, "You entered: " + dev, "\"dev\" Server", 1);
+//				       //System.out.println("\nYou entered: " + dev + "\n");
+//					 }
+//				 else {
+//					   dev = "24";
+//				       //JOptionPane.showMessageDialog(null, "You pressed cancel button...", "\"dev\" Server", 1);
+//				       //System.out.println("\nYou pressed cancel button...\n");
+//					 }
+//				 String datePattern = "\\d{2}";
+//				 isCorrect = ( dev.matches(datePattern) && ( dev.equals("24") || dev.equals("25") ) );
+//				 //System.out.println("Is the entry of \"" + dev + "\" satisfying the acceptance criteria? \nAnswer: " + isCorrect + "\n");
+//				 } 
+//			 if(function.fileExist("server.info", false)) { function.fileCleaner("server.info"); }
+//			 function.fileWriter("server.info", "dev" + dev + ".tvo.org");
+//			 return Integer.valueOf(dev);
+//			 }
 		 
 		 /** Test Delay entry dialogue */
 		 public int minBox(){		 
@@ -552,7 +537,7 @@ public class Mail {
 			 int n = JOptionPane.showOptionDialog(null, params, "Notification Option", JOptionPane.INFORMATION_MESSAGE, 0, icon, buttons, buttons[1]);
 			 boolean now = (n == 0);
 			 
-			 if (now) { min = "0"; }
+			 if (now) { min = "-1"; }
 			 else {
 				    String Default = "45";
 					StringSelection stringSelection = new StringSelection(Default);
