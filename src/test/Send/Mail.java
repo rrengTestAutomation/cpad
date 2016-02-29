@@ -79,7 +79,9 @@ public class Mail {
 		long updateDelay = (startTime - currTime);
 		int sec = (int) updateDelay/1000;
 		
-		// TEST HOST APPLICATION SERVER MANAGEMENT		
+		// TEST HOST APPLICATION SERVER MANAGEMENT
+		if(function.fileExist("server.info", false)) { function.fileCleaner("server.info"); }
+		function.fileWriter("server.info", "http://tomcat-dev:8080/CPAD");
 		System.out.println("Scheduled to start in: " + function.convertTimeSecondsToHoursMinSeconds(sec));
 		System.out.println("Scheduled to start at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay));
 		
@@ -296,7 +298,7 @@ public class Mail {
 			function.fileWriter("email.cont", "CPAD - AUTOMATED " + function.fileScanner("test.type").toUpperCase() + " RESULT");
 			function.fileWriter("email.cont", "");
 			function.fileWriter("email.cont", "     APP SERVER: " + function.fileScanner("server.info"));
-			function.fileWriter("email.cont", "     GiT BRANCH: develop");
+			function.fileWriter("email.cont", "     GiT BRANCH: master");
 			function.fileWriter("email.cont", "");
 
 			// E-MAIL CONTENT TOTAL TESTS NUMBER
