@@ -2,11 +2,13 @@ package test.Cases;
 
 import java.io.IOException;
 import java.text.ParseException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test.common.Locators;
+
+import test.common.Locator;
 import test.helper.Functions;
 
 public class Schedules {
@@ -33,7 +35,7 @@ public class Schedules {
 		String b = "size=60";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
 		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "program_asset_id";
    		String expected = "2790";
@@ -73,7 +75,7 @@ public class Schedules {
 		String b = "size=30";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
 		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "group";
    		String expected = "Adult";
@@ -112,7 +114,7 @@ public class Schedules {
 		String b = "program_asset_id=2790";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
 		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule";
    		int max = 10;
 
@@ -149,7 +151,7 @@ public class Schedules {
 		String b = "program_asset_id=2790";
 		String c = "size=50";
 		String d = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "airing_time";
 	        
@@ -186,7 +188,7 @@ public class Schedules {
 		String b = "program_asset_id=2790";
 		String c = "size=50";
 		String d = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule";
    		String tag = "airing_time";
 	        
@@ -224,7 +226,7 @@ public class Schedules {
 		String c = "size=60";
 		String d = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
 		String e = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "schedule";
    		String tag = "airing_time";
 	        

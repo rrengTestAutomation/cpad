@@ -1,6 +1,7 @@
 package test.developer;
 
 import java.io.IOException;
+
 import org.testng.Assert;
 // import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -10,7 +11,9 @@ import org.testng.annotations.BeforeSuite;
 // import org.testng.annotations.Test;
 
 
-import test.common.Locators;
+
+
+import test.common.Locator;
 import test.helper.Functions;
 
 public class cpadMultiURL{
@@ -23,7 +26,7 @@ public class cpadMultiURL{
 	String a = "program_asset_id=2790";
 	String b = "group=Adult";
 	String c = "size=80";	
-	String[] URL = Locators.url(root, Locators.combination(a, b, c));
+	String[] URL = Locator.url(root, Locator.combination(a, b, c));
     String record = "video";
     String tag = "created_on";
 

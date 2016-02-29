@@ -1,4 +1,4 @@
-package test.Log;
+package test.Report;
 
 import java.io.IOException;
 import org.testng.annotations.AfterSuite;
@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeSuite;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class Report {
+public class Log {
 	Functions function = new Functions();
 	
 	/**

@@ -2,15 +2,19 @@ package test.developer;
 
 import org.testng.Assert;
 
+
+
 // import org.testng.annotations.Test;
 import java.io.IOException;
+
+
 // import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import test.common.Locators;
+import test.common.Locator;
 import test.helper.Functions;
 
 public class cpadComboURL{
@@ -29,7 +33,7 @@ public class cpadComboURL{
 		String a = "program_asset_id=2790";
 		String b = "group=Adult";
 		String c = "size=80";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "created_on";
    		

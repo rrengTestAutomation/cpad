@@ -4,8 +4,9 @@
 <suite name="test-regression">
 
   <test verbose="1" name="test-regression">
-    <packages>	
-    <package name="test.Cases.*"></package>
+    <packages> 
+     <package name="test.Report.*"></package>
+     <package name="test.Cases.*"></package>
     </packages>   
   </test>
   

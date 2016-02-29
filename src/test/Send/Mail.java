@@ -1,4 +1,4 @@
-package test.Mail;
+package test.Send;
 
 import java.awt.Component;
 import java.awt.Toolkit;
@@ -7,6 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Properties;
+
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -26,13 +27,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
 import test.common.*;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
-public class Report {
+public class Mail {
 	static Functions function = new Functions();
 	
 	/** 
@@ -397,7 +400,7 @@ public class Report {
 		
 		/** Test Number dialoge */
 		public int testNum(){
-			 ImageIcon icon = new ImageIcon(Locators.testIconFileDir + "tests.number.1-9.png");
+			 ImageIcon icon = new ImageIcon(Locator.testIconFileDir + "tests.number.1-9.png");
 			 String Default = "0";
 			 String number = null;
 			 boolean isTrue = false;
@@ -427,7 +430,7 @@ public class Report {
 		public String testType() throws NumberFormatException, IOException {		  
 			  Component frame = null;
 		      Icon icon = UIManager.getIcon("OptionPane.questionIcon");
-			  icon = new ImageIcon(Locators.testIconFileDir + "question.round.png");
+			  icon = new ImageIcon(Locator.testIconFileDir + "question.round.png");
 			      Object[] possibilities = { "As Previous",
 	                                         "Regression Test", 
 	                                         "Test Failures Re-Run",
@@ -461,7 +464,7 @@ public class Report {
 		
 		 /** Date and Time entry dialogue */
 		 public String dateBox(){
-			 ImageIcon icon = new ImageIcon(Locators.testIconFileDir + "shedule.date.time.png");
+			 ImageIcon icon = new ImageIcon(Locator.testIconFileDir + "shedule.date.time.png");
 			 String str = null;
 			 boolean isDate = false;
 			 while(isDate == false) {
@@ -496,7 +499,7 @@ public class Report {
 		  * @throws NumberFormatException
 		  */
 		 public int devBox() throws NumberFormatException, IOException{
-			 ImageIcon icon = new ImageIcon(Locators.testIconFileDir + "web.server.pc.png");
+			 ImageIcon icon = new ImageIcon(Locator.testIconFileDir + "web.server.pc.png");
 			 String Default = "24";
 				StringSelection stringSelection = new StringSelection(Default);
 				Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -532,7 +535,7 @@ public class Report {
 		 /** Test Delay entry dialogue */
 		 public int minBox(){		 
 		  // Icon questionIcon = UIManager.getIcon("OptionPane.questionIcon");
-			 Icon icon = new ImageIcon(Locators.testIconFileDir + "timer.watch.when.png");
+			 Icon icon = new ImageIcon(Locator.testIconFileDir + "timer.watch.when.png");
 			 String min = null;
 			 
 //			 String message = "When do you want to run your test?";	
@@ -558,7 +561,7 @@ public class Report {
 					
 				    boolean isTrue = false;
 			        while(isTrue == false) {
-			        icon = new ImageIcon(Locators.testIconFileDir + "timer.min.png");
+			        icon = new ImageIcon(Locator.testIconFileDir + "timer.min.png");
 				    min = (String) JOptionPane.showInputDialog(
 						  null, 
 						  "Enter Test Delay, minutes \n(integer positive value only)\n\nor paste,\nor click \"CANCEL\" for " + Default + " min as a default delay\n ",
@@ -576,7 +579,7 @@ public class Report {
 		 
 		 /** Test E-mail Notification Option dialogue with "Yes" checkbox */
 		 public boolean emailOption(){
-			 Icon icon = new ImageIcon(Locators.testIconFileDir + "envelope.open.letter.png");
+			 Icon icon = new ImageIcon(Locator.testIconFileDir + "envelope.open.letter.png");
 			 JCheckBox checkbox = new JCheckBox("Yes!");
 			 String message = "Do you want to send automated E-Mail notification about Test Results?";
 			 Object[] params = { message, checkbox };
@@ -587,7 +590,7 @@ public class Report {
 		 
 		 /** Test E-mail Notification Option dialogue with "Yes" and "No" smart-checkbox */
 		 public boolean emailOptionDouble(){
-			 Icon icon = new ImageIcon(Locators.testIconFileDir + "envelope.open.email.png");
+			 Icon icon = new ImageIcon(Locator.testIconFileDir + "envelope.open.email.png");
 		     JCheckBox checkboxYes = new JCheckBox("Yes !");
 		     JCheckBox checkboxNo = new JCheckBox("No !");
 		     checkboxNo.setSelected(true);
@@ -605,7 +608,7 @@ public class Report {
 		 
 		 /** Test E-mail Addresses Option dialogue with "All" and "Tester" smart-checkbox */
 		 public boolean emailAddresses(){
-			 Icon icon = new ImageIcon(Locators.testIconFileDir + "envelope.front.address.png");
+			 Icon icon = new ImageIcon(Locator.testIconFileDir + "envelope.front.address.png");
 		     JCheckBox checkboxAll = new JCheckBox("Send E-Mail to All !");
 		     JCheckBox checkboxTester = new JCheckBox("Send E-Mail to Tester Only !");
 		     checkboxTester.setSelected(true);
@@ -678,7 +681,7 @@ public class Report {
 		 /** Test E-mail Notification Option dialogue with "Yes" checkbox */
 		 public boolean addTestOption(){
 		  // Icon icon = UIManager.getIcon("OptionPane.questionIcon");
-			 Icon icon = new ImageIcon(Locators.testIconFileDir + "question.round.png");
+			 Icon icon = new ImageIcon(Locator.testIconFileDir + "question.round.png");
 			 JCheckBox checkbox = new JCheckBox("Yes!");
 			 String message = "Do you want to show the number of difference between last and previous Tests?";
 			 Object[] params = { message, checkbox };

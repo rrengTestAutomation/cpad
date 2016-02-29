@@ -1,11 +1,13 @@
 package test.Cases;
 
 import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test.common.Locators;
+
+import test.common.Locator;
 import test.helper.Functions;
 
 public class Videos{
@@ -31,7 +33,7 @@ public class Videos{
 		String b = "size=60";
 		String c = "sort_order=desc";
 		String d = "sort_by=created_on";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "video";
    		String tag = "group";
    		String expected = "Adult";
@@ -70,7 +72,7 @@ public class Videos{
 		String b = "size=40";
 		String c = "sort_order=desc";
 		String d = "sort_by=born_date";		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "video";
    		String tag = "program_asset_id";
    		String expected = "2790";
@@ -109,7 +111,7 @@ public class Videos{
 		String b = "program_asset_id=2790";
 		String c = "sort_order=asc";
 		String d = "sort_by=born_date";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "video";
    		int max = 5;
 
@@ -148,7 +150,7 @@ public class Videos{
 		String d = "sort_order=asc";
 		String e = "sort_by=born_date";
 		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
 		
 		//// UNIT TEST
 		// String[] URL = Locators.url(root, Locators.combination(b, c));
@@ -190,7 +192,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=1778";
 		String c = "size=20";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "created_on";
 
@@ -226,7 +228,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=1778";
 		String c = "size=20";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "created_on";
 
@@ -262,7 +264,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "updated_on";
 
@@ -298,7 +300,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "updated_on";
 
@@ -334,7 +336,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=50";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "born_date";
 
@@ -370,7 +372,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=40";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "born_date";
 
@@ -406,7 +408,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=50";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "kill_date";
 
@@ -442,7 +444,7 @@ public class Videos{
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=40";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "video";
    		String tag = "kill_date";
 

@@ -20,7 +20,9 @@ import org.w3c.dom.NodeList;
 import org.openqa.selenium.WebDriver;
 // import org.openqa.selenium.firefox.FirefoxDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
-import test.common.Locators;
+
+
+import test.common.Locator;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
@@ -57,7 +59,7 @@ public class cpadSingleURL {
    		function.fileWriterPrinter("\n" + "URL COMBINATION:");
    		function.fileWriterPrinter(url);
    		
-   		String path = Locators.testOutputFileDir;
+   		String path = Locator.testOutputFileDir;
    		String name = "source";
    		String extention = "xml";
    		String fileName = name + "." + extention;

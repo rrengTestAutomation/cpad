@@ -2,11 +2,13 @@ package test.Cases;
 
 import java.io.IOException;
 import java.text.ParseException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test.common.Locators;
+
+import test.common.Locator;
 import test.helper.Functions;
 
 public class AssetChange {
@@ -34,7 +36,7 @@ public class AssetChange {
 		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String d = "access_type=Update";
 		String e = "asset_type=Program";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "id";
    		String expected = "16257024";
@@ -75,7 +77,7 @@ public class AssetChange {
 		String c = "access_type=Update";
 		String d = "asset_type=Program";
 		String e = "size=20";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "object_id";
    		String expected = "119845";
@@ -116,7 +118,7 @@ public class AssetChange {
 		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String d = "asset_type=Video";
 		String e = "size=20";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "access_type";
    		String expected = "Create";
@@ -157,7 +159,7 @@ public class AssetChange {
 		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String d = "access_type=Update";
 		String e = "size=20";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "asset_type";
    		String expected = "Video";
@@ -198,7 +200,7 @@ public class AssetChange {
 		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today	
 		String d = "access_type=Update";
 		String e = "asset_type=Video";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "change_log";
    		int max = 5;
 
@@ -235,7 +237,7 @@ public class AssetChange {
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
 		String d = "size=40";				
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "access_time";
    		String condition = "after";
@@ -273,7 +275,7 @@ public class AssetChange {
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
 		String d = "size=40";				
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "access_time";
    		String condition = "not after";
@@ -315,11 +317,11 @@ public class AssetChange {
 		String e = "asset_type=Video";
 		String f = "size=20";
 		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e, f));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e, f));
 		
-	 // // UNIT TESTS
-		// String[] URL = Locators.url(root, Locators.combination(b));
-		// String[] URL = { "http://tomcat-dev:8080/CPAD/assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
+//	  // UNIT TESTS
+//		 String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+//		 String[] URL = { "http://tomcat-dev:8080/CPAD/assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
 		
    		String record = "change_log";
    		String tag = "id";

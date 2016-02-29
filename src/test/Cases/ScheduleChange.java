@@ -2,11 +2,13 @@ package test.Cases;
 
 import java.io.IOException;
 import java.text.ParseException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test.common.Locators;
+
+import test.common.Locator;
 import test.helper.Functions;
 
 public class ScheduleChange {
@@ -33,7 +35,7 @@ public class ScheduleChange {
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today		
 		String d = "size=50";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "change_log_id";
    		String expected = "211";
@@ -73,7 +75,7 @@ public class ScheduleChange {
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today		
 		String d = "size=50";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "access_type";
    		String expected = "Create";
@@ -113,7 +115,7 @@ public class ScheduleChange {
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today	
 		String d = "access_type=Create";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		int max = 13;
 
@@ -151,7 +153,7 @@ public class ScheduleChange {
 		String b = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today
 		String c = "access_type=Delete";
 		String d = "size=50";				
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "access_time";
    		String condition = "after";
@@ -190,7 +192,7 @@ public class ScheduleChange {
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_type=Delete";
 		String d = "size=50";				
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "access_time";
    		String condition = "not after";
@@ -231,7 +233,7 @@ public class ScheduleChange {
 		String d = "access_type=Create";
 		String e = "size=60";
 
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "schedule_change_log";
    		String tag = "change_log_id";
 	        

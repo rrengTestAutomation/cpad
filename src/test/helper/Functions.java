@@ -40,6 +40,8 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+
+
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -125,7 +127,9 @@ import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
 
 /** LOCATORS */
-import test.common.Locators;
+
+
+import test.common.Locator;
 
 public class Functions {
 	WebDriver driverHelper;
@@ -146,7 +150,7 @@ public class Functions {
 			} else if (remoteOrLocal.equalsIgnoreCase("local")
 					&& browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
-						Locators.driverFileDir + "chromedriver.exe");
+						Locator.driverFileDir + "chromedriver.exe");
 				driver = new ChromeDriver();
 			} else if (remoteOrLocal.equalsIgnoreCase("remote")
 					&& browser.equalsIgnoreCase("chrome")) {
@@ -204,7 +208,7 @@ public class Functions {
 	 */
 	public static Boolean fileExist(String fileName)
 			throws NumberFormatException, IOException {
-		File f = new File(Locators.testOutputFileDir + fileName);
+		File f = new File(Locator.testOutputFileDir + fileName);
 		if (!(f.exists() && f.isFile())) {
 			fileWriterPrinter(f + " is missing...");
 		}
@@ -230,7 +234,7 @@ public class Functions {
 	 */
 	public static Boolean fileExist(String fileName, Boolean silentMode)
 			throws NumberFormatException, IOException {
-		File f = new File(Locators.testOutputFileDir + fileName);
+		File f = new File(Locator.testOutputFileDir + fileName);
 		if (!(f.exists() && f.isFile())) {
 			if (silentMode) {
 				fileWriterPrinter(f + " is missing...");
@@ -279,7 +283,7 @@ public class Functions {
 	public static void fileWriter(String fileName, Object printLine)
 			throws NumberFormatException, IOException {
 		// Create File:
-		File f = new File(Locators.testOutputFileDir + fileName);
+		File f = new File(Locator.testOutputFileDir + fileName);
 		// Write or add a String line into File:
 		FileWriter fw = new FileWriter(f, true);
 		PrintWriter pw = new PrintWriter(fw);
@@ -291,7 +295,7 @@ public class Functions {
 	public static void fileWriter(String fileName, String printLine)
 			throws NumberFormatException, IOException {
 		// Create File:
-		File f = new File(Locators.testOutputFileDir + fileName);
+		File f = new File(Locator.testOutputFileDir + fileName);
 		// Write or add a String line into File:
 		FileWriter fw = new FileWriter(f, true);
 		PrintWriter pw = new PrintWriter(fw);
@@ -318,7 +322,7 @@ public class Functions {
 	public static void fileWriterPrinter() throws NumberFormatException,
 			IOException {
 		// Create File:
-		File f = new File(Locators.testOutputFileDir + "print.log");
+		File f = new File(Locator.testOutputFileDir + "print.log");
 		// Write or add a String line into File:
 		FileWriter fw = new FileWriter(f, true);
 		PrintWriter pw = new PrintWriter(fw);
@@ -340,7 +344,7 @@ public class Functions {
 	public static void fileWriterPrinter(Object printLine)
 			throws NumberFormatException, IOException {
 		// Create File:
-		File f = new File(Locators.testOutputFileDir + "print.log");
+		File f = new File(Locator.testOutputFileDir + "print.log");
 		// Write or add a String line into File:
 		FileWriter fw = new FileWriter(f, true);
 		PrintWriter pw = new PrintWriter(fw);
@@ -361,7 +365,7 @@ public class Functions {
 	public static void fileWriterPrinter(String fileName, Object printLine)
 			throws NumberFormatException, IOException {
 		// Create File:
-		File f = new File(Locators.testOutputFileDir + fileName);
+		File f = new File(Locator.testOutputFileDir + fileName);
 		// Write or add a String line into File:
 		FileWriter fw = new FileWriter(f, true);
 		PrintWriter pw = new PrintWriter(fw);
@@ -1952,7 +1956,7 @@ public class Functions {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd, HH.mm.ss");
 		File scrFile = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
-		String outputFile = Locators.outputFileDir + description + " ("
+		String outputFile = Locator.outputFileDir + description + " ("
 				+ dateFormat.format(new Date()) + ").png";
 		fileWriterPrinter(outputFile);
 		FileUtils.copyFile(scrFile, new File(outputFile));
@@ -1968,7 +1972,7 @@ public class Functions {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd, HH.mm.ss");
 		File scrFile = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
-		String outputFile = Locators.outputFileDir + description + " ("
+		String outputFile = Locator.outputFileDir + description + " ("
 				+ dateFormat.format(milliseconds) + ").png";
 		fileWriterPrinter(outputFile);
 		FileUtils.copyFile(scrFile, new File(outputFile));
@@ -1992,7 +1996,7 @@ public class Functions {
 				l.getClassName().length());
 		String screenshotName = classNameOnly + "." + l.getMethodName() + ", "
 				+ description + ", line # " + l.getLineNumber();
-		String outputFile = Locators.outputFileDir + packageNameOnly
+		String outputFile = Locator.outputFileDir + packageNameOnly
 				+ File.separator + classNameOnly + File.separator
 				+ screenshotName + " (" + dateFormat.format(new Date())
 				+ ").png";
@@ -2032,7 +2036,7 @@ public class Functions {
 			String screenshotName = classNameOnly + "." + l.getMethodName()
 					+ ", " + description + ", line # " + l.getLineNumber();
 
-			String outputFile = Locators.outputFileDir + packageNameOnly
+			String outputFile = Locator.outputFileDir + packageNameOnly
 					+ File.separator + classNameOnly + File.separator
 					+ screenshotName + " (" + dateFormat.format(new Date())
 					+ ").png";
@@ -2074,7 +2078,7 @@ public class Functions {
 					+ ", " + exception + ", " + description + ", line # "
 					+ l.getLineNumber();
 
-			String outputFile = Locators.outputFileDir + packageNameOnly
+			String outputFile = Locator.outputFileDir + packageNameOnly
 					+ File.separator + classNameOnly + File.separator
 					+ screenshotName + " (" + dateFormat.format(new Date())
 					+ ").png";
@@ -2092,7 +2096,7 @@ public class Functions {
 			throws NumberFormatException, IOException {
 		String n = null;
 		if (fileExist(fileName, false)) {
-			File f = new File(Locators.testOutputFileDir + fileName);
+			File f = new File(Locator.testOutputFileDir + fileName);
 			Scanner scanner = new Scanner(f);
 			n = scanner.useDelimiter("\\Z").next();
 			scanner.close();
@@ -2106,7 +2110,7 @@ public class Functions {
 	 */
 	public void fileCleaner(String fileName) throws NumberFormatException, IOException {
 		if (fileExist(fileName, false)) {
-			(new File(Locators.testOutputFileDir + fileName)).delete();
+			(new File(Locator.testOutputFileDir + fileName)).delete();
 		}
 	}
 	
@@ -2122,8 +2126,8 @@ public class Functions {
 	
 	/** @throws IOException */ 
 	public void fileCopy(String fileSource, String fileDest) throws IOException {
-		File s = new File(Locators.testOutputFileDir + fileSource);
-		File d = new File(Locators.testOutputFileDir + fileDest);
+		File s = new File(Locator.testOutputFileDir + fileSource);
+		File d = new File(Locator.testOutputFileDir + fileDest);
 		if (s.exists() && s.isFile()) { FileUtils.copyFile(s, d); }
 	}
 
@@ -2138,7 +2142,7 @@ public class Functions {
 		// if Counter File does not exist - create new it with counter "1";
 		// otherwise - update existing by increasing the counter by "1";
 		int n = 1;
-		File f = new File(Locators.testOutputFileDir + counterFileName);
+		File f = new File(Locator.testOutputFileDir + counterFileName);
 		if (f.exists() && f.isFile()) {
 			n = Integer.valueOf(fileScanner(counterFileName)) + 1;
 		}
@@ -2733,7 +2737,7 @@ public class Functions {
 		// (1) validates XML;
 		// (2) will throw an exception if miss-formatted;
 		try {
-			builder.parse(new InputSource(Locators.testOutputFileDir + fileName));		
+			builder.parse(new InputSource(Locator.testOutputFileDir + fileName));		
 			result = true;
 			} catch (Exception e) {
 			fileCleaner("xml.log");

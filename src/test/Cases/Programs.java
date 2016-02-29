@@ -1,11 +1,13 @@
 package test.Cases;
 
 import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import test.common.Locators;
+
+import test.common.Locator;
 import test.helper.Functions;
 
 public class Programs{
@@ -31,7 +33,7 @@ public class Programs{
 		String b = "size=60";
 		String c = "sort_order=DESC";
 		String d = "sort_by=CREATED_ON";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "program";
    		String tag = "group";
    		String expected = "Adult";
@@ -70,7 +72,7 @@ public class Programs{
 		String b = "size=60";
 		String c = "sort_order=DESC";
 		String d = "sort_by=UPDATED_ON";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
    		String record = "program";
    		String tag = "single_program";
    		String expected = "1";
@@ -109,7 +111,7 @@ public class Programs{
 		String b = "single_program=0";
 		String c = "sort_order=ASC";
 		String d = "sort_by=CREATED_ON";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));		
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));		
    		String record = "program";
    		int max = 7;
 
@@ -145,7 +147,7 @@ public class Programs{
 		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));	    
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));	    
    //// UNIT TEST
      // String[] URL = { root + "&" + c, root + "&" + b };
 
@@ -184,7 +186,7 @@ public class Programs{
 		String a = "group=Kids";
 		String b = "single_program=0";
 		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "program";
    		String tag = "created_on";
 	        
@@ -220,7 +222,7 @@ public class Programs{
 		String a = "group=Adult";
 		String b = "single_program=1";
 		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "program";
    		String tag = "updated_on";
 	        
@@ -256,7 +258,7 @@ public class Programs{
 		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c));
    		String record = "program";
    		String tag = "updated_on";
 	        
@@ -295,7 +297,7 @@ public class Programs{
 		String d = "sort_order=DESC";
 		String e = "sort_by=UPDATED_ON";
 		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
+		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
 		
 		//// UNIT TEST
 		// String[] URL = Locators.url(root, Locators.combination(b, c));

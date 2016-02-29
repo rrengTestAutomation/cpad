@@ -4,14 +4,9 @@
 <suite name="test-single">
   <test verbose="1" name="test-single">
     <classes>
-    
-<!--
-<class name="test.helper.Functions"></class>
--->
+    <class name="test.Report.Log"></class>
 
-<class name="test.Cases.Videos"><methods><include name="testKillDateTagOrderIsAscending"/></methods></class>
-
-<!-- <class name="test.Cases.AssetChange"><methods><include name="testAccessTimeTagIsFilteredAsAfter"/></methods></class> -->
+<class name="test.Cases.AssetChange"><methods><include name="testIdTagOrderIsAscending"/></methods></class>
 
 <!--
 <include name=""/>
