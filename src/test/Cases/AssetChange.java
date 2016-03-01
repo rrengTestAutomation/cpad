@@ -80,7 +80,7 @@ public class AssetChange {
 		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "object_id";
-   		String expected = "119845";
+   		String expected = "2790";
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
