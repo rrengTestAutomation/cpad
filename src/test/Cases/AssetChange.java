@@ -42,6 +42,9 @@ public class AssetChange {
    		String condition = "greater";
 
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_gt=" + function.timestampPlusYears(-5);
+		String B = "access_time_lte=" + function.timestampPlusYears(5);
+		URL[i] = (URL[i].replace(a, A)).replace(b, B);
 	    try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -84,6 +87,9 @@ public class AssetChange {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_gt=" + function.timestampPlusYears(-5);
+		String B = "access_time_lte=" + function.timestampPlusYears(5);
+		URL[i] = (URL[i].replace(a, A)).replace(b, B);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, true); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -124,6 +130,9 @@ public class AssetChange {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_gt=" + function.timestampPlusYears(-5);
+		String B = "access_time_lte=" + function.timestampPlusYears(5);
+		URL[i] = (URL[i].replace(a, A)).replace(b, B);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -164,6 +173,9 @@ public class AssetChange {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_gt=" + function.timestampPlusYears(-5);
+		String B = "access_time_lte=" + function.timestampPlusYears(5);
+		URL[i] = (URL[i].replace(a, A)).replace(b, B);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -202,6 +214,9 @@ public class AssetChange {
    		int max = 5;
 
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_gt=" + function.timestampPlusYears(-5);
+		String B = "access_time_lte=" + function.timestampPlusYears(5);
+		URL[i] = (URL[i].replace(a, A)).replace(b, B);
 		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -240,6 +255,8 @@ public class AssetChange {
    		String condition = "after";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_lte=" + function.timestampPlusDays(5);
+		URL[i] = URL[i].replace(a, A);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -278,6 +295,8 @@ public class AssetChange {
    		String condition = "not after";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String A = "access_time_gt=" + function.timestampPlusDays(-5);
+		URL[i] = URL[i].replace(a, A);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -324,6 +343,9 @@ public class AssetChange {
    		String tag = "id";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String C = "access_time_gt=" + function.timestampPlusYears(-5);
+		String D = "access_time_lte=" + function.timestampPlusYears(5);
+		URL[i] = (URL[i].replace(c, C)).replace(d, D);
 		try { function.assertCpadTagsAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}

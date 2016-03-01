@@ -42,6 +42,9 @@ public class ScheduleChange {
    		String condition = "greater";
 
 		for (int i = 0; i < URL.length; i++) {
+		String B = "access_time_gt=" + function.timestampPlusYears(-7);
+		String C = "access_time_lte=" + function.timestampPlusYears(7);
+		URL[i] = (URL[i].replace(b, B)).replace(c, C);
 	    try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -82,6 +85,9 @@ public class ScheduleChange {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
+		String B = "access_time_gt=" + function.timestampPlusYears(-7);
+		String C = "access_time_lte=" + function.timestampPlusYears(7);
+		URL[i] = (URL[i].replace(b, B)).replace(c, C);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -120,6 +126,9 @@ public class ScheduleChange {
    		int max = 13;
 
 		for (int i = 0; i < URL.length; i++) {
+		String B = "access_time_gt=" + function.timestampPlusYears(-7);
+		String C = "access_time_lte=" + function.timestampPlusYears(7);
+		URL[i] = (URL[i].replace(b, B)).replace(c, C);
 		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
@@ -159,6 +168,8 @@ public class ScheduleChange {
    		String condition = "after";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String B = "access_time_lte=" + function.timestampPlusYears(7);
+		URL[i] = URL[i].replace(b, B);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -198,6 +209,8 @@ public class ScheduleChange {
    		String condition = "not after";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String B = "access_time_gt=" + function.timestampPlusYears(-7);
+		URL[i] = URL[i].replace(b, B);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -238,6 +251,9 @@ public class ScheduleChange {
    		String tag = "change_log_id";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String B = "access_time_gt=" + function.timestampPlusYears(-7);
+		String C = "access_time_lte=" + function.timestampPlusYears(7);
+		URL[i] = (URL[i].replace(b, B)).replace(c, C);
 		try { function.assertCpadTagsAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}

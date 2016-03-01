@@ -42,6 +42,9 @@ public class Schedules {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
+		String C = "airing_time_gt="  + function.timestampPlusDays(-2);
+		String D = "airing_time_lte=" + function.timestampPlusDays(7); 
+		URL[i] = (URL[i].replace(c, C)).replace(d, D);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -82,6 +85,9 @@ public class Schedules {
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
+		String C = "airing_time_gt="  + function.timestampPlusDays(-2);
+		String D = "airing_time_lte=" + function.timestampPlusDays(7); 
+		URL[i] = (URL[i].replace(c, C)).replace(d, D);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -119,6 +125,9 @@ public class Schedules {
    		int max = 10;
 
 		for (int i = 0; i < URL.length; i++) {
+		String C = "airing_time_gt="  + function.timestampPlusDays(-2);
+		String D = "airing_time_lte=" + function.timestampPlusDays(7); 
+		URL[i] = (URL[i].replace(c, C)).replace(d, D);
 		try { function.assertCpadTagsMaxNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, max); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -156,6 +165,8 @@ public class Schedules {
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String D = "airing_time_lte=" + function.timestampPlusDays(7); 
+		URL[i] = URL[i].replace(d, D);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "after"); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -193,6 +204,8 @@ public class Schedules {
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String D = "airing_time_gt="  + function.timestampPlusDays(-2);
+		URL[i] = URL[i].replace(d, D);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not after"); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -227,10 +240,14 @@ public class Schedules {
 		String d = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
 		String e = "airing_time_lte=" + function.timestampPlusDays(7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 days after today
 		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
+		         URL = Locator.url(root, Locator.combination(d));
    		String record = "schedule";
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String D = "airing_time_gt="  + function.timestampPlusDays(-2);
+		String E = "airing_time_lte=" + function.timestampPlusDays(7); 
+		URL[i] = (URL[i].replace(d, D)).replace(e, E);
 		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
