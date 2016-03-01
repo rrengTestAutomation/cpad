@@ -165,8 +165,9 @@ public class Schedules {
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String ROOT = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);
 		String D = "airing_time_lte=" + function.timestampPlusDays(7); 
-		URL[i] = URL[i].replace(d, D);
+		URL[i] = (URL[i].replace(root, ROOT)).replace(d, D);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "after"); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
@@ -204,8 +205,9 @@ public class Schedules {
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
+		String ROOT = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);
 		String D = "airing_time_gt="  + function.timestampPlusDays(-2);
-		URL[i] = URL[i].replace(d, D);
+		URL[i] = (URL[i].replace(root, ROOT)).replace(d, D);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not after"); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
 		}
