@@ -6,7 +6,7 @@
     <classes>
     <class name="test.Send.Mail"></class>
 
-<class name="test.Cases.AssetChange"><methods><include name="testIdTagOrderIsAscending"/></methods></class>
+<class name="test.Cases.Videos"><methods><include name="testCreateOnTagOrderIsDescending"/></methods></class>
 
 <!--
 <include name=""/>

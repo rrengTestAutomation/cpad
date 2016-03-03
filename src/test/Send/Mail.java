@@ -370,6 +370,29 @@ public class Mail {
 		        );
 		}
 		 
+		// Record highest Test Number:
+		if(function.fileExist("test.num", false)) {			
+		   if(function.fileExist("test.max", false)){ 
+			   if( Integer.valueOf(function.fileScanner("test.max")) < Integer.valueOf(function.fileScanner("test.num")) ) {
+				   function.fileCleaner("test.max");
+				   function.fileWriter("test.max", function.fileScanner("test.num"));
+				   }
+			    } else {
+			       function.fileWriter("test.max", function.fileScanner("test.num"));
+			       }		   
+		    } else {		    	
+		    	if(function.fileExist("prev.num", false)) {
+				   if(function.fileExist("test.max", false)){ 
+					   if( Integer.valueOf(function.fileScanner("test.max")) < Integer.valueOf(function.fileScanner("prev.num")) ) {
+						   function.fileCleaner("test.max");
+						   function.fileWriter("test.max", function.fileScanner("prev.num"));
+						   }
+					    } else {
+					       function.fileWriter("test.max", function.fileScanner("prev.num"));					       
+					    }
+				   }
+		    }
+		
 	    // Clean-up unnecessary file(s)
 		   function.fileCleaner("ini.time"   );
 	       function.fileCleaner("failed.num" );
@@ -381,7 +404,6 @@ public class Mail {
 		   function.fileCleaner("email.all"  );
 		   function.fileCleaner("email.cont" );
 		   function.fileCleaner("email.subj" );
-		   function.fileCleaner("test.type"  );
 		   function.fileCleaner("add.show"   );
 		}
 		
@@ -439,9 +461,11 @@ public class Mail {
 			      while((s == null) || (s.length() == 0)){
 			      s = (String)JOptionPane.showInputDialog(frame,"Select Test Type:\n" + number,"Test Type Selection List",JOptionPane.PLAIN_MESSAGE,icon,possibilities,"");
 		          if(s.equals("As Previous")){	        	  
-		        	  if(function.fileExist("prev.num", false)){
-		        		  if( Integer.valueOf(function.fileScanner("prev.num"))  > 100) { s = "Regression Test";      }
-		        		  if( Integer.valueOf(function.fileScanner("prev.num")) <= 100) { s = "Test Failures Re-Run"; }
+		        	  if( function.fileExist("prev.num", false) && function.fileExist("test.max", false) ) {
+		        		  if( Integer.valueOf(function.fileScanner("prev.num")) == Integer.valueOf(function.fileScanner("test.max")) ) {
+		        			  s = "Regression Test";
+		        		  } else {
+		        			  if(function.fileExist("test.type", false)) { s = function.fileScanner("test.type"); } }
 		        		  }
 		        	  }	          
 			      }	
@@ -623,7 +647,7 @@ public class Mail {
 			 if (function.fileExist("prev.num", false)) { function.fileCleaner("prev.num"); }
 		     if (function.fileExist("last.num", false)) {
 		    	 function.fileCopy("last.num", "prev.num");
-		        function.fileCleaner("last.num");
+		         function.fileCleaner("last.num");
 		     }
 		 }
 		 
