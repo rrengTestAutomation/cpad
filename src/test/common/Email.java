@@ -29,6 +29,7 @@ public class Email {
 		                               testerWorkEmail,
 		                               managerEmail,
 		                               "aporretta@tvo.org",
+		                               "ukhan@tvo.org",
 		                               "ositbon@tvo.org",
 		                               "kgiffen@tvo.org",
 		                               "pbandas@tvo.org",
