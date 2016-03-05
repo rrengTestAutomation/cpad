@@ -106,8 +106,8 @@ public class Mail {
 		
 		// TEST DELAY MANAGEMENT
 		int testDelay = minBox();
-		if ( (testDelay > 0 ) && (currTime + updateDelay + testDelay*60*1000 > System.currentTimeMillis()) ){    // USED TO BE: if (testDelay != 0 ) {
-		System.out.println("  Test additional delay is: " + function.convertTimeSecondsToHoursMinSeconds(sec + testDelay*60));
+		if ( (testDelay >= 0 ) && (currTime + updateDelay + testDelay*60*1000 > System.currentTimeMillis()) ){    // USED TO BE: if (testDelay != 0 ) {
+		System.out.println("  Test additional delay is: " + function.convertTimeSecondsToHoursMinSeconds(testDelay*60));
 		System.out.println("  Test will be  started at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay + testDelay*60*1000));
 		System.out.println("\nwait please...\n");
 		} else { System.out.println("starting now...\n"); }
@@ -124,7 +124,7 @@ public class Mail {
 		long sleep = (function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay + testDelay*60*1000)) -
 				      function.convertCalendarDateTimeHourMinSecToMillisecondsAsLong(function.getCurrentDateTimeHourMinSec()));
 				
-		if (testDelay > 0 ) { Thread.sleep(sleep); }   // USED TO BE: if (testDelay != 0 ) { Thread.sleep(sleep); }
+		if (testDelay >= 0 ) { Thread.sleep(sleep); }   // USED TO BE: if (testDelay != 0 ) { Thread.sleep(sleep); }
 		
 		System.out.println(function.getCurrentDateTimeHourMinSec());
 		System.out.println("Starting...\n");
