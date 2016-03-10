@@ -81,7 +81,7 @@ public class Mail {
 		
 		// TEST HOST APPLICATION SERVER MANAGEMENT
 		if(function.fileExist("server.info", false)) { function.fileCleaner("server.info"); }
-		function.fileWriter("server.info", "http://tomcat-dev:8080/CPAD");
+		function.fileWriter("server.info", "http://v-cpad-p01.tvo.org:8080/CPAD");
 		System.out.println("Scheduled to start in: " + function.convertTimeSecondsToHoursMinSeconds(sec));
 		System.out.println("Scheduled to start at: " + function.convertCalendarMillisecondsAsLongToDateTimeHourMinSec(currTime + updateDelay));
 		

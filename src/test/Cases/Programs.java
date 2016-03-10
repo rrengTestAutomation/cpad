@@ -28,7 +28,7 @@ public class Programs{
 	public void testGroupTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?group=Adult";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?group=Adult";
 		String a = "single_program=0";
 		String b = "size=60";
 		String c = "sort_order=DESC";
@@ -67,7 +67,7 @@ public class Programs{
 	public void testSingleProgramTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?single_program=1";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?single_program=1";
 		String a = "group=Adult";
 		String b = "size=60";
 		String c = "sort_order=DESC";
@@ -106,7 +106,7 @@ public class Programs{
 	public void testProgramRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?size=7";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?size=7";
 		String a = "group=Kids";
 		String b = "single_program=0";
 		String c = "sort_order=ASC";
@@ -143,7 +143,7 @@ public class Programs{
 	public void testCreatedOnOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?sort_order=ASC&sort_by=CREATED_ON";
 		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
@@ -182,7 +182,7 @@ public class Programs{
 	public void testCreatedOnOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=CREATED_ON";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?sort_order=DESC&sort_by=CREATED_ON";
 		String a = "group=Kids";
 		String b = "single_program=0";
 		String c = "size=70";
@@ -218,7 +218,7 @@ public class Programs{
 	public void testUpdatedOnOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=ASC&sort_by=UPDATED_ON";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?sort_order=ASC&sort_by=UPDATED_ON";
 		String a = "group=Adult";
 		String b = "single_program=1";
 		String c = "size=70";
@@ -254,7 +254,7 @@ public class Programs{
 	public void testUpdatedOnOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?sort_order=DESC&sort_by=UPDATED_ON";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?sort_order=DESC&sort_by=UPDATED_ON";
 		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
@@ -290,7 +290,7 @@ public class Programs{
 	public void testTitleTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/?title=Allan Gregg";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/?title=Allan Gregg";
 		String a = "group=Adult";
 		String b = "single_program=0";
 		String c = "size=70";
@@ -335,7 +335,7 @@ public class Programs{
 	public void testProgramAssetIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/program_asset_id=2790";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/program_asset_id=2790";
 		String[] URL = { root };
    		String record = "program";
    		String tag = "program_asset_id";
@@ -370,7 +370,7 @@ public class Programs{
 	public void testRecordIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/record_id=1579281";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/record_id=1579281";
 		String[] URL = { root };
    		String record = "program";
    		String tag = "record_id";
@@ -405,7 +405,7 @@ public class Programs{
 	public void testUpdatedOnTagIsFiltered() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/updated_on_gte=2015-09-01T16:45:44&group=adult";
 		String[] URL = { root };
    		String record = "program";
    		String tag = "updated_on";
@@ -438,7 +438,7 @@ public class Programs{
 	public void testUpdatedOnTagIsBetween() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/programs/updated_on_from=2015-09-01T16:45:44&to=2015-09-21T23:45:35&group=adult?size=10";
 		String[] URL = { root };
    		String record = "program";
    		String tag = "updated_on";

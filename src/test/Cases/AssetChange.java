@@ -30,7 +30,7 @@ public class AssetChange {
 	public void testIdTagIsBeyondMinimum() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?id_gt=16257024";		
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?id_gt=16257024";		
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "access_type=Update";
@@ -74,7 +74,7 @@ public class AssetChange {
 	public void testObjectIdTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?object_id=2790";	
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?object_id=2790";	
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "access_type=Update";
@@ -118,7 +118,7 @@ public class AssetChange {
 	public void testAccessTypeTagIsCreate() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_type=Create";			
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_type=Create";			
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "asset_type=Video";
@@ -161,7 +161,7 @@ public class AssetChange {
 	public void testAssetTypeTagIsVideo() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?asset_type=Video";			
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?asset_type=Video";			
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "access_type=Update";
@@ -204,7 +204,7 @@ public class AssetChange {
 	public void testChangeLogRecordsMaxNumber() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?size=5";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?size=5";
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today	
 		String c = "access_type=Update";
@@ -244,7 +244,7 @@ public class AssetChange {
 	public void testAccessTimeTagIsFilteredAsAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
 		String a = "access_time_lte=" + function.timestampPlusDays(5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
@@ -255,7 +255,7 @@ public class AssetChange {
    		String condition = "after";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);
+		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);
 		String A = "access_time_lte=" + function.timestampPlusDays(5);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(a, A);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -285,7 +285,7 @@ public class AssetChange {
 	public void testAccessTimeTagIsFilteredAsNotAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
 		String a = "access_time_gt=" + function.timestampPlusDays(-5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days before today
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
@@ -296,7 +296,7 @@ public class AssetChange {
    		String condition = "not after";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://tomcat-dev:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);
+		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);
 		String A = "access_time_gt=" + function.timestampPlusDays(-5);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(a, A);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -327,7 +327,7 @@ public class AssetChange {
 	public void testIdTagOrderIsAscending() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/assetChanges/";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/";
 		String a = "access_type=Update";
 		String b = "object_id=014259";		
 		String c = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
@@ -339,7 +339,7 @@ public class AssetChange {
 		
 //	 // UNIT TESTS
 //		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
-//		String[] URL = { "http://tomcat-dev:8080/CPAD/assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
+//		String[] URL = { "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
 		
    		String record = "change_log";
    		String tag = "id";

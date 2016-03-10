@@ -28,7 +28,7 @@ public class Videos{
 	public void testGroupTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?group=Adult";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?group=Adult";
 		String a = "program_asset_id=3106";
 		String b = "size=60";
 		String c = "sort_order=desc";
@@ -67,7 +67,7 @@ public class Videos{
 	public void testProgramAssetIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?program_asset_id=2790";		
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?program_asset_id=2790";		
 		String a = "group=Adult";
 		String b = "size=40";
 		String c = "sort_order=desc";
@@ -106,7 +106,7 @@ public class Videos{
 	public void testVideoRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?size=5";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?size=5";
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "sort_order=asc";
@@ -143,7 +143,7 @@ public class Videos{
 	public void testTitleTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?title=American Conservatism at the Crossroads";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?title=American Conservatism at the Crossroads";
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=20";
@@ -188,7 +188,7 @@ public class Videos{
 	public void testCreateOnTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=created_on";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=asc&sort_by=created_on";
 		String a = "group=Adult";
 		String b = "program_asset_id=1778";
 		String c = "size=20";	
@@ -224,7 +224,7 @@ public class Videos{
 	public void testCreateOnTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=created_on";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=desc&sort_by=created_on";
 		String a = "group=Adult";
 		String b = "program_asset_id=1778";
 		String c = "size=20";	
@@ -260,7 +260,7 @@ public class Videos{
 	public void testUpdatedOnTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=updated_on";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=asc&sort_by=updated_on";
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";	
@@ -296,7 +296,7 @@ public class Videos{
 	public void testUpdatedOnTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=updated_on";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=desc&sort_by=updated_on";
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";
@@ -332,7 +332,7 @@ public class Videos{
 	public void testBornDateTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=born_date";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=asc&sort_by=born_date";
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=50";	
@@ -368,7 +368,7 @@ public class Videos{
 	public void testBornDateTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=born_date";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=desc&sort_by=born_date";
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=40";
@@ -404,7 +404,7 @@ public class Videos{
 	public void testKillDateTagOrderIsAscending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=asc&sort_by=kill_date";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=asc&sort_by=kill_date";
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=50";	
@@ -440,7 +440,7 @@ public class Videos{
 	public void testKillDateTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_order=desc&sort_by=kill_date";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_order=desc&sort_by=kill_date";
 		String a = "group=Adult";
 		String b = "program_asset_id=8620";
 		String c = "size=40";
@@ -476,7 +476,7 @@ public class Videos{
 	public void testVideoAssetIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/video_asset_id=281405";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/video_asset_id=281405";
 		String[] URL = { root };
    		String record = "video";
    		String tag = "video_asset_id";
@@ -511,7 +511,7 @@ public class Videos{
 	public void testRecordIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/record_id=2349866";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/record_id=2349866";
 		String[] URL = { root };
    		String record = "video";
    		String tag = "record_id";
@@ -546,7 +546,7 @@ public class Videos{
 	public void testIsCaptionedTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/is_captioned=1";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/is_captioned=1";
 		String[] URL = { root };
    		String record = "video";
    		String tag = "is_captioned";
@@ -581,7 +581,7 @@ public class Videos{
 	public void testBrightcoveRefIdTagIsCorrect() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/brightcove_ref_id=4737449177001";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/brightcove_ref_id=4737449177001";
 		String[] URL = { root };
    		String record = "video";
    		String tag = "brightcove_ref_id";

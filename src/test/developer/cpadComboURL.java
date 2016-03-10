@@ -29,7 +29,7 @@ public class cpadComboURL{
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://tomcat-dev:8080/CPAD/videos/?sort_by=created_on&sort_order=desc";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_by=created_on&sort_order=desc";
 		String a = "program_asset_id=2790";
 		String b = "group=Adult";
 		String c = "size=80";	

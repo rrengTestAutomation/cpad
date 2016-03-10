@@ -30,7 +30,7 @@ public class Schedules {
 	public void testProgramAssetIdTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/?program_asset_id=2790";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?program_asset_id=2790";
 		String a = "group=Adult";
 		String b = "size=60";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
@@ -73,7 +73,7 @@ public class Schedules {
 	public void testGroupTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/?group=Adult";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?group=Adult";
 		String a = "program_asset_id=2790";
 		String b = "size=30";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
@@ -115,7 +115,7 @@ public class Schedules {
 	public void testScheduleRecordsMaxNumber() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/?size=10";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?size=10";
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "airing_time_gt="  + function.timestampPlusDays(-2);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 2 days before today
@@ -155,7 +155,7 @@ public class Schedules {
 	public void testAiringTimeTagIsFilteredAsAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 2 days before today 
 	    String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";
@@ -165,7 +165,7 @@ public class Schedules {
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);
+		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?airing_time_gt=" + function.timestampPlusDays(-2);
 		String D = "airing_time_lte=" + function.timestampPlusDays(7); 
 		URL[i] = (URL[i].replace(root, ROOT)).replace(d, D);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "after"); }
@@ -195,7 +195,7 @@ public class Schedules {
 	public void testAiringTimeTagIsFilteredAsNotAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);  // a datetime stamp in the format YYYY-MM-DDTHH:MM:SS that is 7 days after today
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=50";
@@ -205,7 +205,7 @@ public class Schedules {
    		String tag = "airing_time";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://tomcat-dev:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);
+		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/?airing_time_lte=" + function.timestampPlusDays(7);
 		String D = "airing_time_gt="  + function.timestampPlusDays(-2);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(d, D);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, "not after"); }
@@ -235,7 +235,7 @@ public class Schedules {
 	public void testAiringTimeTagOrderIsDescending() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://tomcat-dev:8080/CPAD/schedules/";
+		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/schedules/";
 		String a = "group=Adult";
 		String b = "program_asset_id=2790";
 		String c = "size=60";
