@@ -14,7 +14,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import test.common.Locator;
+import test.common.Locators;
 import test.helper.Functions;
 
 public class cpadComboURL{
@@ -29,11 +29,11 @@ public class cpadComboURL{
 	 // COUNTER
 	    count++;
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_by=created_on&sort_order=desc";
+		String root = Locators.cpadServerURL + "videos/?sort_by=created_on&sort_order=desc";
 		String a = "program_asset_id=2790";
 		String b = "group=Adult";
 		String c = "size=80";	
-		String[] URL = Locator.url(root, Locator.combination(a, b, c));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
    		String record = "video";
    		String tag = "created_on";
    		

@@ -22,7 +22,7 @@ import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
 
 
-import test.common.Locator;
+import test.common.Locators;
 import test.helper.Functions;
 
 @SuppressWarnings("static-access")
@@ -53,13 +53,13 @@ public class cpadSingleURL {
     	
     	
    	 // ENTRY
-   	 // String url = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
-   		String url = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80";
+   	 // String url = Locators.cpadServerURL + "videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
+   		String url = Locators.cpadServerURL + "videos/?sort_by=created_on&sort_order=desc&size=80";
    		
    		function.fileWriterPrinter("\n" + "URL COMBINATION:");
    		function.fileWriterPrinter(url);
    		
-   		String path = Locator.testOutputFileDir;
+   		String path = Locators.testOutputFileDir;
    		String name = "source";
    		String extention = "xml";
    		String fileName = name + "." + extention;

@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import test.common.Locator;
+import test.common.Locators;
 import test.helper.Functions;
 
 public class AssetChange {
@@ -30,12 +30,12 @@ public class AssetChange {
 	public void testIdTagIsBeyondMinimum() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?id_gt=16257024";		
+		String root = Locators.cpadServerURL + "assetChanges/?id_gt=16257024";		
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "access_type=Update";
 		String d = "asset_type=Program";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "id";
    		String expected = "16257024";
@@ -74,13 +74,13 @@ public class AssetChange {
 	public void testObjectIdTagIsCorrect() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?object_id=2790";	
+		String root = Locators.cpadServerURL + "assetChanges/?object_id=2790";	
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "access_type=Update";
 		String d = "asset_type=Program";
 		String e = "size=20";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
    		String record = "change_log";
    		String tag = "object_id";
    		String expected = "2790";
@@ -118,12 +118,12 @@ public class AssetChange {
 	public void testAccessTypeTagIsCreate() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_type=Create";			
+		String root = Locators.cpadServerURL + "assetChanges/?access_type=Create";			
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "asset_type=Video";
 		String d = "size=20";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "access_type";
    		String expected = "Create";
@@ -161,12 +161,12 @@ public class AssetChange {
 	public void testAssetTypeTagIsVideo() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?asset_type=Video";			
+		String root = Locators.cpadServerURL + "assetChanges/?asset_type=Video";			
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today		
 		String c = "access_type=Update";
 		String d = "size=20";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "asset_type";
    		String expected = "Video";
@@ -204,12 +204,12 @@ public class AssetChange {
 	public void testChangeLogRecordsMaxNumber() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?size=5";
+		String root = Locators.cpadServerURL + "assetChanges/?size=5";
 		String a = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
 		String b = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today	
 		String c = "access_type=Update";
 		String d = "asset_type=Video";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "change_log";
    		int max = 5;
 
@@ -244,18 +244,18 @@ public class AssetChange {
 	public void testAccessTimeTagIsFilteredAsAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
+		String root = Locators.cpadServerURL + "assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
 		String a = "access_time_lte=" + function.timestampPlusDays(5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days after today
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
 		String d = "size=40";				
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "access_time";
    		String condition = "after";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);
+		String ROOT = Locators.cpadServerURL + "assetChanges/?access_time_gt=" + function.timestampPlusDays(-3);
 		String A = "access_time_lte=" + function.timestampPlusDays(5);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(a, A);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -285,18 +285,18 @@ public class AssetChange {
 	public void testAccessTimeTagIsFilteredAsNotAfter() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
+		String root = Locators.cpadServerURL + "assetChanges/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
 		String a = "access_time_gt=" + function.timestampPlusDays(-5);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 days before today
 		String b = "access_type=Update";
 		String c = "asset_type=Video";
 		String d = "size=40";				
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "change_log";
    		String tag = "access_time";
    		String condition = "not after";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_time_lte=" + function.timestampPlusDays(3);
+		String ROOT = Locators.cpadServerURL + "assetChanges/?access_time_lte=" + function.timestampPlusDays(3);
 		String A = "access_time_gt=" + function.timestampPlusDays(-5);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(a, A);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -327,7 +327,7 @@ public class AssetChange {
 	public void testIdTagOrderIsAscending() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/";
+		String root = Locators.cpadServerURL + "assetChanges/";
 		String a = "access_type=Update";
 		String b = "object_id=014259";		
 		String c = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
@@ -335,11 +335,11 @@ public class AssetChange {
 		String e = "asset_type=Video";
 		String f = "size=20";
 		
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e, f));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e, f));
 		
 //	 // UNIT TESTS
 //		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
-//		String[] URL = { "http://v-cpad-p01.tvo.org:8080/CPAD/assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
+//		String[] URL = { Locators.cpadServerURL + "assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
 		
    		String record = "change_log";
    		String tag = "id";

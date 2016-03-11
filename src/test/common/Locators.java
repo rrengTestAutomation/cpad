@@ -2,7 +2,7 @@ package test.common;
 
 import java.io.File;
 
-public class Locator {
+public class Locators {
 	
 	public static String outputFileDir     = System.getProperty("user.dir") + File.separator + "output" + File.separator;
 	public static String testOutputFileDir = System.getProperty("user.dir") + File.separator + "test-output" + File.separator;
@@ -10,6 +10,10 @@ public class Locator {
 	public static String testIconFileDir   = System.getProperty("user.dir") + File.separator + "resources" +  File.separator + "icons" + File.separator;
 	
 	/************************URL's**************************/
+	public static String cpadServerDomain = "v-cpad-p01.tvo.org:8080";
+	public static String cpadServer       = "http://" + cpadServerDomain;
+	public static String cpadServerURL    = cpadServer + "/CPAD/";
+	
 	public static String[][] combination(String a) {
 		String[][] combination = { { a } };
 		return combination;

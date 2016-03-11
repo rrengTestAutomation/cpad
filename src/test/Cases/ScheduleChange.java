@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import test.common.Locator;
+import test.common.Locators;
 import test.helper.Functions;
 
 public class ScheduleChange {
@@ -30,12 +30,12 @@ public class ScheduleChange {
 	public void testChangeLogIdTagIsBeyondMinimum() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?change_log_id_gt=211";
+		String root = Locators.cpadServerURL + "scheduleChange/?change_log_id_gt=211";
 		String a = "access_type=Delete";		
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today		
 		String d = "size=50";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "change_log_id";
    		String expected = "211";
@@ -73,12 +73,12 @@ public class ScheduleChange {
 	public void testAccessTypeTagIsCreate() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?access_type=Create";	
+		String root = Locators.cpadServerURL + "scheduleChange/?access_type=Create";	
 		String a = "change_log_id_gt=211";		
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today		
 		String d = "size=50";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "access_type";
    		String expected = "Create";
@@ -116,12 +116,12 @@ public class ScheduleChange {
 	public void testScheduleChangeLogRecordsMaxNumber() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?size=13";
+		String root = Locators.cpadServerURL + "scheduleChange/?size=13";
 		String a = "change_log_id_gt=211";
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today	
 		String d = "access_type=Create";
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		int max = 13;
 
@@ -157,18 +157,18 @@ public class ScheduleChange {
 	public void testAccessTimeTagIsFilteredAsAfter() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
+		String root = Locators.cpadServerURL + "scheduleChange/?access_time_gt=" + function.timestampPlusDays(-3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days before today
 		String a = "change_log_id_gt=211";
 		String b = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today
 		String c = "access_type=Delete";
 		String d = "size=50";				
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "access_time";
    		String condition = "after";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?access_time_gt=" + function.timestampPlusDays(-3);
+		String ROOT = Locators.cpadServerURL + "scheduleChange/?access_time_gt=" + function.timestampPlusDays(-3);
 		String B = "access_time_lte=" + function.timestampPlusYears(7);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(b, B);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -199,18 +199,18 @@ public class ScheduleChange {
 	public void testAccessTimeTagIsFilteredAsNotAfter() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
+		String root = Locators.cpadServerURL + "scheduleChange/?access_time_lte=" + function.timestampPlusDays(3);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS that is 3 days after today
 		String a = "change_log_id_gt=211";
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);   // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_type=Delete";
 		String d = "size=50";				
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d));
    		String record = "schedule_change_log";
    		String tag = "access_time";
    		String condition = "not after";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		String ROOT = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/?access_time_lte=" + function.timestampPlusDays(3);
+		String ROOT = Locators.cpadServerURL + "scheduleChange/?access_time_lte=" + function.timestampPlusDays(3);
 		String B = "access_time_gt=" + function.timestampPlusYears(-7);
 		URL[i] = (URL[i].replace(root, ROOT)).replace(b, B);
 		try { function.assertCpadTagsDateFilter(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, condition); }
@@ -241,14 +241,14 @@ public class ScheduleChange {
 	public void testChangeLogIdTagOrderIsAscending() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
-		String root = "http://v-cpad-p01.tvo.org:8080/CPAD/scheduleChange/";
+		String root = Locators.cpadServerURL + "scheduleChange/";
 		String a = "change_log_id_gt=211";		
 		String b = "access_time_gt=" + function.timestampPlusYears(-7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years before today
 		String c = "access_time_lte=" + function.timestampPlusYears(7);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 7 years after today
 		String d = "access_type=Create";
 		String e = "size=60";
 
-		String[] URL = Locator.url(root, Locator.combination(a, b, c, d, e));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
    		String record = "schedule_change_log";
    		String tag = "change_log_id";
 	        

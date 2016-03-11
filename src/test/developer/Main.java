@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import test.common.Locator;
+import test.common.Locators;
 import test.helper.Functions;
 
 //@Test(enabled = false /** , invocationCount = 100 */)
@@ -28,7 +28,7 @@ public class Main {
 		
 	   	// driver = new FirefoxDriver();
 	   	// driver = function.getServerName(driver); 
-		System.setProperty("webdriver.chrome.driver", Locator.driverFileDir + "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", Locators.driverFileDir + "chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		function.logOpen();
@@ -38,8 +38,8 @@ public class Main {
 	   	try { 		
 	   	 // ENTRY
 
-	   		String url = "http://v-cpad-p01.tvo.org:8080/CPAD/videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
-	   		String path = Locator.testOutputFileDir;
+	   		String url = Locators.cpadServerURL + "videos/?sort_by=created_on&sort_order=desc&size=80&program_asset_id=2790";
+	   		String path = Locators.testOutputFileDir;
 	   		String name = "source";
 	   		String extention = "xml";
 	   		String fileName = name + "." + extention;

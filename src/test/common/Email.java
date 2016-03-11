@@ -68,15 +68,15 @@ public class Email {
 	  public static String text = "This is content";
 	  
 	  /**********common email single attachment***********/
-	  public static String attachmentFullPath = Locator.testOutputFileDir + "emailable-report.html";
+	  public static String attachmentFullPath = Locators.testOutputFileDir + "emailable-report.html";
 	  public static String attachmentFileName = attachmentFullPath.substring(
 				                                attachmentFullPath.lastIndexOf("\\") + 1,
 				                                attachmentFullPath.length()
 				                                );
 	  
 	  /**********common email multi attachments***********/
-	  public static String[] attachments = { Locator.testOutputFileDir + "run.log",
-		                                     Locator.testOutputFileDir + "failed.log"
+	  public static String[] attachments = { Locators.testOutputFileDir + "run.log",
+		                                     Locators.testOutputFileDir + "failed.log"
 		                                    };
 	  
 	  // ATTACHMENT PATHS VALIDATION
