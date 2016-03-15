@@ -267,6 +267,38 @@ public class Functions {
 		long mills = date.getTime();
 		return mills;
 	}
+	
+	/**
+	 * Convert Date and Time list year, month, day, hours, minutes, seconds to
+	 * long Milliseconds
+	 */
+	public static long convertCalendarStringDateTimeListToMillisecondsAsLong(
+			String Date, int hours, int min, int sec) throws ParseException {
+		
+		String stringDate = Date + " " + hours + ":" + min + ":" + sec;
+		
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = formatter.parse(stringDate);
+		long mills = date.getTime();
+		return mills;
+		
+	}
+	
+	/*
+	 * Convert Date and Time list year, month, day, hours, minutes, seconds to
+	 * long Milliseconds
+	 */
+	public static long convertCalendarStringDateTimeListToMillisecondsAsLong(
+			String Date, String hours, String min, String sec) throws ParseException {
+		
+		String stringDate = Date + " " + hours + ":" + min + ":" + sec;
+		
+		DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = formatter.parse(stringDate);
+		long mills = date.getTime();
+		return mills;
+		
+	}
 
 	/**
 	 * Convert Date and Time list year, month, day, hours, minutes, seconds to
@@ -2694,7 +2726,8 @@ public class Functions {
 		if (math.equals("-")) { min = Integer.valueOf(MM) - Integer.valueOf(mm); }
 		else                  { min = Integer.valueOf(MM) + Integer.valueOf(mm); }
 				
-		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
+	 // return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
+		return convertCalendarStringDateTimeListToMillisecondsAsLong(date, hours, min, sec);
 	}
 	
 	/**
@@ -2709,11 +2742,12 @@ public class Functions {
 		String MM = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 1, cpadDateStamp.indexOf(":") + 3);
 		String SS = cpadDateStamp.substring(cpadDateStamp.indexOf(":") + 4, cpadDateStamp.indexOf(":") + 6);
 
-        int hours = Integer.valueOf(HH);
-        int   min = Integer.valueOf(MM);
-        int   sec = Integer.valueOf(SS);
-				
-		return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
+//      int hours = Integer.valueOf(HH);
+//      int   min = Integer.valueOf(MM);
+//      int   sec = Integer.valueOf(SS);				
+//	    return convertCalendarIntDateTimeListToMillisecondsAsLong(date, hours, min, sec);
+	    
+        return convertCalendarStringDateTimeListToMillisecondsAsLong(date, HH, MM, SS);
 	}
 
 	/**
@@ -3111,8 +3145,9 @@ public class Functions {
 			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }			
 			long[] fingerprintArray = new long[valueArray.length];
 
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
+		 // for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
+			
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
@@ -3280,8 +3315,9 @@ public class Functions {
 			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }			
 			long[] fingerprintArray = new long[valueArray.length];
 
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-
+		 // for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
+			
 			for (int i = 0; i < valueArray.length; i++) {
 				fileWriterPrinter("Record ID: " + (i + 1));
 				fileWriterPrinter("Tag Value: " + valueArray[i]);
