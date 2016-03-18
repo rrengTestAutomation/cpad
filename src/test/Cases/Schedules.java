@@ -250,8 +250,10 @@ public class Schedules {
 		String D = "airing_time_gt="  + function.timestampPlusDays(-2);
 		String E = "airing_time_lte=" + function.timestampPlusDays(7); 
 		URL[i] = (URL[i].replace(d, D)).replace(e, E);
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:

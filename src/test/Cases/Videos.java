@@ -197,8 +197,10 @@ public class Videos{
    		String tag = "created_on";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -233,8 +235,10 @@ public class Videos{
    		String tag = "created_on";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -269,8 +273,10 @@ public class Videos{
    		String tag = "updated_on";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -305,8 +311,10 @@ public class Videos{
    		String tag = "updated_on";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -341,8 +349,10 @@ public class Videos{
    		String tag = "born_date";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -377,16 +387,18 @@ public class Videos{
    		String tag = "born_date";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			  function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+		      function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);		
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
-		        		 );
+		        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+        		 );
 	}
 
 	/**
@@ -413,8 +425,10 @@ public class Videos{
    		String tag = "kill_date";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -447,18 +461,20 @@ public class Videos{
 		String[] URL = Locators.url(root, Locators.combination(a, b, c));
    		String record = "video";
    		String tag = "kill_date";
-
-		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
-		}
 		
+		for (int i = 0; i < URL.length; i++) {
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);		
+		} catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
-		        		 );
+		        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+        		 );
 	}
 	
 	/**

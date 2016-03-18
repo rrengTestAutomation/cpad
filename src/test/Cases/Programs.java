@@ -155,8 +155,10 @@ public class Programs{
    		String tag = "created_on";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -191,8 +193,10 @@ public class Programs{
    		String tag = "created_on";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -227,8 +231,10 @@ public class Programs{
    		String tag = "updated_on";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
@@ -263,8 +269,10 @@ public class Programs{
    		String tag = "updated_on";
 	        
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag); }
-		catch (Exception e) { /** e.printStackTrace(); */ }
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:

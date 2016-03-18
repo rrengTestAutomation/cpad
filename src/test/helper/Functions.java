@@ -40,8 +40,6 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-
-
 /** HELPER IMPORT */
 //import java.awt.AWTException;
 //import java.awt.Component;
@@ -89,6 +87,7 @@ import org.xml.sax.SAXParseException;
 //import org.openqa.selenium.WebElement;
 //import org.testng.annotations.AfterSuite;
 //import org.testng.annotations.BeforeSuite;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -127,8 +126,6 @@ import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
 
 /** LOCATORS */
-
-
 import test.common.Locators;
 
 public class Functions {
@@ -1546,11 +1543,11 @@ public class Functions {
 	}
 	
 	/**
-	 * "AssertTrue" with Screen-Shot and descriptive Error Message, with an URL trace
+	 * "VerifyTrue" with Screen-Shot and descriptive Error Message, with an URL trace
 	 * Screenshot-Disabled
 	 * @param e
 	 */
-	public String getAssertTrue(StackTraceElement l, String description, Boolean b, String url) throws IOException {
+	public String getVerifyTrue(StackTraceElement l, String description, Boolean b, String url) throws IOException {
 
 		String packageNameOnly = l.getClassName().substring(0,
 				l.getClassName().lastIndexOf("."));
@@ -1600,7 +1597,85 @@ public class Functions {
 			fileWriter("failed.log", "   Location: ---> " + location);
 			fileWriter("failed.log", "   Expected: ---> " + "true");
 			fileWriter("failed.log", "     Actual: ---> " + b);
-            if(fileExist("record.log")) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
+            if(fileExist("record.log", false)) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
+			fileWriter("failed.log", "   Detected: " + detected);
+			fileWriter("failed.log", "    Runtime: " + runtime);
+			fileWriter("failed.log", "   Subtotal: " + subtotal);
+			fileWriter("failed.log", "\n\n");	
+		} else {
+			fileWriterPrinter("\nExpected: " + true + "\n  Actual: " + b
+					+ "\n  Result: OK\n");
+		}
+		
+		// Descriptive record output:
+		return "\nError Cause: ---> " + description +
+			   "\n        URL: ---> " + url +
+			   "\n   Location: ---> " + location +
+			   "\n   Expected: ---> " + "true" +
+			   "\n     Actual: ---> " + b +
+			   "\n   Detected: ---> " + detected +
+			   "\n    Runtime: ---> " + runtime +
+			   "\n   Subtotal: ---> " + subtotal +
+			   "\n" + xml + "\n"+
+			   "\nStack Traces:";
+	}
+	
+	/**
+	 * "AssertTrue" with Screen-Shot and descriptive Error Message, with an URL trace
+	 * Screenshot-Disabled
+	 * @param e
+	 */
+	public String getAssertTrue(StackTraceElement l, String description, Boolean b, String url) throws IOException {
+
+		String packageNameOnly = l.getClassName().substring(0,
+				l.getClassName().lastIndexOf("."));
+		String classNameOnly = l.getClassName().substring(
+				1 + l.getClassName().lastIndexOf("."),
+				l.getClassName().length());
+		String location = packageNameOnly + File.separator + classNameOnly
+				+ File.separator + l.getMethodName() + ", line # "
+				+ l.getLineNumber();
+		String xml = "<class name=\"" + packageNameOnly + "." + classNameOnly
+				+ "\"><methods><include name=\"" + l.getMethodName()
+				+ "\"/></methods></class>";
+		String detected = getCurrentDateTimeFull();
+		String runtime = testRunTime("start.time", System.currentTimeMillis());
+		String subtotal = testRunTime("ini.time", System.currentTimeMillis());
+		if (b == false) {
+			fileWriterPrinter("\nError Cause: ---> " + description
+					+ "\n        URL: ---> " + url
+					+ "\n   Location: ---> " + location
+					+ "\n   Expected: ---> " + "true" + "\n     Actual: ---> "
+					+ b + "\n");
+
+			// Creating New or Updating existing Failed Counter record:
+			counter("failed.num");
+			
+			// Append a New Log record:
+			if (fileExist("run.log", false)) {
+				// fileWriter("run.log", "    Failure: #" + fileScanner("failed.num"));
+				// fileWriter("run.log", "Error Cause: ---> " + description);
+				// fileWriter("run.log", "        URL: ---> " + url);
+				// fileWriter("run.log", "   Location: ---> " + location);
+				// fileWriter("run.log", "   Expected: ---> " + "true");
+				// fileWriter("run.log", "     Actual: ---> " + b);
+				// fileWriter("run.log", "");
+				// fileWriter("run.log", "   Detected: ---> " + detected);
+				// fileWriter("run.log", "    Runtime: ---> " + runtime);
+				// fileWriter("run.log", "   Subtotal: ---> " + subtotal);
+			}
+			
+			// Append an Error record:
+			fileWriter("failed.log", "    Failure: #" + fileScanner("failed.num"));
+			fileWriter("failed.log", "       Test: #" + fileScanner("test.num"));
+			fileWriter("failed.log", "      Start: " + convertCalendarMillisecondsAsStringToDateTimeHourMinSec(fileScanner("start.time")));
+			fileWriter("failed.log", "   XML Path: " + xml);
+			fileWriter("failed.log", "Error Cause: ---> " + description);
+			fileWriter("failed.log", "        URL: ---> " + url);
+			fileWriter("failed.log", "   Location: ---> " + location);
+			fileWriter("failed.log", "   Expected: ---> " + "true");
+			fileWriter("failed.log", "     Actual: ---> " + b);
+			if(fileExist("record.log", false)) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
 			fileWriter("failed.log", "   Detected: " + detected);
 			fileWriter("failed.log", "    Runtime: " + runtime);
 			fileWriter("failed.log", "   Subtotal: " + subtotal);
@@ -1679,7 +1754,7 @@ public class Functions {
 			fileWriter("failed.log", "   Location: ---> " + location);
 			fileWriter("failed.log", "   Expected: ---> " + "true");
 			fileWriter("failed.log", "     Actual: ---> " + b);
-            if(fileExist("record.log")) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
+			if(fileExist("record.log", false)) { fileWriter("failed.log", fileScanner("record.log")); fileCleaner("record.log");}
 			fileWriter("failed.log", "   Detected: " + detected);
 			fileWriter("failed.log", "    Runtime: " + runtime);
 			fileWriter("failed.log", "   Subtotal: " + subtotal);
@@ -2506,6 +2581,7 @@ public class Functions {
 		fileCleaner("order.log");
 		fileCleaner("xml.log");
 		fileCleaner("error.log");
+		fileCleaner("reason.log");
 		
 		fileWriter("start.time",
 				convertLongToString(System.currentTimeMillis()));
@@ -2534,6 +2610,7 @@ public class Functions {
 		fileCleaner("order.log");
 		fileCleaner("xml.log");
 		fileCleaner("error.log");
+		fileCleaner("reason.log");
 		
 		fileWriter("finish.time", convertLongToString(finish));
 		// Scanning Test Counter record:
@@ -2905,15 +2982,15 @@ public class Functions {
 	 * @throws SAXException
 	 */
 	public String[] xmlValueArray(String xml, String record,
-			String tag) throws ParserConfigurationException, SAXException,
-			IOException {
-
+		   String tag) throws ParserConfigurationException, SAXException, IOException {
+        fileCleaner("reason.log"); fileWriter("reason.log", cpadMissingRecordError);
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		Document doc = dBuilder.parse(new InputSource(new StringReader(xml)));
 		doc.getDocumentElement().normalize();
 		fileWriterPrinter(doc.getDocumentElement().getNodeName() + ":" + "\n");
 		NodeList nodes = doc.getElementsByTagName(record);
+		
 		String[] valueArray = new String[nodes.getLength()];
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node node = nodes.item(i);
@@ -2923,7 +3000,11 @@ public class Functions {
 				valueArray[i] = getValue(tag, element);
 			}
 		}
-		return valueArray;
+		
+       nodes = doc.getElementsByTagName(tag);
+       if (nodes.getLength() > 0) { fileWriterPrinter(nodes.getLength() + " \"" + tag + "\" tag records found!\n"); fileCleaner("reason.log"); }
+
+	return valueArray;
 	}
 
 	/**
@@ -3031,6 +3112,27 @@ public class Functions {
 	public String cpadMissingRecordError   = "NO RECORDS FOUND...";
 	
 	/**
+	 * Assert CPAD record tags as dates are in descending order
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsRecords(
+	           StackTraceElement trace, String url, int combination, int total,
+		       Boolean ifAssert, String record, String tag) 
+    throws IOException {		
+		String error = "No records found!";
+		try {
+			if (fileExist("reason.log", false)) {
+				
+				getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("reason.log")), url);
+				fileWriterPrinter("========== END ===========");
+				fileWriterPrinter();	
+			}
+			return !fileExist("reason.log", false);
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
+	}
+	
+	/**
 	 * Assert CPAD record tags are in ascending order
 	 * Won't use Selenium WebDriver
 	 * @throws IOException
@@ -3135,59 +3237,66 @@ public class Functions {
 			fileWriterPrinter("==========================");
 
 			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
-			
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			if (fileExist("record.log",  false)) {  fileCleaner("record.log"); fileWriter("record.log", "true"); }			
+			if (fileExist("reason.log",  false)) { fileCleaner("reason.log"); }
+						
 			xmlValidityChecker(xml, trace, combination, total);
 
 			String error = "Out of order!"; String reason = cpadAscDateOrderError;
 			String[] valueArray = xmlValueArray(xml, record, tag);
-			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }			
-			long[] fingerprintArray = new long[valueArray.length];
-
-		 // for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
 			
-			for (int i = 0; i < valueArray.length; i++) {
-				fileWriterPrinter("Record ID: " + (i + 1));
-				fileWriterPrinter("Tag Value: " + valueArray[i]);
+			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
+			if (valueArray.length == 0) { fileCleaner("record.log"); fileWriter("record.log", "false"); }
+			else {			
+			      long[] fingerprintArray = new long[valueArray.length];
 
-				if (i < (valueArray.length - 1)) {
-					boolean assertORDER = compareLong(fingerprintArray[i + 1], fingerprintArray[i]);
+		       // for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+			      for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
+			
+			      for (int i = 0; i < valueArray.length; i++) {
+			    	     fileWriterPrinter("Record ID: " + (i + 1));
+			    	     fileWriterPrinter("Tag Value: " + valueArray[i]);
 
-					if (assertORDER) {
-						fileWriterPrinter("    Result: OK\n");
-					} else {
-						fileWriterPrinter("    Result: FAILED!");
-						fileWriterPrinter("    Reason: " + reason);
-						fileCleaner("order.log");
-						fileWriter("order.log", "false");
+			    	     if (i < (valueArray.length - 1)) {
+			    	         	boolean assertORDER = compareLong(fingerprintArray[i + 1], fingerprintArray[i]);
 
-//						if (ifAssert) {
-//							fileWriterPrinter();
-//							fileWriterPrinter(" Record ID: " + (i + 2));
-//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-//						}
+			    	            if (assertORDER) {
+			    	                fileWriterPrinter("    Result: OK\n");
+			    	                } else {
+			    	                	fileWriterPrinter("    Result: FAILED!");
+			    	                    fileWriterPrinter("    Reason: " + reason);
+			    	                    fileCleaner("order.log");
+			    	                    fileWriter("order.log", "false");
 
-						fileWriterPrinter();
-						
-						fileWriter("record.log", "");					
-						fileWriter("record.log", " Record ID: " + (i + 1));
-						fileWriter("record.log", " Tag Value: " + valueArray[i]);
-						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
-						fileWriter("record.log", "    Result: FAILED!");
-						fileWriter("record.log", "    Reason: " + reason);
-						fileWriter("record.log", "");
-					}
+//				     		if (ifAssert) {
+//				     			fileWriterPrinter();
+//				     			fileWriterPrinter(" Record ID: " + (i + 2));
+//				     			fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//					     	}
 
-//					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
-				}
+			    	                	fileWriterPrinter();
+			    	                	fileWriter("record.log", "");
+			    	                	fileWriter("record.log", " Record ID: " + (i + 1));
+			    	                	fileWriter("record.log", " Tag Value: " + valueArray[i]);
+			    	                	fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
+			    	                	fileWriter("record.log", "    Result: FAILED!");
+			    	                	fileWriter("record.log", "    Reason: " + reason);
+			    	                	fileWriter("record.log", "");
+			    	                }
+			    	            
+//			    	            if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
+			    	            
+			    	     }
+			    	     
+			      }		      
 			}
-
-			fileWriterPrinter("==========================");
-			fileWriterPrinter();
-
+			
 			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+
+			fileWriterPrinter("========== END ===========");
+			fileWriterPrinter();
 
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
@@ -3302,67 +3411,76 @@ public class Functions {
 			String xml = getUrlPageSourceSave(url);
 			
 			fileWriterPrinter();
-			fileWriterPrinter("==========================");
-
-			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
-			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }
+			fileWriterPrinter("========= START ==========");
 			
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("order.log", false )) { fileWriter("order.log", "true"); }			
 			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			if (fileExist("record.log",  false)) {  fileCleaner("record.log"); fileWriter("record.log", "true"); }			
+			if (fileExist("reason.log",  false)) { fileCleaner("reason.log"); }
+			
 			xmlValidityChecker(xml, trace, combination, total);
 			
 			String error = "Out of order!"; String reason = cpadDescDateOrderError;
 			String[] valueArray = xmlValueArray(xml, record, tag);
-			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }			
-			long[] fingerprintArray = new long[valueArray.length];
-
-		 // for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
-			for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
 			
-			for (int i = 0; i < valueArray.length; i++) {
-				fileWriterPrinter("Record ID: " + (i + 1));
-				fileWriterPrinter("Tag Value: " + valueArray[i]);
+			if (valueArray.length == 0) { fileCleaner("order.log"); fileWriter("order.log", "false"); error = "No records found!"; reason = cpadMissingRecordError; }
+			if (valueArray.length == 0) { fileCleaner("record.log"); fileWriter("record.log", "false"); }			
+			else {			
+			      long[] fingerprintArray = new long[valueArray.length];
 
-				if (i < (valueArray.length - 1)) {
-					boolean assertORDER = compareLong(fingerprintArray[i],
-							fingerprintArray[i + 1]);
+		       // for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateStampToMillisecondsAsLong(valueArray[i]); }
+			      for (int i = 0; i < valueArray.length; i++) { fingerprintArray[i] = convertCpadDateFilterToMillisecondsAsLong(valueArray[i]); }
+			
+			      for (int i = 0; i < valueArray.length; i++) {
+			    	     fileWriterPrinter("Record ID: " + (i + 1));
+			    	     fileWriterPrinter("Tag Value: " + valueArray[i]);
 
-					if (assertORDER) {
-						fileWriterPrinter("    Result: OK\n");
-					} else {
-						fileWriterPrinter("    Result: FAILED!");
-						fileWriterPrinter("    Reason: " + reason);
-						fileCleaner("order.log");
-						fileWriter("order.log", "false");
+			    	     if (i < (valueArray.length - 1)) {
+			    	         	boolean assertORDER = compareLong(fingerprintArray[i], fingerprintArray[i + 1]);
 
-//						if (ifAssert) {
-//							fileWriterPrinter();
-//							fileWriterPrinter(" Record ID: " + (i + 2));
-//							fileWriterPrinter("Created On: " + valueArray[i + 1]);
-//						}
+			    	            if (assertORDER) {
+			    	                fileWriterPrinter("    Result: OK\n");
+			    	                } else {
+			    	                	fileWriterPrinter("    Result: FAILED!");
+			    	                    fileWriterPrinter("    Reason: " + reason);
+			    	                    fileCleaner("order.log");
+			    	                    fileWriter("order.log", "false");
 
-						fileWriterPrinter();
-						
-						fileWriter("record.log", "");					
-						fileWriter("record.log", " Record ID: " + (i + 1));
-						fileWriter("record.log", " Tag Value: " + valueArray[i]);
-						fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
-						fileWriter("record.log", "    Result: FAILED!");
-						fileWriter("record.log", "    Reason: " + reason);
-						fileWriter("record.log", "");
-					}
+//				     		if (ifAssert) {
+//				     			fileWriterPrinter();
+//				     			fileWriterPrinter(" Record ID: " + (i + 2));
+//				     			fileWriterPrinter("Created On: " + valueArray[i + 1]);
+//					     	}
 
-//					if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
-				}
+			    	                	fileWriterPrinter();
+			    	                	fileWriter("record.log", "");
+			    	                	fileWriter("record.log", " Record ID: " + (i + 1));
+			    	                	fileWriter("record.log", " Tag Value: " + valueArray[i]);
+			    	                	fileWriter("record.log", "Next Value: " + valueArray[i + 1]);
+			    	                	fileWriter("record.log", "    Result: FAILED!");
+			    	                	fileWriter("record.log", "    Reason: " + reason);
+			    	                	fileWriter("record.log", "");
+			    	                }
+			    	            
+//			    	            if (ifAssert) { Assert.assertTrue(assertORDER, "   Result: FAILED\n"); }
+			    	            
+			    	     }
+			    	     
+			      }		      
 			}
-
-			fileWriterPrinter("==========================");
-			fileWriterPrinter();
-
+			
 			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("order.log")), url);
+
+			fileWriterPrinter("========== END ===========");
+			fileWriterPrinter();
 			
 			boolean result = Boolean.valueOf(fileScanner("order.log")) && Boolean.valueOf(fileScanner("xml.log"));
 			
-			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			if ((fileExist("cpad.log", false)) && (!result)) { 
+				fileCleaner("cpad.log"); fileWriter("cpad.log", result);
+				fileCleaner("reason.log"); fileWriter("reason.log", reason);
+				}
 			
 			fileCleaner("order.log");
 			fileCleaner("xml.log");
