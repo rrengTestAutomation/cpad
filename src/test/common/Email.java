@@ -28,6 +28,7 @@ public class Email {
 	  public static String[] ccAll = {
 		                               testerWorkEmail,
 		                               managerEmail,
+		                               "pleung@tvo.org",
 		                               "aporretta@tvo.org",
 		                               "ukhan@tvo.org",
 		                               "ositbon@tvo.org",

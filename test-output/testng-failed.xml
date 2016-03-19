@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test-single]">
-  <test name="test-single(failed)">
+<suite name="Failed suite [test-regression]">
+  <test name="test-regression(failed)">
     <classes>
-      <class name="test.Cases.Java.cpadTestSchedules">
+      <class name="test.Cases.Programs">
         <methods>
-          <include name="testCreatedOnOrderIsDescending"/>
-          <include name="logOpen"/>
-          <include name="startTime"/>
           <include name="endTime"/>
-          <include name="logClose"/>
+          <include name="startTime"/>
         </methods>
-      </class> <!-- test.Cases.Java.cpadTestSchedules -->
+      </class> <!-- test.Cases.Programs -->
+      <class name="test.Cases.Videos">
+        <methods>
+          <include name="startTime"/>
+          <include name="testBornDateTagOrderIsDescending"/>
+          <include name="endTime"/>
+          <include name="testKillDateTagOrderIsDescending"/>
+        </methods>
+      </class> <!-- test.Cases.Videos -->
+      <class name="test.Cases.AssetChange">
+        <methods>
+          <include name="endTime"/>
+          <include name="startTime"/>
+        </methods>
+      </class> <!-- test.Cases.AssetChange -->
+      <class name="test.Send.Mail">
+        <methods>
+          <include name="start"/>
+          <include name="finish"/>
+        </methods>
+      </class> <!-- test.Send.Mail -->
+      <class name="test.Cases.Schedules">
+        <methods>
+          <include name="endTime"/>
+          <include name="startTime"/>
+        </methods>
+      </class> <!-- test.Cases.Schedules -->
+      <class name="test.Cases.ScheduleChange">
+        <methods>
+          <include name="endTime"/>
+          <include name="startTime"/>
+        </methods>
+      </class> <!-- test.Cases.ScheduleChange -->
     </classes>
-  </test> <!-- test-single(failed) -->
-</suite> <!-- Failed suite [test-single] -->
+  </test> <!-- test-regression(failed) -->
+</suite> <!-- Failed suite [test-regression] -->

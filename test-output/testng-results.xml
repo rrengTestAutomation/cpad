@@ -1,33 +1,721 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" total="48" passed="46">
   <reporter-output>
   </reporter-output>
-  <suite name="test-single" duration-ms="18283" started-at="2016-02-23T21:47:43Z" finished-at="2016-02-23T21:48:01Z">
+  <suite name="test-regression" duration-ms="10612617" started-at="2016-03-18T23:15:00Z" finished-at="2016-03-19T02:11:52Z">
     <groups>
     </groups>
-    <test name="test-single" duration-ms="18283" started-at="2016-02-23T21:47:43Z" finished-at="2016-02-23T21:48:01Z">
-      <class name="test.Cases.Java.cpadTestSchedules">
-        <test-method status="PASS" signature="logOpen()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="logOpen" is-config="true" duration-ms="50" started-at="2016-02-23T16:47:43Z" finished-at="2016-02-23T16:47:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logOpen -->
-        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="startTime" is-config="true" duration-ms="13" started-at="2016-02-23T16:47:43Z" finished-at="2016-02-23T16:47:43Z">
+    <test name="test-regression" duration-ms="10612617" started-at="2016-03-18T23:15:00Z" finished-at="2016-03-19T02:11:52Z">
+      <class name="test.Cases.ScheduleChange">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="startTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:43:47Z" finished-at="2016-03-18T21:43:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTime -->
-        <test-method status="PASS" signature="testCreatedOnOrderIsDescending()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="testCreatedOnOrderIsDescending" duration-ms="18256" started-at="2016-02-23T16:47:43Z" finished-at="2016-02-23T16:48:01Z">
+        <test-method status="PASS" signature="testAccessTimeTagIsFilteredAsAfter()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="testAccessTimeTagIsFilteredAsAfter" duration-ms="3663" started-at="2016-03-18T21:43:47Z" finished-at="2016-03-18T21:43:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreatedOnOrderIsDescending -->
-        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="endTime" is-config="true" duration-ms="2" started-at="2016-02-23T16:48:01Z" finished-at="2016-02-23T16:48:01Z">
+        </test-method> <!-- testAccessTimeTagIsFilteredAsAfter -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="endTime" is-config="true" duration-ms="3" started-at="2016-03-18T21:43:51Z" finished-at="2016-03-18T21:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTime -->
-        <test-method status="PASS" signature="logClose()[pri:0, instance:test.Cases.Java.cpadTestSchedules@c818063]" name="logClose" is-config="true" duration-ms="1" started-at="2016-02-23T16:48:01Z" finished-at="2016-02-23T16:48:01Z">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:43:51Z" finished-at="2016-03-18T21:43:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logClose -->
-      </class> <!-- test.Cases.Java.cpadTestSchedules -->
-    </test> <!-- test-single -->
-  </suite> <!-- test-single -->
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAccessTimeTagIsFilteredAsNotAfter()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="testAccessTimeTagIsFilteredAsNotAfter" duration-ms="82964" started-at="2016-03-18T21:43:51Z" finished-at="2016-03-18T21:45:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccessTimeTagIsFilteredAsNotAfter -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:45:14Z" finished-at="2016-03-18T21:45:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="startTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:45:14Z" finished-at="2016-03-18T21:45:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAccessTypeTagIsCreate()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="testAccessTypeTagIsCreate" duration-ms="62607" started-at="2016-03-18T21:45:14Z" finished-at="2016-03-18T21:46:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccessTypeTagIsCreate -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:46:16Z" finished-at="2016-03-18T21:46:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:46:16Z" finished-at="2016-03-18T21:46:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testChangeLogIdTagIsBeyondMinimum()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="testChangeLogIdTagIsBeyondMinimum" duration-ms="79532" started-at="2016-03-18T21:46:16Z" finished-at="2016-03-18T21:47:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeLogIdTagIsBeyondMinimum -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="endTime" is-config="true" duration-ms="3" started-at="2016-03-18T21:47:36Z" finished-at="2016-03-18T21:47:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:47:36Z" finished-at="2016-03-18T21:47:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testChangeLogIdTagOrderIsAscending()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="testChangeLogIdTagOrderIsAscending" duration-ms="396075" started-at="2016-03-18T21:47:36Z" finished-at="2016-03-18T21:54:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeLogIdTagOrderIsAscending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:54:12Z" finished-at="2016-03-18T21:54:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:54:12Z" finished-at="2016-03-18T21:54:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testScheduleChangeLogRecordsMaxNumber()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="testScheduleChangeLogRecordsMaxNumber" duration-ms="78901" started-at="2016-03-18T21:54:12Z" finished-at="2016-03-18T21:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testScheduleChangeLogRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.ScheduleChange@67b64c45]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:55:31Z" finished-at="2016-03-18T21:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+      </class> <!-- test.Cases.ScheduleChange -->
+      <class name="test.Send.Mail">
+        <test-method status="PASS" signature="start()[pri:0, instance:test.Send.Mail@506e6d5e]" name="start" is-config="true" duration-ms="449107" started-at="2016-03-18T19:07:31Z" finished-at="2016-03-18T19:15:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="finish()[pri:0, instance:test.Send.Mail@506e6d5e]" name="finish" is-config="true" duration-ms="2996" started-at="2016-03-18T22:11:52Z" finished-at="2016-03-18T22:11:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- test.Send.Mail -->
+      <class name="test.Cases.Schedules">
+        <test-method status="PASS" signature="testAiringTimeTagIsFilteredAsAfter()[pri:0, instance:test.Cases.Schedules@3796751b]" name="testAiringTimeTagIsFilteredAsAfter" duration-ms="2891" started-at="2016-03-18T21:55:31Z" finished-at="2016-03-18T21:55:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAiringTimeTagIsFilteredAsAfter -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:31Z" finished-at="2016-03-18T21:55:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:55:34Z" finished-at="2016-03-18T21:55:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:55:34Z" finished-at="2016-03-18T21:55:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAiringTimeTagIsFilteredAsNotAfter()[pri:0, instance:test.Cases.Schedules@3796751b]" name="testAiringTimeTagIsFilteredAsNotAfter" duration-ms="2512" started-at="2016-03-18T21:55:34Z" finished-at="2016-03-18T21:55:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAiringTimeTagIsFilteredAsNotAfter -->
+        <test-method status="PASS" signature="testAiringTimeTagOrderIsDescending()[pri:0, instance:test.Cases.Schedules@3796751b]" name="testAiringTimeTagOrderIsDescending" duration-ms="292" started-at="2016-03-18T21:55:36Z" finished-at="2016-03-18T21:55:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAiringTimeTagOrderIsDescending -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:36Z" finished-at="2016-03-18T21:55:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:36Z" finished-at="2016-03-18T21:55:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:55:37Z" finished-at="2016-03-18T21:55:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:37Z" finished-at="2016-03-18T21:55:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testGroupTagIsCorrect()[pri:0, instance:test.Cases.Schedules@3796751b]" name="testGroupTagIsCorrect" duration-ms="2153" started-at="2016-03-18T21:55:37Z" finished-at="2016-03-18T21:55:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGroupTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:39Z" finished-at="2016-03-18T21:55:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:39Z" finished-at="2016-03-18T21:55:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testProgramAssetIdTagIsCorrect()[pri:0, instance:test.Cases.Schedules@3796751b]" name="testProgramAssetIdTagIsCorrect" duration-ms="1606" started-at="2016-03-18T21:55:39Z" finished-at="2016-03-18T21:55:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProgramAssetIdTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:55:40Z" finished-at="2016-03-18T21:55:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:55:40Z" finished-at="2016-03-18T21:55:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testScheduleRecordsMaxNumber()[pri:0, instance:test.Cases.Schedules@3796751b]" name="testScheduleRecordsMaxNumber" duration-ms="2233" started-at="2016-03-18T21:55:40Z" finished-at="2016-03-18T21:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testScheduleRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Schedules@3796751b]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:43Z" finished-at="2016-03-18T21:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+      </class> <!-- test.Cases.Schedules -->
+      <class name="test.Cases.AssetChange">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="7" started-at="2016-03-18T19:15:00Z" finished-at="2016-03-18T19:15:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAccessTimeTagIsFilteredAsAfter()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testAccessTimeTagIsFilteredAsAfter" duration-ms="171422" started-at="2016-03-18T19:15:00Z" finished-at="2016-03-18T19:17:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccessTimeTagIsFilteredAsAfter -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="4" started-at="2016-03-18T19:17:51Z" finished-at="2016-03-18T19:17:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="10" started-at="2016-03-18T19:17:51Z" finished-at="2016-03-18T19:17:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAccessTimeTagIsFilteredAsNotAfter()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testAccessTimeTagIsFilteredAsNotAfter" duration-ms="176274" started-at="2016-03-18T19:17:51Z" finished-at="2016-03-18T19:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccessTimeTagIsFilteredAsNotAfter -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T19:20:47Z" finished-at="2016-03-18T19:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T19:20:47Z" finished-at="2016-03-18T19:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAccessTypeTagIsCreate()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testAccessTypeTagIsCreate" duration-ms="168571" started-at="2016-03-18T19:20:47Z" finished-at="2016-03-18T19:23:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccessTypeTagIsCreate -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T19:23:36Z" finished-at="2016-03-18T19:23:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T19:23:36Z" finished-at="2016-03-18T19:23:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testAssetTypeTagIsVideo()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testAssetTypeTagIsVideo" duration-ms="185277" started-at="2016-03-18T19:23:36Z" finished-at="2016-03-18T19:26:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAssetTypeTagIsVideo -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="6" started-at="2016-03-18T19:26:41Z" finished-at="2016-03-18T19:26:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="10" started-at="2016-03-18T19:26:41Z" finished-at="2016-03-18T19:26:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testChangeLogRecordsMaxNumber()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testChangeLogRecordsMaxNumber" duration-ms="186002" started-at="2016-03-18T19:26:41Z" finished-at="2016-03-18T19:29:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangeLogRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="4" started-at="2016-03-18T19:29:47Z" finished-at="2016-03-18T19:29:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T19:29:47Z" finished-at="2016-03-18T19:29:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testIdTagIsBeyondMinimum()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testIdTagIsBeyondMinimum" duration-ms="193425" started-at="2016-03-18T19:29:47Z" finished-at="2016-03-18T19:33:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIdTagIsBeyondMinimum -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T19:33:01Z" finished-at="2016-03-18T19:33:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T19:33:01Z" finished-at="2016-03-18T19:33:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testIdTagOrderIsAscending()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testIdTagOrderIsAscending" duration-ms="5236078" started-at="2016-03-18T19:33:01Z" finished-at="2016-03-18T21:00:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIdTagOrderIsAscending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="3" started-at="2016-03-18T21:00:17Z" finished-at="2016-03-18T21:00:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:00:17Z" finished-at="2016-03-18T21:00:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testObjectIdTagIsCorrect()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="testObjectIdTagIsCorrect" duration-ms="846770" started-at="2016-03-18T21:00:17Z" finished-at="2016-03-18T21:14:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testObjectIdTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.AssetChange@96532d6]" name="endTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:14:24Z" finished-at="2016-03-18T21:14:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+      </class> <!-- test.Cases.AssetChange -->
+      <class name="test.Cases.Videos">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:55:43Z" finished-at="2016-03-18T21:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testBornDateTagOrderIsAscending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testBornDateTagOrderIsAscending" duration-ms="47726" started-at="2016-03-18T21:55:43Z" finished-at="2016-03-18T21:56:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBornDateTagOrderIsAscending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:56:30Z" finished-at="2016-03-18T21:56:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:56:30Z" finished-at="2016-03-18T21:56:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="FAIL" signature="testBornDateTagOrderIsDescending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testBornDateTagOrderIsDescending" duration-ms="47447" started-at="2016-03-18T21:56:30Z" finished-at="2016-03-18T21:57:18Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Error Cause: ---> TEST # 34 - Unexpected Results found!
+   Location: ---> test.Cases\Videos\testBornDateTagOrderIsDescending, line # 398
+   Expected: ---> true
+     Actual: ---> false
+   Detected: ---> 2016-03-18 21:57:18
+    Runtime: ---> 0:00:47
+   Subtotal: ---> 2:42:18
+<class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsDescending"/></methods></class>
+
+Stack Traces: expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Error Cause: ---> TEST # 34 - Unexpected Results found!
+   Location: ---> test.Cases\Videos\testBornDateTagOrderIsDescending, line # 398
+   Expected: ---> true
+     Actual: ---> false
+   Detected: ---> 2016-03-18 21:57:18
+    Runtime: ---> 0:00:47
+   Subtotal: ---> 2:42:18
+<class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsDescending"/></methods></class>
+
+Stack Traces: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at test.Cases.Videos.testBornDateTagOrderIsDescending(Videos.java:397)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBornDateTagOrderIsDescending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:57:18Z" finished-at="2016-03-18T21:57:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:57:18Z" finished-at="2016-03-18T21:57:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testBrightcoveRefIdTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testBrightcoveRefIdTagIsCorrect" duration-ms="36" started-at="2016-03-18T21:57:18Z" finished-at="2016-03-18T21:57:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrightcoveRefIdTagIsCorrect -->
+        <test-method status="PASS" signature="testCreateOnTagOrderIsAscending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testCreateOnTagOrderIsAscending" duration-ms="46690" started-at="2016-03-18T21:57:18Z" finished-at="2016-03-18T21:58:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateOnTagOrderIsAscending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:57:18Z" finished-at="2016-03-18T21:57:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:57:18Z" finished-at="2016-03-18T21:57:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:58:05Z" finished-at="2016-03-18T21:58:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="testCreateOnTagOrderIsDescending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testCreateOnTagOrderIsDescending" duration-ms="46454" started-at="2016-03-18T21:58:05Z" finished-at="2016-03-18T21:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateOnTagOrderIsDescending -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:58:05Z" finished-at="2016-03-18T21:58:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testGroupTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testGroupTagIsCorrect" duration-ms="167589" started-at="2016-03-18T21:58:51Z" finished-at="2016-03-18T22:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGroupTagIsCorrect -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:58:51Z" finished-at="2016-03-18T21:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:58:51Z" finished-at="2016-03-18T21:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="testIsCaptionedTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testIsCaptionedTagIsCorrect" duration-ms="5232" started-at="2016-03-18T22:01:39Z" finished-at="2016-03-18T22:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsCaptionedTagIsCorrect -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:01:39Z" finished-at="2016-03-18T22:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:01:39Z" finished-at="2016-03-18T22:01:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T22:01:44Z" finished-at="2016-03-18T22:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="testKillDateTagOrderIsAscending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testKillDateTagOrderIsAscending" duration-ms="48616" started-at="2016-03-18T22:01:44Z" finished-at="2016-03-18T22:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testKillDateTagOrderIsAscending -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:01:44Z" finished-at="2016-03-18T22:01:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:02:32Z" finished-at="2016-03-18T22:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:02:32Z" finished-at="2016-03-18T22:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="FAIL" signature="testKillDateTagOrderIsDescending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testKillDateTagOrderIsDescending" duration-ms="51108" started-at="2016-03-18T22:02:32Z" finished-at="2016-03-18T22:03:24Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Error Cause: ---> TEST # 41 - Unexpected Results found!
+   Location: ---> test.Cases\Videos\testKillDateTagOrderIsDescending, line # 474
+   Expected: ---> true
+     Actual: ---> false
+   Detected: ---> 2016-03-18 22:03:24
+    Runtime: ---> 0:00:51
+   Subtotal: ---> 2:48:23
+<class name="test.Cases.Videos"><methods><include name="testKillDateTagOrderIsDescending"/></methods></class>
+
+Stack Traces: expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Error Cause: ---> TEST # 41 - Unexpected Results found!
+   Location: ---> test.Cases\Videos\testKillDateTagOrderIsDescending, line # 474
+   Expected: ---> true
+     Actual: ---> false
+   Detected: ---> 2016-03-18 22:03:24
+    Runtime: ---> 0:00:51
+   Subtotal: ---> 2:48:23
+<class name="test.Cases.Videos"><methods><include name="testKillDateTagOrderIsDescending"/></methods></class>
+
+Stack Traces: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at test.Cases.Videos.testKillDateTagOrderIsDescending(Videos.java:473)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:207)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:178)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testKillDateTagOrderIsDescending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="3" started-at="2016-03-18T22:03:24Z" finished-at="2016-03-18T22:03:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T22:03:24Z" finished-at="2016-03-18T22:03:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testProgramAssetIdTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testProgramAssetIdTagIsCorrect" duration-ms="205077" started-at="2016-03-18T22:03:24Z" finished-at="2016-03-18T22:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProgramAssetIdTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="3" started-at="2016-03-18T22:06:49Z" finished-at="2016-03-18T22:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="16" started-at="2016-03-18T22:06:49Z" finished-at="2016-03-18T22:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testRecordIdTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testRecordIdTagIsCorrect" duration-ms="49" started-at="2016-03-18T22:06:49Z" finished-at="2016-03-18T22:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRecordIdTagIsCorrect -->
+        <test-method status="PASS" signature="testTitleTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testTitleTagIsCorrect" duration-ms="6692" started-at="2016-03-18T22:06:49Z" finished-at="2016-03-18T22:06:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTitleTagIsCorrect -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:06:49Z" finished-at="2016-03-18T22:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:06:49Z" finished-at="2016-03-18T22:06:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T22:06:55Z" finished-at="2016-03-18T22:06:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:06:55Z" finished-at="2016-03-18T22:06:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testUpdatedOnTagOrderIsAscending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testUpdatedOnTagOrderIsAscending" duration-ms="48408" started-at="2016-03-18T22:06:55Z" finished-at="2016-03-18T22:07:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatedOnTagOrderIsAscending -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="10" started-at="2016-03-18T22:07:44Z" finished-at="2016-03-18T22:07:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T22:07:44Z" finished-at="2016-03-18T22:07:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="testUpdatedOnTagOrderIsDescending()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testUpdatedOnTagOrderIsDescending" duration-ms="48401" started-at="2016-03-18T22:07:44Z" finished-at="2016-03-18T22:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatedOnTagOrderIsDescending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="1" started-at="2016-03-18T22:08:32Z" finished-at="2016-03-18T22:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T22:08:32Z" finished-at="2016-03-18T22:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testVideoAssetIdTagIsCorrect()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testVideoAssetIdTagIsCorrect" duration-ms="36" started-at="2016-03-18T22:08:32Z" finished-at="2016-03-18T22:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVideoAssetIdTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="4" started-at="2016-03-18T22:08:32Z" finished-at="2016-03-18T22:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="startTime" is-config="true" duration-ms="3" started-at="2016-03-18T22:08:32Z" finished-at="2016-03-18T22:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testVideoRecordsMaxNumber()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="testVideoRecordsMaxNumber" duration-ms="199947" started-at="2016-03-18T22:08:32Z" finished-at="2016-03-18T22:11:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVideoRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Videos@2acf57e3]" name="endTime" is-config="true" duration-ms="12" started-at="2016-03-18T22:11:52Z" finished-at="2016-03-18T22:11:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+      </class> <!-- test.Cases.Videos -->
+      <class name="test.Cases.Programs">
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:14:24Z" finished-at="2016-03-18T21:14:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testCreatedOnOrderIsAscending()[pri:0, instance:test.Cases.Programs@340f438e]" name="testCreatedOnOrderIsAscending" duration-ms="47898" started-at="2016-03-18T21:14:24Z" finished-at="2016-03-18T21:15:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreatedOnOrderIsAscending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:15:12Z" finished-at="2016-03-18T21:15:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:15:12Z" finished-at="2016-03-18T21:15:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testCreatedOnOrderIsDescending()[pri:0, instance:test.Cases.Programs@340f438e]" name="testCreatedOnOrderIsDescending" duration-ms="45997" started-at="2016-03-18T21:15:12Z" finished-at="2016-03-18T21:15:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreatedOnOrderIsDescending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="3" started-at="2016-03-18T21:15:58Z" finished-at="2016-03-18T21:15:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:15:58Z" finished-at="2016-03-18T21:15:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testGroupTagIsCorrect()[pri:0, instance:test.Cases.Programs@340f438e]" name="testGroupTagIsCorrect" duration-ms="196261" started-at="2016-03-18T21:15:58Z" finished-at="2016-03-18T21:19:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGroupTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:19:14Z" finished-at="2016-03-18T21:19:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:19:14Z" finished-at="2016-03-18T21:19:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testProgramAssetIdTagIsCorrect()[pri:0, instance:test.Cases.Programs@340f438e]" name="testProgramAssetIdTagIsCorrect" duration-ms="2672" started-at="2016-03-18T21:19:14Z" finished-at="2016-03-18T21:19:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProgramAssetIdTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:19:17Z" finished-at="2016-03-18T21:19:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:19:17Z" finished-at="2016-03-18T21:19:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testProgramRecordsMaxNumber()[pri:0, instance:test.Cases.Programs@340f438e]" name="testProgramRecordsMaxNumber" duration-ms="195537" started-at="2016-03-18T21:19:17Z" finished-at="2016-03-18T21:22:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProgramRecordsMaxNumber -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="10" started-at="2016-03-18T21:22:32Z" finished-at="2016-03-18T21:22:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:22:32Z" finished-at="2016-03-18T21:22:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testRecordIdTagIsCorrect()[pri:0, instance:test.Cases.Programs@340f438e]" name="testRecordIdTagIsCorrect" duration-ms="2462" started-at="2016-03-18T21:22:32Z" finished-at="2016-03-18T21:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRecordIdTagIsCorrect -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:22:35Z" finished-at="2016-03-18T21:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testSingleProgramTagIsCorrect()[pri:0, instance:test.Cases.Programs@340f438e]" name="testSingleProgramTagIsCorrect" duration-ms="200507" started-at="2016-03-18T21:22:35Z" finished-at="2016-03-18T21:25:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSingleProgramTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:22:35Z" finished-at="2016-03-18T21:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:25:55Z" finished-at="2016-03-18T21:25:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testTitleTagIsCorrect()[pri:0, instance:test.Cases.Programs@340f438e]" name="testTitleTagIsCorrect" duration-ms="973635" started-at="2016-03-18T21:25:55Z" finished-at="2016-03-18T21:42:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTitleTagIsCorrect -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:25:55Z" finished-at="2016-03-18T21:25:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:42:09Z" finished-at="2016-03-18T21:42:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:42:09Z" finished-at="2016-03-18T21:42:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testUpdatedOnOrderIsAscending()[pri:0, instance:test.Cases.Programs@340f438e]" name="testUpdatedOnOrderIsAscending" duration-ms="46847" started-at="2016-03-18T21:42:09Z" finished-at="2016-03-18T21:42:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatedOnOrderIsAscending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:42:56Z" finished-at="2016-03-18T21:42:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="1" started-at="2016-03-18T21:42:56Z" finished-at="2016-03-18T21:42:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testUpdatedOnOrderIsDescending()[pri:0, instance:test.Cases.Programs@340f438e]" name="testUpdatedOnOrderIsDescending" duration-ms="45758" started-at="2016-03-18T21:42:56Z" finished-at="2016-03-18T21:43:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatedOnOrderIsDescending -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="2" started-at="2016-03-18T21:43:41Z" finished-at="2016-03-18T21:43:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="4" started-at="2016-03-18T21:43:41Z" finished-at="2016-03-18T21:43:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="testUpdatedOnTagIsBetween()[pri:0, instance:test.Cases.Programs@340f438e]" name="testUpdatedOnTagIsBetween" duration-ms="2650" started-at="2016-03-18T21:43:42Z" finished-at="2016-03-18T21:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatedOnTagIsBetween -->
+        <test-method status="PASS" signature="testUpdatedOnTagIsFiltered()[pri:0, instance:test.Cases.Programs@340f438e]" name="testUpdatedOnTagIsFiltered" duration-ms="2742" started-at="2016-03-18T21:43:44Z" finished-at="2016-03-18T21:43:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatedOnTagIsFiltered -->
+        <test-method status="PASS" signature="startTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="startTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:43:44Z" finished-at="2016-03-18T21:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:43:44Z" finished-at="2016-03-18T21:43:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+        <test-method status="PASS" signature="endTime()[pri:0, instance:test.Cases.Programs@340f438e]" name="endTime" is-config="true" duration-ms="0" started-at="2016-03-18T21:43:47Z" finished-at="2016-03-18T21:43:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTime -->
+      </class> <!-- test.Cases.Programs -->
+    </test> <!-- test-regression -->
+  </suite> <!-- test-regression -->
 </testng-results>
