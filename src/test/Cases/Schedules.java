@@ -253,7 +253,7 @@ public class Schedules {
 		try { 
 			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
 			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
-		} catch (Exception e) { /** e.printStackTrace(); */ }
+		} catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:

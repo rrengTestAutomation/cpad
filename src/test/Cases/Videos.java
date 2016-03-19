@@ -388,8 +388,8 @@ public class Videos{
 
 		for (int i = 0; i < URL.length; i++) {
 		try { 
-			  function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
-		      function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);		
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+		     function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);		
 		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
