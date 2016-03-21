@@ -97,7 +97,7 @@ public class Log {
 		function.fileCleaner("start.time");
 		function.fileCleaner("stack.trace");
 		function.fileCleaner("test.num");
-		function.fileCleaner("xml.path");
-		
+		function.fileCleaner("xml.path");		
 	}
+	
 }
