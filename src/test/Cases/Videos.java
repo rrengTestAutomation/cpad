@@ -326,51 +326,13 @@ public class Videos{
 	}
 
 	/**
-	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [9]
-	 * <p>Date Created: 2016-02-19</p>
-	 * <p>Date Modified: 2016-02-19</p>
-	 * <p>Original Version: V2</p>
-	 * <p>Modified Version: </p>
-	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-09</p>
-	 * @throws IOException
-	 */	
-	@SuppressWarnings("static-access")
-	@Test
-	public void testBornDateTagOrderIsAscending() throws IOException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-	    
-		String root = Locators.cpadServerURL + "videos/?sort_order=asc&sort_by=born_date";
-		String a = "group=Adult";
-		String b = "program_asset_id=8620";
-		String c = "size=50";	
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
-   		String record = "video";
-   		String tag = "born_date";
-
-		for (int i = 0; i < URL.length; i++) {
-		try { 
-			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
-			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
-		} catch (Exception e) { /** e.printStackTrace(); */ }
-		}
-		
-		// SCREENSHOT-DISABLED ASSERTION:
-		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
-				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
-		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
-		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
-		        		 );
-	}
-
-	/**
 	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in descending order [10]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-10</p>
+	 * <p>User Stories: videos-09</p>
 	 * @throws IOException
 	 */	
 	@SuppressWarnings("static-access")
@@ -408,7 +370,7 @@ public class Videos{
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-11</p>
+	 * <p>User Stories: videos-10</p>
 	 * @throws IOException
 	 */	
 	@SuppressWarnings("static-access")
@@ -446,7 +408,7 @@ public class Videos{
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-12</p>
+	 * <p>User Stories: videos-11</p>
 	 * @throws IOException
 	 */	
 	@SuppressWarnings("static-access")
@@ -484,7 +446,7 @@ public class Videos{
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-13</p>
+	 * <p>User Stories: videos-12</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -519,7 +481,7 @@ public class Videos{
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-14</p>
+	 * <p>User Stories: videos-13</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -554,7 +516,7 @@ public class Videos{
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-15</p>
+	 * <p>User Stories: videos-14</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -589,7 +551,7 @@ public class Videos{
 	 * <p>Original Version: V2</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>User Stories: videos-16</p>
+	 * <p>User Stories: videos-15</p>
 	 * @throws IOException
 	 */
 	@SuppressWarnings("static-access")
@@ -607,6 +569,44 @@ public class Videos{
 		for (int i = 0; i < URL.length; i++) {
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
 		catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+	}
+	
+	/**
+	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [9]
+	 * <p>Date Created: 2016-02-19</p>
+	 * <p>Date Modified: 2016-02-19</p>
+	 * <p>Original Version: V2</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: videos-16</p>
+	 * @throws IOException
+	 */	
+	@SuppressWarnings("static-access")
+	@Test
+	public void testBornDateTagOrderIsAscending() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+	    
+		String root = Locators.cpadServerURL + "videos/?sort_order=asc&sort_by=born_date";
+		String a = "group=Adult";
+		String b = "program_asset_id=8620";
+		String c = "size=50";	
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "video";
+   		String tag = "born_date";
+
+		for (int i = 0; i < URL.length; i++) {
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			 function.assertCpadTagsRecords (new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
