@@ -28,12 +28,13 @@ public class Email {
 	  public static String[] ccAll = {
 		                               testerWorkEmail,
 		                               managerEmail,
+		                               "pbandas@tvo.org",
+		                               "jroberts@tvo.org",
 		                               "pleung@tvo.org",
 		                               "aporretta@tvo.org",
 		                               "ukhan@tvo.org",
 		                               "ositbon@tvo.org",
 		                               "kgiffen@tvo.org",
-		                               "pbandas@tvo.org",
 		                               "egoldberg@tvo.org"
 		                             };
 	  public static String[] bccAll = { /** autoTesterEmail,*/ testerHomeEmail };
