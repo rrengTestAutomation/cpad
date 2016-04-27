@@ -326,7 +326,7 @@ public class Videos{
 	}
 
 	/**
-	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in descending order [10]
+	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in descending order [9]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V2</p>
@@ -364,7 +364,7 @@ public class Videos{
 	}
 
 	/**
-	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in ascending order [11]
+	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in ascending order [10]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V2</p>
@@ -402,7 +402,7 @@ public class Videos{
 	}
 
 	/**
-	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in descending order [12]
+	 * Test all of the possible given URL combinations having all the "kill_date" tags of "video" record in descending order [11]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V2</p>
@@ -440,7 +440,7 @@ public class Videos{
 	}
 	
 	/**
-	 * Test given URL is having the "video_asset_id" filter for "video" record is correct [13]
+	 * Test given URL is having the "video_asset_id" filter for "video" record is correct [12]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V2</p>
@@ -475,7 +475,7 @@ public class Videos{
 	}
 
 	/**
-	 * Test given URL is having the "record_id" filter for "video" record is correct [14]
+	 * Test given URL is having the "record_id" filter for "video" record is correct [13]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V2</p>
@@ -510,7 +510,7 @@ public class Videos{
 	}
 
 	/**
-	 * Test given URL is having the "is_captioned" filter for "video" record is correct [15]
+	 * Test given URL is having the "is_captioned" filter for "video" record is correct [14]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V2</p>
@@ -545,7 +545,7 @@ public class Videos{
 	}
 
 	/**
-	 * Test given URL is having the "brightcove_ref_id" filter for "video" record is correct [16]
+	 * Test given URL is having the "brightcove_ref_id" filter for "video" record is correct [15]
 	 * <p>Date Created: 2016-02-18</p>
 	 * <p>Date Modified: 2016-02-18</p>
 	 * <p>Original Version: V2</p>
@@ -580,7 +580,7 @@ public class Videos{
 	}
 	
 	/**
-	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [9]
+	 * Test all of the possible given URL combinations having all the "born_date" tags of "video" record in ascending order [16]
 	 * <p>Date Created: 2016-02-19</p>
 	 * <p>Date Modified: 2016-02-19</p>
 	 * <p>Original Version: V2</p>
