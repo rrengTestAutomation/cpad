@@ -314,9 +314,9 @@ public class AssetChange {
 	/**
 	 * Test all of the possible given URL combinations having sorting for asset changes by its "id" tags of "change_log" records are in ascending order [8]
 	 * <p>Date Created: 2016-02-24</p>
-	 * <p>Date Modified: 2016-02-24</p>
-	 * <p>Original Version: V2</p>
-	 * <p>Modified Version: </p>
+	 * <p>Date Modified: 2016-04-27</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: V3</p>
 	 * <p>Xpath: 1</p>
 	 * <p>User Stories: assetchanges-08</p>
 	 * @throws IOException
@@ -336,11 +336,7 @@ public class AssetChange {
 		
 		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
 		
-//	 // UNIT TESTS
-//		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
-//		String[] URL = { Locators.cpadServerURL + "assetChanges/?access_type=Update&access_time_lte=2021-02-28T03:31:10&access_time_gt=2011-02-28T03:31:10&asset_type=Video&object_id=01425" };
-		
-   		String record = "change_log";
+		String record = "change_log";
    		String tag = "id";
 	        
 		for (int i = 0; i < URL.length; i++) {
