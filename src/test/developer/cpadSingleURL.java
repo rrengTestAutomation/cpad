@@ -190,5 +190,5 @@ public class cpadSingleURL {
 	@BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
 	@AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
 	@AfterMethod  public static void closeBrowsers() { driver.quit(); }
-//  @AfterClass   public static void closeBrowsers() { driver.quit(); }
+//  @AfterMethod  @AfterClass   public static void closeBrowsers() { driver.quit(); }
 }

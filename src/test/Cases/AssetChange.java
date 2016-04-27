@@ -328,14 +328,13 @@ public class AssetChange {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
 	    
 		String root = Locators.cpadServerURL + "assetChanges/";
-		String a = "access_type=Update";
-		String b = "object_id=014259";		
-		String c = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
-		String d = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today
-		String e = "asset_type=Video";
-		String f = "size=20";
+		String a = "access_type=Update";	
+		String b = "access_time_gt=" + function.timestampPlusYears(-5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years before today
+		String c = "access_time_lte=" + function.timestampPlusYears(5);  // a date timestamp formatted YYYY-MM-DDTHH:MM:SS. This timestamp must be 5 years after today
+		String d = "asset_type=Video";
+		String e = "size=20";
 		
-		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e, f));
+		String[] URL = Locators.url(root, Locators.combination(a, b, c, d, e));
 		
 //	 // UNIT TESTS
 //		String[] URL = Locator.url(root, Locator.combination(a, b, c, d));
