@@ -33,7 +33,6 @@ public class Email {
 		                               "pleung@tvo.org",
 		                               "aporretta@tvo.org",
 		                               "ukhan@tvo.org",
-		                               "ositbon@tvo.org",
 		                               "kgiffen@tvo.org",
 		                               "egoldberg@tvo.org"
 		                             };
