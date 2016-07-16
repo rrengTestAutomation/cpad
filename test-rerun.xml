@@ -6,7 +6,7 @@
     <classes>
     <class name="test.Send.Mail"></class>
 
-<class name="test.Cases.Videos"><methods><include name="testCreateOnTagOrderIsDescending"/></methods></class>
+<class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsDescending"/></methods></class>
 
 <!--
 <include name=""/>

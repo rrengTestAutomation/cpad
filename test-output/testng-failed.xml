@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [test-regression]">
-  <test name="test-regression(failed)">
+<suite name="Failed suite [test-rerun]">
+  <test name="test-rerun(failed)">
     <classes>
-      <class name="test.Cases.Programs">
-        <methods>
-          <include name="endTime"/>
-          <include name="startTime"/>
-        </methods>
-      </class> <!-- test.Cases.Programs -->
       <class name="test.Cases.Videos">
         <methods>
-          <include name="startTime"/>
-          <include name="testBornDateTagOrderIsDescending"/>
-          <include name="endTime"/>
-          <include name="testKillDateTagOrderIsDescending"/>
+          <include name="testCreateOnTagOrderIsDescending"/>
         </methods>
       </class> <!-- test.Cases.Videos -->
-      <class name="test.Cases.AssetChange">
-        <methods>
-          <include name="endTime"/>
-          <include name="startTime"/>
-        </methods>
-      </class> <!-- test.Cases.AssetChange -->
       <class name="test.Send.Mail">
         <methods>
           <include name="start"/>
-          <include name="finish"/>
         </methods>
       </class> <!-- test.Send.Mail -->
-      <class name="test.Cases.Schedules">
-        <methods>
-          <include name="endTime"/>
-          <include name="startTime"/>
-        </methods>
-      </class> <!-- test.Cases.Schedules -->
-      <class name="test.Cases.ScheduleChange">
-        <methods>
-          <include name="endTime"/>
-          <include name="startTime"/>
-        </methods>
-      </class> <!-- test.Cases.ScheduleChange -->
     </classes>
-  </test> <!-- test-regression(failed) -->
-</suite> <!-- Failed suite [test-regression] -->
+  </test> <!-- test-rerun(failed) -->
+</suite> <!-- Failed suite [test-rerun] -->
