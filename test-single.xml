@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="test-single">
+<suite name="test-single" parallel="none">
   <test verbose="1" name="test-single">
     <classes>
     <class name="test.Report.Log"></class>
