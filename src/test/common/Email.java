@@ -33,6 +33,7 @@ public class Email {
 		                               "pleung@tvo.org",
 		                               "aporretta@tvo.org",
 		                               "ukhan@tvo.org",
+		                               "ckatz@tvo.org",
 		                               "egoldberg@tvo.org"
 		                             };
 	  public static String[] bccAll = { /** autoTesterEmail,*/ testerHomeEmail };

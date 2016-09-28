@@ -1,10 +1,344 @@
- TEST START: 2016-07-16 16:02:06
+ TEST START: 2016-09-26 23:00:00
 
 
        Test: #1
-      Start: 2016-07-16 16:02:06
-   XML Path: <class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsDescending"/></methods></class>
-     Finish: 2016-07-16 16:03:07
-   Duration: 0:01:01
+      Start: 2016-09-26 23:00:00
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testAccessTimeTagIsFilteredAsAfter"/></methods></class>
+     Finish: 2016-09-26 23:08:22
+   Duration: 0:08:22
 
+       Test: #2
+      Start: 2016-09-26 23:08:22
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testAccessTimeTagIsFilteredAsNotAfter"/></methods></class>
+     Finish: 2016-09-26 23:17:02
+   Duration: 0:08:40
+   Subtotal: 0:17:02
+
+       Test: #3
+      Start: 2016-09-26 23:17:02
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testAccessTypeTagIsCreate"/></methods></class>
+     Finish: 2016-09-26 23:25:31
+   Duration: 0:08:28
+   Subtotal: 0:25:31
+
+       Test: #4
+      Start: 2016-09-26 23:25:31
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testAssetTypeTagIsVideo"/></methods></class>
+     Finish: 2016-09-26 23:35:54
+   Duration: 0:10:22
+   Subtotal: 0:35:53
+
+       Test: #5
+      Start: 2016-09-26 23:35:54
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testChangeLogRecordsMaxNumber"/></methods></class>
+     Finish: 2016-09-26 23:45:15
+   Duration: 0:09:21
+   Subtotal: 0:45:15
+
+       Test: #6
+      Start: 2016-09-26 23:45:15
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testIdTagIsBeyondMinimum"/></methods></class>
+     Finish: 2016-09-26 23:55:53
+   Duration: 0:10:37
+   Subtotal: 0:55:52
+
+       Test: #7
+      Start: 2016-09-26 23:55:53
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testIdTagOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 00:20:41
+   Duration: 0:24:48
+   Subtotal: 1:20:40
+
+       Test: #8
+      Start: 2016-09-27 00:20:41
+   XML Path: <class name="test.Cases.AssetChange"><methods><include name="testObjectIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 01:08:52
+   Duration: 0:48:11
+   Subtotal: 2:08:52
+
+       Test: #9
+      Start: 2016-09-27 01:08:52
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testCreatedOnOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 01:09:46
+   Duration: 0:00:54
+   Subtotal: 2:09:46
+
+       Test: #10
+      Start: 2016-09-27 01:09:46
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testCreatedOnOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 01:10:40
+   Duration: 0:00:53
+   Subtotal: 2:10:39
+
+       Test: #11
+      Start: 2016-09-27 01:10:40
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 01:14:22
+   Duration: 0:03:42
+   Subtotal: 2:14:22
+
+       Test: #12
+      Start: 2016-09-27 01:14:22
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 01:14:25
+   Duration: 0:00:03
+   Subtotal: 2:14:25
+
+       Test: #13
+      Start: 2016-09-27 01:14:25
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testProgramRecordsMaxNumber"/></methods></class>
+     Finish: 2016-09-27 01:18:08
+   Duration: 0:03:42
+   Subtotal: 2:18:08
+
+       Test: #14
+      Start: 2016-09-27 01:18:08
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testRecordIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 01:18:12
+   Duration: 0:00:03
+   Subtotal: 2:18:11
+
+       Test: #15
+      Start: 2016-09-27 01:18:12
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testSingleProgramTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 01:22:02
+   Duration: 0:03:50
+   Subtotal: 2:22:01
+
+       Test: #16
+      Start: 2016-09-27 01:22:02
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testTitleTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 01:39:55
+   Duration: 0:17:52
+   Subtotal: 2:39:54
+
+       Test: #17
+      Start: 2016-09-27 01:39:55
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testUpdatedOnOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 01:40:46
+   Duration: 0:00:51
+   Subtotal: 2:40:46
+
+       Test: #18
+      Start: 2016-09-27 01:40:46
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testUpdatedOnOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 01:41:35
+   Duration: 0:00:48
+   Subtotal: 2:41:35
+
+       Test: #19
+      Start: 2016-09-27 01:41:35
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testUpdatedOnTagIsBetween"/></methods></class>
+     Finish: 2016-09-27 01:41:38
+   Duration: 0:00:03
+   Subtotal: 2:41:38
+
+       Test: #20
+      Start: 2016-09-27 01:41:38
+   XML Path: <class name="test.Cases.Programs"><methods><include name="testUpdatedOnTagIsFiltered"/></methods></class>
+     Finish: 2016-09-27 01:41:42
+   Duration: 0:00:03
+   Subtotal: 2:41:41
+
+       Test: #21
+      Start: 2016-09-27 01:41:42
+   XML Path: <class name="test.Cases.ScheduleChange"><methods><include name="testAccessTimeTagIsFilteredAsAfter"/></methods></class>
+     Finish: 2016-09-27 01:41:45
+   Duration: 0:00:03
+   Subtotal: 2:41:44
+
+       Test: #22
+      Start: 2016-09-27 01:41:45
+   XML Path: <class name="test.Cases.ScheduleChange"><methods><include name="testAccessTimeTagIsFilteredAsNotAfter"/></methods></class>
+     Finish: 2016-09-27 01:43:59
+   Duration: 0:02:13
+   Subtotal: 2:43:58
+
+       Test: #23
+      Start: 2016-09-27 01:43:59
+   XML Path: <class name="test.Cases.ScheduleChange"><methods><include name="testAccessTypeTagIsCreate"/></methods></class>
+     Finish: 2016-09-27 01:45:46
+   Duration: 0:01:47
+   Subtotal: 2:45:46
+
+       Test: #24
+      Start: 2016-09-27 01:45:46
+   XML Path: <class name="test.Cases.ScheduleChange"><methods><include name="testChangeLogIdTagIsBeyondMinimum"/></methods></class>
+     Finish: 2016-09-27 01:48:04
+   Duration: 0:02:18
+   Subtotal: 2:48:04
+
+       Test: #25
+      Start: 2016-09-27 01:48:04
+   XML Path: <class name="test.Cases.ScheduleChange"><methods><include name="testChangeLogIdTagOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 01:59:16
+   Duration: 0:11:11
+   Subtotal: 2:59:15
+
+       Test: #26
+      Start: 2016-09-27 01:59:16
+   XML Path: <class name="test.Cases.ScheduleChange"><methods><include name="testScheduleChangeLogRecordsMaxNumber"/></methods></class>
+     Finish: 2016-09-27 02:01:27
+   Duration: 0:02:11
+   Subtotal: 3:01:27
+
+       Test: #27
+      Start: 2016-09-27 02:01:27
+   XML Path: <class name="test.Cases.Schedules"><methods><include name="testAiringTimeTagIsFilteredAsAfter"/></methods></class>
+     Finish: 2016-09-27 02:01:30
+   Duration: 0:00:02
+   Subtotal: 3:01:29
+
+       Test: #28
+      Start: 2016-09-27 02:01:30
+   XML Path: <class name="test.Cases.Schedules"><methods><include name="testAiringTimeTagIsFilteredAsNotAfter"/></methods></class>
+     Finish: 2016-09-27 02:01:32
+   Duration: 0:00:02
+   Subtotal: 3:01:32
+
+       Test: #29
+      Start: 2016-09-27 02:01:32
+   XML Path: <class name="test.Cases.Schedules"><methods><include name="testAiringTimeTagOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 02:01:32
+   Duration: 0:00:00
+   Subtotal: 3:01:32
+
+       Test: #30
+      Start: 2016-09-27 02:01:32
+   XML Path: <class name="test.Cases.Schedules"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:01:34
+   Duration: 0:00:01
+   Subtotal: 3:01:34
+
+       Test: #31
+      Start: 2016-09-27 02:01:34
+   XML Path: <class name="test.Cases.Schedules"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:01:36
+   Duration: 0:00:01
+   Subtotal: 3:01:35
+
+       Test: #32
+      Start: 2016-09-27 02:01:36
+   XML Path: <class name="test.Cases.Schedules"><methods><include name="testScheduleRecordsMaxNumber"/></methods></class>
+     Finish: 2016-09-27 02:01:38
+   Duration: 0:00:02
+   Subtotal: 3:01:38
+
+       Test: #33
+      Start: 2016-09-27 02:01:38
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 02:03:20
+   Duration: 0:01:41
+   Subtotal: 3:03:19
+
+       Test: #34
+      Start: 2016-09-27 02:03:20
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 02:04:41
+   Duration: 0:01:21
+   Subtotal: 3:04:41
+
+       Test: #35
+      Start: 2016-09-27 02:04:41
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testBrightcoveRefIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:04:41
+   Duration: 0:00:00
+   Subtotal: 3:04:41
+
+       Test: #36
+      Start: 2016-09-27 02:04:41
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testCreateOnTagOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 02:06:02
+   Duration: 0:01:20
+   Subtotal: 3:06:02
+
+       Test: #37
+      Start: 2016-09-27 02:06:02
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testCreateOnTagOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 02:07:20
+   Duration: 0:01:18
+   Subtotal: 3:07:20
+
+       Test: #38
+      Start: 2016-09-27 02:07:20
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testGroupTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:11:42
+   Duration: 0:04:21
+   Subtotal: 3:11:42
+
+       Test: #39
+      Start: 2016-09-27 02:11:42
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testIsCaptionedTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:11:51
+   Duration: 0:00:08
+   Subtotal: 3:11:50
+
+       Test: #40
+      Start: 2016-09-27 02:11:51
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testKillDateTagOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 02:13:10
+   Duration: 0:01:18
+   Subtotal: 3:13:09
+
+       Test: #41
+      Start: 2016-09-27 02:13:10
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testKillDateTagOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 02:14:28
+   Duration: 0:01:17
+   Subtotal: 3:14:27
+
+       Test: #42
+      Start: 2016-09-27 02:14:28
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testProgramAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:19:56
+   Duration: 0:05:28
+   Subtotal: 3:19:55
+
+       Test: #43
+      Start: 2016-09-27 02:19:56
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testRecordIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:19:56
+   Duration: 0:00:00
+   Subtotal: 3:19:55
+
+       Test: #44
+      Start: 2016-09-27 02:19:56
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testTitleTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:20:05
+   Duration: 0:00:09
+   Subtotal: 3:20:05
+
+       Test: #45
+      Start: 2016-09-27 02:20:05
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testUpdatedOnTagOrderIsAscending"/></methods></class>
+     Finish: 2016-09-27 02:21:28
+   Duration: 0:01:22
+   Subtotal: 3:21:28
+
+       Test: #46
+      Start: 2016-09-27 02:21:28
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testUpdatedOnTagOrderIsDescending"/></methods></class>
+     Finish: 2016-09-27 02:22:49
+   Duration: 0:01:20
+   Subtotal: 3:22:48
+
+       Test: #47
+      Start: 2016-09-27 02:22:49
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testVideoAssetIdTagIsCorrect"/></methods></class>
+     Finish: 2016-09-27 02:22:49
+   Duration: 0:00:00
+   Subtotal: 3:22:49
+
+       Test: #48
+      Start: 2016-09-27 02:22:49
+   XML Path: <class name="test.Cases.Videos"><methods><include name="testVideoRecordsMaxNumber"/></methods></class>
+     Finish: 2016-09-27 02:28:22
+   Duration: 0:05:33
+   Subtotal: 3:28:22
+
+TOTAL TESTS: 48
      FAILED: 0
+TEST  START: 2016-09-26 23:00:00
+TEST FINISH: 2016-09-27 02:28:23
+TOTAL  TIME: 3:28:22
+

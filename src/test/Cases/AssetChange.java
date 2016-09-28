@@ -91,7 +91,7 @@ public class AssetChange {
 		String B = "access_time_lte=" + function.timestampPlusYears(5);
 		URL[i] = (URL[i].replace(a, A)).replace(b, B);
 		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, true); }
-		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		catch (Exception exception) { /** exception.printStackTrace(); */ function.fileWriterPrinter("\nERROR!\nURL[" + i + "]: " + URL[i] + "\n"); }
 		}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
