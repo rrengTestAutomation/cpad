@@ -464,6 +464,90 @@ public class Programs{
 		        		 );
 	}
 	
+	/**
+	 * Test sorting programs by its created date in descending order [5]
+	 * <p>Date Created: 2016-02-15</p>
+	 * <p>Date Modified: 2016-02-15</p>
+	 * <p>Original Version: V2</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>User Stories: programs-05</p>
+	 * @throws IOException
+	 */
+	/**
+	 * Test the search and display list of "programs" by group of "kids" for any combination of sort ordering the created date is displayed in ascending order [51]
+	 * <p>Date Created: 2016-11-14</p>
+	 * <p>Date Modified: 2016-11-14</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37479</p>
+	 * @throws IOException
+	 */
+	@Test(groups = {"US-37479"}, priority = 51)
+	@SuppressWarnings("static-access")
+	public void testCreatedOnDateOrderIsAscendingForProgramsByGroupOfKids() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+		String root = Locators.cpadServerURL + "programs/?";
+		String a = "group=Kids";
+		String b = "sort_by=created_on";
+		String c = "sort_order=asc";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "program";
+   		String tag = "created_on";
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { 
+			 function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+	}
+	
+	/**
+	 * Test the search and display list of "programs" by group of "kids" for any combination of sort ordering the created date is displayed in descending order [52]
+	 * <p>Date Created: 2016-11-14</p>
+	 * <p>Date Modified: 2016-11-14</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37479</p>
+	 * @throws IOException
+	 */
+	@Test(groups = {"US-37479"}, priority = 52)
+	@SuppressWarnings("static-access")
+	public void testCreatedOnDateOrderIsDescendingForProgramsByGroupOfKids() throws IOException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
+		String root = Locators.cpadServerURL + "programs/?";
+		String a = "group=Kids";
+		String b = "sort_by=created_on";
+		String c = "sort_order=desc";
+		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+   		String record = "program";
+   		String tag = "created_on";
+	        
+		for (int i = 0; i < URL.length; i++) {
+		try { 
+			 function.assertCpadTagsDateDesc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);	
+		} catch (Exception e) { /** e.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+	}
+	
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
 }

@@ -8,8 +8,10 @@
 
 <!--
 COVERED BY AUTOMATED TEST: -->
-<class name="test.Cases.AssetChange"><methods>
-<include name="testIdTagOrderIsAscendingForVideoAssetOnUpdateAndDeleteAccess"/></methods></class>
+<class name="test.Cases.Programs"><methods>
+<include name="testCreatedOnDateOrderIsAscendingForProgramsByGroupOfKids"/>
+<include name="testCreatedOnDateOrderIsDescendingForProgramsByGroupOfKids"/>
+</methods></class>
 
     </classes>
   </test>
