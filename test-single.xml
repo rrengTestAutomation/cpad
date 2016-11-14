@@ -6,11 +6,10 @@
     <classes>
     <class name="test.Report.Log"></class>
 
-<class name="test.Cases.Videos"><methods><include name="testBornDateTagOrderIsDescending"/></methods></class>
-
 <!--
-<include name=""/>
--->
+COVERED BY AUTOMATED TEST: -->
+<class name="test.Cases.AssetChange"><methods>
+<include name="testIdTagOrderIsAscendingForVideoAssetOnUpdateAndDeleteAccess"/></methods></class>
 
     </classes>
   </test>

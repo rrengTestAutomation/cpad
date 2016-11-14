@@ -264,6 +264,8 @@ public class Locators {
         return combination;
     }
 
+    public static String url(String root, String join) { return root.replace(" ", "%20") + join(join).replace("?&", "?"); }
+    
 	public static String[] url(String root, String[][] join) {
 		String[] url = new String[join.length];
 		for (int i = 0; i < join.length; i++) {
@@ -271,6 +273,8 @@ public class Locators {
 			url[i] = (root.replace(" ", "%20") + join(join[i])).replace("?&", "?"); }
 		return url;
 	};	
+	
+	public static String join(String combination) { return "&" + combination; }
 	
 	public static String join(String[] combination) {
 		String result = "";

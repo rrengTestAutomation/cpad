@@ -354,6 +354,69 @@ public class AssetChange {
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
+
+	/**
+	 * Test Asset Changelog: Verify that create, update and delete are displayed in chronological order [49]
+	 * <p>Date Created: 2016-11-14</p>
+	 * <p>Date Modified: 2016-11-14</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37431</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@SuppressWarnings("static-access")
+	@Test(groups = {"TC-37431"}, priority = 49)
+	public void testIdTagOrderIsAscendingForVideoAssetOnUpdateAndDeleteAccess() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+	    
+		String root = Locators.cpadServerURL + "assetChanges/";
+		String a = "asset_type=Video";	
+		String b = "access_type=Update";
+		String c = "access_type=Delete";
+		String d = "group=Kids";
+		
+		// TEST A + B + D:
+		String[] URL = Locators.url(root, Locators.combination(a, b));
+		
+		String record = "change_log";
+		String timestamp = "access_time";
+   		String tag = "id";
+	        
+		for (int i = 0; i < URL.length; i++) {
+			URL[i] = Locators.url(URL[i], d);
+			try { 
+				function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, timestamp);
+				function.assertCpadTagsAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			} catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+		
+		// TEST A + C + D:
+		URL = Locators.url(root, Locators.combination(a, c));
+	        
+		for (int i = 0; i < URL.length; i++) {
+			URL[i] = Locators.url(URL[i], d);
+			try { 
+				function.assertCpadTagsDateAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, timestamp);
+				function.assertCpadTagsAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
+			} catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+	}
 	
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
