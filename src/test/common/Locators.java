@@ -10,9 +10,9 @@ public class Locators {
 	public static String testIconFileDir   = System.getProperty("user.dir") + File.separator + "resources" +  File.separator + "icons" + File.separator;
 	
 	/************************URL's**************************/
-	public static String cpadServerURL    = System.getProperty("URL");                                                // used to be: cpadServer + "/CPAD/";
-	public static String cpadServer       = cpadServerURL.substring(0, cpadServerURL.indexOf("/CPAD/"));              // used to be: System.getProperty("URL");                                               // used to be: "http://" + cpadServerDomain;
-	public static String cpadServerDomain = cpadServer.substring(cpadServer.lastIndexOf("://"), cpadServer.length()); // used to be: "v-cpad-p01.tvo.org:8080";	
+	public static String cpadServerURL    = System.getProperty("URL");                                                     // used to be: cpadServer + "/CPAD/";
+	public static String cpadServer       = cpadServerURL.substring(0, cpadServerURL.indexOf("/CPAD/"));                   // used to be: System.getProperty("URL");                                               // used to be: "http://" + cpadServerDomain;
+	public static String cpadServerDomain = cpadServer.substring(cpadServer.lastIndexOf("://") + 3, cpadServer.length());  // used to be: "v-cpad-p01.tvo.org:8080";	
 	
 	
 	public static String[][] combination(String a) {

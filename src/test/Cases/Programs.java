@@ -488,7 +488,6 @@ public class Programs{
 	@SuppressWarnings("static-access")
 	public void testCreatedOnDateOrderIsAscendingForProgramsByGroupOfKids() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
-		
 		String root = Locators.cpadServerURL + "programs/?";
 		String a = "group=Kids";
 		String b = "sort_by=created_on";
