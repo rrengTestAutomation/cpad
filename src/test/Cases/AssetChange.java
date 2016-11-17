@@ -427,7 +427,7 @@ public class AssetChange {
 	 * @throws IOException
 	 * @throws ParseException 
 	 */
-	@Test(groups = {"US-37432"}, priority = 49)
+	@Test(groups = {"TC-37432"}, priority = 49)
 	@SuppressWarnings("static-access")
 	public void testIdTagOrderIsAscendingForVideoAssetOnUpdateAndDeleteAccess() throws IOException, ParseException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
@@ -467,6 +467,41 @@ public class AssetChange {
 				function.assertCpadTagsAsc(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag);
 			} catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+	}
+	
+	/**
+	 * Test display only first 50 asset change log records [54]
+	 * <p>Date Created: 2016-11-17</p>
+	 * <p>Date Modified: 2016-11-17</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37497</p>
+	 */
+	@Test(groups = {"TC-37497"}, priority = 54)
+	@SuppressWarnings("static-access")
+	public void testDisplayOnlyFirstSizeAssetChanges() throws IOException, ParseException {		
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+				
+		String root = Locators.cpadServerURL + "assetChanges/?";
+		String a = "start=0";		
+		String b = "size=50";
+		String c = "group=Kids";
+		String[] URL = Locators.url(root, Locators.permulation(a, b, c));
+   		String record = "change_log";
+   		int number = 50;
+
+		for (int i = 0; i < URL.length; i++) {
+			try { function.assertCpadTagsTotalNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, number); }
+			catch (Exception exception) { /** exception.printStackTrace(); */ }
+			}
 		
 		// SCREENSHOT-DISABLED ASSERTION:
 		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 

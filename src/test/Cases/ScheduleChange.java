@@ -268,6 +268,53 @@ public class ScheduleChange {
 		        		 );
 	}
 	
+	/**
+	 * Test display only first 50 schedule changes [53]
+	 * <p>Date Created: 2016-11-17</p>
+	 * <p>Date Modified: 2016-11-17</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37494</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@Test(groups = {"TC-37494"}, priority = 53)
+	@SuppressWarnings("static-access")
+	public void testDisplayOnlyFirstSizeScheduleChanges() throws IOException, ParseException {		
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+	    
+		String root = Locators.cpadServerURL + "scheduleChange/?";
+		String a = "start=0";		
+		String b = "size=50";
+		String[] URL = Locators.url(root, Locators.permulation(a, b));
+   		String record = "schedule_change_log";
+   		String tag = "change_log_id";
+   		String expectedFirst = "201";
+   		String expectedLast  = "250";
+   		String condition = "equals";
+   		int number = 50;
+
+		for (int i = 0; i < URL.length; i++) {
+			String expected = String.valueOf(Integer.valueOf(expectedFirst) + i);
+			try { 
+				function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false);
+				if (expected.equals(expectedLast)){
+					function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expectedLast, condition, false);
+					}
+			    function.assertCpadTagsTotalNumber(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, number);
+			}
+			catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+		}
+	
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }
 }

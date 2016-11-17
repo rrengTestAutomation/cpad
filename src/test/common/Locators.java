@@ -27,6 +27,11 @@ public class Locators {
 		return combination;
 	}
 	
+	public static String[][] permulation(String a, String b) {
+		String[][] permulation = { { a, b }, { b, a } };
+		return permulation;
+	}
+	
 	public static String[][] combination(String a, String b, String c) {
 		String[][] combination = { { a }, { b }, { c },
                                    { a, b }, { a, c }, { b, a },
@@ -35,6 +40,13 @@ public class Locators {
                                    { b, c, a }, { c, a, b }, { c, b, a }
                                  };
 		return combination;
+	}
+	
+	public static String[][] permulation(String a, String b, String c) {
+		String[][] permulation = { { a, b, c }, { a, c, b }, { b, a, c },
+                                   { b, c, a }, { c, a, b }, { c, b, a }
+                                 };
+		return permulation;
 	}
 	
     public static String[][] combination(String a, String b, String c, String d) {

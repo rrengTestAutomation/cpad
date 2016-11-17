@@ -3647,6 +3647,74 @@ public class Functions {
 
 		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
 	}
+	
+	/**
+	 * Assert number of CPAD record tags is less then maximum
+	 * Won't use Selenium WebDriver
+	 * @throws IOException
+	 */
+	public boolean assertCpadTagsTotalNumber(
+			StackTraceElement trace, String url, int combination, int total,
+			Boolean ifAssert, String record, int number)
+	throws IOException {
+		try {
+			fileCleaner("url.log"); fileWriter("url.log", url);
+			fileWriterPrinter("\n" + "URL COMBINATION # " + combination + " OF " + total + ":");
+			fileWriterPrinter(url);
+			fileWriterPrinter("\n" + "Record Name: " + record);
+
+			String xml = getUrlPageSourceSave(url);
+			String error = "";
+			
+			fileWriterPrinter("==========================");
+
+			if (!fileExist("cpad.log", false)) { fileWriter("cpad.log", "true"); }
+			if (!fileExist("max.log", false)) { fileWriter("max.log", "true"); }		
+			
+			if (!fileExist("xml.log",  false)) { fileWriter("xml.log",  "true"); }			
+			xmlValidityChecker(xml, trace, combination, total);
+			
+			fileWriterPrinter("Records Number: " + xmlRecordLength(xml, record));
+			boolean assertion = (xmlRecordLength(xml, record) == number);
+			
+			if ( (!assertion) && (xmlRecordLength(xml, record) < number) ) { error = "Less then expected!"; }
+			if ( (!assertion) && (xmlRecordLength(xml, record) > number) ) { error = "More then expected!"; }
+
+			if (assertion) { fileWriterPrinter("        Result: OK");
+			        } else {
+				             fileWriterPrinter("        Result: FAILED!");
+				             fileWriterPrinter("        Reason: NOT EQUAL TO " + number + " <" + record + "> RECORDS FOUND...");
+				             fileCleaner("max.log");
+				             fileWriter( "max.log", "false");			             
+
+							 fileWriterPrinter();
+							
+							 fileWriter("record.log", "");					
+							 fileWriter("record.log", "   Record: " + record);
+							 fileWriter("record.log", "    Found: " + xmlRecordLength(xml, record));
+							 fileWriter("record.log", " Expected: " + number);
+							 fileWriter("record.log", "   Result: FAILED!");
+							 fileWriter("record.log", "   Reason: NOT EQUAL TO " + number + " <" + record + "> RECORDS FOUND...");
+							 fileWriter("record.log", "");
+					}
+
+//			if (ifAssert) { Assert.assertTrue(assertion, "        Result: FAILED"); }			
+
+			fileWriterPrinter("==========================");
+			fileWriterPrinter();
+			
+			getAssertTrue(trace, error + " (URL " + combination + " OF " + total + ")", Boolean.valueOf(fileScanner("max.log")), url);
+
+			boolean result = Boolean.valueOf(fileScanner("max.log")) && Boolean.valueOf(fileScanner("xml.log"));
+			
+			if ((fileExist("cpad.log", false)) && (!result)) { fileCleaner("cpad.log"); fileWriter("cpad.log", result); }
+			
+			fileCleaner("max.log");
+			fileCleaner("xml.log");
+			return result;
+
+		} catch (Exception exception) { /** exception.printStackTrace(); */ fileCleaner("cpad.log"); fileWriter("cpad.log", false); return false; }
+	}
 
 	/**
 	 * Assert CPAD record tags as dates filtered correctly

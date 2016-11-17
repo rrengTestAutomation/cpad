@@ -484,7 +484,7 @@ public class Programs{
 	 * <p>Test Cases: 37479</p>
 	 * @throws IOException
 	 */
-	@Test(groups = {"US-37479"}, priority = 51)
+	@Test(groups = {"TC-37479"}, priority = 51)
 	@SuppressWarnings("static-access")
 	public void testCreatedOnDateOrderIsAscendingForProgramsByGroupOfKids() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
@@ -492,7 +492,7 @@ public class Programs{
 		String a = "group=Kids";
 		String b = "sort_by=created_on";
 		String c = "sort_order=asc";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locators.url(root, Locators.permulation(a, b, c));
    		String record = "program";
    		String tag = "created_on";
 	        
@@ -520,7 +520,7 @@ public class Programs{
 	 * <p>Test Cases: 37479</p>
 	 * @throws IOException
 	 */
-	@Test(groups = {"US-37479"}, priority = 52)
+	@Test(groups = {"TC-37479"}, priority = 52)
 	@SuppressWarnings("static-access")
 	public void testCreatedOnDateOrderIsDescendingForProgramsByGroupOfKids() throws IOException {
 		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
@@ -529,7 +529,7 @@ public class Programs{
 		String a = "group=Kids";
 		String b = "sort_by=created_on";
 		String c = "sort_order=desc";
-		String[] URL = Locators.url(root, Locators.combination(a, b, c));
+		String[] URL = Locators.url(root, Locators.permulation(a, b, c));
    		String record = "program";
    		String tag = "created_on";
 	        
