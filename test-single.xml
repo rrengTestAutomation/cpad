@@ -9,8 +9,7 @@
 <!--
 COVERED BY AUTOMATED TEST: -->
 <class name="test.Cases.AssetChange"><methods>
-<include name="testDisplayByAssetTypeTagIsVideo"/>
-<include name="testDisplayByAssetTypeTagIsProgram"/>
+<include name="testDisplayByAccessTypeTagIsCorrect"/>
 </methods></class>
 
     </classes>

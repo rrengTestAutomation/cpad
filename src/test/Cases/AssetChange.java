@@ -514,7 +514,7 @@ public class AssetChange {
 	}
 	
 	/**
-	 * Test display by specific <asset_type> where the <access_type> is update the list must only display assets for videos [55]
+	 * Test display by specific <asset_type> must only display specific asset type [55]
 	 * <p>Date Created: 2016-11-18</p>
 	 * <p>Date Modified: 2016-11-18</p>
 	 * <p>Original Version: V1</p>
@@ -526,18 +526,20 @@ public class AssetChange {
 	 */
 	@Test(groups = {"US-37498"}, priority = 55)
 	@SuppressWarnings("static-access")
-	public void testDisplayByAssetTypeTagIsVideo() throws IOException, ParseException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);	    
+	public void testDisplayByAssetTypeTagIsCorrect() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
 		String root = Locators.cpadServerURL + "assetChanges/?";		
 		String a = "access_type=Update";
-		String[] URL = Locators.url(root, Locators.combination(a));
+		String b = "asset_type=Program";
+		String[] URL = Locators.url(root, Locators.list(a, b));
    		String record = "change_log";
    		String tag = "asset_type";
-   		String expected = "Video";
+   		String[] expected = {"Video","Program"};
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected[i], condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
@@ -550,30 +552,34 @@ public class AssetChange {
 		}
 	
 	/**
-	 * Test display by specific <asset_type> where the <asset_type> is Program the list must only display assets for programs [56]
+	 * Test display by specific <access_type> must only display the logs for requested access type [56]
+	 * Display by specific <access_type>.
 	 * <p>Date Created: 2016-11-18</p>
 	 * <p>Date Modified: 2016-11-18</p>
 	 * <p>Original Version: V1</p>
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
-	 * <p>Test Cases: 37498</p>
+	 * <p>Test Cases: 37499</p>
 	 * @throws IOException
 	 * @throws ParseException 
 	 */
-	@Test(groups = {"US-37498"}, priority = 56)
+	@Test(groups = {"US-37499"}, priority = 56)
 	@SuppressWarnings("static-access")
-	public void testDisplayByAssetTypeTagIsProgram() throws IOException, ParseException {
-		function.printXmlPath(new RuntimeException().getStackTrace()[0]);	    
+	public void testDisplayByAccessTypeTagIsCorrect() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);
+		
 		String root = Locators.cpadServerURL + "assetChanges/?";		
-		String a = "asset_type=Program";
-		String[] URL = Locators.url(root, Locators.combination(a));
+		String a = "access_type=Update";
+		String b = "access_type=Create";
+		String c = "access_type=Delete";
+		String[] URL = Locators.url(root, Locators.list(a, b, c));
    		String record = "change_log";
-   		String tag = "asset_type";
-   		String expected = "Program";
+   		String tag = "access_type";
+   		String[] expected = {"Update","Create","Delete"};
    		String condition = "equal";
 
 		for (int i = 0; i < URL.length; i++) {
-		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected[i], condition, false); }
 		catch (Exception exception) { /** exception.printStackTrace(); */ }
 		}
 		
