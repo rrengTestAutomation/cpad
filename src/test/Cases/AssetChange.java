@@ -484,6 +484,8 @@ public class AssetChange {
 	 * <p>Modified Version: </p>
 	 * <p>Xpath: 1</p>
 	 * <p>Test Cases: 37497</p>
+	 * @throws IOException
+	 * @throws ParseException 
 	 */
 	@Test(groups = {"TC-37497"}, priority = 54)
 	@SuppressWarnings("static-access")
@@ -510,6 +512,78 @@ public class AssetChange {
 		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
 		        		 );
 	}
+	
+	/**
+	 * Test display by specific <asset_type> where the <access_type> is update the list must only display assets for videos [55]
+	 * <p>Date Created: 2016-11-18</p>
+	 * <p>Date Modified: 2016-11-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37498</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@Test(groups = {"US-37498"}, priority = 55)
+	@SuppressWarnings("static-access")
+	public void testDisplayByAssetTypeTagIsVideo() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);	    
+		String root = Locators.cpadServerURL + "assetChanges/?";		
+		String a = "access_type=Update";
+		String[] URL = Locators.url(root, Locators.combination(a));
+   		String record = "change_log";
+   		String tag = "asset_type";
+   		String expected = "Video";
+   		String condition = "equal";
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
+		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+		}
+	
+	/**
+	 * Test display by specific <asset_type> where the <asset_type> is Program the list must only display assets for programs [56]
+	 * <p>Date Created: 2016-11-18</p>
+	 * <p>Date Modified: 2016-11-18</p>
+	 * <p>Original Version: V1</p>
+	 * <p>Modified Version: </p>
+	 * <p>Xpath: 1</p>
+	 * <p>Test Cases: 37498</p>
+	 * @throws IOException
+	 * @throws ParseException 
+	 */
+	@Test(groups = {"US-37498"}, priority = 56)
+	@SuppressWarnings("static-access")
+	public void testDisplayByAssetTypeTagIsProgram() throws IOException, ParseException {
+		function.printXmlPath(new RuntimeException().getStackTrace()[0]);	    
+		String root = Locators.cpadServerURL + "assetChanges/?";		
+		String a = "asset_type=Program";
+		String[] URL = Locators.url(root, Locators.combination(a));
+   		String record = "change_log";
+   		String tag = "asset_type";
+   		String expected = "Program";
+   		String condition = "equal";
+
+		for (int i = 0; i < URL.length; i++) {
+		try { function.assertCpadTagsCompareToExpected(new RuntimeException().getStackTrace()[0], URL[i], i+1, URL.length, false, record, tag, expected, condition, false); }
+		catch (Exception exception) { /** exception.printStackTrace(); */ }
+		}
+		
+		// SCREENSHOT-DISABLED ASSERTION:
+		Assert.assertTrue(Boolean.valueOf(function.fileScanner("cpad.log")), 
+				        function.getAssertTrue(new RuntimeException().getStackTrace()[0],
+		        		 "TEST # " + function.fileScanner("test.num") + " - Unexpected Results found!"
+		        	   , Boolean.valueOf(function.fileScanner("cpad.log")), false)
+		        		 );
+		}
 	
    @BeforeMethod public static void startTime() throws IOException { new Functions().startTime(); } 
    @AfterMethod  public static void endTime() throws IOException { new Functions().endTime(); }

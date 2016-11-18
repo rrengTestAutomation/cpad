@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="test-single" parallel="none">
+<suite name="test-single">
   <test verbose="1" name="test-single">
     <classes>
     <class name="test.Report.Log"></class>
 
 <!--
 COVERED BY AUTOMATED TEST: -->
-<class name="test.Cases.Programs"><methods>
-<include name="testCreatedOnDateOrderIsAscendingForProgramsByGroupOfKids"/>
-<include name="testCreatedOnDateOrderIsDescendingForProgramsByGroupOfKids"/>
+<class name="test.Cases.AssetChange"><methods>
+<include name="testDisplayByAssetTypeTagIsVideo"/>
+<include name="testDisplayByAssetTypeTagIsProgram"/>
 </methods></class>
 
     </classes>
