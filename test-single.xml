@@ -4,7 +4,8 @@
 <suite name="test-single">
   <test verbose="1" name="test-single">
     <classes>
-    <class name="test.Report.Log"></class>
+       <class name="test.Report.Log"></class>
+<!--   <class name="test.Send.Mail"></class> -->
 
 <!--
 COVERED BY AUTOMATED TEST: -->
